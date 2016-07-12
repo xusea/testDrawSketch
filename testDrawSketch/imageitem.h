@@ -15,6 +15,7 @@
     NSString * filename;
     NSString * grayname;
     NSString * logname;
+    NSString * transparentname;
     int downflag;
     int ind;
     int type;//0 se , 1 image
@@ -26,6 +27,7 @@
 @property NSString * filename;
 @property NSString * grayname;
 @property NSString * logname;
+@property NSString * transparentname;
 @property int downflag;
 @property int ind;
 @property int type;

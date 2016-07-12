@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "84B0EF92A5DD3FF95EE3E54C28ECE45C7147BDE6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "84B0EF92A5DD3FF95EE3E54C28ECE45C7147BDE6" : 0,
+    "C520DF429E7C06B166BA1A5031F8067AFC67AEDD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "35763240-8DBF-45F7-B6CB-D51F77075B61",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "84B0EF92A5DD3FF95EE3E54C28ECE45C7147BDE6" : "testDrawSketch\/",
+    "C520DF429E7C06B166BA1A5031F8067AFC67AEDD" : "cm\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "testDrawSketch",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "testDrawSketch.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:xusea\/testDrawSketch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "84B0EF92A5DD3FF95EE3E54C28ECE45C7147BDE6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:xusea\/cm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C520DF429E7C06B166BA1A5031F8067AFC67AEDD"
+    }
+  ]
+}

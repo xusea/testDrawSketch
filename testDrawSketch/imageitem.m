@@ -14,6 +14,7 @@
 @synthesize filename;
 @synthesize grayname;
 @synthesize logname;
+@synthesize transparentname;
 @synthesize downflag;
 @synthesize ind;
 @synthesize type;

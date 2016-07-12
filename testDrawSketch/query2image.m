@@ -159,6 +159,7 @@
             NSString * filename = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
             NSString * grayname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
             NSString * logname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
+        
             imageitem * seitem = [[imageitem alloc]init];
             [seitem setUrl:url];
             [seitem setType:0];
@@ -210,9 +211,11 @@
             
             NSString * grayname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
             NSString * logname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
+            NSString * transparentname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
             [image setFilename:filename];
             [image setGrayname:grayname];
             [image setLogname:logname];
+            [image setTransparentname:transparentname];
             [image setMyiobjectpoint:nil];
             [imageitemlist addObject:image];
             
@@ -267,6 +270,7 @@
             {
                 bestimageind = i;
                 newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
+                
             }
             else if(bestimageind > -1 && bestimageind < [imageitemlist count])
             {

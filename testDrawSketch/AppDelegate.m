@@ -346,11 +346,14 @@
             NSString * imagename = [imaget filename];
             NSString * grayname = [imaget grayname];
             NSString * logname = [imaget logname];
+            NSString * transparentname = [imaget transparentname];
+            NSString * transparenttemp = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
             NSImage * image =[[NSImage alloc]initWithContentsOfFile:imagename];
             NSString * resizename = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
             [imagetrans resizeimage:imagename outimage:resizename newsize:NSMakeSize(400, 300)];
             [imagetrans imagecut:resizename outfile:grayname logfile:logname];
-            
+            [imagetrans imagesketch:logname orgimage:resizename outimage:transparenttemp];
+            [imagetrans cutalpha:transparenttemp outimage:transparentname];
             if([imaget myiobjectpoint] != nil)
             {
                 
