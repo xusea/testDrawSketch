@@ -31,5 +31,7 @@
 +(void)convertDPI72:(NSString *)orgimage outimage:(NSString *)outimage;
 //缩放图片
 +(void)resizeimage:(NSString *)orgimage outimage:(NSString *)outimage newsize:(NSSize)ns;
+//透明图片填充边框
++(void)fillalpha:(NSString *)orgimage outimage:(NSString *)outimage;
 @end
 

@@ -292,7 +292,8 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
             sg = (u_int)*(pixel + 1);
             sb = (u_int)*(pixel + 2);
             sa = (u_int)*(pixel + 3);
-            if( sa > 255.0f * 0.5)
+            //if( sa > 255.0f * 0.01)
+            if( sa > 0)
             {
                 if(left > i)
                 {
@@ -316,17 +317,23 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     }
     if(alphaflag == 1)
     {
-        width = right - left;
-        height = top - buttom;
+        int newwidth = right - left;
+        int newheight = top - buttom;
         NSRect rect;
-        rect.size.width = width;
-        rect.size.height = height;
+        rect.size.width = newwidth;
+        rect.size.height = newheight;
         rect.origin.x = left;
-        rect.origin.y = buttom-10;
+        //trick 
+        rect.origin.y = height - top;
+        //rect.origin.y = buttom;
+        NSRect inrect = rect;
+        inrect.origin.x = 0;
+        inrect.origin.y = 0;
+        NSLog(@"draw bound %d %d %d %d", left, right, top, buttom);
         NSBitmapImageRep *repout = [[NSBitmapImageRep alloc]
                                     initWithBitmapDataPlanes: NULL
-                                    pixelsWide: width
-                                    pixelsHigh: height
+                                    pixelsWide: newwidth
+                                    pixelsHigh: newheight
                                     bitsPerSample: 8
                                     samplesPerPixel: 4
                                     hasAlpha: YES
@@ -338,7 +345,8 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
         NSGraphicsContext *ctxout = [NSGraphicsContext graphicsContextWithBitmapImageRep: repout];
         [NSGraphicsContext saveGraphicsState];
         [NSGraphicsContext setCurrentContext: ctxout];
-        [oimage drawAtPoint: NSZeroPoint fromRect: rect operation: NSCompositeCopy fraction: 1.0];
+        //[oimage drawAtPoint:NSZeroPoint fromRect: rect operation: NSCompositeCopy fraction: 1.0];
+        [oimage drawInRect:inrect fromRect:rect operation:NSCompositeCopy fraction:1.0];
         [ctxout flushGraphics];
         [NSGraphicsContext restoreGraphicsState];
         NSData * outdata = [repout representationUsingType:NSPNGFileType properties:nil];
@@ -450,5 +458,114 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     
     NSData *data = [rep_dpi representationUsingType: NSPNGFileType properties: nil];
     [data writeToFile: outimage atomically: YES];
+}
+
++(void)fillalpha:(NSString *)orgimage outimage:(NSString *)outimage
+{
+    NSImage * oimage = [[NSImage alloc]initWithContentsOfFile:orgimage];
+    if(oimage == nil)
+    {
+        NSLog(@"cutalpah cann't open file %@", orgimage);
+        return ;
+    }
+    int width = [oimage size].width;
+    int height = [oimage size].height;
+    
+    NSBitmapImageRep *reporg = [[NSBitmapImageRep alloc]
+                                initWithBitmapDataPlanes: NULL
+                                pixelsWide: width
+                                pixelsHigh: height
+                                bitsPerSample: 8
+                                samplesPerPixel: 4
+                                hasAlpha: YES
+                                isPlanar: NO
+                                colorSpaceName: NSDeviceRGBColorSpace
+                                bytesPerRow: width * 4
+                                bitsPerPixel: 32];
+    
+    NSGraphicsContext *ctxorg = [NSGraphicsContext graphicsContextWithBitmapImageRep: reporg];
+    [NSGraphicsContext saveGraphicsState];
+    [NSGraphicsContext setCurrentContext: ctxorg];
+    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [ctxorg flushGraphics];
+    [NSGraphicsContext restoreGraphicsState];
+    
+    unsigned char * org_bitmapdata = [reporg bitmapData];
+    NSUInteger org_bitmapdata_BytesPerRow = [reporg bytesPerRow];
+    NSColor *fillcolor = [NSColor colorWithCalibratedRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+    int left = INT_MAX;
+    int right = INT_MIN;
+    int top = INT_MIN;
+    int buttom = INT_MAX;
+    int alphaflag = 0;
+    for(int i = 0 ;i< width; i ++)
+    {
+        for(int j = 0; j< height; j ++)
+        {
+            unsigned char *pixel = org_bitmapdata + ((i * 4) + (j * org_bitmapdata_BytesPerRow));
+            u_int sr, sg, sb, sa;
+            sr = (u_int)*pixel;
+            sg = (u_int)*(pixel + 1);
+            sb = (u_int)*(pixel + 2);
+            sa = (u_int)*(pixel + 3);
+            //if( sa > 255.0f * 0.01)
+            if( sa > 0)
+            {
+              /*  if(left > i)
+                {
+                    left = i;
+                }
+                if(right < i)
+                {
+                    right = i;
+                }
+                if(top < j)
+                {
+                    top = j;
+                }
+                if(buttom > j)
+                {
+                    buttom = j;
+                }
+                alphaflag = 1;*/
+                [reporg setColor:fillcolor atX:i y:j];
+            }
+        }
+    }
+    
+    NSData * repdata = [reporg representationUsingType:NSPNGFileType properties:nil];
+    [repdata writeToFile:outimage atomically:YES];
+
+    
+    /*if(alphaflag == 1)
+    {
+     
+        NSBitmapImageRep *repout = [[NSBitmapImageRep alloc]
+                                    initWithBitmapDataPlanes: NULL
+                                    pixelsWide: width
+                                    pixelsHigh: height
+                                    bitsPerSample: 8
+                                    samplesPerPixel: 4
+                                    hasAlpha: YES
+                                    isPlanar: NO
+                                    colorSpaceName: NSDeviceRGBColorSpace
+                                    bytesPerRow: width * 4
+                                    bitsPerPixel: 32];
+        
+        NSGraphicsContext *ctxout = [NSGraphicsContext graphicsContextWithBitmapImageRep: repout];
+        [NSGraphicsContext saveGraphicsState];
+        [NSGraphicsContext setCurrentContext: ctxout];
+        [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+        [ctxout flushGraphics];
+        [NSGraphicsContext restoreGraphicsState];
+        NSData * outdata = [repout representationUsingType:NSPNGFileType properties:nil];
+        [outdata writeToFile:outimage atomically:YES];
+        
+    }
+    else
+    {
+        NSLog(@"empty image");
+    }*/
+    
 }
 @end

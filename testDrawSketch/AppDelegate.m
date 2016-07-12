@@ -241,7 +241,7 @@
     [_scrollimagelist reloadData];
     [_scrollimagelist setDataSource:[qi2 imagesource]];
     [_scrollimagelist reloadData];*/
-    NSMutableArray * querydrawlist = querydraw;
+   /* NSMutableArray * querydrawlist = querydraw;
     NSString * str = @"";
     for(int i = 0; i < [querydrawlist count]; i ++)
     {
@@ -250,7 +250,10 @@
         str = [str stringByAppendingString:@" [] "];
         str = [str stringByAppendingString:[it filename]];
     }
-    NSLog(@"current selected images %@", str);
+    NSLog(@"current selected images %@", str);*/
+    [imagetrans cutalpha:@"/Users/xusea/sketch2photo/tdog.png" outimage:@"/Users/xusea/sketch2photo/t2dog.png"];
+                                       
+    
 }
 
 - (IBAction)trace2png:(id)sender {
