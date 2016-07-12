@@ -10,7 +10,7 @@
 
 @interface resultimageview : NSView
 {
-    NSMutableArray * querydraw;
+    NSMutableArray * querydrawlist;
 }
-@property NSMutableArray * querydraw;
+@property NSMutableArray * querydrawlist;
 @end

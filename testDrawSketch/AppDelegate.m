@@ -235,12 +235,22 @@
     NSString * imagedoggray = [NSString stringWithFormat:@"%@/doggray.png", dir];
     NSString * imagedoglog = [NSString stringWithFormat:@"%@/doglog.png", dir];
     [imagetrans imagecut:imagedog outfile:imagedoggray logfile:imagedoglog];*/
-    query2image * qi2 = [_scrollimagelist qi2point];
+/*    query2image * qi2 = [_scrollimagelist qi2point];
     [_scrollimagelist setDataSource:nil];
     
     [_scrollimagelist reloadData];
     [_scrollimagelist setDataSource:[qi2 imagesource]];
-    [_scrollimagelist reloadData];
+    [_scrollimagelist reloadData];*/
+    NSMutableArray * querydrawlist = querydraw;
+    NSString * str = @"";
+    for(int i = 0; i < [querydrawlist count]; i ++)
+    {
+        query2image * q2i = [querydrawlist objectAtIndex:i];
+        imageitem * it = [q2i getbestimageitem];
+        str = [str stringByAppendingString:@" [] "];
+        str = [str stringByAppendingString:[it filename]];
+    }
+    NSLog(@"current selected images %@", str);
 }
 
 - (IBAction)trace2png:(id)sender {
