@@ -323,13 +323,13 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
         rect.size.width = newwidth;
         rect.size.height = newheight;
         rect.origin.x = left;
-        //trick 
+        //trick
         rect.origin.y = height - top;
         //rect.origin.y = buttom;
         NSRect inrect = rect;
         inrect.origin.x = 0;
         inrect.origin.y = 0;
-        NSLog(@"draw bound %d %d %d %d", left, right, top, buttom);
+       // NSLog(@"draw bound %d %d %d %d", left, right, top, buttom);
         NSBitmapImageRep *repout = [[NSBitmapImageRep alloc]
                                     initWithBitmapDataPlanes: NULL
                                     pixelsWide: newwidth

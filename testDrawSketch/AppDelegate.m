@@ -72,6 +72,10 @@
     convert_progress = [[NSThread alloc] initWithTarget:self selector:@selector(run_convert) object:nil];
     [convert_progress setName:@"Thread_convert"];
     [convert_progress start];
+    
+    //6.初始化左下角缩略图
+    [_resultimage setQuerydrawlist:querydraw];
+    //[resultimageview setQuerydrawlist:querydraw];
  /*   qi = [[query2image alloc]init];
     imagedatasource = [[scrollimagedelegate alloc]init];
     [qi setImagesource:imagedatasource];
@@ -251,10 +255,11 @@
         str = [str stringByAppendingString:[it filename]];
     }
     NSLog(@"current selected images %@", str);*/
-    [imagetrans cutalpha:@"/Users/xusea/sketch2photo/tdog.png" outimage:@"/Users/xusea/sketch2photo/t2dog.png"];
+   // [imagetrans cutalpha:@"/Users/xusea/sketch2photo/tdog.png" outimage:@"/Users/xusea/sketch2photo/t2dog.png"];
                                        
-    
-}
+    [_resultimage setNeedsDisplay:YES];
+
+}//debug end
 
 - (IBAction)trace2png:(id)sender {
     for(int i = 0; i < [[[_window contentView] subviews] count]; i ++)
@@ -282,7 +287,6 @@
     //[qi getimages];
     
     //[imagetrans resizeimage:@"/Users/xusea/matt/555.jpg" outimage:@"/Users/xusea/matt/556.jpg" newsize:NSMakeSize(400, 300)];
-    
 }
 
 - (IBAction)start:(id)sender {

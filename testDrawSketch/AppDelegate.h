@@ -53,6 +53,7 @@
 - (IBAction)statscore:(id)sender;
 - (IBAction)showscores:(id)sender;
 @property (weak) IBOutlet resultimageview *resultimage;
+@property (weak) IBOutlet resultimageview *riv;
 
 @end
 
