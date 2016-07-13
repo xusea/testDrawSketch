@@ -188,6 +188,18 @@
     NSString *dataPoint = [[NSString alloc] initWithBytes:data length:NUMBER_OF_CHARS encoding:NSUTF8StringEncoding];
     return dataPoint;
 }
+
+-(NSString *)getrandnum
+{
+    int NUMBER_OF_CHARS = 5;
+    char data[NUMBER_OF_CHARS];
+    for (int x=0;x < NUMBER_OF_CHARS; x++)
+    {
+        data[x] = ('0' + (arc4random_uniform(10)));
+    }
+    NSString *dataPoint = [[NSString alloc] initWithBytes:data length:NUMBER_OF_CHARS encoding:NSUTF8StringEncoding];
+    return dataPoint;
+}
 -(int)getimagesfromseresult:(NSURL *)filename sesource:(NSString*) se
 {
     NSString * filecontent = [NSString stringWithContentsOfFile:[[filename absoluteString] substringWithRange:NSMakeRange(7, [[filename absoluteString] length] - 7)]  encoding:NSUTF8StringEncoding error:nil];
@@ -207,11 +219,12 @@
             [image setUrl:url];
             [image setDownflag:0];
             [image setInd:[imageitemlist count]];
-            NSString * filename =[NSString stringWithFormat:@"%@/%@.%@", dir, [self getrandstr], suffix];
+            NSString * prefixstr = [self getrandnum];
+            NSString * filename =[NSString stringWithFormat:@"%@/%@%@.%@", dir,prefixstr, [self getrandstr], suffix];
             
-            NSString * grayname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
-            NSString * logname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
-            NSString * transparentname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
+            NSString * grayname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * logname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * transparentname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
             [image setFilename:filename];
             [image setGrayname:grayname];
             [image setLogname:logname];

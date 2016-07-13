@@ -46,6 +46,7 @@
 -(NSString *)getDocumentsPath;
 -(void)showResponseCode:(NSURLResponse *)response ;
 -(NSString *)getrandstr;
+-(NSString *)getrandnum;
 -(int)getimagesfromseresult:(NSURL *)filename sesource:(NSString*) se;
 -(imageitem *)getdownimageitem;
 -(void)statimagescore:(imageitem *)it;
