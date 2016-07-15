@@ -76,6 +76,10 @@ scrollimagedelegate * g_scrollimagedelegate;
 {
     //NSLog(@"call image count %lu ", (unsigned long)[scrollimages count]);
     //return [scrollimages count];
+    if([scrollimages count] < 10)
+    {
+        visiblerange = [scrollimages count];
+    }
     return visiblerange;
 }
 - (void)imageBrowserSelectionDidChange:(IKImageBrowserView *)aBrowser

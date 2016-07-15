@@ -353,7 +353,7 @@
 }
 -(void)resetbestimagescore
 {
-    int imagecount = [[imagesource scrollimages]count];
+    int imagecount = [[imagesource scrollimages] count];
     [imagesource setVisiblerange:imagecount];
     int bestind = [self bestimageind];
     float tempscore = -1;
