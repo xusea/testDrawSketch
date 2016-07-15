@@ -24,6 +24,7 @@
 @synthesize dir;
 @synthesize selectedimageind;
 @synthesize bestimageind;
+@synthesize visiblerange;
 - (id) init
 {
     if(self = [super init])
@@ -39,6 +40,7 @@
         dir = NSTemporaryDirectory();
         selectedimageind = -1;
         bestimageind = -1;
+        visiblerange = -1;
     }
     return self; 
 }
@@ -117,16 +119,23 @@
         }
         if([imaget type ]==1)
         {
+            NSString * imagename = [[downloadURL absoluteString] substringWithRange:NSMakeRange(7, [[downloadURL absoluteString] length] - 7)];
+            
+            if([self checkdownloadfile:imagename] !=0 )
+            {
+                return ;
+            }
             MyScrollImageObject * msi = [[MyScrollImageObject alloc]init];
             [msi setUrl:[NSURL URLWithString:orgurl]];
-            NSString * imagename = [[downloadURL absoluteString] substringWithRange:NSMakeRange(7, [[downloadURL absoluteString] length] - 7)];
+            
             NSImage * image =[[NSImage alloc]initWithContentsOfFile:imagename];
             [msi setI:image];
             [msi setTitle:@"123"];
             [msi setSubtitle:@"1_-1.0"];
             [[imagesource scrollimages] addObject:msi];
             [imaget setMyiobjectpoint:msi];
-            if(selectflag == 1)
+            //小于10的时候自动滚屏
+            if(selectflag == 1 && [[imagesource scrollimages] count] < 10)
             {
                 [ikipoint reloadData];
             }
@@ -237,7 +246,7 @@
         }
     }
     
-    for(int i = 0; i < [imageitemlist count] && i < 10; i++)
+    for(int i = 0; i < [imageitemlist count] && i < 30; i++)
     {
         imageitem * image = [imageitemlist objectAtIndex:i];
         [self downloadfile:[image url] file:[image filename]];
@@ -272,6 +281,11 @@
         {
             double score = [imagetrans imagecom:[dsketch tracefillcontourpath] rightfile:[temp logname]];
             [temp setScore:score];
+            
+            if(i > [self visiblerange])
+            {
+                break;
+            }
             NSString * subtitle = [[temp myiobjectpoint] subtitle];
             NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
             NSString * newsubtitle = [NSString stringWithFormat:@"%@_%f", [strs firstObject], score];
@@ -323,5 +337,60 @@
     }
 
     return it;
+}
+-(int)checkdownloadfile:(NSString *)filename
+{
+    NSImage * i = [[NSImage alloc]initWithContentsOfFile:filename];
+    if(i == nil)
+    {
+        return -1;
+    }
+    if([i size].width == 0 || [i size].height == 0)
+    {
+        return -2;
+    }
+    return 0;
+}
+-(void)resetbestimagescore
+{
+    int imagecount = [[imagesource scrollimages]count];
+    [imagesource setVisiblerange:imagecount];
+    int bestind = [self bestimageind];
+    float tempscore = -1;
+    if(bestind != -1)
+    {
+        tempscore = [[imageitemlist objectAtIndex:bestind] score];
+    }
+    for(int i = 0 ; i < [imageitemlist count]; i ++)
+    {
+        imageitem * temp = [imageitemlist objectAtIndex:i];
+        if([temp score] > 0.0001)
+        {
+            if(bestind < 0)
+            {
+                bestind = i;
+            }
+            else
+            {
+                if([temp score] < tempscore)
+                {
+                    bestind = i;
+                    tempscore = [temp score];
+                }
+            }
+        }
+    }
+    if(bestind != -1 && bestind != [self bestimageind])
+    {
+        imageitem * bit = [imageitemlist objectAtIndex:bestimageind];
+        NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
+        NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
+        [[bit myiobjectpoint]setSubtitle:oldsubtitle];
+        
+        NSString * newsubtitle = [NSString stringWithFormat:@"3_kkk"];
+        bit = [imageitemlist objectAtIndex:bestind];
+        [[bit myiobjectpoint]setSubtitle:newsubtitle];
+    }
+    [self setBestimageind:bestind];
 }
 @end

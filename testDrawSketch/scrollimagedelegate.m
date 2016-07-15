@@ -50,13 +50,14 @@
 scrollimagedelegate * g_scrollimagedelegate;
 @implementation scrollimagedelegate
 @synthesize scrollimages;
+@synthesize visiblerange;
 - (id) init
 {
     if(self = [super init])
     {
         //g_scrollimagedelegate = self;
         scrollimages = [[NSMutableArray alloc] init];
-        
+        visiblerange = 0;
        /* MyScrollImageObject * msi = [[MyScrollImageObject alloc]init];
         //[msi setUrl:@"http://111/111.html"];
         NSString * imagename = @"11234";
@@ -74,7 +75,8 @@ scrollimagedelegate * g_scrollimagedelegate;
 - (NSUInteger)numberOfItemsInImageBrowser:(IKImageBrowserView *)view
 {
     //NSLog(@"call image count %lu ", (unsigned long)[scrollimages count]);
-    return [scrollimages count];
+    //return [scrollimages count];
+    return visiblerange;
 }
 - (void)imageBrowserSelectionDidChange:(IKImageBrowserView *)aBrowser
 {

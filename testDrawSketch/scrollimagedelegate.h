@@ -27,7 +27,9 @@
 @interface scrollimagedelegate : NSObject
 {
     NSMutableArray * scrollimages;
+    int visiblerange;
 
 }
 @property NSMutableArray * scrollimages;
+@property int visiblerange;
 @end

@@ -377,6 +377,7 @@
                         [_scrollimagelist setDataSource:nil];
                         
                         [_scrollimagelist reloadData];
+                        
                         [_scrollimagelist setDataSource:[qi2 imagesource]];
                         [_scrollimagelist reloadData];
                     });
@@ -423,5 +424,8 @@
     }
     NSString *dataPoint = [[NSString alloc] initWithBytes:data length:NUMBER_OF_CHARS encoding:NSUTF8StringEncoding];
     return dataPoint;
+}
+- (IBAction)extend:(id)sender {
+    [[_scrollimagelist qi2point] resetbestimagescore];
 }
 @end

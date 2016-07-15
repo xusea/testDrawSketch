@@ -27,6 +27,7 @@
     NSString * dir;
     int bestimageind;
     int selectedimageind;
+    int visiblerange;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -40,6 +41,7 @@
 @property NSString * dir;
 @property int bestimageind;
 @property int selectedimageind;
+@property int visiblerange;
 
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
@@ -52,4 +54,6 @@
 -(void)statimagescore:(imageitem *)it;
 -(imageitem *)getbestimageitem;
 -(imageitem *)getselectedimageitem;
+-(int)checkdownloadfile:(NSString *)filename;
+-(void)resetbestimagescore;
 @end
