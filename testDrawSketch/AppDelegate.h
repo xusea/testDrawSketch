@@ -55,6 +55,7 @@
 @property (weak) IBOutlet resultimageview *resultimage;
 @property (weak) IBOutlet resultimageview *riv;
 - (IBAction)extend:(id)sender;
+@property (weak) IBOutlet NSButton *extendbutton;
 
 @end
 

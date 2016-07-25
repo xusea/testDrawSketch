@@ -75,6 +75,9 @@
     
     //6.初始化左下角缩略图
     [_resultimage setQuerydrawlist:querydraw];
+    
+    //7.右下角按钮
+    [_extendbutton setEnabled:YES];
     //[resultimageview setQuerydrawlist:querydraw];
  /*   qi = [[query2image alloc]init];
     imagedatasource = [[scrollimagedelegate alloc]init];
@@ -194,8 +197,52 @@
     [q2i setThumbnailViewpoint:tV];
     [q2i setDsketch:dS];
     [q2i setQuery:inputq];
+    [q2i setIkipoint:_scrollimagelist];
     [querydraw addObject:q2i];
     [tV setQ2ipoint:q2i];
+    
+    
+    //设置刚插入为最高优先级
+    //设置底部备选图片
+    [[tV buttomimagelist] setDataSource:[[tV q2ipoint] imagesource]];
+    //[[tV buttomimagelist] reloadData];
+    [_scrollimagelist setDataSource:[q2i imagesource]];
+    [_scrollimagelist reloadData];
+    [_scrollimagelist setQ2ipoint:q2i];
+    [q2i setSelectflag:1];
+    
+    [[tV edittext] setHidden:NO];
+    [[tV edittext] setStringValue:inputq];
+    [tV setSelectflag:1];
+    //[tV selectflag] = 1;
+    //bring front drawsketch
+
+    if([tV parentcollection] != nil)
+    {
+        for(int i = 0;i < [[[tV parentcollection] subviews] count];i ++)
+        {
+            NSString * classname = NSStringFromClass([[[[tV parentcollection] subviews]objectAtIndex:i] class]);
+            // NSLog(@"%@", classname);
+            if([classname isEqualToString:@"thumbnailView"])
+            {
+                thumbnailView * tv = (thumbnailView *)[[[tV parentcollection] subviews] objectAtIndex:i];
+                if(tv == tV)
+                {
+                    //NSLog(@"current selected item %d", i);
+                }
+                else
+                {
+                    [tv setSelectflag:0];
+                    [[tv edittext]setHidden:YES];
+                    
+                }
+                [tv setNeedsDisplay:YES];
+            }
+            
+            
+        }
+    }
+    ////////
     colorind = (colorind + 1) % [colorset count];
   /*  drawSketch *dS = [[drawSketch alloc]initWithFrame:NSMakeRect(100, 100, 100, 100)];
    // [_window contentView addSubview:dS];
@@ -373,7 +420,7 @@
                     //Background Thread
                     dispatch_async(dispatch_get_main_queue(), ^(void){
                         //Run UI Updates
-                        query2image * qi2 = [_scrollimagelist qi2point];
+                        query2image * qi2 = [_scrollimagelist q2ipoint];
                         [_scrollimagelist setDataSource:nil];
                         
                         [_scrollimagelist reloadData];
@@ -426,6 +473,7 @@
     return dataPoint;
 }
 - (IBAction)extend:(id)sender {
-    [[_scrollimagelist qi2point] resetbestimagescore];
+    NSLog(@"click extend button");
+    [[_scrollimagelist q2ipoint] resetbestimagescore];
 }
 @end

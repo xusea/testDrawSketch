@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="dSC" destination="rLz-3s-Ftd" id="mY2-6u-Od7"/>
+                <outlet property="extendbutton" destination="9Z8-wn-tgc" id="Wis-hV-G4H"/>
                 <outlet property="imageT" destination="9Ld-fz-4Dg" id="LzC-GY-nfd"/>
                 <outlet property="resultimage" destination="71C-Kq-chf" id="uRV-Ai-mdz"/>
                 <outlet property="scrollimagelist" destination="2fm-qJ-Rvz" id="KGR-gc-F1U"/>
@@ -727,11 +728,11 @@
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-fz-4Dg">
                         <rect key="frame" x="203" y="20" width="545" height="96"/>
                         <clipView key="contentView" ambiguous="YES" id="Vam-US-8Su">
-                            <rect key="frame" x="1" y="1" width="543" height="94"/>
+                            <rect key="frame" x="1" y="1" width="528" height="79"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fm-qJ-Rvz" customClass="scrollBrowserView">
-                                    <rect key="frame" x="0.0" y="0.0" width="181" height="94"/>
+                                    <rect key="frame" x="0.0" y="-15" width="181" height="94"/>
                                     <connections>
                                         <outlet property="_dataSource" destination="mPe-fk-axe" id="fdK-NW-OMu"/>
                                         <outlet property="_delegate" destination="mPe-fk-axe" id="GLJ-ua-hXH"/>
@@ -740,31 +741,31 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="NCM-98-jyw">
-                            <rect key="frame" x="1" y="79" width="543" height="16"/>
+                            <rect key="frame" x="1" y="80" width="528" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="5Yx-ol-a3t">
-                            <rect key="frame" x="528" y="1" width="16" height="94"/>
+                            <rect key="frame" x="529" y="1" width="15" height="79"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo5-o9-zgm">
                         <rect key="frame" x="11" y="124" width="183" height="395"/>
                         <clipView key="contentView" ambiguous="YES" id="u1y-WB-hFG">
-                            <rect key="frame" x="1" y="1" width="181" height="393"/>
+                            <rect key="frame" x="1" y="1" width="166" height="378"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pw0-Ge-geR">
-                                    <rect key="frame" x="0.0" y="299" width="181" height="94"/>
+                                    <rect key="frame" x="0.0" y="284" width="181" height="94"/>
                                 </view>
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="dTA-wu-JWA">
-                            <rect key="frame" x="1" y="378" width="181" height="16"/>
+                            <rect key="frame" x="1" y="379" width="166" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="54T-Kb-gPs">
-                            <rect key="frame" x="166" y="1" width="16" height="393"/>
+                            <rect key="frame" x="167" y="1" width="15" height="378"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -809,7 +810,7 @@
                     </customView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Z8-wn-tgc">
                         <rect key="frame" x="756" y="20" width="31" height="96"/>
-                        <buttonCell key="cell" type="bevel" title="&gt;" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="D3G-Uz-xxl">
+                        <buttonCell key="cell" type="bevel" title="&gt;" alternateTitle="=" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="D3G-Uz-xxl">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>

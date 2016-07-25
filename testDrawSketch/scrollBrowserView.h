@@ -11,5 +11,5 @@
 {
     query2image * q2ipoint;
 }
-@property query2image * qi2point;
+@property query2image * q2ipoint;
 @end

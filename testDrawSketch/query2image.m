@@ -135,10 +135,17 @@
             [[imagesource scrollimages] addObject:msi];
             [imaget setMyiobjectpoint:msi];
             //小于10的时候自动滚屏
-            if(selectflag == 1 && [[imagesource scrollimages] count] < 10)
+            if([[imagesource scrollimages] count] < 10)
             {
-                [ikipoint reloadData];
+                
+                [imagesource setVisiblerange:(int)[[imagesource scrollimages] count] ];
+                [self setVisiblerange:(int)[[imagesource scrollimages] count] ];
+                if(selectflag == 1)
+                {
+                    [ikipoint reloadData];
+                }
             }
+            
         }
         //NSLog(@"downnewfile %@", location);
     }
@@ -355,6 +362,7 @@
 {
     int imagecount = [[imagesource scrollimages] count];
     [imagesource setVisiblerange:imagecount];
+    [ikipoint reloadData];
     int bestind = [self bestimageind];
     float tempscore = -1;
     if(bestind != -1)

@@ -10,7 +10,7 @@
 #import "scrollCell.h"
 #import "query2image.h"
 @implementation scrollBrowserView
-@synthesize qi2point;
+@synthesize q2ipoint;
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     /*NSRect bound = [self frame];

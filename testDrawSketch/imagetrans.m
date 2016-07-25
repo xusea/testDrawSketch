@@ -465,7 +465,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSImage * oimage = [[NSImage alloc]initWithContentsOfFile:orgimage];
     if(oimage == nil)
     {
-        NSLog(@"cutalpah cann't open file %@", orgimage);
+        NSLog(@"fillalpha cann't open file %@", orgimage);
         return ;
     }
     int width = [oimage size].width;

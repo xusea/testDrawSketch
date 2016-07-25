@@ -150,7 +150,7 @@
     //设置底部备选图片
     [buttomimagelist setDataSource:[[self q2ipoint] imagesource]];
     [buttomimagelist reloadData];
-    [buttomimagelist setQi2point:[self q2ipoint]];
+    [buttomimagelist setQ2ipoint:[self q2ipoint]];
     //设置自动reload新下载图片
     [q2ipoint setSelectflag:1];
     
