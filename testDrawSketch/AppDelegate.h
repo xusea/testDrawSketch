@@ -56,6 +56,8 @@
 @property (weak) IBOutlet resultimageview *riv;
 - (IBAction)extend:(id)sender;
 @property (weak) IBOutlet NSButton *extendbutton;
+- (IBAction)showindex:(id)sender;
+- (IBAction)scrollposition:(id)sender;
 
 @end
 

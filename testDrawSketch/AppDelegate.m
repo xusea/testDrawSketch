@@ -420,13 +420,15 @@
                     //Background Thread
                     dispatch_async(dispatch_get_main_queue(), ^(void){
                         //Run UI Updates
+                        [_scrollimagelist setNeedsDisplay:YES];
+                        /*
                         query2image * qi2 = [_scrollimagelist q2ipoint];
                         [_scrollimagelist setDataSource:nil];
                         
                         [_scrollimagelist reloadData];
                         
                         [_scrollimagelist setDataSource:[qi2 imagesource]];
-                        [_scrollimagelist reloadData];
+                        [_scrollimagelist reloadData];*/
                     });
                 });
                 /*dispatch_async(dispatch_get_main_queue(), ^{
@@ -476,4 +478,17 @@
     NSLog(@"click extend button");
     [[_scrollimagelist q2ipoint] resetbestimagescore];
 }
+- (IBAction)showindex:(id)sender {
+    NSIndexSet * indexset = [_scrollimagelist visibleItemIndexes];
+    NSUInteger ind;
+    for(ind = [indexset firstIndex]; ind != NSNotFound; ind = [indexset indexGreaterThanIndex:ind])
+    {
+        NSLog(@"%ld", ind);
+    }
+}
+
+- (IBAction)scrollposition:(id)sender {
+    [_scrollimagelist scrollIndexToVisible:3];
+}
+
 @end
