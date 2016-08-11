@@ -78,7 +78,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
     }
     if( [type isEqualToString:IKImageBrowserCellForegroundLayer])
     {
-        CALayer * foregroundlayer = [CALayer layer];
+       /* CALayer * foregroundlayer = [CALayer layer];
         foregroundlayer.frame = frame;
         [foregroundlayer setNeedsDisplay];
         
@@ -87,7 +87,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         setBundleImageOnLayer(glossyLayer, CFSTR("tick.png"));
         [foregroundlayer addSublayer:glossyLayer];
 
-        return foregroundlayer;
+        return foregroundlayer;*/
     }
     return [super layerForType:type];
 }

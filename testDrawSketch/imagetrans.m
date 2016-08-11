@@ -113,7 +113,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSImage * oimage = [[NSImage alloc]initWithContentsOfFile:orgimage];
     if(gimage == nil || oimage == nil)
     {
-        NSLog(@"imagesketch cann't open file [%@][%@]", grayimage, orgimage);
+        //NSLog(@"imagesketch cann't open file [%@][%@]", grayimage, orgimage);
         return;
     }
     int width = [gimage size].width;
@@ -249,7 +249,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSImage * oimage = [[NSImage alloc]initWithContentsOfFile:orgimage];
     if(oimage == nil)
     {
-        NSLog(@"cutalpah cann't open file %@", orgimage);
+        //NSLog(@"cutalpah cann't open file %@", orgimage);
         return ;
     }
     int width = [oimage size].width;
@@ -366,7 +366,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSImage * image_dpi = [[NSImage alloc]initByReferencingFile:orgimage];
     if(image_dpi == nil)
     {
-        NSLog(@"convertDPI72 cann't open file %@", orgimage);
+        //NSLog(@"convertDPI72 cann't open file %@", orgimage);
         return;
     }
     int width = [image_dpi size].width;
@@ -415,7 +415,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSImage * image_dpi = [[NSImage alloc]initByReferencingFile:orgimage];
     if(image_dpi == nil)
     {
-        NSLog(@"resizeimage cann't open file %@", orgimage);
+        //NSLog(@"resizeimage cann't open file %@", orgimage);
         return ;
     }
     float width = [image_dpi size].width;
@@ -465,7 +465,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSImage * oimage = [[NSImage alloc]initWithContentsOfFile:orgimage];
     if(oimage == nil)
     {
-        NSLog(@"fillalpha cann't open file %@", orgimage);
+        //NSLog(@"fillalpha cann't open file %@", orgimage);
         return ;
     }
     int width = [oimage size].width;

@@ -134,6 +134,8 @@
             [msi setSubtitle:@"1_-1.0"];
             [[imagesource scrollimages] addObject:msi];
             [imaget setMyiobjectpoint:msi];
+            int ind = [[imagesource scrollimages] count];
+            [imaget setInd:ind];
             //小于10的时候自动滚屏
             if([[imagesource scrollimages] count] < 10)
             {
@@ -246,6 +248,7 @@
             [image setLogname:logname];
             [image setTransparentname:transparentname];
             [image setMyiobjectpoint:nil];
+            [image setInd:-1];
             [imageitemlist addObject:image];
             
             [url2file setObject:image forKey:url];
@@ -287,37 +290,46 @@
         if(temp == it)
         {
             double score = [imagetrans imagecom:[dsketch tracefillcontourpath] rightfile:[temp logname]];
+            //NSLog(@"score %lf", score);
             [temp setScore:score];
             
-            if(i > [self visiblerange])
-            {
-                break;
-            }
             NSString * subtitle = [[temp myiobjectpoint] subtitle];
             NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
             NSString * newsubtitle = [NSString stringWithFormat:@"%@_%f", [strs firstObject], score];
-            if(score < 0)
+            if([temp ind] > [self visiblerange])
             {
-                break;
-            }
-            if(bestimageind == -1)
-            {
-                bestimageind = i;
-                newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
                 
             }
-            else if(bestimageind > -1 && bestimageind < [imageitemlist count])
+            else
             {
-                imageitem * bit = [imageitemlist objectAtIndex:bestimageind];
-                double mscore = [bit score];
-                if(score > 0.0001 && score < mscore)
+                if(score < 0)
                 {
-                    //修改旧的属性
-                    NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
-                    NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
-                    [[bit myiobjectpoint]setSubtitle:oldsubtitle];
-                    bestimageind = i;
-                    newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
+
+                }
+                else
+                {
+                    if(bestimageind == -1)
+                    {
+                        bestimageind = i;
+                        newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
+                        NSLog(@"top score %d %lf", bestimageind, score);
+                        
+                    }
+                    else if(bestimageind > -1 && bestimageind < [imageitemlist count])
+                    {
+                        imageitem * bit = [imageitemlist objectAtIndex:bestimageind];
+                        double mscore = [bit score];
+                        if(score > 0.0001 && score < mscore && i != bestimageind)
+                        {
+                            NSLog(@"haha top score %d %lf", i ,score);
+                            //修改旧的属性
+                            NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
+                            NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
+                            [[bit myiobjectpoint]setSubtitle:oldsubtitle];
+                            bestimageind = i;
+                            newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
+                        }
+                    }
                 }
             }
             [[temp myiobjectpoint]setSubtitle:newsubtitle];
@@ -395,7 +407,7 @@
         NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
         [[bit myiobjectpoint]setSubtitle:oldsubtitle];
         
-        NSString * newsubtitle = [NSString stringWithFormat:@"3_kkk"];
+        NSString * newsubtitle = [NSString stringWithFormat:@"3_%f", tempscore];
         bit = [imageitemlist objectAtIndex:bestind];
         [[bit myiobjectpoint]setSubtitle:newsubtitle];
     }
