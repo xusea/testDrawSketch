@@ -7,7 +7,8 @@
 //
 
 #import "scrollimagedelegate.h"
-
+#import "scrollBrowserView.h"
+#import "query2image.h"
 @implementation MyScrollImageObject
 
 @synthesize url;
@@ -84,20 +85,25 @@ scrollimagedelegate * g_scrollimagedelegate;
 }
 - (void)imageBrowserSelectionDidChange:(IKImageBrowserView *)aBrowser
 {
-    /* NSLog(@"holy fuck");
-     NSIndexSet * ind = [aBrowser selectionIndexes];
-     //ind = [imagebrowsertemplet selectionIndexes];
+    NSLog(@"holy fuck");
+    NSIndexSet * ind = [aBrowser selectionIndexes];
+    
+    scrollBrowserView * sBV = (scrollBrowserView *)aBrowser;
+    query2image * q2i = [sBV q2ipoint];
+    
+    //ind = [imagebrowsertemplet selectionIndexes];
      int a = (int)[ind firstIndex];
      if(a>=0 || a<[scrollimages count])
      {
-     NSLog(@"ffffont name :%@ ",[[fontArray objectAtIndex:a] fontname]);
-     [tv settextfontname:[[fontArray objectAtIndex:a] fontname]];
+         MyScrollImageObject *mio = [[[q2i imagesource] scrollimages] objectAtIndex:a];
+         NSLog(@"subtit name :%@ ",[mio subtitle]);
+         ;
      //[tv setdisplayfont:[NSFont fontWithName:[[fontArray objectAtIndex:a] fontname] size:15.0]];
      }
      else
      {
-     NSLog(@"out of bound");
+         NSLog(@"out of bound");
      }
-     */
+    
 }
 @end
