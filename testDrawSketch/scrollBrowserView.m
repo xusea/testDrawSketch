@@ -104,15 +104,49 @@
 {
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     
-    NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
-  
+    //NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
+    int idx = [self getindexfrompoint:currentPosition];
+    if(idx != -1)
+    {
+        MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:idx];
+        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"1"];
+        [mio setSubtitle:newsubtitle];
+    }
+    else
+    {
+        NSLog(@"entered ???");
+    }
+    [self setNeedsDisplay:YES];
     //NSLog(@"entered %d", [self getindexfrompoint:currentPosition]);
 }
 - (void)mouseExited:(NSEvent *)theEvent
 {
-    NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-    
-    NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
+    for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
+    {
+        MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
+        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"0"];
+        [mio setSubtitle:newsubtitle];
+    }
+    [self setNeedsDisplay:YES];
+   /* NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSLog(@"exited point [%lf %lf]", currentPosition.x, currentPosition.y);
+    int x[4] = {0,2,0,-2};
+    int y[4] = {2,0,-2,0};
+    for(int i = 0;i < 4;i ++)
+    {
+        NSPoint p = currentPosition;
+        p.x += x[i];
+        p.y += y[i];
+        int ind = [self getindexfrompoint:p];
+        if(ind != -1)
+        {
+            NSLog(@"exited %d", ind);
+            return;
+        }
+    }*/
+    //NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
     
     //NSLog(@"exited %d", [self getindexfrompoint:currentPosition]);
 }
@@ -141,8 +175,8 @@
         return -1;
     }
     int ind = (point.x - targetrect.origin.x ) / (targetrect.size.width + cellspace);
-    if(point.x > (ind * (targetrect.size.width + cellspace) + targetrect.origin.x)
-       && point.x < (ind * (targetrect.size.width + cellspace) + targetrect.origin.x + targetrect.size.width))
+    if(point.x >= (ind * (targetrect.size.width + cellspace) + targetrect.origin.x)
+       && point.x <= (ind * (targetrect.size.width + cellspace) + targetrect.origin.x + targetrect.size.width))
     {
         return ind;
     }

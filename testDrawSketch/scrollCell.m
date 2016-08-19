@@ -148,6 +148,22 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
             NSAttributedString * currentText =[[NSAttributedString alloc] initWithString:score attributes: attributes];
             [currentText drawAtPoint:bound.origin];
         }
+        
+        //画mouse over
+        if([strs count] >2)
+        {
+            NSString * mouseover = [strs objectAtIndex:2];
+            if([mouseover isEqualToString:@"1"])
+            {
+                NSRect bound = [self frame];
+                bound.origin.x = -5;
+                bound.origin.y = -5;
+                bound.size.width += 10;
+                bound.size.height += 10;
+                NSImage * borderimg = [NSImage imageNamed:@"red.png"];
+                [borderimg drawInRect:bound];
+            }
+        }
     }
     else
     {
