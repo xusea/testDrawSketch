@@ -47,6 +47,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         internalimageframe.origin.y += 3;
         internalimageframe.size.width -= 6;
         internalimageframe.size.height -= 6;
+       
     }
     return self;
 }

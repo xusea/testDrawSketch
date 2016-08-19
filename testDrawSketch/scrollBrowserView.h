@@ -12,8 +12,14 @@
     query2image * q2ipoint;
     int enteredind;
     NSPoint fixpos;
+    NSRect targetrect;
+    int cellspace;
 }
 @property query2image * q2ipoint;
 @property int enteredind;
 @property NSPoint fixpos;
+@property NSRect targetrect;
+@property int cellspace;
+-(int)getindexfrompoint:(NSPoint)point;
+-(void)initial;
 @end
