@@ -18,15 +18,22 @@
 -(void)initial
 {
     enteredind = -1;
-    NSTrackingAreaOptions options = NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways|NSTrackingAssumeInside;
-    NSTrackingArea *area = [[NSTrackingArea alloc] initWithRect:self.bounds options:options owner:self userInfo:nil];
-    [self addTrackingArea:area];
     
     targetrect.origin.x = 10;
     targetrect.origin.y = 10;
     targetrect.size.height = 115;
     targetrect.size.width = 100;
     cellspace = 20;
+    
+/*NSTrackingAreaOptions options = NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways|NSTrackingAssumeInside;
+    for(int i = 0; i < 2; i ++)
+    {
+        NSRect rect = targetrect;
+        rect.origin.x = targetrect.origin.x + (targetrect.size.width + cellspace) * i;
+
+        NSTrackingArea *area = [[NSTrackingArea alloc] initWithRect:rect options:options owner:self userInfo:nil];
+        [self addTrackingArea:area];
+    }*/
 }
 - (id)initWithFrame:(NSRect)frame
 {
@@ -99,39 +106,33 @@
     
     NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
   
-
+    //NSLog(@"entered %d", [self getindexfrompoint:currentPosition]);
 }
 - (void)mouseExited:(NSEvent *)theEvent
 {
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     
     NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
+    
+    //NSLog(@"exited %d", [self getindexfrompoint:currentPosition]);
 }
 - (void)updateTrackingAreas
 {
-   // NSLog(@"bounds %lf %lf ", [self bounds].size.width, [self bounds].size.height);
-    NSTrackingAreaOptions options = NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways|NSTrackingAssumeInside;
-    NSTrackingArea *area = [[NSTrackingArea alloc] initWithRect:self.bounds
-                                                        options:options
-                                                          owner:self
-                                                       userInfo:nil];
-    [self addTrackingArea:area];
-   /* for(int i = 0; i< [[self trackingAreas] count]; i ++)
+    for(int i = 0; i< [[self trackingAreas] count]; i ++)
     {
         NSTrackingArea * ta = [[self trackingAreas] objectAtIndex:i];
         [self removeTrackingArea:ta];
     }
-    for(int i = 0 ;i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
+    
+    NSTrackingAreaOptions options = NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways|NSTrackingAssumeInside;
+    for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
     {
-        NSRect rect = [self itemFrameAtIndex:i];;
-        NSLog(@"area %lf %lf %lf %lf", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
-        int opts = (NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways);
-        NSTrackingArea * trackingArea = [ [NSTrackingArea alloc] initWithRect:rect
-                                                     options:opts
-                                                       owner:self
-                                                    userInfo:nil];
-        [self addTrackingArea:trackingArea];
-    }*/
+        NSRect rect = targetrect;
+        rect.origin.x = targetrect.origin.x + (targetrect.size.width + cellspace) * i;
+    
+        NSTrackingArea *area = [[NSTrackingArea alloc] initWithRect:rect options:options owner:self userInfo:nil];
+        [self addTrackingArea:area];
+    }
 }
 -(int)getindexfrompoint:(NSPoint)point
 {
