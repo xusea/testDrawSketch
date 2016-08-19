@@ -24,16 +24,7 @@
     targetrect.size.height = 115;
     targetrect.size.width = 100;
     cellspace = 20;
-    
-/*NSTrackingAreaOptions options = NSTrackingMouseEnteredAndExited|NSTrackingActiveAlways|NSTrackingAssumeInside;
-    for(int i = 0; i < 2; i ++)
-    {
-        NSRect rect = targetrect;
-        rect.origin.x = targetrect.origin.x + (targetrect.size.width + cellspace) * i;
 
-        NSTrackingArea *area = [[NSTrackingArea alloc] initWithRect:rect options:options owner:self userInfo:nil];
-        [self addTrackingArea:area];
-    }*/
 }
 - (id)initWithFrame:(NSRect)frame
 {
