@@ -725,30 +725,6 @@
                             <action selector="testdownfile:" target="Voe-Tx-rLC" id="Ddb-U4-M3J"/>
                         </connections>
                     </button>
-                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-fz-4Dg">
-                        <rect key="frame" x="203" y="20" width="545" height="96"/>
-                        <clipView key="contentView" ambiguous="YES" id="Vam-US-8Su">
-                            <rect key="frame" x="1" y="1" width="543" height="94"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fm-qJ-Rvz" customClass="scrollBrowserView">
-                                    <rect key="frame" x="0.0" y="0.0" width="181" height="94"/>
-                                    <connections>
-                                        <outlet property="_dataSource" destination="mPe-fk-axe" id="fdK-NW-OMu"/>
-                                        <outlet property="_delegate" destination="mPe-fk-axe" id="GLJ-ua-hXH"/>
-                                    </connections>
-                                </view>
-                            </subviews>
-                        </clipView>
-                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="NCM-98-jyw">
-                            <rect key="frame" x="1" y="79" width="543" height="16"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="5Yx-ol-a3t">
-                            <rect key="frame" x="529" y="1" width="15" height="94"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo5-o9-zgm">
                         <rect key="frame" x="11" y="124" width="183" height="395"/>
                         <clipView key="contentView" ambiguous="YES" id="u1y-WB-hFG">
@@ -838,6 +814,30 @@
                             <action selector="scrollposition:" target="Voe-Tx-rLC" id="bra-MX-H9I"/>
                         </connections>
                     </button>
+                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-fz-4Dg">
+                        <rect key="frame" x="203" y="20" width="545" height="96"/>
+                        <clipView key="contentView" ambiguous="YES" id="Vam-US-8Su">
+                            <rect key="frame" x="1" y="1" width="543" height="94"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fm-qJ-Rvz" customClass="scrollBrowserView">
+                                    <rect key="frame" x="0.0" y="0.0" width="181" height="94"/>
+                                    <connections>
+                                        <outlet property="_dataSource" destination="mPe-fk-axe" id="fdK-NW-OMu"/>
+                                        <outlet property="_delegate" destination="mPe-fk-axe" id="GLJ-ua-hXH"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="NCM-98-jyw">
+                            <rect key="frame" x="1" y="79" width="543" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="5Yx-ol-a3t">
+                            <rect key="frame" x="529" y="1" width="15" height="94"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
                 </subviews>
             </view>
         </window>

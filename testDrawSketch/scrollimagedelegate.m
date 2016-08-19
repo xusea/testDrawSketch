@@ -85,7 +85,7 @@ scrollimagedelegate * g_scrollimagedelegate;
 }
 - (void)imageBrowserSelectionDidChange:(IKImageBrowserView *)aBrowser
 {
-    NSLog(@"holy fuck");
+    
     NSIndexSet * ind = [aBrowser selectionIndexes];
     
     scrollBrowserView * sBV = (scrollBrowserView *)aBrowser;
@@ -93,12 +93,18 @@ scrollimagedelegate * g_scrollimagedelegate;
     
     //ind = [imagebrowsertemplet selectionIndexes];
      int a = (int)[ind firstIndex];
-     if(a>=0 || a<[scrollimages count])
+     if(a>=0 || a<[[[q2i imagesource] scrollimages] count])
      {
          MyScrollImageObject *mio = [[[q2i imagesource] scrollimages] objectAtIndex:a];
+        /* for(int i = 0;i < [[q2i imageitemlist] count]; i ++)
+         {
+             if(mio == [[[q2i imageitemlist]objectAtIndex:i] myiobjectpoint])
+             {
+                 [q2i setSelectedimageind:i];
+                 
+             }
+         }*/
          NSLog(@"subtit name :%@ ",[mio subtitle]);
-         ;
-     //[tv setdisplayfont:[NSFont fontWithName:[[fontArray objectAtIndex:a] fontname] size:15.0]];
      }
      else
      {

@@ -10,6 +10,10 @@
 @interface scrollBrowserView : IKImageBrowserView
 {
     query2image * q2ipoint;
+    int enteredind;
+    NSPoint fixpos;
 }
 @property query2image * q2ipoint;
+@property int enteredind;
+@property NSPoint fixpos;
 @end
