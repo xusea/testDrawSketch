@@ -24,6 +24,7 @@
 @synthesize thumbnailbounds;
 @synthesize q2ipoint;
 @synthesize buttomimagelist;
+@synthesize backgroundbutton;
 - (id) init
 {
     if(self = [super init])
@@ -43,6 +44,15 @@
         thumbnailbounds.size.height = 26;
         thumbnailbounds.size.width = 26;
         //为子类增加属性进行初始化
+        //设置是否为背景button属性
+        backgroundbutton = [[NSButton alloc]init];
+        NSRect buttonframe = NSMakeRect(0, 20, 10, 10);
+        [backgroundbutton setFrame:buttonframe];
+        [backgroundbutton setTitle:@"T"];
+        //backgroundbutton.bezelStyle = NSRoundedBezelStyle;
+        [backgroundbutton setTarget:self];
+        [backgroundbutton setAction:@selector(backgroundbuttonclick:)];
+        [self addSubview:backgroundbutton];
     }
     return self;
 }
@@ -214,5 +224,37 @@
     cp.x += thumbnailbounds.origin.x;
     cp.y += thumbnailbounds.origin.y;
     return cp;
+}
+
+-(void)backgroundbuttonclick:(id)sender
+{
+    if(parentcollection != nil)
+    {
+        for(int i = 0;i < [[parentcollection subviews] count];i ++)
+        {
+            NSString * classname = NSStringFromClass([[[parentcollection subviews]objectAtIndex:i] class]);
+            // NSLog(@"%@", classname);
+            if([classname isEqualToString:@"thumbnailView"])
+            {
+                thumbnailView * tv = (thumbnailView *)[[parentcollection subviews] objectAtIndex:i];
+                if(tv == self)
+                {
+                    [[tv q2ipoint] setBackgroundflag:1];
+                    //NSLog(@"current selected item %d", i);
+                }
+                else
+                {
+                    [[tv q2ipoint] setBackgroundflag:0];
+                    [tv setSelectflag:0];
+                    [[tv edittext]setHidden:YES];
+                    
+                }
+                [tv setNeedsDisplay:YES];
+            }
+            
+            
+        }
+    }
+    //NSLog(@"click background");
 }
 @end

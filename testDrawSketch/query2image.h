@@ -28,6 +28,7 @@
     int bestimageind;
     int selectedimageind;
     int visiblerange;
+    int backgroundflag;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -42,7 +43,7 @@
 @property int bestimageind;
 @property int selectedimageind;
 @property int visiblerange;
-
+@property int backgroundflag;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;

@@ -30,6 +30,7 @@
     query2image * q2ipoint;
     //IKImageBrowserView * buttomimagelist;
     scrollBrowserView * buttomimagelist;
+    NSButton * backgroundbutton;
 }
 @property NSString * query;
 @property NSImage * thumbnailsketch;
@@ -45,6 +46,7 @@
 @property NSRect thumbnailbounds;
 @property query2image * q2ipoint;
 @property IKImageBrowserView * buttomimagelist;
+@property NSButton * backgroundbutton;
 -(void)setcurrentquery:(NSString *)q;
 -(NSPoint)convertthumbnailpoint:(NSPoint) inpoint leftbuttom:(NSPoint)lbpoint righttop:(NSPoint)rtpoint;
 @end

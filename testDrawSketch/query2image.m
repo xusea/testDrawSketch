@@ -25,6 +25,7 @@
 @synthesize selectedimageind;
 @synthesize bestimageind;
 @synthesize visiblerange;
+@synthesize backgroundflag;
 - (id) init
 {
     if(self = [super init])
@@ -41,6 +42,7 @@
         selectedimageind = -1;
         bestimageind = -1;
         visiblerange = -1;
+        backgroundflag = 0;
     }
     return self; 
 }

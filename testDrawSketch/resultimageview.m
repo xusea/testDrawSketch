@@ -27,6 +27,10 @@
     for(int i = 0; i < [querydrawlist count]; i ++)
     {
         query2image * q2i = [querydrawlist objectAtIndex:i];
+        if([q2i backgroundflag] == 1)
+        {
+            continue;
+        }
         imageitem * it = [q2i getbestimageitem];
         NSImage * image = [[NSImage alloc]initWithContentsOfFile:[it transparentname]];
         NSRect drawrect;
