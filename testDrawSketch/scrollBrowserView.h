@@ -14,12 +14,14 @@
     NSPoint fixpos;
     NSRect targetrect;
     int cellspace;
+    NSImageView * bigsizeimage;
 }
 @property query2image * q2ipoint;
 @property int enteredind;
 @property NSPoint fixpos;
 @property NSRect targetrect;
 @property int cellspace;
+@property NSImageView * bigsizeimage;
 -(int)getindexfrompoint:(NSPoint)point;
 -(void)initial;
 @end

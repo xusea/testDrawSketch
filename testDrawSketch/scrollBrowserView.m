@@ -15,6 +15,7 @@
 @synthesize fixpos;
 @synthesize targetrect;
 @synthesize cellspace;
+@synthesize bigsizeimage;
 -(void)initial
 {
     enteredind = -1;
@@ -103,16 +104,30 @@
         NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
         NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"1"];
         [mio setSubtitle:newsubtitle];
+        for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
+        {
+            if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
+            {
+                
+                [bigsizeimage setHidden:NO];
+                imageitem * it = [[[self q2ipoint] imageitemlist]objectAtIndex:i];
+                NSImage * image = [[NSImage alloc] initWithContentsOfFile:[it filename]];
+                [bigsizeimage setImage:image];
+            }
+        }
     }
     else
     {
         NSLog(@"entered ???");
     }
     [self setNeedsDisplay:YES];
+    
+    
     //NSLog(@"entered %d", [self getindexfrompoint:currentPosition]);
 }
 - (void)mouseExited:(NSEvent *)theEvent
 {
+    [bigsizeimage setHidden:YES];
     for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
     {
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];

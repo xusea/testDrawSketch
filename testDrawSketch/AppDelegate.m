@@ -79,6 +79,10 @@
     
     //7.右下角按钮
     [_extendbutton setEnabled:YES];
+    
+    //8.放大缩略图
+    [_bigsizeimage setHidden:YES];
+    [_scrollimagelist setBigsizeimage:_bigsizeimage];
     //[resultimageview setQuerydrawlist:querydraw];
  /*   qi = [[query2image alloc]init];
     imagedatasource = [[scrollimagedelegate alloc]init];
@@ -489,7 +493,8 @@
 }
 
 - (IBAction)scrollposition:(id)sender {
-    [_scrollimagelist scrollIndexToVisible:3];
+    [_bigsizeimage setHidden:YES];
+    //[_scrollimagelist scrollIndexToVisible:3];
 }
 
 @end

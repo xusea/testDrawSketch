@@ -58,6 +58,7 @@
 @property (weak) IBOutlet NSButton *extendbutton;
 - (IBAction)showindex:(id)sender;
 - (IBAction)scrollposition:(id)sender;
+@property (weak) IBOutlet NSImageView *bigsizeimage;
 
 @end
 
