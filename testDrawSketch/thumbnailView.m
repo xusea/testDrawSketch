@@ -58,6 +58,17 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
+    //画背景黑框
+    if([[self q2ipoint] backgroundflag ]==1)
+    {
+        NSRect bound = [self bounds];
+        NSBezierPath *trace = [[NSBezierPath alloc]init];
+        [trace setLineWidth:3];
+        [[NSColor blackColor]set];
+        [trace appendBezierPathWithRect:bound];
+        [trace closePath];
+        [trace stroke];
+    }
      //画边框
     if(selectflag == 1)
     {
@@ -239,7 +250,8 @@
                 thumbnailView * tv = (thumbnailView *)[[parentcollection subviews] objectAtIndex:i];
                 if(tv == self)
                 {
-                    [[tv q2ipoint] setBackgroundflag:1];
+                    
+                    [[tv q2ipoint] setBackgroundflag:1 - [[tv q2ipoint] backgroundflag]];
                     //NSLog(@"current selected item %d", i);
                 }
                 else

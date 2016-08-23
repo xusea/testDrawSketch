@@ -24,6 +24,85 @@
     {
         return;
     }
+    
+    for(int i = 0; i < [querydrawlist count] * 2 ; i++)
+    {
+        query2image * q2i = [querydrawlist objectAtIndex:i % [querydrawlist count]];
+        if((i < [querydrawlist count]  && [q2i backgroundflag] != 1)
+           ||(i >= [querydrawlist count]  && [q2i backgroundflag] == 1))
+        {
+            continue;
+        }
+        //NSLog(@"%lu", i % [querydrawlist count]);
+        imageitem * it = [q2i getbestimageitem];
+        NSImage * image;
+        NSRect drawrect;
+        if(i < [querydrawlist count])
+        {
+            image = [[NSImage alloc]initWithContentsOfFile:[it filename]];
+            drawrect = [self frame];
+        }
+        else
+        {
+            image = [[NSImage alloc]initWithContentsOfFile:[it transparentname]];
+        
+        
+            drawrect.origin.x = 0;
+            drawrect.origin.y = 0;
+            drawrect.size.width =  [[q2i dsketch] righttop].x - [[q2i dsketch]leftbuttom].x;
+            drawrect.size.height = [[q2i dsketch] righttop].y - [[q2i dsketch] leftbuttom].y;
+            NSPoint drawpoint =[[q2i dsketch]leftbuttom];
+            
+            float radio = 1.0;
+            if([self frame].size.width / [self frame].size.height > [[q2i dsketch] frame].size.width / [[q2i dsketch] frame].size.height)
+            {
+                radio = [self frame].size.width / [[q2i dsketch] frame].size.width;
+            }
+            else
+            {
+                radio = [self frame].size.height / [[q2i dsketch] frame].size.height;
+            }
+            drawpoint.x *= radio;
+            drawpoint.y *= radio;
+            drawrect.size.width *=  radio;
+            drawrect.size.height *= radio;
+            drawrect.origin = drawpoint;
+        }
+        [image drawInRect:drawrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+    }
+    return;
+    for(int i = 0; i < [querydrawlist count]; i ++)
+    {
+        query2image * q2i = [querydrawlist objectAtIndex:i];
+        if([q2i backgroundflag] != 1)
+        {
+            continue;
+        }
+        imageitem * it = [q2i getbestimageitem];
+        NSImage * image = [[NSImage alloc]initWithContentsOfFile:[it transparentname]];
+        NSRect drawrect;
+        drawrect.origin.x = 0;
+        drawrect.origin.y = 0;
+        drawrect.size.width =  [[q2i dsketch] righttop].x - [[q2i dsketch]leftbuttom].x;
+        drawrect.size.height = [[q2i dsketch] righttop].y - [[q2i dsketch] leftbuttom].y;
+        NSPoint drawpoint =[[q2i dsketch]leftbuttom];
+        
+        float radio = 1.0;
+        if([self frame].size.width / [self frame].size.height > [[q2i dsketch] frame].size.width / [[q2i dsketch] frame].size.height)
+        {
+            radio = [self frame].size.width / [[q2i dsketch] frame].size.width;
+        }
+        else
+        {
+            radio = [self frame].size.height / [[q2i dsketch] frame].size.height;
+        }
+        drawpoint.x *= radio;
+        drawpoint.y *= radio;
+        drawrect.size.width *=  radio;
+        drawrect.size.height *= radio;
+        drawrect.origin = drawpoint;
+        [image drawInRect:drawrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+    }
     for(int i = 0; i < [querydrawlist count]; i ++)
     {
         query2image * q2i = [querydrawlist objectAtIndex:i];
