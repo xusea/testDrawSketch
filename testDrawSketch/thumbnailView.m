@@ -64,10 +64,10 @@
         NSRect bound = [self bounds];
         NSBezierPath *trace = [[NSBezierPath alloc]init];
         [trace setLineWidth:3];
-        [[NSColor blackColor]set];
+        [[NSColor grayColor]set];
         [trace appendBezierPathWithRect:bound];
         [trace closePath];
-        [trace stroke];
+        [trace fill];
     }
      //画边框
     if(selectflag == 1)
