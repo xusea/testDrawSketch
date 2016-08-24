@@ -83,6 +83,7 @@
     //8.放大缩略图
     [_bigsizeimage setHidden:YES];
     [_scrollimagelist setBigsizeimage:_bigsizeimage];
+    [_bigsizeimage setImageFrameStyle:NSImageFrameGrayBezel];
     //[resultimageview setQuerydrawlist:querydraw];
  /*   qi = [[query2image alloc]init];
     imagedatasource = [[scrollimagedelegate alloc]init];

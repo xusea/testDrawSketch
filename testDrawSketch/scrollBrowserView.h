@@ -15,6 +15,7 @@
     NSRect targetrect;
     int cellspace;
     NSImageView * bigsizeimage;
+    NSRect bigsizeimageframe;
 }
 @property query2image * q2ipoint;
 @property int enteredind;
@@ -22,6 +23,7 @@
 @property NSRect targetrect;
 @property int cellspace;
 @property NSImageView * bigsizeimage;
+@property NSRect bigsizeimageframe;
 -(int)getindexfrompoint:(NSPoint)point;
 -(void)initial;
 @end

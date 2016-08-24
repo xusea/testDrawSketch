@@ -16,6 +16,7 @@
 @synthesize targetrect;
 @synthesize cellspace;
 @synthesize bigsizeimage;
+@synthesize bigsizeimageframe;
 -(void)initial
 {
     enteredind = -1;
@@ -25,7 +26,10 @@
     targetrect.size.height = 115;
     targetrect.size.width = 100;
     cellspace = 20;
-
+    bigsizeimageframe.origin.x = 0;
+    bigsizeimageframe.origin.y = 0;
+    bigsizeimageframe.size.width = 400;
+    bigsizeimageframe.size.height = 300;
 }
 - (id)initWithFrame:(NSRect)frame
 {
@@ -109,10 +113,29 @@
             if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
             {
                 
-                [bigsizeimage setHidden:NO];
                 imageitem * it = [[[self q2ipoint] imageitemlist]objectAtIndex:i];
                 NSImage * image = [[NSImage alloc] initWithContentsOfFile:[it filename]];
+                if(image ==nil)
+                {
+                    break;
+                }
+                NSPoint frameorign = NSMakePoint(200, 130);
+                //frameorign.y += targetrect.size.height + 20;
+                NSRect newframe = bigsizeimageframe;
+                newframe.origin = frameorign;
+                double radio = image.size.height / image.size.width;
+                if( newframe.size.height / newframe.size.width > radio)
+                {
+                    newframe.size.height = newframe.size.width * radio;
+                }
+                else
+                {
+                    newframe.size.width = newframe.size.height / radio;
+                }
+                [bigsizeimage setFrame:newframe];
+                [bigsizeimage setHidden:NO];
                 [bigsizeimage setImage:image];
+                
             }
         }
     }
