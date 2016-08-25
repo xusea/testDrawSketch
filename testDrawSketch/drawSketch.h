@@ -9,8 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "imagetrans.h"
 @class thumbnailView;
-
-@interface BrushPoint : NSObject
+@class BrushPoint;
+/*@interface BrushPoint : NSObject
 {
     NSPoint p;  //当前点
     int undoflag;   //之后点不画了
@@ -20,7 +20,7 @@
 @property (readwrite) NSPoint p;
 @property (readwrite) int undoflag;
 @property (readwrite) int t;
-@end
+@end*/
 
 @interface drawSketch : NSView
 {

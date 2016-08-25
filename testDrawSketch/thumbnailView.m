@@ -8,7 +8,7 @@
 
 #import "thumbnailView.h"
 #import "query2image.h"
-
+#import "BrushPoint.h"
 @implementation thumbnailView
 @synthesize query;
 @synthesize thumbnailsketch;

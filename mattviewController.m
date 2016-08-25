@@ -16,35 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
-}
-@synthesize imagepath;
-@synthesize pngfilepath;
-@synthesize pngresultfilepath;
-@synthesize pngresultfileimerodepath;
-@synthesize resultfilepath;
-@synthesize resultbgfilepath;
-@synthesize hash_magic;
-@synthesize pw;
-@synthesize flag;
-@synthesize g_progress;
-@synthesize maxarea;
-@synthesize areaset;
-@synthesize posx;
-@synthesize posy;
-@synthesize showid;
-@synthesize imagemap;
-@synthesize dpi;
-@synthesize modelRect;
-@synthesize leftRect;
-@synthesize rightRect;
-//@synthesize _showorg;
-//@synthesize _showresult;
-//@synthesize _showbg;
-@synthesize zoomFactor;
-@synthesize maxzoomFactor;
-@synthesize brushframe;
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [_window setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"backg.png"]]];
     /*
      @property (weak) IBOutlet NSButton *showopen;
@@ -170,13 +141,34 @@
     
     [_showchangebg setEnabled:NO];
     [_showchangetransparent setEnabled:NO];
-    //[_showbg setImage:[NSImage imageNamed:@"background.png"]];
-    
+    // Do view setup here.
 }
-
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
-}
+@synthesize imagepath;
+@synthesize pngfilepath;
+@synthesize pngresultfilepath;
+@synthesize pngresultfileimerodepath;
+@synthesize resultfilepath;
+@synthesize resultbgfilepath;
+@synthesize hash_magic;
+@synthesize pw;
+@synthesize flag;
+@synthesize g_progress;
+@synthesize maxarea;
+@synthesize areaset;
+@synthesize posx;
+@synthesize posy;
+@synthesize showid;
+@synthesize imagemap;
+@synthesize dpi;
+@synthesize modelRect;
+@synthesize leftRect;
+@synthesize rightRect;
+//@synthesize _showorg;
+//@synthesize _showresult;
+//@synthesize _showbg;
+@synthesize zoomFactor;
+@synthesize maxzoomFactor;
+@synthesize brushframe;
 
 - (IBAction)openimage:(id)sender {
     
@@ -293,12 +285,12 @@
         //NSSize pngsize = [image size];
         pngsize.width = [imagerep pixelsWide];
         pngsize.height = [imagerep pixelsHigh];
-        NSLog(@"%f ", [_window backingScaleFactor]);
-        if([_window backingScaleFactor] > 1.0)
+       // NSLog(@"%f ", [_window backingScaleFactor]);
+       /* if([_window backingScaleFactor] > 1.0)
         {
             pngsize.width /= 2;
             pngsize.height /= 2;
-        }
+        }*/
         NSLog(@"%f %f", pngsize.height, pngsize.width);
         [_showbrush setImagesize:pngsize];
         [_showbrush setCroparea:brushframe];

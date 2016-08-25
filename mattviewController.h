@@ -53,7 +53,7 @@
     float zoomFactor;
     float maxzoomFactor;
     float curzoomFactor;
-    
+    NSWindow *window;
 }
 @property (readwrite) float zoomFactor;
 @property (readwrite) float maxzoomFactor;
@@ -143,5 +143,5 @@
 - (IBAction)changebg:(id)sender;
 - (IBAction)changetransparent:(id)sender;
 @property (weak) IBOutlet NSButton *showchangetransparent;
-
+@property (weak) IBOutlet NSWindow *window;
 @end

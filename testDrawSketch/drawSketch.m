@@ -9,14 +9,14 @@
 #import "drawSketch.h"
 #import "thumbnailView.h"
 
+#import "BrushPoint.h"
 
-
-@implementation BrushPoint
+/*@implementation BrushPoint
 
 @synthesize p;
 @synthesize t;
 @synthesize undoflag;
-@end
+@end*/
 
 
 @implementation drawSketch

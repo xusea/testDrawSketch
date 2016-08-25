@@ -39,7 +39,6 @@
 		2914A7F61D6F240A0021E9E6 /* brushview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A7DC1D6F240A0021E9E6 /* brushview.m */; };
 		2914A7F71D6F240A0021E9E6 /* CTCSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A7DE1D6F240A0021E9E6 /* CTCSlider.m */; };
 		2914A7F81D6F240A0021E9E6 /* CTCSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A7E01D6F240A0021E9E6 /* CTCSliderCell.m */; };
-		2914A7F91D6F240A0021E9E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A7E11D6F240A0021E9E6 /* main.m */; };
 		2914A7FA1D6F240A0021E9E6 /* matt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2914A7E31D6F240A0021E9E6 /* matt.mm */; };
 		2914A7FB1D6F240A0021E9E6 /* progresswindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A7E51D6F240A0021E9E6 /* progresswindow.m */; };
 		2914A7FC1D6F240A0021E9E6 /* progresswindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2914A7E61D6F240A0021E9E6 /* progresswindow.xib */; };
@@ -51,6 +50,7 @@
 		2914A8021D6F240A0021E9E6 /* TCScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A7F21D6F240A0021E9E6 /* TCScroller.m */; };
 		2914A8061D6F241E0021E9E6 /* mattviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A8041D6F241E0021E9E6 /* mattviewController.m */; };
 		2914A8071D6F241E0021E9E6 /* mattviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2914A8051D6F241E0021E9E6 /* mattviewController.xib */; };
+		2914A80A1D6F2B3C0021E9E6 /* BrushPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A8091D6F2B3C0021E9E6 /* BrushPoint.m */; };
 		295E3D131D52241300DA7B27 /* libopencv_calib3d.2.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E3D021D52241300DA7B27 /* libopencv_calib3d.2.4.3.dylib */; };
 		295E3D141D52241300DA7B27 /* libopencv_contrib.2.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E3D031D52241300DA7B27 /* libopencv_contrib.2.4.3.dylib */; };
 		295E3D151D52241300DA7B27 /* libopencv_core.2.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E3D041D52241300DA7B27 /* libopencv_core.2.4.3.dylib */; };
@@ -205,7 +205,6 @@
 		2914A7DE1D6F240A0021E9E6 /* CTCSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTCSlider.m; path = ../matt/matt/CTCSlider.m; sourceTree = "<group>"; };
 		2914A7DF1D6F240A0021E9E6 /* CTCSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTCSliderCell.h; path = ../matt/matt/CTCSliderCell.h; sourceTree = "<group>"; };
 		2914A7E01D6F240A0021E9E6 /* CTCSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTCSliderCell.m; path = ../matt/matt/CTCSliderCell.m; sourceTree = "<group>"; };
-		2914A7E11D6F240A0021E9E6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../matt/matt/main.m; sourceTree = "<group>"; };
 		2914A7E21D6F240A0021E9E6 /* matt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matt.h; path = ../matt/matt/matt.h; sourceTree = "<group>"; };
 		2914A7E31D6F240A0021E9E6 /* matt.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = matt.mm; path = ../matt/matt/matt.mm; sourceTree = "<group>"; };
 		2914A7E41D6F240A0021E9E6 /* progresswindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = progresswindow.h; path = ../matt/matt/progresswindow.h; sourceTree = "<group>"; };
@@ -227,6 +226,8 @@
 		2914A8031D6F241E0021E9E6 /* mattviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mattviewController.h; sourceTree = "<group>"; };
 		2914A8041D6F241E0021E9E6 /* mattviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mattviewController.m; sourceTree = "<group>"; };
 		2914A8051D6F241E0021E9E6 /* mattviewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mattviewController.xib; sourceTree = "<group>"; };
+		2914A8081D6F2B3C0021E9E6 /* BrushPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrushPoint.h; sourceTree = "<group>"; };
+		2914A8091D6F2B3C0021E9E6 /* BrushPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrushPoint.m; sourceTree = "<group>"; };
 		295E3D021D52241300DA7B27 /* libopencv_calib3d.2.4.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.2.4.3.dylib; path = ../lib_dylib/libopencv_calib3d.2.4.3.dylib; sourceTree = "<group>"; };
 		295E3D031D52241300DA7B27 /* libopencv_contrib.2.4.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_contrib.2.4.3.dylib; path = ../lib_dylib/libopencv_contrib.2.4.3.dylib; sourceTree = "<group>"; };
 		295E3D041D52241300DA7B27 /* libopencv_core.2.4.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.2.4.3.dylib; path = ../lib_dylib/libopencv_core.2.4.3.dylib; sourceTree = "<group>"; };
@@ -371,7 +372,6 @@
 				2914A7DE1D6F240A0021E9E6 /* CTCSlider.m */,
 				2914A7DF1D6F240A0021E9E6 /* CTCSliderCell.h */,
 				2914A7E01D6F240A0021E9E6 /* CTCSliderCell.m */,
-				2914A7E11D6F240A0021E9E6 /* main.m */,
 				2914A7E21D6F240A0021E9E6 /* matt.h */,
 				2914A7E31D6F240A0021E9E6 /* matt.mm */,
 				2914A7E41D6F240A0021E9E6 /* progresswindow.h */,
@@ -497,6 +497,8 @@
 				DFEA8EC41D23BA2900A2D87A /* scrollBrowserView.m */,
 				DFEA8ED01D2CFCD800A2D87A /* resultimageview.h */,
 				DFEA8ED11D2CFCD800A2D87A /* resultimageview.m */,
+				2914A8081D6F2B3C0021E9E6 /* BrushPoint.h */,
+				2914A8091D6F2B3C0021E9E6 /* BrushPoint.m */,
 			);
 			path = testDrawSketch;
 			sourceTree = "<group>";
@@ -779,13 +781,13 @@
 				DF3CFF971CF6908B008B325B /* main.m in Sources */,
 				DF3CFFC11CF693AE008B325B /* drawSketch.m in Sources */,
 				2914A7FD1D6F240A0021E9E6 /* resizebound.m in Sources */,
+				2914A80A1D6F2B3C0021E9E6 /* BrushPoint.m in Sources */,
 				DFEA8EB91D23B7CD00A2D87A /* scrollCell.m in Sources */,
 				DF57CC181D0FA5F6005AD426 /* query2image.m in Sources */,
 				2914A7F51D6F240A0021E9E6 /* backgroundbound.m in Sources */,
 				DF57CC221D128B0E005AD426 /* scrollimagedelegate.m in Sources */,
 				2914A8021D6F240A0021E9E6 /* TCScroller.m in Sources */,
 				DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */,
-				2914A7F91D6F240A0021E9E6 /* main.m in Sources */,
 				DF3CFF941CF6908B008B325B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
