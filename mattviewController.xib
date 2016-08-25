@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10101" systemVersion="15E32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10101"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="mattviewController">
@@ -12,8 +13,183 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="1065" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-di-GCV">
+                    <rect key="frame" x="0.0" y="0.0" width="1065" height="480"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-jV-2oR">
+                            <rect key="frame" x="33" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="open" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="ADn-Q8-qbw">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKE-2h-LOf">
+                            <rect key="frame" x="90" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="save" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="XgI-JN-dnH">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMt-Bn-4FB">
+                            <rect key="frame" x="145" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="out" imagePosition="only" alignment="center" alternateImage="outclick" state="on" imageScaling="axesIndependently" inset="2" id="moa-I8-QIn">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pmc-Yo-dxK">
+                            <rect key="frame" x="597" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="erase" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="q4E-QF-2GH">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-YN-Ax0">
+                            <rect key="frame" x="200" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="in" imagePosition="only" alignment="center" alternateImage="inclick" state="on" imageScaling="proportionallyDown" inset="2" id="SkN-hG-BmB">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNF-iD-rQS">
+                            <rect key="frame" x="647" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="start" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Bry-zB-EB1">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q72-qf-Z9t">
+                            <rect key="frame" x="492" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="undo" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="7In-1L-quS">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OB0-2o-3xS">
+                            <rect key="frame" x="545" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="redo" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="m4D-2D-Lvy">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-PN-nU7" customClass="CTCSlider">
+                            <rect key="frame" x="275" y="444" width="199" height="21"/>
+                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="8FL-V5-fTh" customClass="CTCSliderCell"/>
+                        </slider>
+                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" horizontalScrollElasticity="none" verticalScrollElasticity="none" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="2Hu-DO-prt" customClass="SynchroScrollView">
+                            <rect key="frame" x="540" y="15" width="510" height="410"/>
+                            <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="hpH-em-heA">
+                                <rect key="frame" x="0.0" y="0.0" width="510" height="410"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKy-G6-kYm" customClass="shellview">
+                                        <rect key="frame" x="0.0" y="316" width="500" height="400"/>
+                                        <subviews>
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ygd-9I-hDB" customClass="backgroundbound">
+                                                <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                            </customView>
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9Q-5r-Ksk" customClass="resizebound">
+                                                <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                            </customView>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </clipView>
+                            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="et2-ii-V8U" customClass="TCScroller">
+                                <rect key="frame" x="0.0" y="394" width="510" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="wo7-9N-x0Y" customClass="TCScroller">
+                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-JI-F55">
+                            <rect key="frame" x="718" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="zoomin" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="5xd-Mm-hYf">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ru-aP-G08">
+                            <rect key="frame" x="768" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="zoomout" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="tHJ-5g-4cW">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Btx-WO-ysd">
+                            <rect key="frame" x="926" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="newbg" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="zwk-Dg-owt">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="bb6-wP-uQz" customClass="SynchroScrollView">
+                            <rect key="frame" x="15" y="15" width="510" height="410"/>
+                            <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="A9S-4w-XyI">
+                                <rect key="frame" x="0.0" y="0.0" width="510" height="410"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cls-Q1-ht0" customClass="shellview">
+                                        <rect key="frame" x="0.0" y="316" width="500" height="400"/>
+                                        <subviews>
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-3Y-fIw" customClass="shellview">
+                                                <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                                <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpd-9r-3PT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="OtD-eh-nIC"/>
+                                                    </imageView>
+                                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxO-tp-ymn" customClass="brushview">
+                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                                    </customView>
+                                                </subviews>
+                                            </customView>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </clipView>
+                            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="pZc-M6-IXR" customClass="TCScroller">
+                                <rect key="frame" x="0.0" y="394" width="510" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="6iZ-JK-6Fe" customClass="TCScroller">
+                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </scroller>
+                        </scrollView>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51d-mZ-g3E">
+                            <rect key="frame" x="881" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="smallbg" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="jKR-9l-Xya">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                </view>
+            </subviews>
         </customView>
     </objects>
+    <resources>
+        <image name="erase" width="48" height="48"/>
+        <image name="in" width="128" height="128"/>
+        <image name="inclick" width="128" height="128"/>
+        <image name="newbg" width="64" height="64"/>
+        <image name="open" width="128" height="128"/>
+        <image name="out" width="128" height="128"/>
+        <image name="outclick" width="128" height="128"/>
+        <image name="redo" width="512" height="512"/>
+        <image name="save" width="128" height="128"/>
+        <image name="smallbg" width="64" height="64"/>
+        <image name="start" width="128" height="128"/>
+        <image name="undo" width="512" height="512"/>
+        <image name="zoomin" width="64" height="64"/>
+        <image name="zoomout" width="64" height="64"/>
+    </resources>
 </document>
