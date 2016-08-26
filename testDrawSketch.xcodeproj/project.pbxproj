@@ -38,6 +38,23 @@
 		2914A8061D6F241E0021E9E6 /* mattviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A8041D6F241E0021E9E6 /* mattviewController.m */; };
 		2914A8071D6F241E0021E9E6 /* mattviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2914A8051D6F241E0021E9E6 /* mattviewController.xib */; };
 		2914A80A1D6F2B3C0021E9E6 /* BrushPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2914A8091D6F2B3C0021E9E6 /* BrushPoint.m */; };
+		2914A80B1D708B290021E9E6 /* libopencv_videostab.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824BA1D6FDF3C006101F1 /* libopencv_videostab.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A80C1D708B290021E9E6 /* libopencv_stitching.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824BB1D6FDF3C006101F1 /* libopencv_stitching.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A80D1D708B290021E9E6 /* libopencv_ts.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824BC1D6FDF3C006101F1 /* libopencv_ts.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A80E1D708B290021E9E6 /* libopencv_video.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824BD1D6FDF3C006101F1 /* libopencv_video.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A80F1D708B290021E9E6 /* libopencv_photo.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824BE1D6FDF3C006101F1 /* libopencv_photo.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8101D708B290021E9E6 /* libopencv_ml.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824BF1D6FDF3C006101F1 /* libopencv_ml.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8111D708B290021E9E6 /* libopencv_nonfree.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C01D6FDF3C006101F1 /* libopencv_nonfree.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8121D708B290021E9E6 /* libopencv_objdetect.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C11D6FDF3C006101F1 /* libopencv_objdetect.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8131D708B290021E9E6 /* libopencv_imgproc.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C21D6FDF3C006101F1 /* libopencv_imgproc.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8141D708B290021E9E6 /* libopencv_legacy.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C31D6FDF3C006101F1 /* libopencv_legacy.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8151D708B290021E9E6 /* libopencv_gpu.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C41D6FDF3C006101F1 /* libopencv_gpu.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8161D708B290021E9E6 /* libopencv_highgui.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C51D6FDF3C006101F1 /* libopencv_highgui.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8171D708B290021E9E6 /* libopencv_core.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C61D6FDF3C006101F1 /* libopencv_core.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8181D708B290021E9E6 /* libopencv_features2d.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C71D6FDF3C006101F1 /* libopencv_features2d.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A8191D708B290021E9E6 /* libopencv_flann.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C81D6FDF3C006101F1 /* libopencv_flann.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A81A1D708B290021E9E6 /* libopencv_calib3d.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C91D6FDF3C006101F1 /* libopencv_calib3d.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A81B1D708B290021E9E6 /* libopencv_contrib.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824CA1D6FDF3C006101F1 /* libopencv_contrib.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */; };
 		DF27CE221CFFE4E0009DAA27 /* opencvproxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */; };
 		DF27CE241CFFEE38009DAA27 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF27CE231CFFEE38009DAA27 /* AppKit.framework */; };
@@ -131,6 +148,23 @@
 			dstPath = dylib;
 			dstSubfolderSpec = 10;
 			files = (
+				2914A80B1D708B290021E9E6 /* libopencv_videostab.2.4.3.dylib in CopyFiles */,
+				2914A80C1D708B290021E9E6 /* libopencv_stitching.2.4.3.dylib in CopyFiles */,
+				2914A80D1D708B290021E9E6 /* libopencv_ts.2.4.3.dylib in CopyFiles */,
+				2914A80E1D708B290021E9E6 /* libopencv_video.2.4.3.dylib in CopyFiles */,
+				2914A80F1D708B290021E9E6 /* libopencv_photo.2.4.3.dylib in CopyFiles */,
+				2914A8101D708B290021E9E6 /* libopencv_ml.2.4.3.dylib in CopyFiles */,
+				2914A8111D708B290021E9E6 /* libopencv_nonfree.2.4.3.dylib in CopyFiles */,
+				2914A8121D708B290021E9E6 /* libopencv_objdetect.2.4.3.dylib in CopyFiles */,
+				2914A8131D708B290021E9E6 /* libopencv_imgproc.2.4.3.dylib in CopyFiles */,
+				2914A8141D708B290021E9E6 /* libopencv_legacy.2.4.3.dylib in CopyFiles */,
+				2914A8151D708B290021E9E6 /* libopencv_gpu.2.4.3.dylib in CopyFiles */,
+				2914A8161D708B290021E9E6 /* libopencv_highgui.2.4.3.dylib in CopyFiles */,
+				2914A8171D708B290021E9E6 /* libopencv_core.2.4.3.dylib in CopyFiles */,
+				2914A8181D708B290021E9E6 /* libopencv_features2d.2.4.3.dylib in CopyFiles */,
+				2914A8191D708B290021E9E6 /* libopencv_flann.2.4.3.dylib in CopyFiles */,
+				2914A81A1D708B290021E9E6 /* libopencv_calib3d.2.4.3.dylib in CopyFiles */,
+				2914A81B1D708B290021E9E6 /* libopencv_contrib.2.4.3.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
