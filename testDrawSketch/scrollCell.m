@@ -77,19 +77,20 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         [backgroundlayer setNeedsDisplay];
         return backgroundlayer;
     }
-    if( [type isEqualToString:IKImageBrowserCellForegroundLayer])
+    /*if( [type isEqualToString:IKImageBrowserCellForegroundLayer])
     {
-       /* CALayer * foregroundlayer = [CALayer layer];
+        CALayer * foregroundlayer = [CALayer layer];
         foregroundlayer.frame = frame;
-        [foregroundlayer setNeedsDisplay];
+        foregroundlayer.delegate = self;
+       // [foregroundlayer setNeedsDisplay];
         
         CALayer *glossyLayer = [CALayer layer];
-        glossyLayer.frame = NSMakeRect(0, 0, 30, 30);
-        setBundleImageOnLayer(glossyLayer, CFSTR("tick.png"));
+        glossyLayer.frame = self.frame;
+        setBundleImageOnLayer(glossyLayer, CFSTR("mouseover.png"));
         [foregroundlayer addSublayer:glossyLayer];
 
-        return foregroundlayer;*/
-    }
+        return foregroundlayer;
+    }*/
     return [super layerForType:type];
 }
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context

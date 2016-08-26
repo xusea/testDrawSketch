@@ -134,8 +134,8 @@
                 }
                 [bigsizeimage setFrame:newframe];
                 [bigsizeimage setHidden:NO];
-                [bigsizeimage setImage:image];
-                
+                //[bigsizeimage setImage:image];
+                [[bigsizeimage thumbnailimage]setImage:image];
             }
         }
     }

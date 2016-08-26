@@ -18,6 +18,7 @@
 #import "scrollBrowserView.h"
 #import "resultimageview.h"
 #import "mattviewController.h"
+#import "premattview.h"
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     query2image * qi;
@@ -60,7 +61,8 @@
 @property (weak) IBOutlet NSButton *extendbutton;
 - (IBAction)showindex:(id)sender;
 - (IBAction)scrollposition:(id)sender;
-@property (weak) IBOutlet NSImageView *bigsizeimage;
+//@property (weak) IBOutlet NSImageView *bigsizeimage;
 @property mattviewController* mattview;
+@property (weak) IBOutlet premattview *bigsizeimage;
 @end
 

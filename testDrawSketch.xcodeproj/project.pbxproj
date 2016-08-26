@@ -71,6 +71,8 @@
 		DF3824D91D6FDF3C006101F1 /* libopencv_flann.2.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3824C81D6FDF3C006101F1 /* libopencv_flann.2.4.3.dylib */; };
 		DF3824DA1D6FDF3C006101F1 /* libopencv_calib3d.2.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3824C91D6FDF3C006101F1 /* libopencv_calib3d.2.4.3.dylib */; };
 		DF3824DB1D6FDF3C006101F1 /* libopencv_contrib.2.4.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3824CA1D6FDF3C006101F1 /* libopencv_contrib.2.4.3.dylib */; };
+		DF3824DD1D7037B4006101F1 /* mouseover.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3824DC1D7037B4006101F1 /* mouseover.png */; };
+		DF3824E01D703A57006101F1 /* premattview.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3824DF1D703A57006101F1 /* premattview.m */; };
 		DF3CFF941CF6908B008B325B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFF931CF6908B008B325B /* AppDelegate.m */; };
 		DF3CFF971CF6908B008B325B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFF961CF6908B008B325B /* main.m */; };
 		DF3CFF991CF6908B008B325B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3CFF981CF6908B008B325B /* Assets.xcassets */; };
@@ -216,6 +218,9 @@
 		DF3824C81D6FDF3C006101F1 /* libopencv_flann.2.4.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_flann.2.4.3.dylib; path = ../lib_dylib/libopencv_flann.2.4.3.dylib; sourceTree = "<group>"; };
 		DF3824C91D6FDF3C006101F1 /* libopencv_calib3d.2.4.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.2.4.3.dylib; path = ../lib_dylib/libopencv_calib3d.2.4.3.dylib; sourceTree = "<group>"; };
 		DF3824CA1D6FDF3C006101F1 /* libopencv_contrib.2.4.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_contrib.2.4.3.dylib; path = ../lib_dylib/libopencv_contrib.2.4.3.dylib; sourceTree = "<group>"; };
+		DF3824DC1D7037B4006101F1 /* mouseover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouseover.png; path = ../../icons/mouseover.png; sourceTree = "<group>"; };
+		DF3824DE1D703A57006101F1 /* premattview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = premattview.h; sourceTree = "<group>"; };
+		DF3824DF1D703A57006101F1 /* premattview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = premattview.m; sourceTree = "<group>"; };
 		DF3CFF8F1CF6908B008B325B /* testDrawSketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testDrawSketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3CFF921CF6908B008B325B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF3CFF931CF6908B008B325B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -437,6 +442,8 @@
 				DF5B40AB1D193739008F8F26 /* drawSketchCollection.m */,
 				DF3CFF981CF6908B008B325B /* Assets.xcassets */,
 				DF3CFF9A1CF6908B008B325B /* MainMenu.xib */,
+				DF3824DE1D703A57006101F1 /* premattview.h */,
+				DF3824DF1D703A57006101F1 /* premattview.m */,
 				DF3CFF9D1CF6908B008B325B /* Info.plist */,
 				DF3CFF951CF6908B008B325B /* Supporting Files */,
 				DF3CFFBF1CF693AE008B325B /* drawSketch.h */,
@@ -498,6 +505,7 @@
 		DFEA8EBA1D23B8D500A2D87A /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				DF3824DC1D7037B4006101F1 /* mouseover.png */,
 				2914A79E1D6F23D60021E9E6 /* backg.png */,
 				2914A79F1D6F23D60021E9E6 /* background.png */,
 				2914A7A01D6F23D60021E9E6 /* bordermark.png */,
@@ -657,6 +665,7 @@
 				2914A7C21D6F23D60021E9E6 /* itunes_barFillBeforeknob.png in Resources */,
 				2914A7D01D6F23D60021E9E6 /* smallbg.png in Resources */,
 				2914A7CA1D6F23D60021E9E6 /* outclick.png in Resources */,
+				DF3824DD1D7037B4006101F1 /* mouseover.png in Resources */,
 				2914A7BD1D6F23D60021E9E6 /* centermove.png in Resources */,
 				DFDE8E2D1D337A0300A13724 /* purple.png in Resources */,
 				2914A7C11D6F23D60021E9E6 /* itunes_barFill.png in Resources */,
@@ -754,6 +763,7 @@
 				DF3824921D6FDE96006101F1 /* backgroundbound.m in Sources */,
 				DF3824941D6FDE96006101F1 /* CTCSliderCell.m in Sources */,
 				DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */,
+				DF3824E01D703A57006101F1 /* premattview.m in Sources */,
 				DF3CFF941CF6908B008B325B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

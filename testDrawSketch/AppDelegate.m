@@ -81,9 +81,10 @@
     [_extendbutton setEnabled:YES];
     
     //8.放大缩略图
+    [_bigsizeimage initiation];
     [_bigsizeimage setHidden:YES];
     [_scrollimagelist setBigsizeimage:_bigsizeimage];
-    [_bigsizeimage setImageFrameStyle:NSImageFrameGrayBezel];
+    [[_bigsizeimage thumbnailimage] setImageFrameStyle:NSImageFrameGrayBezel];
     
     //9.mattview初始化
     mattview = [[mattviewController alloc]init];
@@ -93,6 +94,7 @@
     [mattview setWindow:_window];
     [[_window contentView]addSubview:[mattview allview]];
     [[mattview allview]setHidden:YES];
+    
    // NSRect r = [[_window contentView] frame];
    // [[mattview allview]setFrame:r];
    // [[_window contentView]addSubview:[tvc allview]];
