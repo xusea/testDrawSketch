@@ -84,6 +84,18 @@
     [_bigsizeimage setHidden:YES];
     [_scrollimagelist setBigsizeimage:_bigsizeimage];
     [_bigsizeimage setImageFrameStyle:NSImageFrameGrayBezel];
+    
+    //9.mattview初始化
+    mattview = [[mattviewController alloc]init];
+    bool ret = [[NSBundle mainBundle] loadNibNamed:@"mattviewController" owner:mattview topLevelObjects:nil];
+    NSLog(@"load mattviewController %d", ret);
+    [mattview viewDidLoad];
+    [mattview setWindow:_window];
+    [[_window contentView]addSubview:[mattview allview]];
+    [[mattview allview]setHidden:YES];
+   // NSRect r = [[_window contentView] frame];
+   // [[mattview allview]setFrame:r];
+   // [[_window contentView]addSubview:[tvc allview]];
     //[resultimageview setQuerydrawlist:querydraw];
  /*   qi = [[query2image alloc]init];
     imagedatasource = [[scrollimagedelegate alloc]init];
@@ -494,7 +506,9 @@
 }
 
 - (IBAction)scrollposition:(id)sender {
-    [_bigsizeimage setHidden:YES];
+    [[mattview allview]setHidden:NO];
+    [[mattview allview] setNeedsDisplay:YES];
+    //[_bigsizeimage setHidden:YES];
     //[_scrollimagelist scrollIndexToVisible:3];
 }
 

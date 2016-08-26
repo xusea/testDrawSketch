@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="mattviewController">
             <connections>
+                <outlet property="allview" destination="Hz6-mo-xeY" id="a3z-Zv-bjS"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -104,7 +105,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="wo7-9N-x0Y" customClass="TCScroller">
-                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
+                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
@@ -160,7 +161,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="6iZ-JK-6Fe" customClass="TCScroller">
-                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
+                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>

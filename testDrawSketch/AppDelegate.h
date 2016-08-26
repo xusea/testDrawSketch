@@ -17,6 +17,7 @@
 #import "drawSketchCollection.h"
 #import "scrollBrowserView.h"
 #import "resultimageview.h"
+#import "mattviewController.h"
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     query2image * qi;
@@ -28,6 +29,7 @@
     NSPoint fpos;
     NSThread* convert_progress;
     NSLock *lock;
+    mattviewController * mattview;
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -59,6 +61,6 @@
 - (IBAction)showindex:(id)sender;
 - (IBAction)scrollposition:(id)sender;
 @property (weak) IBOutlet NSImageView *bigsizeimage;
-
+@property mattviewController* mattview;
 @end
 
