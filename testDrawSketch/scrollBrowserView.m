@@ -89,11 +89,30 @@
     NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
     int index =[self getindexfrompoint:currentPosition];
     NSLog(@"click item %d", index);
-    if (idx != NSNotFound)
+    if(index != -1)
+    {
+        int toolind = [self gettoolfrompoint:currentPosition];
+        
+        MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:index];
+        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@_%d", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], [subtitlestrs objectAtIndex:2], toolind];
+        [mio setSubtitle:newsubtitle];
+        NSLog(@"click tool ind: %d %@" ,toolind, newsubtitle);
+    }
+    [self setNeedsDisplay:YES];
+    /*if (idx != NSNotFound)
     {
         NSRect rect = [self itemFrameAtIndex:idx];
         NSLog(@"click %ld [%lf %lf %lf %lf]", idx, rect.size.height, rect.size.width, currentPosition.x, currentPosition.y);
-    }
+    }*/
+    return;
+}
+
+- (void)mouseUp:(NSEvent *)event
+{
+    [self cleanalltoolsstatus];
+    [self setNeedsDisplay:YES];
+     // NSLog(@"mouse upupup");
     return;
 }
 - (void)mouseEntered:(NSEvent *)theEvent
@@ -151,13 +170,14 @@
 - (void)mouseExited:(NSEvent *)theEvent
 {
     [bigsizeimage setHidden:YES];
-    for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
+    /*for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
     {
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
         NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
         NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"0"];
         [mio setSubtitle:newsubtitle];
-    }
+    }*/
+    [self cleanalltoolsstatus];
     [self setNeedsDisplay:YES];
    /* NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     NSLog(@"exited point [%lf %lf]", currentPosition.x, currentPosition.y);
@@ -210,5 +230,40 @@
         return ind;
     }
     return -1;
+}
+-(int)gettoolfrompoint:(NSPoint)point
+{
+    if(point.y < 10 || point.y > (targetrect.origin.y + targetrect.size.height))
+    {
+        return -1;
+    }
+    if(point.y >=10 && point.y <=30)
+    {
+        int ind = (point.x - targetrect.origin.x ) / (targetrect.size.width + cellspace);
+        if(point.x >= (ind * (targetrect.size.width + cellspace) + targetrect.origin.x)
+           && point.x <= (ind * (targetrect.size.width + cellspace) + targetrect.origin.x + targetrect.size.width))
+        {
+            float toolspace = point.x - (ind * (targetrect.size.width + cellspace) + targetrect.origin.x);
+            return (int)(toolspace / 20);
+            
+        }
+    }
+    else
+    {
+        return -1;
+    }
+    return -1;
+}
+
+-(void)cleanalltoolsstatus
+{
+    for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
+    {
+        MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
+        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_0_-1", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1]];
+        [mio setSubtitle:newsubtitle];
+    }
+
 }
 @end

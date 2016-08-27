@@ -11,9 +11,11 @@
 @interface premattview : NSView
 {
     NSImageView * thumbnailimage;
+    NSImageView * strokeimage;
     NSImageView * toolimage;
 }
 @property NSImageView * thumbnailimage;
 @property NSImageView * toolimage;
+@property NSImageView * strokeimage;
 -(void)initiation;
 @end

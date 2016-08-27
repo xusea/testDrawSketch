@@ -27,4 +27,6 @@
 @property NSRect bigsizeimageframe;
 -(int)getindexfrompoint:(NSPoint)point;
 -(void)initial;
+-(int)gettoolfrompoint:(NSPoint)point;
+-(void)cleanalltoolsstatus;
 @end

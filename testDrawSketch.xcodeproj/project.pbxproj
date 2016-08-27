@@ -56,6 +56,8 @@
 		2914A81A1D708B290021E9E6 /* libopencv_calib3d.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C91D6FDF3C006101F1 /* libopencv_calib3d.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2914A81B1D708B290021E9E6 /* libopencv_contrib.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824CA1D6FDF3C006101F1 /* libopencv_contrib.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2914A81D1D71C6E60021E9E6 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A81C1D71C6E60021E9E6 /* pencil.png */; };
+		2914A81F1D71CC1F0021E9E6 /* stroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A81E1D71CC1F0021E9E6 /* stroke.png */; };
+		2914A8211D71D0860021E9E6 /* strokeclick.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A8201D71D0860021E9E6 /* strokeclick.png */; };
 		DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */; };
 		DF27CE221CFFE4E0009DAA27 /* opencvproxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */; };
 		DF27CE241CFFEE38009DAA27 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF27CE231CFFEE38009DAA27 /* AppKit.framework */; };
@@ -206,6 +208,8 @@
 		2914A8081D6F2B3C0021E9E6 /* BrushPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrushPoint.h; sourceTree = "<group>"; };
 		2914A8091D6F2B3C0021E9E6 /* BrushPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrushPoint.m; sourceTree = "<group>"; };
 		2914A81C1D71C6E60021E9E6 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pencil.png; path = ../../icons/pencil.png; sourceTree = "<group>"; };
+		2914A81E1D71CC1F0021E9E6 /* stroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stroke.png; path = ../../icons/stroke.png; sourceTree = "<group>"; };
+		2914A8201D71D0860021E9E6 /* strokeclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = strokeclick.png; path = ../../icons/strokeclick.png; sourceTree = "<group>"; };
 		DF27CE1D1CFEC5A7009DAA27 /* imagetrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imagetrans.h; sourceTree = "<group>"; };
 		DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imagetrans.m; sourceTree = "<group>"; };
 		DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = opencvproxy.mm; sourceTree = "<group>"; };
@@ -541,6 +545,8 @@
 		DFEA8EBA1D23B8D500A2D87A /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				2914A8201D71D0860021E9E6 /* strokeclick.png */,
+				2914A81E1D71CC1F0021E9E6 /* stroke.png */,
 				2914A81C1D71C6E60021E9E6 /* pencil.png */,
 				DF3824DC1D7037B4006101F1 /* mouseover.png */,
 				2914A79E1D6F23D60021E9E6 /* backg.png */,
@@ -703,6 +709,7 @@
 				2914A7C21D6F23D60021E9E6 /* itunes_barFillBeforeknob.png in Resources */,
 				2914A7D01D6F23D60021E9E6 /* smallbg.png in Resources */,
 				2914A7CA1D6F23D60021E9E6 /* outclick.png in Resources */,
+				2914A81F1D71CC1F0021E9E6 /* stroke.png in Resources */,
 				DF3824DD1D7037B4006101F1 /* mouseover.png in Resources */,
 				2914A7BD1D6F23D60021E9E6 /* centermove.png in Resources */,
 				DFDE8E2D1D337A0300A13724 /* purple.png in Resources */,
@@ -711,6 +718,7 @@
 				DFDE8E2E1D337A0300A13724 /* red.png in Resources */,
 				DFDE8E2F1D337A0300A13724 /* tick.png in Resources */,
 				2914A7C01D6F23D60021E9E6 /* inclick.png in Resources */,
+				2914A8211D71D0860021E9E6 /* strokeclick.png in Resources */,
 				2914A7D41D6F23D60021E9E6 /* zoominclick.png in Resources */,
 				2914A7CD1D6F23D60021E9E6 /* rightbuttom.png in Resources */,
 				2914A7C41D6F23D60021E9E6 /* itunes_barRightAge.png in Resources */,

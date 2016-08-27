@@ -39,6 +39,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
 @synthesize selectedflag;
 @synthesize mouseoverflag;
 @synthesize imagestatus;
+@synthesize strokeclickflag;
 @synthesize internalimageframe;
 - (id) init
 {
@@ -134,13 +135,13 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         [borderimg drawInRect:bound];
        
         //画分数
-        if([strs count] > 1)
+     /*   if([strs count] > 1)
         {
             NSString * score = [strs objectAtIndex:1];
             NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica light" size:15], NSFontAttributeName,[NSColor blackColor], NSForegroundColorAttributeName, nil];
             NSAttributedString * currentText =[[NSAttributedString alloc] initWithString:score attributes: attributes];
             [currentText drawAtPoint:bound.origin];
-        }
+        }*/
         
         //画mouse over
         if([self mouseoverflag] == 1)
@@ -154,6 +155,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
             [borderimg drawInRect:bound];
         }
         //画工具
+        //编辑按钮
         NSRect pencilframe;
         pencilframe.size.height = 20;
         pencilframe.size.width = 20;
@@ -161,6 +163,24 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         pencilframe.origin.y = 0;
         NSImage * pencilimage = [NSImage imageNamed:@"pencil.png"];
         [pencilimage drawInRect:pencilframe];
+        
+        //轮廓
+        NSRect strokeframe;
+        strokeframe.size.height = 20;
+        strokeframe.size.width = 20;
+        strokeframe.origin.x = 20;
+        strokeframe.origin.y = 0;
+        if(strokeclickflag == 1)
+        {
+            NSImage * strokeimage = [NSImage imageNamed:@"strokeclick.png"];
+            [strokeimage drawInRect:strokeframe];
+        }
+        else
+        {
+            NSImage * strokeimage = [NSImage imageNamed:@"stroke.png"];
+            [strokeimage drawInRect:strokeframe];
+        }
+
     }
     else
     {
@@ -275,6 +295,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
 -(void)getallstatus
 {
     NSString * subtitle = [[self representedItem] subtitle];
+    NSLog(@"getall status %@ ", subtitle);
     NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
     
     
@@ -286,6 +307,14 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
     else
     {
         [self setMouseoverflag:0];
+    }
+    if([strs count] >=4)
+    {
+        [self setStrokeclickflag:[[strs objectAtIndex:3] intValue]];
+    }
+    else
+    {
+        [self setStrokeclickflag:-1];
     }
     return;
 }

@@ -11,6 +11,7 @@
 @implementation premattview
 @synthesize thumbnailimage;
 @synthesize toolimage;
+@synthesize strokeimage;
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];

@@ -13,11 +13,13 @@
     NSRect internalimageframe;
     int selectedflag;
     int mouseoverflag;
-    int imagestatus;;
+    int imagestatus;
+    int strokeclickflag;
 }
 @property (readwrite)NSRect internalimageframe;
 @property (readwrite)int selectedflag;
 @property (readwrite)int mouseoverflag;
 @property (readwrite)int imagestatus;
+@property (readwrite)int strokeclickflag;
 -(void)getallstatus;
 @end
