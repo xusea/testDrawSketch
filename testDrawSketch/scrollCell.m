@@ -36,6 +36,9 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
 }
 
 @implementation scrollCell
+@synthesize selectedflag;
+@synthesize mouseoverflag;
+@synthesize imagestatus;
 @synthesize internalimageframe;
 - (id) init
 {
@@ -95,6 +98,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
 }
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context
 {
+    [self getallstatus];
     // Set the current context.
     NSString * subtitle = [[self representedItem] subtitle];
     NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
@@ -104,38 +108,26 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
     {
         [NSGraphicsContext setCurrentContext:nscg];
         
-        /*
-         ////画边框
-        NSRect bound = [self frame];
-        bound.origin.x = 0;
-        bound.origin.y = 0;
-        NSBezierPath *trace = [[NSBezierPath alloc]init];
-        [trace setLineWidth:2];
-        [[NSColor blueColor] set];
-        [trace appendBezierPathWithRect:bound];
-        [trace closePath];
-        [trace stroke];*/
         
         
         //////画gif
-        //   NSImage *img = [NSImage imageNamed:@"2.gif"];
-        //   [img drawInRect:NSMakeRect(0, 0, 90, 90)];
+        
         NSRect bound = [self frame];
         bound.origin.x = -1;
         bound.origin.y = -1;
         bound.size.width += 2;
         bound.size.height += 2;
         NSImage * borderimg = [NSImage imageNamed:@"red.png"];
-        NSString * imagestatus = [strs firstObject];
-        if([imagestatus isEqualToString:@"1"])
+        //NSString * imagestatus = [strs firstObject];
+        if([self imagestatus] == 1)
         {
             borderimg = [NSImage imageNamed:@"green.png"];
         }
-        else if([imagestatus isEqualToString:@"2"])
+        else if([self imagestatus] == 2)
         {
             borderimg = [NSImage imageNamed:@"yellow.png"];
         }
-        else if([imagestatus isEqualToString:@"3"])
+        else if([self imagestatus] == 3)
         {
             borderimg = [NSImage imageNamed:@"blue.png"];
         }
@@ -151,20 +143,24 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         }
         
         //画mouse over
-        if([strs count] >2)
+        if([self mouseoverflag] == 1)
         {
-            NSString * mouseover = [strs objectAtIndex:2];
-            if([mouseover isEqualToString:@"1"])
-            {
-                NSRect bound = [self frame];
-                bound.origin.x = -5;
-                bound.origin.y = -5;
-                bound.size.width += 10;
-                bound.size.height += 10;
-                NSImage * borderimg = [NSImage imageNamed:@"red.png"];
-                [borderimg drawInRect:bound];
-            }
+            NSRect bound = [self frame];
+            bound.origin.x = -5;
+            bound.origin.y = -5;
+            bound.size.width += 10;
+            bound.size.height += 10;
+            NSImage * borderimg = [NSImage imageNamed:@"red.png"];
+            [borderimg drawInRect:bound];
         }
+        //画工具
+        NSRect pencilframe;
+        pencilframe.size.height = 20;
+        pencilframe.size.width = 20;
+        pencilframe.origin.x = 0;
+        pencilframe.origin.y = 0;
+        NSImage * pencilimage = [NSImage imageNamed:@"pencil.png"];
+        [pencilimage drawInRect:pencilframe];
     }
     else
     {
@@ -222,7 +218,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
     imageFrame.origin.y = floorf(imageFrame.origin.y);
     imageFrame.size.width = ceilf(imageFrame.size.width);
     imageFrame.size.height = ceilf(imageFrame.size.height);
-    
+    //imageFrame.origin.y -=20;
     return imageFrame;
 }
 
@@ -274,5 +270,23 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
 - (NSRect)selectionFrame
 {
     return NSInsetRect([self frame], -5, -5);
+}
+
+-(void)getallstatus
+{
+    NSString * subtitle = [[self representedItem] subtitle];
+    NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
+    
+    
+    [self setImagestatus:[[strs firstObject] intValue]];
+    if([strs count] >= 3)
+    {
+        [self setMouseoverflag:[[strs objectAtIndex:2] intValue]];
+    }
+    else
+    {
+        [self setMouseoverflag:0];
+    }
+    return;
 }
 @end

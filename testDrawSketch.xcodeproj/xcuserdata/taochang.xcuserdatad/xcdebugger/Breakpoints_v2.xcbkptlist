@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/scrollCell.m"
-            timestampString = "492441762.67126"
+            timestampString = "493991398.167822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "-init"
             landmarkType = "5">
          </BreakpointContent>

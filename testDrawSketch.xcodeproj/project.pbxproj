@@ -55,6 +55,7 @@
 		2914A8191D708B290021E9E6 /* libopencv_flann.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C81D6FDF3C006101F1 /* libopencv_flann.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2914A81A1D708B290021E9E6 /* libopencv_calib3d.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824C91D6FDF3C006101F1 /* libopencv_calib3d.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2914A81B1D708B290021E9E6 /* libopencv_contrib.2.4.3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF3824CA1D6FDF3C006101F1 /* libopencv_contrib.2.4.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2914A81D1D71C6E60021E9E6 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A81C1D71C6E60021E9E6 /* pencil.png */; };
 		DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */; };
 		DF27CE221CFFE4E0009DAA27 /* opencvproxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */; };
 		DF27CE241CFFEE38009DAA27 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF27CE231CFFEE38009DAA27 /* AppKit.framework */; };
@@ -204,6 +205,7 @@
 		2914A8051D6F241E0021E9E6 /* mattviewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mattviewController.xib; sourceTree = "<group>"; };
 		2914A8081D6F2B3C0021E9E6 /* BrushPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrushPoint.h; sourceTree = "<group>"; };
 		2914A8091D6F2B3C0021E9E6 /* BrushPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrushPoint.m; sourceTree = "<group>"; };
+		2914A81C1D71C6E60021E9E6 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pencil.png; path = ../../icons/pencil.png; sourceTree = "<group>"; };
 		DF27CE1D1CFEC5A7009DAA27 /* imagetrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imagetrans.h; sourceTree = "<group>"; };
 		DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imagetrans.m; sourceTree = "<group>"; };
 		DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = opencvproxy.mm; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 		DFEA8EBA1D23B8D500A2D87A /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				2914A81C1D71C6E60021E9E6 /* pencil.png */,
 				DF3824DC1D7037B4006101F1 /* mouseover.png */,
 				2914A79E1D6F23D60021E9E6 /* backg.png */,
 				2914A79F1D6F23D60021E9E6 /* background.png */,
@@ -683,6 +686,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2914A81D1D71C6E60021E9E6 /* pencil.png in Resources */,
 				2914A7C31D6F23D60021E9E6 /* itunes_barLeftAge.png in Resources */,
 				2914A7C61D6F23D60021E9E6 /* leftcorner.png in Resources */,
 				2914A7CC1D6F23D60021E9E6 /* redo.png in Resources */,

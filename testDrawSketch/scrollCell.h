@@ -11,6 +11,13 @@
 @interface scrollCell : IKImageBrowserCell
 {
     NSRect internalimageframe;
+    int selectedflag;
+    int mouseoverflag;
+    int imagestatus;;
 }
 @property (readwrite)NSRect internalimageframe;
+@property (readwrite)int selectedflag;
+@property (readwrite)int mouseoverflag;
+@property (readwrite)int imagestatus;
+-(void)getallstatus;
 @end
