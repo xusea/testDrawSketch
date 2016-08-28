@@ -95,60 +95,6 @@
     [[_window contentView]addSubview:[mattview allview]];
     [[mattview allview]setHidden:YES];
     
-   // NSRect r = [[_window contentView] frame];
-   // [[mattview allview]setFrame:r];
-   // [[_window contentView]addSubview:[tvc allview]];
-    //[resultimageview setQuerydrawlist:querydraw];
- /*   qi = [[query2image alloc]init];
-    imagedatasource = [[scrollimagedelegate alloc]init];
-    [qi setImagesource:imagedatasource];
-    [_scrollimagelist setDataSource:imagedatasource];
-    [_scrollimagelist setContentResizingMask:NSViewWidthSizable];
-    [qi setIkipoint:_scrollimagelist];
-    
-    for(int i = 0; i < 15;i++)
-    {
-        thumbnailView * tV = [[thumbnailView alloc]init];
-        [tV setParentcollection:tvc];
-        NSRect frame = [tV frame];
-        NSString * q = [NSString stringWithFormat:@"query :%d", i];
-        [tV setQuery:q];
-        frame.origin.y = i * frame.size.height;
-        [tV setFrame:frame];
-        [[_thumblist documentView] addSubview:tV];
-        NSRect scrollframe = frame;
-        scrollframe.size.height = i * frame.size.height;
-        [[_thumblist documentView] setFrameSize:scrollframe.size];
-    }
-    
-    
-    
-    for(int i = 0; i < [[tvc subviews] count]; i ++)
-    {
-        NSLog(@"%d %ld %@", i, [[[tvc subviews]objectAtIndex:i] tag], NSStringFromClass([[[tvc subviews]objectAtIndex:i] class]));
-    }*/
-    /* [_thumblist setTranslatesAutoresizingMaskIntoConstraints:YES];
-    [_thumblist setHasHorizontalScroller:YES];
-    [_thumblist setHasVerticalRuler:YES];
-    [_thumblist setAutohidesScrollers:NSViewWidthSizable|NSViewHeightSizable];
-    for(int i = 0; i < 15;i++)
-    {
-        thumbnailView * tV = [[thumbnailView alloc]init];
-        NSRect frame = [tV frame];
-        NSString * q = [NSString stringWithFormat:@"query :%d", i];
-        [tV setQuery:q];
-        frame.origin.y = i * frame.size.height;
-        [tV setFrame:frame];
-        [[_thumblist contentView] addSubview:tV];
-        NSRect scrollframe = frame;
-        scrollframe.size.height = i * frame.size.height;
-        NSLog(@"%f %f", [_thumblist contentSize].width, [_thumblist contentSize].height);
-        [[_thumblist contentView]setFrame:scrollframe];
-        [[_thumblist documentView]setFrame:scrollframe];
-    }*/
-    //[_thumblist setDocumentView:tvc];
-    //[[_thumblist documentView] setFrameSize:NSMakeSize(400, 800)];
-    //[_imageT setHasVerticalScroller:NO];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -430,55 +376,18 @@
             [imagetrans cutalpha:transparenttemp outimage:transparentname];
             if([imaget myiobjectpoint] != nil)
             {
-                
-                NSString * subtitle = [[imaget myiobjectpoint] subtitle];
-                NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
-                NSString * newsubtitle = [NSString stringWithFormat:@"2_%@",[strs objectAtIndex:1]];
-                [[imaget myiobjectpoint] setSubtitle:newsubtitle];
+                [[imaget myiobjectpoint] changevalue:@"2" index:0];
                 [q2i statimagescore:imaget];
                 dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
                     //Background Thread
                     dispatch_async(dispatch_get_main_queue(), ^(void){
                         //Run UI Updates
                         [_scrollimagelist setNeedsDisplay:YES];
-                        /*
-                        query2image * qi2 = [_scrollimagelist q2ipoint];
-                        [_scrollimagelist setDataSource:nil];
-                        
-                        [_scrollimagelist reloadData];
-                        
-                        [_scrollimagelist setDataSource:[qi2 imagesource]];
-                        [_scrollimagelist reloadData];*/
                     });
                 });
-                /*dispatch_async(dispatch_get_main_queue(), ^{
-                    //[_scrollimagelist setDataSource:[[_scrollimagelist qi2point] imagesource] ];
-                    [_scrollimagelist reloadData];
-                    [_scrollimagelist setNeedsDisplay:YES];
-                    NSLog(@"holy shit!");
-                });*/
-                //[_scrollimagelist reloadData];
             }
             
         }
-        /*if(flag == 1 && pw != nil)
-        {
-            //[[tw pg] setProgressOffset:a++];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[pw pg] setDoubleValue:g_progress];
-            });
-            //            NSLog(@"%d", a);
-            //[alert setshow:a++];
-        }
-        if(g_progress == 100)
-        {
-            flag = 0;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [NSApp endSheet:[pw window]];
-                [_window setMovable:YES];
-            });
-            g_progress = 0;
-        }*/
         [lock unlock];
     }
 }

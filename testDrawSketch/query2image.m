@@ -295,9 +295,10 @@
             //NSLog(@"score %lf", score);
             [temp setScore:score];
             
-            NSString * subtitle = [[temp myiobjectpoint] subtitle];
+           /* NSString * subtitle = [[temp myiobjectpoint] subtitle];
             NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
-            NSString * newsubtitle = [NSString stringWithFormat:@"%@_%f", [strs firstObject], score];
+            NSString * newsubtitle = [NSString stringWithFormat:@"%@_%f", [strs firstObject], score];*/
+            [[temp myiobjectpoint] changevalue:[NSString stringWithFormat:@"%lf", score] index:1];
             if([temp ind] > [self visiblerange])
             {
                 
@@ -313,9 +314,10 @@
                     if(bestimageind == -1)
                     {
                         bestimageind = i;
-                        newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
-                        NSLog(@"top score %d %lf", bestimageind, score);
+                        //newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
+                       // NSLog(@"top score %d %lf", bestimageind, score);
                         
+                        [[temp myiobjectpoint] changevalue:@"3" index:0];
                     }
                     else if(bestimageind > -1 && bestimageind < [imageitemlist count])
                     {
@@ -323,18 +325,20 @@
                         double mscore = [bit score];
                         if(score > 0.0001 && score < mscore && i != bestimageind)
                         {
-                            NSLog(@"haha top score %d %lf", i ,score);
+                            /*NSLog(@"haha top score %d %lf", i ,score);
                             //修改旧的属性
                             NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
                             NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
-                            [[bit myiobjectpoint]setSubtitle:oldsubtitle];
+                            [[bit myiobjectpoint]setSubtitle:oldsubtitle];*/
                             bestimageind = i;
-                            newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
+                            [[bit myiobjectpoint] changevalue:@"2" index:0];
+                            [[temp myiobjectpoint] changevalue:@"3" index:0];
+                            //newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
                         }
                     }
                 }
             }
-            [[temp myiobjectpoint]setSubtitle:newsubtitle];
+            //[[temp myiobjectpoint]setSubtitle:newsubtitle];
             break;
         }
     }
@@ -405,13 +409,14 @@
     if(bestind != -1 && bestind != [self bestimageind])
     {
         imageitem * bit = [imageitemlist objectAtIndex:bestimageind];
-        NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
+        /*NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
         NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
-        [[bit myiobjectpoint]setSubtitle:oldsubtitle];
-        
-        NSString * newsubtitle = [NSString stringWithFormat:@"3_%f", tempscore];
+        [[bit myiobjectpoint]setSubtitle:oldsubtitle];*/
+        [[bit myiobjectpoint] changevalue:@"2" index:0];
+       // NSString * newsubtitle = [NSString stringWithFormat:@"3_%f", tempscore];
         bit = [imageitemlist objectAtIndex:bestind];
-        [[bit myiobjectpoint]setSubtitle:newsubtitle];
+        [[bit myiobjectpoint] changevalue:@"3" index:0];
+        //[[bit myiobjectpoint]setSubtitle:newsubtitle];
     }
     [self setBestimageind:bestind];
 }

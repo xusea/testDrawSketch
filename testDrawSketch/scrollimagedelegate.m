@@ -47,6 +47,53 @@
 {
     return subtitle;
 }
+
+-(void)changevalue:(NSString *)value index:(int)ind
+{
+    NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
+    NSString * newsubtitle = @"";
+    int c = ind + 1;
+    if([strs count] > c)
+    {
+        c = (int)[strs count];
+    }
+    if(ind !=0)
+    {
+        if([strs count] != 0)
+        {
+            newsubtitle = [strs objectAtIndex:0];
+        }
+        else
+        {
+            newsubtitle = @"-1";
+        }
+    }
+    else
+    {
+        newsubtitle = value;
+    }
+    for(int j = 1;j < c ; j ++)
+    {
+        if(j == ind)
+        {
+            newsubtitle = [newsubtitle stringByAppendingString:[NSString stringWithFormat:@"_%@", value]];
+        }
+        else
+        {
+            if(j < [strs count])
+            {
+                newsubtitle = [newsubtitle stringByAppendingString:[NSString stringWithFormat:@"_%@", strs[j]]];
+            }
+            else
+            {
+                newsubtitle = [newsubtitle stringByAppendingString:@"_-1.0"];
+            }
+        }
+    }
+    subtitle = newsubtitle;
+    return;
+}
+
 @end
 scrollimagedelegate * g_scrollimagedelegate;
 @implementation scrollimagedelegate

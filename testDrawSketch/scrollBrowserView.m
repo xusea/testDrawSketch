@@ -86,7 +86,7 @@
     
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     
-    NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
+   // NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
     int index =[self getindexfrompoint:currentPosition];
     NSLog(@"click item %d", index);
     if(index != -1)
@@ -94,10 +94,11 @@
         int toolind = [self gettoolfrompoint:currentPosition];
         
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:index];
-        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
-        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@_%d", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], [subtitlestrs objectAtIndex:2], toolind];
-        [mio setSubtitle:newsubtitle];
-        NSLog(@"click tool ind: %d %@" ,toolind, newsubtitle);
+        //NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+        //NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@_%d", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], [subtitlestrs objectAtIndex:2], toolind];
+        //[mio setSubtitle:newsubtitle];
+        [mio changevalue:[NSString stringWithFormat:@"%d", toolind] index:3];
+       // NSLog(@"click tool ind: %d %@" ,toolind, newsubtitle);
     }
     [self setNeedsDisplay:YES];
     /*if (idx != NSNotFound)
@@ -124,9 +125,10 @@
     if(idx != -1)
     {
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:idx];
-        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
-        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"1"];
-        [mio setSubtitle:newsubtitle];
+        //NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+        //NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"1"];
+        //[mio setSubtitle:newsubtitle];
+        [mio changevalue:@"1" index:2];
         for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
         {
             if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
@@ -177,6 +179,7 @@
         NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"0"];
         [mio setSubtitle:newsubtitle];
     }*/
+    [self cleanallenteredstatus];
     [self cleanalltoolsstatus];
     [self setNeedsDisplay:YES];
    /* NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
@@ -260,10 +263,22 @@
     for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
     {
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
-        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+        [mio changevalue:@"-1" index:3];
+       /* NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
         NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_0_-1", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1]];
-        [mio setSubtitle:newsubtitle];
+        [mio setSubtitle:newsubtitle];*/
     }
 
+}
+-(void)cleanallenteredstatus
+{
+    for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
+    {
+        MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
+        [mio changevalue:@"-1" index:2];
+        /* NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
+         NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_0_-1", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1]];
+         [mio setSubtitle:newsubtitle];*/
+    }
 }
 @end

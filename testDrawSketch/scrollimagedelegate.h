@@ -22,6 +22,7 @@
 @property (retain) NSString * fontname;
 @property (retain) NSString * subtitle;
 @property (retain) NSString * title;
+-(void)changevalue:(NSString *) value index:(int)ind;
 @end
 
 @interface scrollimagedelegate : NSObject

@@ -29,4 +29,5 @@
 -(void)initial;
 -(int)gettoolfrompoint:(NSPoint)point;
 -(void)cleanalltoolsstatus;
+-(void)cleanallenteredstatus;
 @end
