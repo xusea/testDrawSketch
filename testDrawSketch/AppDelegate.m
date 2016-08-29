@@ -86,7 +86,7 @@
     [_scrollimagelist setBigsizeimage:_bigsizeimage];
     [[_bigsizeimage thumbnailimage] setImageFrameStyle:NSImageFrameGrayBezel];
     
-    //9.mattview初始化
+    //9.mattview（人工编辑框）初始化
     mattview = [[mattviewController alloc]init];
     bool ret = [[NSBundle mainBundle] loadNibNamed:@"mattviewController" owner:mattview topLevelObjects:nil];
     NSLog(@"load mattviewController %d", ret);

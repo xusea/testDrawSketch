@@ -295,7 +295,7 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
 -(void)getallstatus
 {
     NSString * subtitle = [[self representedItem] subtitle];
-    NSLog(@"getall status %@ ", subtitle);
+    //NSLog(@"getall status %@ ", subtitle);
     NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
     
     

@@ -86,7 +86,6 @@
     
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     
-   // NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
     int index =[self getindexfrompoint:currentPosition];
     NSLog(@"click item %d", index);
     if(index != -1)
@@ -94,18 +93,35 @@
         int toolind = [self gettoolfrompoint:currentPosition];
         
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:index];
-        //NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
-        //NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@_%d", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], [subtitlestrs objectAtIndex:2], toolind];
-        //[mio setSubtitle:newsubtitle];
         [mio changevalue:[NSString stringWithFormat:@"%d", toolind] index:3];
-       // NSLog(@"click tool ind: %d %@" ,toolind, newsubtitle);
+        if(toolind == 1)
+        {
+            //0 未定义  1 stroke
+            for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
+            {
+                if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
+                {
+                    
+                    imageitem * it = [[[self q2ipoint] imageitemlist]objectAtIndex:i];
+                    NSImage * image = [[NSImage alloc] initWithContentsOfFile:[it transparentname]];
+                    if(image ==nil)
+                    {
+                        break;
+                    }
+                    
+                   // [bigsizeimage setFrame:newframe];
+                   // [bigsizeimage setHidden:NO];
+                    //[bigsizeimage setImage:image];
+                   // [[bigsizeimage thumbnailimage]setImage:image];
+                    //[bigsizeimage strokeimage] setFrame:[bigsizeimage frame];
+                    [[bigsizeimage strokeimage]setImage:image];
+                    
+                }
+            }
+        }
     }
     [self setNeedsDisplay:YES];
-    /*if (idx != NSNotFound)
-    {
-        NSRect rect = [self itemFrameAtIndex:idx];
-        NSLog(@"click %ld [%lf %lf %lf %lf]", idx, rect.size.height, rect.size.width, currentPosition.x, currentPosition.y);
-    }*/
+    
     return;
 }
 
@@ -125,9 +141,7 @@
     if(idx != -1)
     {
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:idx];
-        //NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
-        //NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"1"];
-        //[mio setSubtitle:newsubtitle];
+        
         [mio changevalue:@"1" index:2];
         for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
         {

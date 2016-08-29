@@ -15,8 +15,8 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    [thumbnailimage setNeedsDisplay:YES];
-    [toolimage setNeedsDisplay:YES];
+  //  [thumbnailimage setNeedsDisplay:YES];
+  //  [toolimage setNeedsDisplay:YES];
     
     NSRect bound = [self bounds];
     NSBezierPath *trace = [[NSBezierPath alloc]init];
@@ -32,9 +32,12 @@
     thumbnailimage.frame = [self bounds];
     [self addSubview:thumbnailimage];
     
-    [thumbnailimage setImage:[NSImage imageNamed:@"yellow.png"]];
+    strokeimage = [[NSImageView alloc]init];
+    strokeimage.frame = [self bounds];
+    [self addSubview:strokeimage];
+   /* [thumbnailimage setImage:[NSImage imageNamed:@"yellow.png"]];
     //NSLog(@"???????");
     toolimage = [[NSImageView alloc]init];
-    [self addSubview:toolimage];
+    [self addSubview:toolimage];*/
 }
 @end
