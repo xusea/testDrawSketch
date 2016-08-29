@@ -33,5 +33,7 @@
 +(void)resizeimage:(NSString *)orgimage outimage:(NSString *)outimage newsize:(NSSize)ns;
 //透明图片填充边框
 +(void)fillalpha:(NSString *)orgimage outimage:(NSString *)outimage;
+//将黑白图片转为stroke
++(void)gray2stroke:(NSString *)logfile strokename:(NSString*)strokename;
 @end
 

@@ -358,20 +358,17 @@
         }
         if(imaget != nil)
         {
-/*            NSString * filename = [imaget filename];
-            NSFileManager *fileManager = [NSFileManager defaultManager];
-            NSString *downloadDir = [NSTemporaryDirectory()  stringByAppendingPathComponent:filename];
-            NSURL *downloadURL = [NSURL fileURLWithPath:downloadDir];
-            NSString * imagename = [[downloadURL absoluteString] substringWithRange:NSMakeRange(7, [[downloadURL absoluteString] length] - 7)];*/
             NSString * imagename = [imaget filename];
             NSString * grayname = [imaget grayname];
             NSString * logname = [imaget logname];
             NSString * transparentname = [imaget transparentname];
+            NSString * strokename = [imaget strokename];
             NSString * transparenttemp = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
             NSImage * image =[[NSImage alloc]initWithContentsOfFile:imagename];
             NSString * resizename = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
             [imagetrans resizeimage:imagename outimage:resizename newsize:NSMakeSize(400, 300)];
             [imagetrans imagecut:resizename outfile:grayname logfile:logname];
+            [imagetrans gray2stroke:logname strokename:strokename];
             [imagetrans imagesketch:logname orgimage:resizename outimage:transparenttemp];
             [imagetrans cutalpha:transparenttemp outimage:transparentname];
             if([imaget myiobjectpoint] != nil)

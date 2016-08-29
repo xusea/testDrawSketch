@@ -103,18 +103,14 @@
                 {
                     
                     imageitem * it = [[[self q2ipoint] imageitemlist]objectAtIndex:i];
-                    NSImage * image = [[NSImage alloc] initWithContentsOfFile:[it transparentname]];
+                    NSImage * image = [[NSImage alloc] initWithContentsOfFile:[it strokename]];
                     if(image ==nil)
                     {
                         break;
                     }
                     
-                   // [bigsizeimage setFrame:newframe];
-                   // [bigsizeimage setHidden:NO];
-                    //[bigsizeimage setImage:image];
-                   // [[bigsizeimage thumbnailimage]setImage:image];
-                    //[bigsizeimage strokeimage] setFrame:[bigsizeimage frame];
                     [[bigsizeimage strokeimage]setImage:image];
+                    [[bigsizeimage strokeimage]setHidden:NO];
                     
                 }
             }
@@ -127,8 +123,10 @@
 
 - (void)mouseUp:(NSEvent *)event
 {
+    [[bigsizeimage strokeimage]setHidden:YES];
     [self cleanalltoolsstatus];
     [self setNeedsDisplay:YES];
+    
      // NSLog(@"mouse upupup");
     return;
 }
@@ -186,35 +184,10 @@
 - (void)mouseExited:(NSEvent *)theEvent
 {
     [bigsizeimage setHidden:YES];
-    /*for(int i = 0; i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
-    {
-        MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
-        NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
-        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_%@", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1], @"0"];
-        [mio setSubtitle:newsubtitle];
-    }*/
+    [[bigsizeimage strokeimage] setHidden:YES];
     [self cleanallenteredstatus];
     [self cleanalltoolsstatus];
     [self setNeedsDisplay:YES];
-   /* NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-    NSLog(@"exited point [%lf %lf]", currentPosition.x, currentPosition.y);
-    int x[4] = {0,2,0,-2};
-    int y[4] = {2,0,-2,0};
-    for(int i = 0;i < 4;i ++)
-    {
-        NSPoint p = currentPosition;
-        p.x += x[i];
-        p.y += y[i];
-        int ind = [self getindexfrompoint:p];
-        if(ind != -1)
-        {
-            NSLog(@"exited %d", ind);
-            return;
-        }
-    }*/
-    //NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
-    
-    //NSLog(@"exited %d", [self getindexfrompoint:currentPosition]);
 }
 - (void)updateTrackingAreas
 {
@@ -278,9 +251,6 @@
     {
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
         [mio changevalue:@"-1" index:3];
-       /* NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
-        NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_0_-1", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1]];
-        [mio setSubtitle:newsubtitle];*/
     }
 
 }
@@ -290,9 +260,6 @@
     {
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:i];
         [mio changevalue:@"-1" index:2];
-        /* NSArray * subtitlestrs = [[mio subtitle] componentsSeparatedByString:@"_"];
-         NSString * newsubtitle = [NSString stringWithFormat:@"%@_%@_0_-1", [subtitlestrs objectAtIndex:0], [subtitlestrs objectAtIndex:1]];
-         [mio setSubtitle:newsubtitle];*/
     }
 }
 @end

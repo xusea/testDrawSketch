@@ -245,10 +245,12 @@
             NSString * grayname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
             NSString * logname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
             NSString * transparentname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * strokename = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
             [image setFilename:filename];
             [image setGrayname:grayname];
             [image setLogname:logname];
             [image setTransparentname:transparentname];
+            [image setStrokename:strokename];
             [image setMyiobjectpoint:nil];
             [image setInd:-1];
             [imageitemlist addObject:image];

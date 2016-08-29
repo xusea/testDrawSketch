@@ -16,6 +16,7 @@
     NSString * grayname;
     NSString * logname;
     NSString * transparentname;
+    NSString * strokename;
     int downflag;
     int ind;
     int type;//0 se , 1 image
@@ -28,6 +29,7 @@
 @property NSString * grayname;
 @property NSString * logname;
 @property NSString * transparentname;
+@property NSString * strokename;
 @property int downflag;
 @property int ind;
 @property int type;

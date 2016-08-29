@@ -15,6 +15,7 @@
 @synthesize grayname;
 @synthesize logname;
 @synthesize transparentname;
+@synthesize strokename;
 @synthesize downflag;
 @synthesize ind;
 @synthesize type;
