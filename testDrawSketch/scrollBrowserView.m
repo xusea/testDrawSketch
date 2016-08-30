@@ -108,7 +108,12 @@
                     {
                         break;
                     }
-                    
+                    //[bigsizeimage showstrokeimage:image];
+                    NSRect newbounds = [bigsizeimage frame];
+                    newbounds.origin.x = 0;
+                    newbounds.origin.y = 0;
+                    [[bigsizeimage strokeimage]setFrame:newbounds];
+                    [[bigsizeimage strokeimage]setBounds:newbounds];
                     [[bigsizeimage strokeimage]setImage:image];
                     [[bigsizeimage strokeimage]setHidden:NO];
                     
@@ -152,6 +157,7 @@
                 {
                     break;
                 }
+                //[bigsizeimage showthumbnailimage:image];
                 NSPoint frameorign = NSMakePoint(200, 130);
                 //frameorign.y += targetrect.size.height + 20;
                 NSRect newframe = bigsizeimageframe;
@@ -168,7 +174,13 @@
                 [bigsizeimage setFrame:newframe];
                 [bigsizeimage setHidden:NO];
                 //[bigsizeimage setImage:image];
+                NSRect newbounds = newframe;
+                newbounds.origin.x = 0;
+                newbounds.origin.y = 0;
+                [[bigsizeimage thumbnailimage]setFrame:newbounds];
+                [[bigsizeimage thumbnailimage]setBounds:newbounds];
                 [[bigsizeimage thumbnailimage]setImage:image];
+                
             }
         }
     }

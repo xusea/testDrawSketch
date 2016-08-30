@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/scrollBrowserView.m"
-            timestampString = "494177400.375702"
+            timestampString = "494259745.612549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "-gettoolfrompoint:"
             landmarkType = "5">
          </BreakpointContent>

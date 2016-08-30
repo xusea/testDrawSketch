@@ -35,9 +35,29 @@
     strokeimage = [[NSImageView alloc]init];
     strokeimage.frame = [self bounds];
     [self addSubview:strokeimage];
-   /* [thumbnailimage setImage:[NSImage imageNamed:@"yellow.png"]];
-    //NSLog(@"???????");
-    toolimage = [[NSImageView alloc]init];
-    [self addSubview:toolimage];*/
+
 }
+-(void)showthumbnailimage:(NSImage *)image
+{
+    [thumbnailimage setImage:image];
+    [self setHidden:NO];
+}
+-(void)showstrokeimage:(NSImage *)image
+{
+    [strokeimage setImage:image];
+    [strokeimage setHidden:NO];
+}
+-(void)disableallimage
+{
+    [self setHidden:YES];
+}
+-(void)disablethumbnailimage
+{
+    [thumbnailimage setHidden:YES];
+}
+-(void)disablestrokeimage
+{
+    [strokeimage setHidden:YES];
+}
+
 @end

@@ -18,4 +18,9 @@
 @property NSImageView * toolimage;
 @property NSImageView * strokeimage;
 -(void)initiation;
+-(void)showthumbnailimage:(NSImage *)image;
+-(void)showstrokeimage:(NSImage *)image;
+-(void)disableallimage;
+-(void)disablethumbnailimage;
+-(void)disablestrokeimage;
 @end

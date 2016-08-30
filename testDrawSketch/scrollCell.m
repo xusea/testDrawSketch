@@ -153,32 +153,33 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
             bound.size.height += 10;
             NSImage * borderimg = [NSImage imageNamed:@"red.png"];
             [borderimg drawInRect:bound];
-        }
-        //画工具
-        //编辑按钮
-        NSRect pencilframe;
-        pencilframe.size.height = 20;
-        pencilframe.size.width = 20;
-        pencilframe.origin.x = 0;
-        pencilframe.origin.y = 0;
-        NSImage * pencilimage = [NSImage imageNamed:@"pencil.png"];
-        [pencilimage drawInRect:pencilframe];
         
-        //轮廓
-        NSRect strokeframe;
-        strokeframe.size.height = 20;
-        strokeframe.size.width = 20;
-        strokeframe.origin.x = 20;
-        strokeframe.origin.y = 0;
-        if(strokeclickflag == 1)
-        {
-            NSImage * strokeimage = [NSImage imageNamed:@"strokeclick.png"];
-            [strokeimage drawInRect:strokeframe];
-        }
-        else
-        {
-            NSImage * strokeimage = [NSImage imageNamed:@"stroke.png"];
-            [strokeimage drawInRect:strokeframe];
+            //画工具
+            //编辑按钮
+            NSRect pencilframe;
+            pencilframe.size.height = 20;
+            pencilframe.size.width = 20;
+            pencilframe.origin.x = 0;
+            pencilframe.origin.y = 0;
+            NSImage * pencilimage = [NSImage imageNamed:@"pencil.png"];
+            [pencilimage drawInRect:pencilframe];
+            
+            //轮廓
+            NSRect strokeframe;
+            strokeframe.size.height = 20;
+            strokeframe.size.width = 20;
+            strokeframe.origin.x = 20;
+            strokeframe.origin.y = 0;
+            if(strokeclickflag == 1)
+            {
+                NSImage * strokeimage = [NSImage imageNamed:@"strokeclick.png"];
+                [strokeimage drawInRect:strokeframe];
+            }
+            else
+            {
+                NSImage * strokeimage = [NSImage imageNamed:@"stroke.png"];
+                [strokeimage drawInRect:strokeframe];
+            }
         }
 
     }

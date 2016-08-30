@@ -525,7 +525,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSColor *fillcolor2 = [NSColor colorWithCalibratedRed:0.0 green:0.0 blue:1.0 alpha:0.0];
     int posx[4] = {1, 0, -1 , 0};
     int posy[4] = {0, 1, 0, -1};
-    int brushsize = 10;
+    int brushsize = 4;
     for(int i = 0 ;i< width; i ++)
     {
         for(int j = 0; j< height; j ++)
@@ -567,13 +567,16 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
                 [repgraybak setColor:fillcolor atX:i y:j];
                 for(int k = 0; k < brushsize; k ++)
                 {
-                    int newi = i + k / 2 - k;
-                    int newj = j ;
-                    if(newi < 0 || newj < 0 || newi >= width || newj >= height)
+                    for(int kk = 0; kk < brushsize; kk ++)
                     {
-                        continue;
+                        int newi = i + k / 2 - k;
+                        int newj = j + kk / 2- kk;
+                        if(newi < 0 || newj < 0 || newi >= width || newj >= height)
+                        {
+                            continue;
+                        }
+                        [repgraybak setColor:fillcolor atX:newi y:newj];
                     }
-                    [repgraybak setColor:fillcolor atX:newi y:newj];
                 }
             }
             else
