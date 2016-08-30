@@ -525,7 +525,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSColor *fillcolor2 = [NSColor colorWithCalibratedRed:0.0 green:0.0 blue:1.0 alpha:0.0];
     int posx[4] = {1, 0, -1 , 0};
     int posy[4] = {0, 1, 0, -1};
-    int brushsize = 20;
+    int brushsize = 10;
     for(int i = 0 ;i< width; i ++)
     {
         for(int j = 0; j< height; j ++)

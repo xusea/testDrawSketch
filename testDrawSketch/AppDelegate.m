@@ -85,6 +85,7 @@
     [_bigsizeimage setHidden:YES];
     [_scrollimagelist setBigsizeimage:_bigsizeimage];
     [[_bigsizeimage thumbnailimage] setImageFrameStyle:NSImageFrameGrayBezel];
+    [[_bigsizeimage strokeimage] setImageFrameStyle:NSImageFrameGrayBezel];
     
     //9.mattview（人工编辑框）初始化
     mattview = [[mattviewController alloc]init];
