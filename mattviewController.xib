@@ -77,7 +77,7 @@
                             </buttonCell>
                         </button>
                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-PN-nU7" customClass="CTCSlider">
-                            <rect key="frame" x="275" y="444" width="199" height="20"/>
+                            <rect key="frame" x="275" y="444" width="199" height="21"/>
                             <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="8FL-V5-fTh" customClass="CTCSliderCell"/>
                         </slider>
                         <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" horizontalScrollElasticity="none" verticalScrollElasticity="none" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="2Hu-DO-prt" customClass="SynchroScrollView">
@@ -105,7 +105,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="wo7-9N-x0Y" customClass="TCScroller">
-                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
+                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
@@ -161,7 +161,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="6iZ-JK-6Fe" customClass="TCScroller">
-                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
+                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>

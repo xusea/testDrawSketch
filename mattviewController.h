@@ -145,4 +145,5 @@
 @property (weak) IBOutlet NSButton *showchangetransparent;
 @property (weak) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSView *allview;
+- (void)addimage:(NSString *)filename strokename:(NSString*)strokename;
 @end

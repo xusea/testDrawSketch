@@ -66,6 +66,7 @@
     [_scrollimagelist setContentResizingMask:NSViewWidthSizable];
     NSPoint fixpos = [_imageT frame].origin;
     [_scrollimagelist setFixpos:fixpos];
+    
     //4.初始化绘画修正点
     fpos = [_dSC frame].origin;
     
@@ -95,6 +96,7 @@
     [mattview setWindow:_window];
     [[_window contentView]addSubview:[mattview allview]];
     [[mattview allview]setHidden:YES];
+    [_scrollimagelist setMattview:mattview];
     
 }
 

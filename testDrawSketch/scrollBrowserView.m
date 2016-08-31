@@ -17,6 +17,7 @@
 @synthesize cellspace;
 @synthesize bigsizeimage;
 @synthesize bigsizeimageframe;
+@synthesize mattview;
 -(void)initial
 {
     enteredind = -1;
@@ -94,7 +95,22 @@
         
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:index];
         [mio changevalue:[NSString stringWithFormat:@"%d", toolind] index:3];
-        if(toolind == 1)
+        if(toolind == 0)
+        {
+            //弹起人工编辑框
+            
+            for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
+            {
+                if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
+                {
+                    imageitem * it = [[[self q2ipoint] imageitemlist]objectAtIndex:i];
+                    [mattview addimage:[it filename] strokename:[it strokename]];
+                    [[mattview allview] setHidden:NO];
+                    [[mattview allview] setNeedsDisplay:YES];
+                }
+            }
+        }
+        else if(toolind == 1)
         {
             //0 未定义  1 stroke
             for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
@@ -120,6 +136,7 @@
                 }
             }
         }
+        
     }
     [self setNeedsDisplay:YES];
     

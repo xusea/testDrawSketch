@@ -102,7 +102,7 @@
     [_showbrush setOffsetX:[_scrollbrushview frame].origin.x OffsetY:[_scrollbrushview frame].origin.y];
     [_showdrawin setState:NSOnState];
     hash_magic = @"df23js773";
-    imagepath = @"";
+    imagepath = NSTemporaryDirectory();
     
     NSString* dir = NSTemporaryDirectory();
     NSString* prefix = [dir stringByAppendingString:hash_magic];
@@ -1158,6 +1158,132 @@
     [_showbg setI:image];
     [_showbg setBgtype:1];
     [_showbg setNeedsDisplay:YES];
+}
+
+- (void)addimage:(NSString *)filename strokename:(NSString*)strokename
+{
+        // Gets list of all files selected
+        NSImageRep * imagerep = [NSImageRep imageRepWithContentsOfFile:filename];
+        NSImage * image = [[NSImage alloc] initWithContentsOfFile:filename] ;
+    
+        curzoomFactor = 1;
+        [_showsave setEnabled:YES];
+        [_showdrawin setEnabled:YES];
+        [_showdrawout setEnabled:YES];
+        [_showzoomout setEnabled:YES];
+        [_showzoomin setEnabled:YES];
+        [_showclear setEnabled:YES];
+        [_showchangesize setEnabled:YES];
+        [_showundo setEnabled:YES];
+        [_showredo setEnabled:YES];
+        [_showmatting setEnabled:YES];
+        [_showbrush setCandrawflag:1];
+        // set size and position
+        leftRect.size = modelRect.size;
+        leftRect.origin.x = 0;
+        leftRect.origin.y = 0;
+        
+        rightRect.size = modelRect.size;
+        rightRect.origin.x = 0;
+        rightRect.origin.y = 0;
+        
+        brushRect.size = modelRect.size;
+        if((float)[image size].width / (float)[image size].height > (float)modelRect.size.width / (float)modelRect.size.height)
+        {
+            brushRect.size.height = (float)[image size].height / (float)[image size].width * modelRect.size.width;
+            brushRect.size.height = (float)[image size].height / (float)[image size].width * modelRect.size.width;
+        }
+        else
+        {
+            brushRect.size.width = (float)[image size].width / (float)[image size].height * modelRect.size.height;
+            brushRect.size.width = (float)[image size].width / (float)[image size].height * modelRect.size.height;
+        }
+        
+        
+        [_showorg setFrame:leftRect];
+        [_showbrush setFrame:leftRect];
+        leftRect.origin.x=0;
+        leftRect.origin.y=0;
+        [_showbrush setBounds:leftRect];
+        [_showbg setFrame:rightRect];
+        [_showresult setFrame:rightRect];
+        
+        [_showorg setImage:image];
+        [_showbrush setZoomfactor:1];
+        [_showresult setZoomfactor:1];
+        //////////////////
+        NSLog(@"showorg %f %f %f %f", [[_leftview documentView] frame].origin.x, [[_leftview documentView] frame].origin.y, [_showorg frame].origin.x, [_showorg frame].origin.y);
+        
+        ///////////////////
+        //[_showresult setImage:nil];
+        [_showresult setI:nil];
+        [_showbrush removepath];
+        [_showdrawin setState:NSOnState];
+        [_showdrawout setState:NSOffState];
+        [_showbrush setBrusht:0];
+        maxarea = 0;
+        [areaset removeAllObjects];
+        //set brush border
+        brushframe = [_showorg frame];
+        brushframe.origin.x = 0;
+        brushframe.origin.y = 0;
+        //NSRect brushbounds = [_showorg bounds];
+        float borderrate = [_showorg frame].size.height / [_showorg frame].size.width;
+        float imagerate = [image size].height / [image size].width;
+        if(borderrate > imagerate)
+        {
+            brushframe.size.height = imagerate * brushframe.size.width;
+            brushframe.origin.y = ([_showorg frame].size.height - brushframe.size.height) / 2;
+        }
+        else
+        {
+            brushframe.size.width = brushframe.size.height / imagerate;
+            brushframe.origin.x = ([_showorg frame].size.width - brushframe.size.width) / 2;
+        }
+        NSSize pngsize;
+        //NSSize pngsize = [image size];
+        pngsize.width = [imagerep pixelsWide];
+        pngsize.height = [imagerep pixelsHigh];
+        // NSLog(@"%f ", [_window backingScaleFactor]);
+        /* if([_window backingScaleFactor] > 1.0)
+         {
+         pngsize.width /= 2;
+         pngsize.height /= 2;
+         }*/
+        NSLog(@"%f %f", pngsize.height, pngsize.width);
+        [_showbrush setImagesize:pngsize];
+        [_showbrush setCroparea:brushframe];
+        
+        
+        NSImage * srcImage = [NSImage imageNamed:@"background.png"];
+        
+        NSImage *newImage = [[NSImage alloc] initWithSize:brushRect.size];
+        [newImage lockFocus];
+        [[NSColor grayColor] set];
+        NSRectFill(NSMakeRect(0,0,[newImage size].width, [newImage size].height));
+        //[srcImage compositeToPoint:NSZeroPoint operation:NSCompositeCopy];
+        [srcImage drawAtPoint:NSZeroPoint fromRect:NSMakeRect(0,0,[newImage size].width, [newImage size].height) operation:NSCompositeSourceOver fraction:1.0];
+        [newImage unlockFocus];
+        
+        //[_showbg setImageScaling:NSImageScaleNone];
+        //[_showbg setImage:newImage];
+        [_showbg setI:newImage];
+        [_showbg setPointbound:brushframe];
+        [_showbg setBgtype:1];
+        [_showresult setImageboung:brushframe];
+        [_showresult setPointbound:brushframe];
+        [_showresult setNeedsDisplay:YES];
+        //[_showbg setI:newImage];
+        //[_showbg setPointbound:brushframe];
+        // dpi
+        
+        
+        dpi = ceilf((72.0f * [imagerep pixelsWide])/[image size].width);
+        [_showbrush setOrgdpi:dpi];
+        
+        [_showchangebg setEnabled:YES];
+        [_showchangetransparent setEnabled:YES];
+        
 }
 
 @end
