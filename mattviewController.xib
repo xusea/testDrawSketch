@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="mattviewController">
             <connections>
                 <outlet property="allview" destination="Hz6-mo-xeY" id="a3z-Zv-bjS"/>
+                <outlet property="backgroundview" destination="wJU-di-GCV" id="HFW-9f-VE6"/>
                 <outlet property="leftinnershellview" destination="yOy-3Y-fIw" id="yWa-Et-9cm"/>
                 <outlet property="leftshellview" destination="cls-Q1-ht0" id="qFZ-xf-1MN"/>
                 <outlet property="rightshellview" destination="aKy-G6-kYm" id="bJ6-V9-nH9"/>
@@ -26,7 +27,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1065" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-di-GCV">
+                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-di-GCV" customClass="mattbackgroundview">
                     <rect key="frame" x="0.0" y="0.0" width="1065" height="480"/>
                     <subviews>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-jV-2oR">

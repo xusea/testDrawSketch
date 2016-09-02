@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_window setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"backg.png"]]];
+    
+    //[_window setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"backg.png"]]];
     /*
      @property (weak) IBOutlet NSButton *showopen;
      @property (weak) IBOutlet NSButton *showsave;

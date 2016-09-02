@@ -17,6 +17,7 @@
 #import "backgroundbound.h"
 #import "util.h"
 #import "shellview.h"
+#import "mattbackgroundview.h"
 @interface mattviewController : NSViewController
 {
     NSString * imagepath;
@@ -146,4 +147,6 @@
 @property (weak) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSView *allview;
 - (void)addimage:(NSString *)filename strokename:(NSString*)strokename;
+@property (weak) IBOutlet mattbackgroundview *backgroundview;
+
 @end
