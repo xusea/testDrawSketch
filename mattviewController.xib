@@ -8,6 +8,15 @@
         <customObject id="-2" userLabel="File's Owner" customClass="mattviewController">
             <connections>
                 <outlet property="allview" destination="Hz6-mo-xeY" id="a3z-Zv-bjS"/>
+                <outlet property="leftinnershellview" destination="yOy-3Y-fIw" id="yWa-Et-9cm"/>
+                <outlet property="leftshellview" destination="cls-Q1-ht0" id="qFZ-xf-1MN"/>
+                <outlet property="rightshellview" destination="aKy-G6-kYm" id="bJ6-V9-nH9"/>
+                <outlet property="scrollbgview" destination="2Hu-DO-prt" id="e6b-jv-gkr"/>
+                <outlet property="scrollbrushview" destination="bb6-wP-uQz" id="z4P-xb-ndc"/>
+                <outlet property="showbg" destination="Ygd-9I-hDB" id="7hC-F8-xcN"/>
+                <outlet property="showbrush" destination="bxO-tp-ymn" id="bRV-vg-d8v"/>
+                <outlet property="showorg" destination="jpd-9r-3PT" id="hph-U4-sN2"/>
+                <outlet property="showresult" destination="G9Q-5r-Ksk" id="wCk-qE-7qh"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -77,17 +86,17 @@
                             </buttonCell>
                         </button>
                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-PN-nU7" customClass="CTCSlider">
-                            <rect key="frame" x="275" y="444" width="199" height="21"/>
+                            <rect key="frame" x="275" y="444" width="199" height="20"/>
                             <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="8FL-V5-fTh" customClass="CTCSliderCell"/>
                         </slider>
                         <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" horizontalScrollElasticity="none" verticalScrollElasticity="none" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="2Hu-DO-prt" customClass="SynchroScrollView">
                             <rect key="frame" x="540" y="15" width="510" height="410"/>
                             <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="hpH-em-heA">
-                                <rect key="frame" x="0.0" y="0.0" width="510" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="495" height="395"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKy-G6-kYm" customClass="shellview">
-                                        <rect key="frame" x="0.0" y="316" width="500" height="400"/>
+                                        <rect key="frame" x="0.0" y="301" width="500" height="400"/>
                                         <subviews>
                                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ygd-9I-hDB" customClass="backgroundbound">
                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
@@ -101,11 +110,11 @@
                                 <color key="backgroundColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
                             </clipView>
                             <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="et2-ii-V8U" customClass="TCScroller">
-                                <rect key="frame" x="0.0" y="394" width="510" height="16"/>
+                                <rect key="frame" x="0.0" y="395" width="495" height="15"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="wo7-9N-x0Y" customClass="TCScroller">
-                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
+                                <rect key="frame" x="495" y="0.0" width="15" height="395"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
@@ -133,11 +142,11 @@
                         <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="bb6-wP-uQz" customClass="SynchroScrollView">
                             <rect key="frame" x="15" y="15" width="510" height="410"/>
                             <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="A9S-4w-XyI">
-                                <rect key="frame" x="0.0" y="0.0" width="510" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="495" height="395"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cls-Q1-ht0" customClass="shellview">
-                                        <rect key="frame" x="0.0" y="316" width="500" height="400"/>
+                                        <rect key="frame" x="0.0" y="301" width="500" height="400"/>
                                         <subviews>
                                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-3Y-fIw" customClass="shellview">
                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
@@ -157,11 +166,11 @@
                                 <color key="backgroundColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
                             </clipView>
                             <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="pZc-M6-IXR" customClass="TCScroller">
-                                <rect key="frame" x="0.0" y="394" width="510" height="16"/>
+                                <rect key="frame" x="0.0" y="395" width="495" height="15"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="6iZ-JK-6Fe" customClass="TCScroller">
-                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
+                                <rect key="frame" x="495" y="0.0" width="15" height="395"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
