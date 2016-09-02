@@ -8,6 +8,7 @@
 #import <Quartz/Quartz.h>
 #import "premattview.h"
 #import "mattviewController.h"
+#import "mattwindowcontroller.h"
 @class query2image;
 @interface scrollBrowserView : IKImageBrowserView
 {
@@ -19,6 +20,7 @@
     premattview * bigsizeimage;
     NSRect bigsizeimageframe;
     mattviewController * mattview;
+    mattwindowcontroller * mattwindow;
 }
 @property query2image * q2ipoint;
 @property int enteredind;
@@ -28,6 +30,7 @@
 @property premattview * bigsizeimage;
 @property NSRect bigsizeimageframe;
 @property mattviewController * mattview;
+@property mattwindowcontroller * mattwindow;
 -(int)getindexfrompoint:(NSPoint)point;
 -(void)initial;
 -(int)gettoolfrompoint:(NSPoint)point;

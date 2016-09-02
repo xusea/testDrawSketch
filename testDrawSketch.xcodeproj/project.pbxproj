@@ -94,6 +94,8 @@
 		DF3824DD1D7037B4006101F1 /* mouseover.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3824DC1D7037B4006101F1 /* mouseover.png */; };
 		DF3824E01D703A57006101F1 /* premattview.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3824DF1D703A57006101F1 /* premattview.m */; };
 		DF3824E31D797908006101F1 /* mattbackgroundview.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3824E21D797908006101F1 /* mattbackgroundview.m */; };
+		DF3824E91D79B718006101F1 /* mattwindowcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3824E71D79B718006101F1 /* mattwindowcontroller.m */; };
+		DF3824EA1D79B718006101F1 /* mattwindowcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3824E81D79B718006101F1 /* mattwindowcontroller.xib */; };
 		DF3CFF941CF6908B008B325B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFF931CF6908B008B325B /* AppDelegate.m */; };
 		DF3CFF971CF6908B008B325B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFF961CF6908B008B325B /* main.m */; };
 		DF3CFF991CF6908B008B325B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3CFF981CF6908B008B325B /* Assets.xcassets */; };
@@ -264,6 +266,9 @@
 		DF3824DF1D703A57006101F1 /* premattview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = premattview.m; sourceTree = "<group>"; };
 		DF3824E11D797908006101F1 /* mattbackgroundview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mattbackgroundview.h; sourceTree = "<group>"; };
 		DF3824E21D797908006101F1 /* mattbackgroundview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mattbackgroundview.m; sourceTree = "<group>"; };
+		DF3824E61D79B718006101F1 /* mattwindowcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mattwindowcontroller.h; sourceTree = "<group>"; };
+		DF3824E71D79B718006101F1 /* mattwindowcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mattwindowcontroller.m; sourceTree = "<group>"; };
+		DF3824E81D79B718006101F1 /* mattwindowcontroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mattwindowcontroller.xib; sourceTree = "<group>"; };
 		DF3CFF8F1CF6908B008B325B /* testDrawSketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testDrawSketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3CFF921CF6908B008B325B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF3CFF931CF6908B008B325B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -517,6 +522,9 @@
 				DFEA8ED11D2CFCD800A2D87A /* resultimageview.m */,
 				2914A8081D6F2B3C0021E9E6 /* BrushPoint.h */,
 				2914A8091D6F2B3C0021E9E6 /* BrushPoint.m */,
+				DF3824E61D79B718006101F1 /* mattwindowcontroller.h */,
+				DF3824E71D79B718006101F1 /* mattwindowcontroller.m */,
+				DF3824E81D79B718006101F1 /* mattwindowcontroller.xib */,
 			);
 			path = testDrawSketch;
 			sourceTree = "<group>";
@@ -711,6 +719,7 @@
 				2914A7BF1D6F23D60021E9E6 /* in.png in Resources */,
 				2914A7D11D6F23D60021E9E6 /* start.png in Resources */,
 				DFDE8E2C1D337A0300A13724 /* green.png in Resources */,
+				DF3824EA1D79B718006101F1 /* mattwindowcontroller.xib in Resources */,
 				2914A7C21D6F23D60021E9E6 /* itunes_barFillBeforeknob.png in Resources */,
 				2914A7D01D6F23D60021E9E6 /* smallbg.png in Resources */,
 				2914A7CA1D6F23D60021E9E6 /* outclick.png in Resources */,
@@ -791,6 +800,7 @@
 				DFEA8EC51D23BA2900A2D87A /* scrollBrowserView.m in Sources */,
 				DFC58C241D0EA40000E06DFD /* downfile.m in Sources */,
 				DFDE8E231D3379CC00A13724 /* CmSaliencyRC.mm in Sources */,
+				DF3824E91D79B718006101F1 /* mattwindowcontroller.m in Sources */,
 				DFDE8E1F1D3379CC00A13724 /* cmdefine.mm in Sources */,
 				2914A8061D6F241E0021E9E6 /* mattviewController.m in Sources */,
 				DFDE8E241D3379CC00A13724 /* segment-image.cpp in Sources */,

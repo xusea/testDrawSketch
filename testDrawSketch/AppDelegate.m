@@ -23,6 +23,7 @@
 @synthesize fpos;
 @synthesize convert_progress;
 @synthesize lock;
+@synthesize mattwindow =_mattwindow;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     //初始化颜色
     colorset = [[NSMutableArray alloc]init];
@@ -89,14 +90,23 @@
     [[_bigsizeimage strokeimage] setImageFrameStyle:NSImageFrameGrayBezel];
     
     //9.mattview（人工编辑框）初始化
-    mattview = [[mattviewController alloc]init];
+/*    mattview = [[mattviewController alloc]init];
     bool ret = [[NSBundle mainBundle] loadNibNamed:@"mattviewController" owner:mattview topLevelObjects:nil];
     NSLog(@"load mattviewController %d", ret);
     [mattview viewDidLoad];
     [mattview setWindow:_window];
     [[_window contentView]addSubview:[mattview allview]];
     [[mattview allview]setHidden:YES];
-    [_scrollimagelist setMattview:mattview];
+    [_scrollimagelist setMattview:mattview];*/
+    
+    //10.mattwindow
+   /* mattwindow = [[mattwindowcontroller alloc]init];
+    ret = [[NSBundle mainBundle]loadNibNamed:@"mattwindowcontroller" owner:mattwindow topLevelObjects:nil];
+    NSLog(@"load mattwindowController %d", ret);
+    [[mattwindow window]setCanHide:YES];*/
+    //[mattwindow windowDidLoad];
+   // [[[mattwindow window] contentView] addSubview:[mattview allview]];
+    //[NSApp runModalForWindow:[mattwindow window]];
     
 }
 

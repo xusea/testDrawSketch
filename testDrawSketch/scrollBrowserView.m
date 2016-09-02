@@ -104,9 +104,27 @@
                 if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
                 {
                     imageitem * it = [[[self q2ipoint] imageitemlist]objectAtIndex:i];
+                    
+                        mattview = [[mattviewController alloc]init];
+                     bool ret = [[NSBundle mainBundle] loadNibNamed:@"mattviewController" owner:mattview topLevelObjects:nil];
+                     NSLog(@"load mattviewController %d", ret);
+                     [mattview viewDidLoad];
+                     //[mattview setWindow:_window];
+                     //[[_window contentView]addSubview:[mattview allview]];
+                     //[[mattview allview]setHidden:YES];
+                    // [_scrollimagelist setMattview:mattview];
+                    
+                    //10.mattwindow
+                     mattwindow = [[mattwindowcontroller alloc]init];
+                     ret = [[NSBundle mainBundle]loadNibNamed:@"mattwindowcontroller" owner:mattwindow topLevelObjects:nil];
+                     NSLog(@"load mattwindowController %d", ret);
                     [mattview addimage:[it filename] strokename:[it strokename]];
-                    [[mattview allview] setHidden:NO];
-                    [[mattview allview] setNeedsDisplay:YES];
+                    [[[mattwindow window] contentView] addSubview:[mattview allview]];
+                    
+                    [mattview setWindow:[mattwindow window]];
+                   // [NSApp runModalForWindow:[mattwindow window] ];
+                    //[[mattview allview] setHidden:NO];
+                    //[[mattview allview] setNeedsDisplay:YES];
                 }
             }
         }

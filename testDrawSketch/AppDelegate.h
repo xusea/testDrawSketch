@@ -19,6 +19,7 @@
 #import "resultimageview.h"
 #import "mattviewController.h"
 #import "premattview.h"
+#import "mattwindowcontroller.h"
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     query2image * qi;
@@ -31,6 +32,8 @@
     NSThread* convert_progress;
     NSLock *lock;
     mattviewController * mattview;
+    //NSWindow __unsafe_unretained * mattwindow;
+    mattwindowcontroller * mattwindow;
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -64,5 +67,7 @@
 //@property (weak) IBOutlet NSImageView *bigsizeimage;
 @property mattviewController* mattview;
 @property (weak) IBOutlet premattview *bigsizeimage;
+//@property(assign) IBOutlet NSWindow *mattwindow;
+@property(weak) mattwindowcontroller * mattwindow;
 @end
 
