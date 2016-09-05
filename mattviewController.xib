@@ -11,13 +11,27 @@
                 <outlet property="backgroundview" destination="wJU-di-GCV" id="HFW-9f-VE6"/>
                 <outlet property="leftinnershellview" destination="yOy-3Y-fIw" id="yWa-Et-9cm"/>
                 <outlet property="leftshellview" destination="cls-Q1-ht0" id="qFZ-xf-1MN"/>
+                <outlet property="leftview" destination="bb6-wP-uQz" id="Z0M-S5-1si"/>
                 <outlet property="rightshellview" destination="aKy-G6-kYm" id="bJ6-V9-nH9"/>
+                <outlet property="rightview" destination="2Hu-DO-prt" id="8MS-ev-C7B"/>
                 <outlet property="scrollbgview" destination="2Hu-DO-prt" id="e6b-jv-gkr"/>
                 <outlet property="scrollbrushview" destination="bb6-wP-uQz" id="z4P-xb-ndc"/>
                 <outlet property="showbg" destination="Ygd-9I-hDB" id="7hC-F8-xcN"/>
                 <outlet property="showbrush" destination="bxO-tp-ymn" id="bRV-vg-d8v"/>
+                <outlet property="showbrushsize" destination="DN4-PN-nU7" id="skV-DE-2x8"/>
+                <outlet property="showbsize" destination="DN4-PN-nU7" id="Ges-eb-qoa"/>
+                <outlet property="showchangesize" destination="DN4-PN-nU7" id="yOu-1v-C9E"/>
+                <outlet property="showclear" destination="Pmc-Yo-dxK" id="9r5-Wt-ro2"/>
+                <outlet property="showin" destination="dhF-YN-Ax0" id="6vW-Dw-IMu"/>
+                <outlet property="showmatting" destination="yNF-iD-rQS" id="DJU-37-59l"/>
                 <outlet property="showorg" destination="jpd-9r-3PT" id="hph-U4-sN2"/>
+                <outlet property="showout" destination="PMt-Bn-4FB" id="C6A-NM-Yut"/>
+                <outlet property="showredo" destination="OB0-2o-3xS" id="xkX-Hg-ZZQ"/>
                 <outlet property="showresult" destination="G9Q-5r-Ksk" id="wCk-qE-7qh"/>
+                <outlet property="showsave" destination="aKE-2h-LOf" id="l9E-ls-fPv"/>
+                <outlet property="showundo" destination="Q72-qf-Z9t" id="juM-EE-W6Q"/>
+                <outlet property="showzoomin" destination="VuN-JI-F55" id="MsS-AG-g65"/>
+                <outlet property="showzoomout" destination="0Ru-aP-G08" id="3E1-bk-IqE"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -40,65 +54,62 @@
                 <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-di-GCV" customClass="mattbackgroundview">
                     <rect key="frame" x="0.0" y="0.0" width="1065" height="480"/>
                     <subviews>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-jV-2oR">
-                            <rect key="frame" x="33" y="434" width="40" height="40"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="open" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="ADn-Q8-qbw">
-                                <behavior key="behavior" lightByContents="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                        </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKE-2h-LOf">
-                            <rect key="frame" x="90" y="434" width="40" height="40"/>
+                            <rect key="frame" x="15" y="434" width="40" height="40"/>
                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="save" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="XgI-JN-dnH">
                                 <behavior key="behavior" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="saveimage:" target="-2" id="KHX-lo-tIO"/>
+                            </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMt-Bn-4FB">
-                            <rect key="frame" x="145" y="434" width="40" height="40"/>
+                            <rect key="frame" x="58" y="434" width="40" height="40"/>
                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="out" imagePosition="only" alignment="center" alternateImage="outclick" state="on" imageScaling="axesIndependently" inset="2" id="moa-I8-QIn">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="drawout:" target="-2" id="1t2-r8-TGA"/>
+                            </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pmc-Yo-dxK">
-                            <rect key="frame" x="597" y="434" width="40" height="40"/>
+                            <rect key="frame" x="338" y="434" width="40" height="40"/>
                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="erase" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="q4E-QF-2GH">
                                 <behavior key="behavior" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
-                        </button>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-YN-Ax0">
-                            <rect key="frame" x="200" y="434" width="40" height="40"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="in" imagePosition="only" alignment="center" alternateImage="inclick" state="on" imageScaling="proportionallyDown" inset="2" id="SkN-hG-BmB">
-                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
+                            <connections>
+                                <action selector="callremovepath:" target="-2" id="rdg-fo-0vz"/>
+                            </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNF-iD-rQS">
-                            <rect key="frame" x="647" y="434" width="40" height="40"/>
+                            <rect key="frame" x="380" y="434" width="40" height="40"/>
                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="start" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Bry-zB-EB1">
                                 <behavior key="behavior" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
-                        </button>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q72-qf-Z9t">
-                            <rect key="frame" x="492" y="434" width="40" height="40"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="undo" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="7In-1L-quS">
-                                <behavior key="behavior" lightByContents="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
+                            <connections>
+                                <action selector="matting:" target="-2" id="GTH-Cx-ruX"/>
+                            </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OB0-2o-3xS">
-                            <rect key="frame" x="545" y="434" width="40" height="40"/>
+                            <rect key="frame" x="297" y="434" width="40" height="40"/>
                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="redo" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="m4D-2D-Lvy">
                                 <behavior key="behavior" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="callredo:" target="-2" id="Sqw-cO-VyY"/>
+                            </connections>
                         </button>
                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-PN-nU7" customClass="CTCSlider">
-                            <rect key="frame" x="275" y="444" width="199" height="20"/>
-                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="8FL-V5-fTh" customClass="CTCSliderCell"/>
+                            <rect key="frame" x="146" y="444" width="102" height="20"/>
+                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="4.87842345505618" tickMarkPosition="above" sliderType="linear" id="8FL-V5-fTh" customClass="CTCSliderCell"/>
+                            <connections>
+                                <action selector="changebrushsize:" target="-2" id="iZ0-CM-zyP"/>
+                            </connections>
                         </slider>
                         <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" horizontalScrollElasticity="none" verticalScrollElasticity="none" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="2Hu-DO-prt" customClass="SynchroScrollView">
                             <rect key="frame" x="540" y="15" width="510" height="410"/>
@@ -130,18 +141,24 @@
                             </scroller>
                         </scrollView>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-JI-F55">
-                            <rect key="frame" x="718" y="434" width="40" height="40"/>
+                            <rect key="frame" x="421" y="434" width="40" height="40"/>
                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="zoomin" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="5xd-Mm-hYf">
                                 <behavior key="behavior" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="zoomin:" target="-2" id="6T5-CW-aIL"/>
+                            </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ru-aP-G08">
-                            <rect key="frame" x="768" y="434" width="40" height="40"/>
+                            <rect key="frame" x="471" y="434" width="40" height="40"/>
                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="zoomout" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="tHJ-5g-4cW">
                                 <behavior key="behavior" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="zoomout:" target="-2" id="jLE-bx-cg6"/>
+                            </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Btx-WO-ysd">
                             <rect key="frame" x="926" y="434" width="40" height="40"/>
@@ -192,6 +209,26 @@
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-YN-Ax0">
+                            <rect key="frame" x="100" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="in" imagePosition="only" alignment="center" alternateImage="inclick" state="on" imageScaling="proportionallyDown" inset="2" id="SkN-hG-BmB">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="drawin:" target="-2" id="MqX-Dw-12P"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q72-qf-Z9t">
+                            <rect key="frame" x="253" y="434" width="40" height="40"/>
+                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="undo" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="7In-1L-quS">
+                                <behavior key="behavior" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="callundo:" target="-2" id="exE-bm-S0l"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </view>
             </subviews>
@@ -202,7 +239,6 @@
         <image name="in" width="128" height="128"/>
         <image name="inclick" width="128" height="128"/>
         <image name="newbg" width="64" height="64"/>
-        <image name="open" width="128" height="128"/>
         <image name="out" width="128" height="128"/>
         <image name="outclick" width="128" height="128"/>
         <image name="redo" width="512" height="512"/>
