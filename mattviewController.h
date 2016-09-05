@@ -54,7 +54,8 @@
     float zoomFactor;
     float maxzoomFactor;
     float curzoomFactor;
-    NSWindow *window;
+    NSWindow * __weak boundwindow;
+    int DPIScale;
 }
 @property (readwrite) float zoomFactor;
 @property (readwrite) float maxzoomFactor;
@@ -148,5 +149,6 @@
 @property (strong) IBOutlet NSView *allview;
 - (void)addimage:(NSString *)filename strokename:(NSString*)strokename;
 @property (weak) IBOutlet mattbackgroundview *backgroundview;
-
+@property(weak)NSWindow * boundwindow;
+@property (readwrite)int DPIScale;
 @end

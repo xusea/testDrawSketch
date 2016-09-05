@@ -67,7 +67,10 @@
     [_scrollimagelist setContentResizingMask:NSViewWidthSizable];
     NSPoint fixpos = [_imageT frame].origin;
     [_scrollimagelist setFixpos:fixpos];
-    
+    if([_window backingScaleFactor] > 1.0)
+    {
+        [_scrollimagelist setDPIScale:2];
+    }
     //4.初始化绘画修正点
     fpos = [_dSC frame].origin;
     

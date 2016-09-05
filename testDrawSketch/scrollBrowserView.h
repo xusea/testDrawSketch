@@ -21,6 +21,7 @@
     NSRect bigsizeimageframe;
     mattviewController * mattview;
     mattwindowcontroller * mattwindow;
+    int DPIScale;
 }
 @property query2image * q2ipoint;
 @property int enteredind;
@@ -31,6 +32,7 @@
 @property NSRect bigsizeimageframe;
 @property mattviewController * mattview;
 @property mattwindowcontroller * mattwindow;
+@property int DPIScale;
 -(int)getindexfrompoint:(NSPoint)point;
 -(void)initial;
 -(int)gettoolfrompoint:(NSPoint)point;

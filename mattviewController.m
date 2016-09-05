@@ -142,6 +142,8 @@
     
     [_showchangebg setEnabled:NO];
     [_showchangetransparent setEnabled:NO];
+    
+    DPIScale = 1;
     // Do view setup here.
 }
 @synthesize imagepath;
@@ -170,7 +172,8 @@
 @synthesize zoomFactor;
 @synthesize maxzoomFactor;
 @synthesize brushframe;
-
+@synthesize boundwindow;
+@synthesize DPIScale;
 - (IBAction)openimage:(id)sender {
     
     NSOpenPanel* openDlg = [NSOpenPanel openPanel];
@@ -287,11 +290,11 @@
         pngsize.width = [imagerep pixelsWide];
         pngsize.height = [imagerep pixelsHigh];
        // NSLog(@"%f ", [_window backingScaleFactor]);
-       /* if([_window backingScaleFactor] > 1.0)
+        if([boundwindow backingScaleFactor] > 1.0)
         {
             pngsize.width /= 2;
             pngsize.height /= 2;
-        }*/
+        }
         NSLog(@"%f %f", pngsize.height, pngsize.width);
         [_showbrush setImagesize:pngsize];
         [_showbrush setCroparea:brushframe];
@@ -448,7 +451,7 @@
     [[pw pg]setMaxValue:100.0];
     [[pw pg]setDoubleValue:50.0];
     //NSPoint pp = [_window frame].origin;
-    NSPoint p = [_window frame].origin;
+    NSPoint p = [boundwindow frame].origin;
     //p.x += 300;
     p.x += 1060 / 2 - 200 / 2 - 15;
     
@@ -456,17 +459,18 @@
     [[pw window] setFrameOrigin:p];
     [[pw pg] displayIfNeeded];
     //flag = 1;
-    [_window setMovable:NO];
+    [boundwindow setMovable:NO];
     [lock lock];
     flag = 1;
     [lock unlock];
     [pw runModal];
-    [_window setMovable:YES];
+    [boundwindow setMovable:YES];
     
     //[self matt_internal];
 }
 - (void)matt_internal
 {
+    NSLog(@"call matt_internal %@",imagepath);
     showid = -1;
     maxarea = 0;
     [areaset removeAllObjects];
@@ -723,15 +727,15 @@
     [[pw pg]setMaxValue:100.0];
     [[pw pg]setDoubleValue:50.0];
     //NSPoint pp = [_window frame].origin;
-    NSPoint p = [_window frame].origin;
+    NSPoint p = [boundwindow frame].origin;
     //p.x = 500;
     //p.y = 500;
     [[pw window] setFrameOrigin:p];
     [[pw pg] displayIfNeeded];
     flag = 1;
-    [_window setMovable:NO];
+    [boundwindow setMovable:NO];
     [pw runModal];
-    [_window setMovable:YES];
+    [boundwindow setMovable:YES];
     flag = 0;
     
 }
@@ -754,7 +758,7 @@
             flag = 0;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [NSApp endSheet:[pw window]];
-                [_window setMovable:YES];
+                [boundwindow setMovable:YES];
             });
             g_progress = 0;
         }
@@ -894,7 +898,7 @@
 }
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
 {
-    [_window setIsVisible:YES];
+    [boundwindow setIsVisible:YES];
     NSLog(@"reopen???");
     return YES;
 }
@@ -906,7 +910,7 @@
 
 - (IBAction)menureopen:(id)sender {
     //[[NSApplication sharedApplication] unhide:self];
-    [_window setIsVisible:YES];
+    [boundwindow setIsVisible:YES];
     NSLog(@"click menureopen");
 }
 - (IBAction)zoomin:(id)sender {
@@ -1166,6 +1170,7 @@
         // Gets list of all files selected
         NSImageRep * imagerep = [NSImageRep imageRepWithContentsOfFile:filename];
         NSImage * image = [[NSImage alloc] initWithContentsOfFile:filename] ;
+        imagepath = filename;
     
         curzoomFactor = 1;
         [_showsave setEnabled:YES];
@@ -1245,12 +1250,13 @@
         //NSSize pngsize = [image size];
         pngsize.width = [imagerep pixelsWide];
         pngsize.height = [imagerep pixelsHigh];
-        // NSLog(@"%f ", [_window backingScaleFactor]);
-        /* if([_window backingScaleFactor] > 1.0)
+         NSLog(@"%f ", [boundwindow backingScaleFactor]);
+         //if([boundwindow backingScaleFactor] > 1.0)
+        if(DPIScale > 1.0)
          {
          pngsize.width /= 2;
          pngsize.height /= 2;
-         }*/
+         }
         NSLog(@"%f %f", pngsize.height, pngsize.width);
         [_showbrush setImagesize:pngsize];
         [_showbrush setCroparea:brushframe];

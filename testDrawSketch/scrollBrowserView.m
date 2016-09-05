@@ -18,6 +18,8 @@
 @synthesize bigsizeimage;
 @synthesize bigsizeimageframe;
 @synthesize mattview;
+@synthesize DPIScale;
+@synthesize mattwindow;
 -(void)initial
 {
     enteredind = -1;
@@ -31,6 +33,7 @@
     bigsizeimageframe.origin.y = 0;
     bigsizeimageframe.size.width = 400;
     bigsizeimageframe.size.height = 300;
+    DPIScale = 1;
 }
 - (id)initWithFrame:(NSRect)frame
 {
@@ -116,12 +119,12 @@
                     
                     //10.mattwindow
                      mattwindow = [[mattwindowcontroller alloc]init];
+                    [mattview setDPIScale:DPIScale];
                      ret = [[NSBundle mainBundle]loadNibNamed:@"mattwindowcontroller" owner:mattwindow topLevelObjects:nil];
                      NSLog(@"load mattwindowController %d", ret);
                     [mattview addimage:[it filename] strokename:[it strokename]];
                     [[[mattwindow window] contentView] addSubview:[mattview allview]];
-                    
-                    [mattview setWindow:[mattwindow window]];
+                    //[mattview setBoundwindow:[mattwindow window]];
                    // [NSApp runModalForWindow:[mattwindow window] ];
                     //[[mattview allview] setHidden:NO];
                     //[[mattview allview] setNeedsDisplay:YES];
