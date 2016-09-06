@@ -108,9 +108,9 @@
                 {
                     imageitem * it = [[[self q2ipoint] imageitemlist]objectAtIndex:i];
                     
-                        mattview = [[mattviewController alloc]init];
-                     bool ret = [[NSBundle mainBundle] loadNibNamed:@"mattviewController" owner:mattview topLevelObjects:nil];
-                     NSLog(@"load mattviewController %d", ret);
+                    mattview = [[mattviewController alloc]init];
+                    bool ret = [[NSBundle mainBundle] loadNibNamed:@"mattviewController" owner:mattview topLevelObjects:nil];
+                    NSLog(@"load mattviewController %d", ret);
                      [mattview viewDidLoad];
                      //[mattview setWindow:_window];
                      //[[_window contentView]addSubview:[mattview allview]];
@@ -120,8 +120,8 @@
                     //10.mattwindow
                      mattwindow = [[mattwindowcontroller alloc]init];
                     [mattview setDPIScale:DPIScale];
-                     ret = [[NSBundle mainBundle]loadNibNamed:@"mattwindowcontroller" owner:mattwindow topLevelObjects:nil];
-                     NSLog(@"load mattwindowController %d", ret);
+                    ret = [[NSBundle mainBundle]loadNibNamed:@"mattwindowcontroller" owner:mattwindow topLevelObjects:nil];
+                    NSLog(@"load mattwindowController %d", ret);
                     [mattview addimage:[it filename] strokename:[it strokename]];
                     [[[mattwindow window] contentView] addSubview:[mattview allview]];
                     //[mattview setBoundwindow:[mattwindow window]];

@@ -1146,6 +1146,11 @@
     NSImage * image = [[NSImage alloc] initWithContentsOfFile:filename] ;
     //NSString * dir = NSTemporaryDirectory();
     //NSString * orgsizestrokename = [dir stringByAppendingString:@"/abcdefg.png"];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if([fm removeItemAtPath:orgsizestrokenamepath error:NULL]==NO){
+        NSLog(@"delete file failed");
+    }
+    NSImage * strokeimage = [[NSImage alloc]initWithContentsOfFile:strokename];
     [imagetrans resizeimage:strokename outimage: orgsizestrokenamepath newsize:[image size]];
     NSImage * orgsizestrokeimage = [[NSImage alloc]initWithContentsOfFile:orgsizestrokenamepath];
     imagepath = filename;
