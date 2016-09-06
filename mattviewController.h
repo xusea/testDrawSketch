@@ -157,4 +157,5 @@
 @property(readwrite)NSString * strokenamepath;
 @property (weak) IBOutlet NSImageView *showstrokeimage;
 @property(readwrite)NSString * orgsizestrokenamepath;
+- (IBAction)savestroke:(id)sender;
 @end

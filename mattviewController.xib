@@ -106,7 +106,7 @@
                             </connections>
                         </button>
                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-PN-nU7" customClass="CTCSlider">
-                            <rect key="frame" x="146" y="444" width="102" height="20"/>
+                            <rect key="frame" x="146" y="454" width="102" height="20"/>
                             <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="4.87842345505618" tickMarkPosition="above" sliderType="linear" id="8FL-V5-fTh" customClass="CTCSliderCell"/>
                             <connections>
                                 <action selector="changebrushsize:" target="-2" id="iZ0-CM-zyP"/>
@@ -234,10 +234,28 @@
                                 <action selector="callundo:" target="-2" id="exE-bm-S0l"/>
                             </connections>
                         </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-EC-sam">
+                            <rect key="frame" x="149" y="421" width="68" height="32"/>
+                            <buttonCell key="cell" type="push" title="save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OWV-iE-DqT">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="savestroke:" target="-2" id="PUq-8Z-PdV"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </view>
             </subviews>
         </customView>
+        <button verticalHuggingPriority="750" id="aCz-1S-zmN">
+            <rect key="frame" x="0.0" y="0.0" width="82" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZKy-SJ-HMJ">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+        </button>
     </objects>
     <resources>
         <image name="erase" width="48" height="48"/>

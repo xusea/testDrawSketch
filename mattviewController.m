@@ -1279,4 +1279,10 @@
     
 }
 
+- (IBAction)savestroke:(id)sender {
+    NSFileManager * fm = [NSFileManager defaultManager];
+    [fm moveItemAtPath:orgsizestrokenamepath toPath:strokenamepath error:nil];
+    //NSImage * strokeimage =[[NSImage alloc]initWithContentsOfFile:strokenamepath];
+    //[imagetrans resizeimage:orgsizestrokenamepath outimage:strokenamepath newsize:[strokeimage size]];
+}
 @end
