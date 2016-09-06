@@ -35,5 +35,7 @@
 +(void)fillalpha:(NSString *)orgimage outimage:(NSString *)outimage;
 //将黑白图片转为stroke
 +(void)gray2stroke:(NSString *)logfile strokename:(NSString*)strokename;
+//将彩色图片转为stroke
++(void)color2stroke:(NSString *)logfile strokename:(NSString*)strokename;
 @end
 

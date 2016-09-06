@@ -589,4 +589,134 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSData * repdata = [repgraybak representationUsingType:NSPNGFileType properties:nil];
     [repdata writeToFile:strokename atomically:YES];
 }
++(void)color2stroke:(NSString *)logfile strokename:(NSString*)strokename
+{
+    NSImage * oimage = [[NSImage alloc]initWithContentsOfFile:logfile];
+    if(oimage == nil)
+    {
+        //NSLog(@"imagesketch cann't open file [%@][%@]", grayimage, orgimage);
+        return;
+    }
+    int width = [oimage size].width;
+    int height = [oimage size].height;
+    NSBitmapImageRep *repgray = [[NSBitmapImageRep alloc]
+                                 initWithBitmapDataPlanes: NULL
+                                 pixelsWide: width
+                                 pixelsHigh: height
+                                 bitsPerSample: 8
+                                 samplesPerPixel: 4
+                                 hasAlpha: YES
+                                 isPlanar: NO
+                                 colorSpaceName: NSDeviceRGBColorSpace
+                                 bytesPerRow: width * 4
+                                 bitsPerPixel: 32];
+    
+    NSGraphicsContext *ctxgray = [NSGraphicsContext graphicsContextWithBitmapImageRep: repgray];
+    [NSGraphicsContext saveGraphicsState];
+    [NSGraphicsContext setCurrentContext: ctxgray];
+    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [ctxgray flushGraphics];
+    [NSGraphicsContext restoreGraphicsState];
+    
+    unsigned char * gray_bitmapdata = [repgray bitmapData];
+    NSUInteger gray_bitmapdata_BytesPerRow = [repgray bytesPerRow];
+    
+    NSImage * oimagebak = [[NSImage alloc]initWithContentsOfFile:logfile];
+    if(oimagebak == nil)
+    {
+        //NSLog(@"imagesketch cann't open file [%@][%@]", grayimage, orgimage);
+        return;
+    }
+    NSBitmapImageRep *repgraybak = [[NSBitmapImageRep alloc]
+                                    initWithBitmapDataPlanes: NULL
+                                    pixelsWide: width
+                                    pixelsHigh: height
+                                    bitsPerSample: 8
+                                    samplesPerPixel: 4
+                                    hasAlpha: YES
+                                    isPlanar: NO
+                                    colorSpaceName: NSDeviceRGBColorSpace
+                                    bytesPerRow: width * 4
+                                    bitsPerPixel: 32];
+    
+    NSGraphicsContext *ctxgraybak = [NSGraphicsContext graphicsContextWithBitmapImageRep: repgraybak];
+    [NSGraphicsContext saveGraphicsState];
+    [NSGraphicsContext setCurrentContext: ctxgraybak];
+    [oimagebak drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [ctxgraybak flushGraphics];
+    [NSGraphicsContext restoreGraphicsState];
+    
+    unsigned char * graybak_bitmapdata = [repgraybak bitmapData];
+    NSUInteger graybak_bitmapdata_BytesPerRow = [repgraybak bytesPerRow];
+    
+    
+    
+    NSColor *fillcolor = [NSColor colorWithCalibratedRed:0.0 green:1.0 blue:0.0 alpha:1.0];
+    NSColor *fillcolor2 = [NSColor colorWithCalibratedRed:0.0 green:0.0 blue:1.0 alpha:0.0];
+    int posx[4] = {1, 0, -1 , 0};
+    int posy[4] = {0, 1, 0, -1};
+    int brushsize = 4;
+    for(int i = 0 ;i< width; i ++)
+    {
+        for(int j = 0; j< height; j ++)
+        {
+            unsigned char *pixel = gray_bitmapdata + ((i * 4) + (j * gray_bitmapdata_BytesPerRow));
+            u_int sr, sg, sb, sa;
+            sr = (u_int)*pixel;
+            sg = (u_int)*(pixel + 1);
+            sb = (u_int)*(pixel + 2);
+            sa = (u_int)*(pixel + 3);
+            if(sr ==0 && sg ==0 && sb == 0)
+            {
+                [repgraybak setColor:fillcolor2 atX:i y:j];
+                continue;
+            }
+            int flag = 0;
+            for(int k = 0; k < 4; k ++)
+            {
+                int newi = i + posx[k];
+                int newj = j + posy[k];
+                if(newi < 0 || newj < 0 || newi >= width || newj >= height)
+                {
+                    continue;
+                }
+                unsigned char *newpixel = gray_bitmapdata + ((newi * 4) + (newj * gray_bitmapdata_BytesPerRow));
+                u_int newsr, newsg, newsb, newsa;
+                newsr = (u_int)*newpixel;
+                newsg = (u_int)*(newpixel + 1);
+                newsb = (u_int)*(newpixel + 2);
+                newsa = (u_int)*(newpixel + 3);
+                if(newsr == 0 && newsg == 0 && newsb ==0)
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+            if( flag == 1)
+            {
+                [repgraybak setColor:fillcolor atX:i y:j];
+                for(int k = 0; k < brushsize; k ++)
+                {
+                    for(int kk = 0; kk < brushsize; kk ++)
+                    {
+                        int newi = i + k / 2 - k;
+                        int newj = j + kk / 2- kk;
+                        if(newi < 0 || newj < 0 || newi >= width || newj >= height)
+                        {
+                            continue;
+                        }
+                        [repgraybak setColor:fillcolor atX:newi y:newj];
+                    }
+                }
+            }
+            else
+            {
+                [repgraybak setColor:fillcolor2 atX:i y:j];
+            }
+            
+        }
+    }
+    NSData * repdata = [repgraybak representationUsingType:NSPNGFileType properties:nil];
+    [repdata writeToFile:strokename atomically:YES];
+}
 @end

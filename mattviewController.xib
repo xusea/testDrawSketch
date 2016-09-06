@@ -29,6 +29,7 @@
                 <outlet property="showredo" destination="OB0-2o-3xS" id="xkX-Hg-ZZQ"/>
                 <outlet property="showresult" destination="G9Q-5r-Ksk" id="wCk-qE-7qh"/>
                 <outlet property="showsave" destination="aKE-2h-LOf" id="l9E-ls-fPv"/>
+                <outlet property="showstrokeimage" destination="4Cz-WM-wpL" id="HhD-4v-01W"/>
                 <outlet property="showundo" destination="Q72-qf-Z9t" id="juM-EE-W6Q"/>
                 <outlet property="showzoomin" destination="VuN-JI-F55" id="MsS-AG-g65"/>
                 <outlet property="showzoomout" destination="0Ru-aP-G08" id="3E1-bk-IqE"/>
@@ -136,7 +137,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="wo7-9N-x0Y" customClass="TCScroller">
-                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
+                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>
@@ -183,6 +184,10 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="OtD-eh-nIC"/>
                                                     </imageView>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Cz-WM-wpL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Eyk-5n-4x6"/>
+                                                    </imageView>
                                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxO-tp-ymn" customClass="brushview">
                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
                                                     </customView>
@@ -198,7 +203,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                             <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="6iZ-JK-6Fe" customClass="TCScroller">
-                                <rect key="frame" x="494" y="0.0" width="16" height="410"/>
+                                <rect key="frame" x="495" y="0.0" width="15" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </scroller>
                         </scrollView>

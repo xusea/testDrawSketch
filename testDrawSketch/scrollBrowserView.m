@@ -133,7 +133,7 @@
         }
         else if(toolind == 1)
         {
-            //0 未定义  1 stroke
+            //  1 stroke
             for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
             {
                 if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])

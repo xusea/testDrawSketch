@@ -18,6 +18,7 @@
 #import "util.h"
 #import "shellview.h"
 #import "mattbackgroundview.h"
+#import "imagetrans.h"
 @interface mattviewController : NSViewController
 {
     NSString * imagepath;
@@ -56,6 +57,8 @@
     float curzoomFactor;
     NSWindow * __weak boundwindow;
     int DPIScale;
+    NSString * strokenamepath;
+    NSString * orgsizestrokenamepath;
 }
 @property (readwrite) float zoomFactor;
 @property (readwrite) float maxzoomFactor;
@@ -151,4 +154,7 @@
 @property (weak) IBOutlet mattbackgroundview *backgroundview;
 @property(weak)NSWindow * boundwindow;
 @property (readwrite)int DPIScale;
+@property(readwrite)NSString * strokenamepath;
+@property (weak) IBOutlet NSImageView *showstrokeimage;
+@property(readwrite)NSString * orgsizestrokenamepath;
 @end

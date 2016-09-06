@@ -25,6 +25,8 @@
 @synthesize lock;
 @synthesize mattwindow =_mattwindow;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+   // [imagetrans color2stroke:@"/Users/xusea/Desktop/df23js773_resultfilepath.png" strokename:@"/Users/xusea/Desktop/123.png"];
     //初始化颜色
     colorset = [[NSMutableArray alloc]init];
     [colorset addObject:[NSColor blackColor]];
