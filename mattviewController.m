@@ -1236,13 +1236,13 @@
     //NSSize pngsize = [image size];
     pngsize.width = [imagerep pixelsWide];
     pngsize.height = [imagerep pixelsHigh];
-     NSLog(@"%f ", [boundwindow backingScaleFactor]);
+    NSLog(@"%f ", [boundwindow backingScaleFactor]);
      //if([boundwindow backingScaleFactor] > 1.0)
     if(DPIScale > 1.0)
-     {
-     pngsize.width /= 2;
-     pngsize.height /= 2;
-     }
+    {
+        pngsize.width /= 2;
+        pngsize.height /= 2;
+    }
     NSLog(@"%f %f", pngsize.height, pngsize.width);
     [_showbrush setImagesize:pngsize];
     [_showbrush setCroparea:brushframe];
