@@ -59,6 +59,7 @@
     int DPIScale;
     NSString * strokenamepath;
     NSString * orgsizestrokenamepath;
+    NSString * transparentnamepath;
 }
 @property (readwrite) float zoomFactor;
 @property (readwrite) float maxzoomFactor;
@@ -150,7 +151,7 @@
 @property (weak) IBOutlet NSButton *showchangetransparent;
 @property (weak) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSView *allview;
-- (void)addimage:(NSString *)filename strokename:(NSString*)strokename;
+- (void)addimage:(NSString *)filename strokename:(NSString*)strokename transparentname:(NSString *)transparentname;
 @property (weak) IBOutlet mattbackgroundview *backgroundview;
 @property(weak)NSWindow * boundwindow;
 @property (readwrite)int DPIScale;
@@ -158,4 +159,5 @@
 @property (weak) IBOutlet NSImageView *showstrokeimage;
 @property(readwrite)NSString * orgsizestrokenamepath;
 - (IBAction)savestroke:(id)sender;
+@property(readwrite)NSString * transparentnamepath;
 @end

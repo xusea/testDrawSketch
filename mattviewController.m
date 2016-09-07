@@ -179,6 +179,7 @@
 @synthesize DPIScale;
 @synthesize strokenamepath;
 @synthesize orgsizestrokenamepath;
+@synthesize transparentnamepath;
 /*
 - (IBAction)openimage:(id)sender {
     
@@ -1139,7 +1140,7 @@
     [_showbg setNeedsDisplay:YES];
 }
 
-- (void)addimage:(NSString *)filename strokename:(NSString*)strokename
+- (void)addimage:(NSString *)filename strokename:(NSString*)strokename transparentname:(NSString *)transparentname
 {
         // Gets list of all files selected
     NSImageRep * imagerep = [NSImageRep imageRepWithContentsOfFile:filename];
@@ -1155,6 +1156,7 @@
     NSImage * orgsizestrokeimage = [[NSImage alloc]initWithContentsOfFile:orgsizestrokenamepath];
     imagepath = filename;
     strokenamepath = strokename;
+    transparentnamepath = transparentname;
     curzoomFactor = 1;
     [_showsave setEnabled:YES];
     [_showdrawin setEnabled:YES];
@@ -1280,8 +1282,14 @@
 }
 
 - (IBAction)savestroke:(id)sender {
+    NSError * error = nil;
     NSFileManager * fm = [NSFileManager defaultManager];
-    [fm moveItemAtPath:orgsizestrokenamepath toPath:strokenamepath error:nil];
+    [fm removeItemAtPath:strokenamepath error:NULL];
+    bool ret = [fm moveItemAtPath:orgsizestrokenamepath toPath:strokenamepath error:&error];
+    NSLog(@"move file error %@", error);
+    
+    [fm removeItemAtPath:transparentnamepath error:NULL];
+    ret = [fm moveItemAtPath:resultfilepath toPath:transparentnamepath error:&error];
     //NSImage * strokeimage =[[NSImage alloc]initWithContentsOfFile:strokenamepath];
     //[imagetrans resizeimage:orgsizestrokenamepath outimage:strokenamepath newsize:[strokeimage size]];
 }

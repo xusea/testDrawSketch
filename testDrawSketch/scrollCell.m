@@ -180,6 +180,14 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
                 NSImage * strokeimage = [NSImage imageNamed:@"stroke.png"];
                 [strokeimage drawInRect:strokeframe];
             }
+            
+            NSRect insertframe;
+            insertframe.size.height = 20;
+            insertframe.size.width = 20;
+            insertframe.origin.x = 40;
+            insertframe.origin.y = 0;
+            NSImage * insertimage = [NSImage imageNamed:@"insert.png"];
+            [insertimage drawInRect:insertframe];
         }
 
     }

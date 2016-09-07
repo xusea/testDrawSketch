@@ -58,6 +58,7 @@
 		2914A81D1D71C6E60021E9E6 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A81C1D71C6E60021E9E6 /* pencil.png */; };
 		2914A81F1D71CC1F0021E9E6 /* stroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A81E1D71CC1F0021E9E6 /* stroke.png */; };
 		2914A8211D71D0860021E9E6 /* strokeclick.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A8201D71D0860021E9E6 /* strokeclick.png */; };
+		DF139FE71D7FE3460018C063 /* insert.png in Resources */ = {isa = PBXBuildFile; fileRef = DF139FE61D7FE3460018C063 /* insert.png */; };
 		DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */; };
 		DF27CE221CFFE4E0009DAA27 /* opencvproxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */; };
 		DF27CE241CFFEE38009DAA27 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF27CE231CFFEE38009DAA27 /* AppKit.framework */; };
@@ -213,6 +214,7 @@
 		2914A81C1D71C6E60021E9E6 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pencil.png; path = ../../icons/pencil.png; sourceTree = "<group>"; };
 		2914A81E1D71CC1F0021E9E6 /* stroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stroke.png; path = ../../icons/stroke.png; sourceTree = "<group>"; };
 		2914A8201D71D0860021E9E6 /* strokeclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = strokeclick.png; path = ../../icons/strokeclick.png; sourceTree = "<group>"; };
+		DF139FE61D7FE3460018C063 /* insert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insert.png; path = ../../icons/insert.png; sourceTree = "<group>"; };
 		DF27CE1D1CFEC5A7009DAA27 /* imagetrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imagetrans.h; sourceTree = "<group>"; };
 		DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imagetrans.m; sourceTree = "<group>"; };
 		DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = opencvproxy.mm; sourceTree = "<group>"; };
@@ -558,6 +560,7 @@
 		DFEA8EBA1D23B8D500A2D87A /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				DF139FE61D7FE3460018C063 /* insert.png */,
 				2914A8201D71D0860021E9E6 /* strokeclick.png */,
 				2914A81E1D71CC1F0021E9E6 /* stroke.png */,
 				2914A81C1D71C6E60021E9E6 /* pencil.png */,
@@ -743,6 +746,7 @@
 				2914A8071D6F241E0021E9E6 /* mattviewController.xib in Resources */,
 				2914A7D31D6F23D60021E9E6 /* zoomin.png in Resources */,
 				2914A7BE1D6F23D60021E9E6 /* erase.png in Resources */,
+				DF139FE71D7FE3460018C063 /* insert.png in Resources */,
 				2914A7CF1D6F23D60021E9E6 /* save.png in Resources */,
 				2914A7CB1D6F23D60021E9E6 /* red.logoist in Resources */,
 				DFDE8E2B1D337A0300A13724 /* blue.png in Resources */,

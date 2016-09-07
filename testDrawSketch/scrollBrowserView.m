@@ -122,7 +122,7 @@
                     [mattview setDPIScale:DPIScale];
                     ret = [[NSBundle mainBundle]loadNibNamed:@"mattwindowcontroller" owner:mattwindow topLevelObjects:nil];
                     NSLog(@"load mattwindowController %d", ret);
-                    [mattview addimage:[it filename] strokename:[it strokename]];
+                    [mattview addimage:[it filename] strokename:[it strokename] transparentname:[it transparentname]];
                     [[[mattwindow window] contentView] addSubview:[mattview allview]];
                     //[mattview setBoundwindow:[mattwindow window]];
                    // [NSApp runModalForWindow:[mattwindow window] ];
@@ -154,6 +154,19 @@
                     [[bigsizeimage strokeimage]setImage:image];
                     [[bigsizeimage strokeimage]setHidden:NO];
                     
+                }
+            }
+        }
+        else if(toolind == 2)
+        {
+            // 2 钉子
+            for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
+            {
+                if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
+                {
+                    [[self q2ipoint] setBestimageind:i];
+                    NSLog(@"click bestind %d", i);
+                    break;
                 }
             }
         }
