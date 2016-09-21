@@ -448,7 +448,7 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "-drawRect:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -510,7 +510,7 @@
             startingLineNumber = "468"
             endingLineNumber = "468"
             landmarkName = "-matt_internal"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -558,7 +558,7 @@
             startingLineNumber = "1293"
             endingLineNumber = "1293"
             landmarkName = "-savestroke:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -574,7 +574,7 @@
             startingLineNumber = "1288"
             endingLineNumber = "1288"
             landmarkName = "-savestroke:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -590,7 +590,7 @@
             startingLineNumber = "30"
             endingLineNumber = "30"
             landmarkName = "-drawRect:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -112,6 +112,8 @@
 		DF57CC251D17B405005AD426 /* thumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC241D17B405005AD426 /* thumbnailView.m */; };
 		DF57CC281D17CD42005AD426 /* thumbnailViewCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC271D17CD42005AD426 /* thumbnailViewCollection.m */; };
 		DF5B40AC1D193739008F8F26 /* drawSketchCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B40AB1D193739008F8F26 /* drawSketchCollection.m */; };
+		DF6AA2681D927C310000184C /* resultdetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6AA2661D927C310000184C /* resultdetailViewController.m */; };
+		DF6AA2691D927C310000184C /* resultdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6AA2671D927C310000184C /* resultdetailViewController.xib */; };
 		DFC58C241D0EA40000E06DFD /* downfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC58C231D0EA40000E06DFD /* downfile.m */; };
 		DFDE8E1E1D3379CC00A13724 /* CmCv.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFDE8E0E1D3379CC00A13724 /* CmCv.mm */; };
 		DFDE8E1F1D3379CC00A13724 /* cmdefine.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFDE8E101D3379CC00A13724 /* cmdefine.mm */; };
@@ -300,6 +302,9 @@
 		DF57CC271D17CD42005AD426 /* thumbnailViewCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thumbnailViewCollection.m; sourceTree = "<group>"; };
 		DF5B40AA1D193739008F8F26 /* drawSketchCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawSketchCollection.h; sourceTree = "<group>"; };
 		DF5B40AB1D193739008F8F26 /* drawSketchCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawSketchCollection.m; sourceTree = "<group>"; };
+		DF6AA2651D927C310000184C /* resultdetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resultdetailViewController.h; path = testDrawSketch/resultdetailViewController.h; sourceTree = "<group>"; };
+		DF6AA2661D927C310000184C /* resultdetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = resultdetailViewController.m; path = testDrawSketch/resultdetailViewController.m; sourceTree = "<group>"; };
+		DF6AA2671D927C310000184C /* resultdetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = resultdetailViewController.xib; path = testDrawSketch/resultdetailViewController.xib; sourceTree = "<group>"; };
 		DFC58C221D0EA40000E06DFD /* downfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downfile.h; sourceTree = "<group>"; };
 		DFC58C231D0EA40000E06DFD /* downfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downfile.m; sourceTree = "<group>"; };
 		DFDE8E0C1D3379CC00A13724 /* block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = block.h; path = ../cm/block.h; sourceTree = "<group>"; };
@@ -409,6 +414,9 @@
 				DF3824891D6FDE95006101F1 /* progresswindow.m */,
 				DF38248A1D6FDE95006101F1 /* progresswindow.h */,
 				2914A8031D6F241E0021E9E6 /* mattviewController.h */,
+				DF6AA2651D927C310000184C /* resultdetailViewController.h */,
+				DF6AA2661D927C310000184C /* resultdetailViewController.m */,
+				DF6AA2671D927C310000184C /* resultdetailViewController.xib */,
 				2914A8041D6F241E0021E9E6 /* mattviewController.m */,
 				2914A8051D6F241E0021E9E6 /* mattviewController.xib */,
 				DF3824E11D797908006101F1 /* mattbackgroundview.h */,
@@ -716,6 +724,7 @@
 				2914A7BA1D6F23D60021E9E6 /* backg.png in Resources */,
 				2914A7C71D6F23D60021E9E6 /* newbg.png in Resources */,
 				2914A7BB1D6F23D60021E9E6 /* background.png in Resources */,
+				DF6AA2691D927C310000184C /* resultdetailViewController.xib in Resources */,
 				DF3CFF991CF6908B008B325B /* Assets.xcassets in Resources */,
 				DF38248C1D6FDE95006101F1 /* progresswindow.xib in Resources */,
 				DFDE8E301D337A0300A13724 /* yellow.png in Resources */,
@@ -824,6 +833,7 @@
 				DF57CC181D0FA5F6005AD426 /* query2image.m in Sources */,
 				DF38248D1D6FDE95006101F1 /* resizebound.m in Sources */,
 				DF57CC221D128B0E005AD426 /* scrollimagedelegate.m in Sources */,
+				DF6AA2681D927C310000184C /* resultdetailViewController.m in Sources */,
 				DF3824961D6FDE96006101F1 /* matt.mm in Sources */,
 				DF3824E31D797908006101F1 /* mattbackgroundview.m in Sources */,
 				DF3824921D6FDE96006101F1 /* backgroundbound.m in Sources */,
