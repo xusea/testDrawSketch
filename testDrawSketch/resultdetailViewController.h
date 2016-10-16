@@ -7,7 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "resultimageview.h"
 @interface resultdetailViewController : NSViewController
+{
+    //NSMutableArray * querydrawlist;
+}
+//@property NSMutableArray * querydrawlist;
+@property (weak) IBOutlet resultimageview *resultimage;
+@property (strong) IBOutlet NSView *allview;
 
 @end

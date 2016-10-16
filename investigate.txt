@@ -1,0 +1,1847 @@
+total 768
+drwxr-xr-x  15 xusea  staff     510  9 24 15:30 .
+drwxr-xr-x   9 xusea  staff     306  8 26 10:26 ..
+-rw-r--r--   1 xusea  staff    8196  9 21 17:04 .DS_Store
+drwxr-xr-x  16 xusea  staff     544  9 21 16:29 .git
+-rw-r--r--   1 xusea  staff  280305  8 26 10:14 index.html
+-rw-r--r--   1 xusea  staff       0  9 24 15:30 investigate.txt
+-rw-r--r--   1 xusea  staff     209  9  2 17:08 mattbackgroundview.h
+-rw-r--r--   1 xusea  staff     542  9  2 17:10 mattbackgroundview.m
+-rw-r--r--   1 xusea  staff    5881  9  7 14:27 mattviewController.h
+-rw-r--r--   1 xusea  staff   51531  9  7 14:27 mattviewController.m
+-rw-r--r--   1 xusea  staff   26427  9 21 16:25 mattviewController.xib
+drwxr-xr-x  45 xusea  staff    1530  9 22 18:01 testDrawSketch
+drwxr-xr-x   5 xusea  staff     170  9 24 15:28 testDrawSketch.xcodeproj
+drwxr-xr-x   4 xusea  staff     136  8 26 10:14 testDrawSketchTests
+drwxr-xr-x   4 xusea  staff     136  8 26 10:14 testDrawSketchUITests
+
+./.git:
+total 72
+drwxr-xr-x   16 xusea  staff   544  9 21 16:29 .
+drwxr-xr-x   15 xusea  staff   510  9 24 15:30 ..
+-rw-r--r--    1 xusea  staff    31  9 21 16:29 COMMIT_EDITMSG
+-rw-r--r--    1 xusea  staff    93  9  1 13:31 FETCH_HEAD
+-rw-r--r--    1 xusea  staff    23  8 26 10:14 HEAD
+-rw-r--r--    1 xusea  staff    41  9  1 13:31 ORIG_HEAD
+drwxr-xr-x    2 xusea  staff    68  8 26 10:14 branches
+-rw-r--r--    1 xusea  staff   309  8 26 10:14 config
+-rw-r--r--    1 xusea  staff    73  8 26 10:14 description
+drwxr-xr-x   11 xusea  staff   374  8 26 10:14 hooks
+-rw-r--r--    1 xusea  staff  7875  9 21 16:29 index
+drwxr-xr-x    3 xusea  staff   102  8 26 10:14 info
+drwxr-xr-x    4 xusea  staff   136  8 26 10:14 logs
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 objects
+-rw-r--r--    1 xusea  staff   107  8 26 10:14 packed-refs
+drwxr-xr-x    5 xusea  staff   170  8 26 10:14 refs
+
+./.git/branches:
+total 0
+drwxr-xr-x   2 xusea  staff   68  8 26 10:14 .
+drwxr-xr-x  16 xusea  staff  544  9 21 16:29 ..
+
+./.git/hooks:
+total 80
+drwxr-xr-x  11 xusea  staff   374  8 26 10:14 .
+drwxr-xr-x  16 xusea  staff   544  9 21 16:29 ..
+-rwxr-xr-x   1 xusea  staff   478  8 26 10:14 applypatch-msg.sample
+-rwxr-xr-x   1 xusea  staff   896  8 26 10:14 commit-msg.sample
+-rwxr-xr-x   1 xusea  staff   189  8 26 10:14 post-update.sample
+-rwxr-xr-x   1 xusea  staff   424  8 26 10:14 pre-applypatch.sample
+-rwxr-xr-x   1 xusea  staff  1642  8 26 10:14 pre-commit.sample
+-rwxr-xr-x   1 xusea  staff  1348  8 26 10:14 pre-push.sample
+-rwxr-xr-x   1 xusea  staff  4951  8 26 10:14 pre-rebase.sample
+-rwxr-xr-x   1 xusea  staff  1239  8 26 10:14 prepare-commit-msg.sample
+-rwxr-xr-x   1 xusea  staff  3610  8 26 10:14 update.sample
+
+./.git/info:
+total 8
+drwxr-xr-x   3 xusea  staff  102  8 26 10:14 .
+drwxr-xr-x  16 xusea  staff  544  9 21 16:29 ..
+-rw-r--r--   1 xusea  staff  240  8 26 10:14 exclude
+
+./.git/logs:
+total 8
+drwxr-xr-x   4 xusea  staff   136  8 26 10:14 .
+drwxr-xr-x  16 xusea  staff   544  9 21 16:29 ..
+-rw-r--r--   1 xusea  staff  3566  9 21 16:29 HEAD
+drwxr-xr-x   4 xusea  staff   136  8 26 10:14 refs
+
+./.git/logs/refs:
+total 0
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 ..
+drwxr-xr-x  3 xusea  staff  102  8 26 10:14 heads
+drwxr-xr-x  3 xusea  staff  102  8 26 10:14 remotes
+
+./.git/logs/refs/heads:
+total 8
+drwxr-xr-x  3 xusea  staff   102  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff   136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  3566  9 21 16:29 master
+
+./.git/logs/refs/remotes:
+total 0
+drwxr-xr-x  3 xusea  staff  102  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 ..
+drwxr-xr-x  4 xusea  staff  136  8 26 10:36 origin
+
+./.git/logs/refs/remotes/origin:
+total 16
+drwxr-xr-x  4 xusea  staff   136  8 26 10:36 .
+drwxr-xr-x  3 xusea  staff   102  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff   190  8 26 10:14 HEAD
+-rw-r--r--  1 xusea  staff  3229  9 21 16:29 master
+
+./.git/objects:
+total 0
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 .
+drwxr-xr-x   16 xusea  staff   544  9 21 16:29 ..
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 00
+drwxr-xr-x    3 xusea  staff   102  9 21 16:29 01
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 02
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 04
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 05
+drwxr-xr-x    6 xusea  staff   204  9  1 13:31 06
+drwxr-xr-x    4 xusea  staff   136  9  2 22:36 07
+drwxr-xr-x    3 xusea  staff   102  9  6 17:29 09
+drwxr-xr-x    3 xusea  staff   102  8 26 10:35 0a
+drwxr-xr-x    3 xusea  staff   102  9  6 23:12 0c
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 0d
+drwxr-xr-x    3 xusea  staff   102  9  5 22:20 0e
+drwxr-xr-x    5 xusea  staff   170  9  6 23:12 0f
+drwxr-xr-x    3 xusea  staff   102  9 21 16:29 10
+drwxr-xr-x    7 xusea  staff   238  9  2 13:29 11
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 12
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 14
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 17
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 18
+drwxr-xr-x    4 xusea  staff   136  9  2 22:35 19
+drwxr-xr-x    3 xusea  staff   102  9  6 17:29 1a
+drwxr-xr-x    4 xusea  staff   136  9 21 16:28 1b
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 1c
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 1d
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 1f
+drwxr-xr-x    6 xusea  staff   204  9  7 14:51 20
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 21
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 22
+drwxr-xr-x    3 xusea  staff   102  8 26 17:19 23
+drwxr-xr-x    5 xusea  staff   170  9  2 22:36 26
+drwxr-xr-x    3 xusea  staff   102  8 26 17:19 27
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 2a
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 2b
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 2d
+drwxr-xr-x    5 xusea  staff   170  8 29 17:57 2e
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 30
+drwxr-xr-x    4 xusea  staff   136  8 29 09:58 31
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 32
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 34
+drwxr-xr-x    4 xusea  staff   136  9  5 22:20 36
+drwxr-xr-x    4 xusea  staff   136  8 29 17:57 37
+drwxr-xr-x    4 xusea  staff   136  9  2 22:35 38
+drwxr-xr-x    3 xusea  staff   102  8 30 18:32 3a
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 3b
+drwxr-xr-x    3 xusea  staff   102  8 26 11:12 3e
+drwxr-xr-x    6 xusea  staff   204  9  5 22:20 3f
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 40
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 42
+drwxr-xr-x    4 xusea  staff   136  8 30 10:03 43
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 44
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 45
+drwxr-xr-x    4 xusea  staff   136  9  1 13:31 46
+drwxr-xr-x    5 xusea  staff   170  9  7 14:51 47
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 4b
+drwxr-xr-x    4 xusea  staff   136  9  7 17:23 4c
+drwxr-xr-x    3 xusea  staff   102  9 21 16:28 4d
+drwxr-xr-x    4 xusea  staff   136  8 29 09:58 4e
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 4f
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 52
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 53
+drwxr-xr-x    3 xusea  staff   102  8 26 17:18 54
+drwxr-xr-x    4 xusea  staff   136  9  5 23:51 55
+drwxr-xr-x    3 xusea  staff   102  8 30 18:32 56
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 59
+drwxr-xr-x    5 xusea  staff   170  9  6 22:49 5a
+drwxr-xr-x    3 xusea  staff   102  9  5 22:20 5c
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 5d
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 5f
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 60
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 61
+drwxr-xr-x    6 xusea  staff   204  9  6 22:50 62
+drwxr-xr-x    5 xusea  staff   170  9  5 23:51 63
+drwxr-xr-x    5 xusea  staff   170  9  6 22:50 64
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 66
+drwxr-xr-x    4 xusea  staff   136  9  5 22:20 67
+drwxr-xr-x    3 xusea  staff   102  8 30 10:03 68
+drwxr-xr-x    5 xusea  staff   170  8 30 18:32 69
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 6a
+drwxr-xr-x    3 xusea  staff   102  9  2 17:08 6b
+drwxr-xr-x    5 xusea  staff   170  9  5 23:51 6d
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 6e
+drwxr-xr-x    7 xusea  staff   238  9  6 22:49 6f
+drwxr-xr-x    3 xusea  staff   102  9  2 22:36 70
+drwxr-xr-x    4 xusea  staff   136  9  6 22:50 71
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 74
+drwxr-xr-x    5 xusea  staff   170  9  7 17:23 75
+drwxr-xr-x    5 xusea  staff   170  9  2 22:35 77
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 78
+drwxr-xr-x    3 xusea  staff   102  9  2 13:29 79
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 7b
+drwxr-xr-x    7 xusea  staff   238  9  7 14:51 7d
+drwxr-xr-x    7 xusea  staff   238  9  6 22:49 7e
+drwxr-xr-x    4 xusea  staff   136  9  7 17:23 80
+drwxr-xr-x    4 xusea  staff   136  9  6 22:50 83
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 84
+drwxr-xr-x    4 xusea  staff   136  9  1 13:31 85
+drwxr-xr-x    6 xusea  staff   204  9  6 22:49 87
+drwxr-xr-x    3 xusea  staff   102  8 26 10:35 88
+drwxr-xr-x    4 xusea  staff   136  9  1 13:31 8b
+drwxr-xr-x    6 xusea  staff   204  9  6 22:50 8c
+drwxr-xr-x    3 xusea  staff   102  9  7 14:51 8d
+drwxr-xr-x    4 xusea  staff   136  9  2 22:36 8e
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 8f
+drwxr-xr-x    5 xusea  staff   170  9  5 22:20 90
+drwxr-xr-x    4 xusea  staff   136  9  6 22:49 93
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 94
+drwxr-xr-x    4 xusea  staff   136  9  7 17:23 95
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 97
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 99
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 9a
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 9c
+drwxr-xr-x    4 xusea  staff   136  8 26 11:12 9d
+drwxr-xr-x    4 xusea  staff   136  8 29 09:58 9e
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 9f
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 a1
+drwxr-xr-x    6 xusea  staff   204  9  5 23:51 a2
+drwxr-xr-x    5 xusea  staff   170  9  6 22:49 a3
+drwxr-xr-x    5 xusea  staff   170  9  2 17:12 a4
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 a5
+drwxr-xr-x    5 xusea  staff   170  9  5 23:51 a6
+drwxr-xr-x    4 xusea  staff   136  8 30 18:32 a9
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 aa
+drwxr-xr-x    3 xusea  staff   102  9  6 22:49 ab
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 ac
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 ad
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 ae
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 af
+drwxr-xr-x    4 xusea  staff   136  8 29 17:57 b0
+drwxr-xr-x    3 xusea  staff   102  8 26 11:11 b1
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 b2
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 b4
+drwxr-xr-x    4 xusea  staff   136  9  2 17:08 b5
+drwxr-xr-x    3 xusea  staff   102  9  5 22:20 b6
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 b7
+drwxr-xr-x    3 xusea  staff   102  9  7 14:51 b8
+drwxr-xr-x    3 xusea  staff   102  9  2 22:35 b9
+drwxr-xr-x    5 xusea  staff   170  9  7 14:51 ba
+drwxr-xr-x    4 xusea  staff   136  9  5 23:51 bc
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 bd
+drwxr-xr-x    4 xusea  staff   136  8 29 17:57 be
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 bf
+drwxr-xr-x    3 xusea  staff   102  9  2 17:12 c0
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 c2
+drwxr-xr-x    4 xusea  staff   136  8 30 10:03 c3
+drwxr-xr-x    6 xusea  staff   204  9  6 23:12 c5
+drwxr-xr-x    5 xusea  staff   170  9  2 22:36 c6
+drwxr-xr-x    5 xusea  staff   170  9  6 23:12 c7
+drwxr-xr-x    4 xusea  staff   136  8 29 09:58 c9
+drwxr-xr-x    4 xusea  staff   136  9  2 22:35 ca
+drwxr-xr-x    4 xusea  staff   136  9  5 23:51 cc
+drwxr-xr-x    3 xusea  staff   102  9  2 22:36 cd
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 ce
+drwxr-xr-x    4 xusea  staff   136  8 30 10:03 cf
+drwxr-xr-x    4 xusea  staff   136  9  5 23:51 d1
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 d2
+drwxr-xr-x    3 xusea  staff   102  8 31 09:51 d4
+drwxr-xr-x    5 xusea  staff   170  9  2 21:33 d6
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 d7
+drwxr-xr-x    4 xusea  staff   136  8 30 10:03 d8
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 d9
+drwxr-xr-x    4 xusea  staff   136  8 31 09:51 da
+drwxr-xr-x    3 xusea  staff   102  9  7 17:23 db
+drwxr-xr-x    3 xusea  staff   102  8 26 10:36 dc
+drwxr-xr-x    5 xusea  staff   170  9  2 17:12 dd
+drwxr-xr-x    3 xusea  staff   102  9  7 17:23 de
+drwxr-xr-x    3 xusea  staff   102  8 26 11:12 df
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 e1
+drwxr-xr-x    4 xusea  staff   136  8 30 18:32 e2
+drwxr-xr-x    3 xusea  staff   102  9  2 13:29 e3
+drwxr-xr-x    5 xusea  staff   170  9  7 14:51 e4
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 e5
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 e6
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 e7
+drwxr-xr-x    3 xusea  staff   102  8 30 10:03 e8
+drwxr-xr-x    3 xusea  staff   102  9  6 17:29 e9
+drwxr-xr-x    3 xusea  staff   102  8 26 17:19 ea
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 eb
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 ec
+drwxr-xr-x    5 xusea  staff   170  9  6 23:12 ed
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 ee
+drwxr-xr-x    4 xusea  staff   136  9 21 16:25 ef
+drwxr-xr-x    4 xusea  staff   136  9  2 22:36 f0
+drwxr-xr-x    4 xusea  staff   136  9 21 16:28 f1
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 f2
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 f3
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 f5
+drwxr-xr-x    7 xusea  staff   238  9 21 16:29 f6
+drwxr-xr-x    4 xusea  staff   136  9  1 13:31 f7
+drwxr-xr-x    3 xusea  staff   102  9  7 14:51 f8
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 fd
+drwxr-xr-x    3 xusea  staff   102  9  6 22:50 ff
+drwxr-xr-x    2 xusea  staff    68  8 26 10:14 info
+drwxr-xr-x    4 xusea  staff   136  8 26 10:14 pack
+
+./.git/objects/00:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   135  9 21 16:29 106e42aeea5b652d04319a246491c42d33fde7
+-r--r--r--    1 xusea  staff    71  8 30 18:32 9a886f6b5617a1cb8ef0c20e36e70f82d40022
+-r--r--r--    1 xusea  staff    92  9  7 14:51 f867bb959774bc61ea7aa02c6e63e493393790
+
+./.git/objects/01:
+total 24
+drwxr-xr-x    3 xusea  staff   102  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  9174  9 21 16:29 62ac88e7fae93e58037d64cd7b82529d3c8e5b
+
+./.git/objects/02:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    70  8 26 11:12 e3d23e54ccbe10db4bc859e34503ac01791700
+-r--r--r--    1 xusea  staff   132  9  2 17:12 faf42bf6daa83c5312a92a815e227d1576c876
+
+./.git/objects/04:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   170  8 29 09:58 2ca206ba9e8fb8bc8ec7f924a80ff0f777ea75
+
+./.git/objects/05:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2588  8 29 17:57 03c7b3df2dc9a80e148917d45c59012b653405
+
+./.git/objects/06:
+total 48
+drwxr-xr-x    6 xusea  staff    204  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    134  8 26 17:19 2cec7efe63d5b8f5b85ebf3aafa3af935e9a5c
+-r--r--r--    1 xusea  staff    131  8 31 09:51 7be7f15943b12fa88051ddeec512df3a589aa7
+-r--r--r--    1 xusea  staff  11802  9  1 13:31 88260b42e7af2c6e024ae128d0d89d68094cae
+-r--r--r--    1 xusea  staff   4083  8 30 10:03 d805778c4a13f063d1740d0ccb086a8d6cc272
+
+./.git/objects/07:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 22:36 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   317  8 30 18:32 910937505826630c6e45e63b3488cd70308045
+-r--r--r--    1 xusea  staff    91  9  2 22:36 c9a26b28f8884116d70f0ce868a4b452324872
+
+./.git/objects/09:
+total 64
+drwxr-xr-x    3 xusea  staff    102  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  32422  9  6 17:29 8f97c8dfa0cfb363f0c370af9925a33ac8ac7b
+
+./.git/objects/0a:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 10:35 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2715  8 26 10:35 9fb78a2db923ef09f169a54cc96e873755876f
+
+./.git/objects/0c:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   161  9  6 23:12 56e980be8afa872fe68fbf63e7260f8b6f220d
+
+./.git/objects/0d:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  8 26 17:19 4d360a2df67c5eca4da24f82ddfaae95920d6e
+-r--r--r--    1 xusea  staff   380  9  7 14:51 a4a257972dc3505745495b975473d4b05253b9
+
+./.git/objects/0e:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  5 22:20 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    59  9  7 14:51 46a7149b7dd1a0d73063e471857882531254d3
+
+./.git/objects/0f:
+total 80
+drwxr-xr-x    5 xusea  staff    170  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff     84  9  6 23:12 39e02ea8fb12207318c484874e70bb5e83ed8e
+-r--r--r--    1 xusea  staff    380  9  5 22:20 41392940195ce053105334b6d0e7645bb725ae
+-r--r--r--    1 xusea  staff  30024  8 26 17:18 5801fe86452f71f4cfc68d7e8eb1aad736f1ea
+
+./.git/objects/10:
+total 32
+drwxr-xr-x    3 xusea  staff    102  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  12722  9 21 16:29 57e73551fcdc5ea23bcfbc707c28822410e787
+
+./.git/objects/11:
+total 96
+drwxr-xr-x    7 xusea  staff    238  9  2 13:29 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   1137  9  1 13:31 1411c115dee0795877f1854f914d18ae973e76
+-r--r--r--    1 xusea  staff  30945  9  2 13:29 4375ed9bb8e20c780dc957a4a046e26884795f
+-r--r--r--    1 xusea  staff    611  8 30 10:03 9ee7b8ab391e59ee9df0f08a0860c12064cc94
+-r--r--r--    1 xusea  staff    522  8 29 17:57 d30959bc78cd34e29b1988aacebdb6503f8ff7
+-r--r--r--    1 xusea  staff    317  8 29 09:58 eeb2d5969300fe3e3bc00560dc8168ca79e296
+
+./.git/objects/12:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1136  8 29 17:57 0b0c0b2b7f28ecc0079f8c0e59904d51ee8274
+
+./.git/objects/14:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1135  8 29 09:58 590d33cb242d924ff887d9767f685325cecfc5
+
+./.git/objects/17:
+total 16
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  5203  8 29 09:58 7ece481f3d0d60a69a9f7f7f1c768606392d77
+
+./.git/objects/18:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  9  6 22:50 5131e5f98a9fd201521cc0b7297b8c9d50c17e
+-r--r--r--    1 xusea  staff   158  9  7 17:23 ba2218a8ce490d74442b7972e661c56a97dfb4
+-r--r--r--    1 xusea  staff    91  9 21 16:29 be86dee5f26049463c8679de3c0eb596878dfc
+-r--r--r--    1 xusea  staff    70  8 29 09:58 e80bc84aa033af70a44b60b6b6d35c1964a137
+
+./.git/objects/19:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 22:35 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2637  8 26 17:18 0d7e8e569f9a40a1b5da2d960438b34d0db330
+-r--r--r--    1 xusea  staff   444  9  2 22:35 d53a366c78b4486f3e66f854f7dec422d9d4ea
+
+./.git/objects/1a:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2790  9  6 17:29 e3e45ab203d393e73cac79e2028ca3e93e2762
+
+./.git/objects/1b:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9 21 16:28 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  2 17:12 befc255e08b9f4753405ee27a19193e923c217
+-r--r--r--    1 xusea  staff   238  9 21 16:28 f5c124958251480ac3a9e0380d31c5bb9c08c5
+
+./.git/objects/1c:
+total 16
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  5140  9  1 13:31 b0a974b81aeca79fdd818661101b879465122b
+
+./.git/objects/1d:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    72  8 30 10:03 6890ae96da18f1038f0aafe5e9e85d10e37f52
+-r--r--r--    1 xusea  staff  1423  9  2 17:12 a4aea7db881bbb3f3370151ecfbbff60a6a3a9
+
+./.git/objects/1f:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  4084  9 21 16:29 17beac7ff538dd7c384dbd00b4244122f2d06f
+-r--r--r--    1 xusea  staff   615  8 31 09:51 26998e42c057f3ef77de80366406593830642f
+-r--r--r--    1 xusea  staff   520  8 29 09:58 f1f624f719cdb128c802ecc7b7c4b004eeb145
+
+./.git/objects/20:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   134  9  6 23:12 14576c9f65149f0815390b5a135748e8d195b6
+-r--r--r--    1 xusea  staff  1621  9  7 14:51 21e97bf47a69fc7e8569b4e0b3f380d5c02ec8
+-r--r--r--    1 xusea  staff   316  9  1 13:31 4407dcb23a2a1471890f7423fae62bc525aa94
+-r--r--r--    1 xusea  staff  1569  9  6 23:12 9b8dc2a66283a294caf0cbdc2522b34b9368c7
+
+./.git/objects/21:
+total 24
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  9152  8 29 17:57 fdbd9a8fca8717a3b06acb61b6e8a4ca41e26e
+
+./.git/objects/22:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   135  9  5 23:51 354f5a90f2bb743c7861bc09172b27fe10262c
+-r--r--r--    1 xusea  staff  2842  8 29 17:57 c52fcef15597151e99bfca290e5ef0449e5f85
+-r--r--r--    1 xusea  staff    56  9 21 16:29 e2654999d9770e6f2b08e93e6380e848c29b41
+
+./.git/objects/23:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 17:19 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    57  8 26 17:19 0bd311b27f59f90ceb07c85c4bb21be8661058
+
+./.git/objects/26:
+total 32
+drwxr-xr-x    5 xusea  staff   170  9  2 22:36 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  5269  9  2 22:35 028986ddbdd92390c17cdfadcc3add9aa0a776
+-r--r--r--    1 xusea  staff  1367  8 26 10:35 2e8702d57573f57e03d154b8569ee8aa19ba86
+-r--r--r--    1 xusea  staff    71  9  2 22:36 a4d461f555f3d73efb1b28eb314686882e3299
+
+./.git/objects/27:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 17:19 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1147  8 26 17:19 e0d30c6eeda79e46b896d7175345d070ce4503
+
+./.git/objects/2a:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  8 31 09:51 19b1ff98484ea5389d85d6fb9bc49c682e77e6
+-r--r--r--    1 xusea  staff    70  9  7 14:51 624fc529f93592f46a8cb0c225c549b897678e
+
+./.git/objects/2b:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  6 23:12 3f0e9f2429258748794b889e63f2c6cd814ba1
+-r--r--r--    1 xusea  staff   131  8 26 11:12 d692af59586cdc097c4ef70b915ab489d0e786
+
+./.git/objects/2d:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  8 29 09:58 32ff311152f876ce9607fcb113af492fbd8076
+
+./.git/objects/2e:
+total 40
+drwxr-xr-x    5 xusea  staff    170  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff     83  8 29 09:58 32ffffa299e122b0ae4956086ff5d4c64d6a88
+-r--r--r--    1 xusea  staff     69  8 29 17:57 38805038ae2c4ef9c06fed58214693248d3744
+-r--r--r--    1 xusea  staff  12172  8 29 09:58 e407b6e648ea04b28100ac7783514c9b1a172a
+
+./.git/objects/30:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    70  9 21 16:29 3de0507564d8999f2a7331d9d9939699f9b8b5
+-r--r--r--    1 xusea  staff   162  9  6 22:49 fb991e79645ba31b53c830a8c0d57880518ad9
+
+./.git/objects/31:
+total 72
+drwxr-xr-x    4 xusea  staff    136  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  29782  8 26 11:11 1a99f2a192345da1fc5f95358ef1e3fcc5aa4e
+-r--r--r--    1 xusea  staff     72  8 29 09:58 260d4ca31b90d6e82357a14342fecaf7c808fc
+
+./.git/objects/32:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1407  9  6 17:29 a5498ad300a135eab751b2f21d70a872a70583
+-r--r--r--    1 xusea  staff    57  8 26 10:36 a87d4fac82c68542a9b5662781f3dfa4c794ba
+-r--r--r--    1 xusea  staff   131  9  5 22:20 c2191ff031425ca5c71e2e989dc8e5fd50e946
+
+./.git/objects/34:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   502  9 21 16:29 13729c7278a4b98b6585afe5fe022db4ee8ea2
+-r--r--r--    1 xusea  staff   165  9  2 13:29 43dec04ab20e9456f435b2eca54eeb0b69f2da
+
+./.git/objects/36:
+total 56
+drwxr-xr-x    4 xusea  staff    136  9  5 22:20 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   1234  9  5 22:20 32eb40e336207008196153e6e89137abdddab8
+-r--r--r--    1 xusea  staff  22678  8 29 09:58 dce59ea50b3cd80a9c1d73e829fab6bd1eea02
+
+./.git/objects/37:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1080  8 26 10:36 43fb76cfb07c0fe76a3f28049f59393a9112d9
+-r--r--r--    1 xusea  staff    71  8 29 17:57 4dd14ebb65dd1c334c434a35977635dbea8e29
+
+./.git/objects/38:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 22:35 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   792  9  2 22:35 52d071af0e753aab05a79d0ea079a2cb2bf639
+-r--r--r--    1 xusea  staff    84  8 26 10:36 9df370971c64087ae68f373f2d14aedbd93089
+
+./.git/objects/3a:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 30 18:32 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   132  8 30 18:32 c9ce70acd359af5b4251420bdf8141ac683457
+
+./.git/objects/3b:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    91  8 26 10:36 0647119754d5ce6e9261877538b2580ed8d476
+-r--r--r--    1 xusea  staff   380  9  6 17:29 7fe1f1629f710e1de524fee9e2bd7f019c38d4
+
+./.git/objects/3e:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 11:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1080  8 26 11:12 d103da42fb70c3a4e46e1673470a2918cd5f54
+
+./.git/objects/3f:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9  5 22:20 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   134  9  5 22:20 22d1a45b82eaf96d1b8ffaeeb19a51f7411f7c
+-r--r--r--    1 xusea  staff    83  8 29 17:57 3289993a4f81b90dabef4c2a9ca1489dfdac83
+-r--r--r--    1 xusea  staff   814  9  2 21:33 660df15d3e08086602409bea01a3a16bd9051f
+-r--r--r--    1 xusea  staff    92  8 29 09:58 e97f27fee8666689877d3cbfcac6d6c53fb3eb
+
+./.git/objects/40:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   316  9  2 13:29 2fd78523546173d999166b0ad703d63d03c85f
+-r--r--r--    1 xusea  staff    70  9  6 17:29 673198254060b18b8d572b148ba02e8dfd6eca
+
+./.git/objects/42:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    74  9 21 16:29 3f10d973829ea43bd40773d33cbed0a3c5c8c3
+-r--r--r--    1 xusea  staff    70  9  2 17:12 f4df40fa5732f1108fcc43e5556639d73f18a9
+
+./.git/objects/43:
+total 32
+drwxr-xr-x    4 xusea  staff    136  8 30 10:03 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  11253  8 26 10:35 915a2a990d581b01aa768cf511005396cff9d2
+-r--r--r--    1 xusea  staff     92  8 30 10:03 c269e99ce811ede7adc3aa5a0bbf0ec98706e8
+
+./.git/objects/44:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  8 29 09:58 2be6676c3141e0f70dbba7863472aba774bb5c
+
+./.git/objects/45:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1416  9  6 23:12 91dd7a8aa7ff16115a4d091c1432a4c7b58259
+-r--r--r--    1 xusea  staff   134  8 29 09:58 b2660bf900e548914bcd3c626f7b31c655e582
+
+./.git/objects/46:
+total 24
+drwxr-xr-x    4 xusea  staff   136  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  4689  8 29 09:58 4b867075694811e2630f5c9807391413adfa3b
+-r--r--r--    1 xusea  staff   627  9  1 13:31 52b4b2fe28229f1106455c98194683d2735f36
+
+./.git/objects/47:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   135  9  2 22:36 2d3bc1c175197f60e2ce8d6c61e6ea4626a495
+-r--r--r--    1 xusea  staff  1438  9  7 14:51 5891377131d8864c962633a43be8caf0d16fe8
+-r--r--r--    1 xusea  staff  4018  9  6 23:12 92a4c4b28c047c3428289103fe14eaf86fbf06
+
+./.git/objects/4b:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  9  7 14:51 2f70c5d674e34749ae688af544edce614fcaeb
+-r--r--r--    1 xusea  staff   134  9  2 13:29 6fb79e16655a6cfc31f5ec8fa34b3e3b080566
+
+./.git/objects/4c:
+total 72
+drwxr-xr-x    4 xusea  staff    136  9  7 17:23 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  31108  9  2 17:12 5ae3d2b0e88417180a3a1fe337f857794d5673
+-r--r--r--    1 xusea  staff     72  9  7 17:23 daaabefe1be8bf22c9a27e36b4f2e94f2b428b
+
+./.git/objects/4d:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9 21 16:28 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   180  9 21 16:28 bbef7a50bb18e77037c5deb4857ac201fff550
+
+./.git/objects/4e:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  8 29 09:58 181e24c8d7f8df7bb7fe2eeb916d8d11ad1381
+-r--r--r--    1 xusea  staff   163  8 26 17:19 92e0a8a8d9bf98895e37feb1ed49a7d70fb5c1
+
+./.git/objects/4f:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   168  8 30 18:32 51491e8a9f56b603c1c727c1a0dd26f132883b
+-r--r--r--    1 xusea  staff   131  9  6 23:12 add2f89a16d3c7c6b821902f61276c59370f9b
+
+./.git/objects/52:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  9  1 13:31 486add0751daf279ffb57cbdfcc21a62855c3a
+
+./.git/objects/53:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   577  8 29 09:58 6e62e6bd7ced7a3b58e1deafa62dc7328184dd
+
+./.git/objects/54:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 17:18 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   233  8 26 17:18 12c181d48add035d01e43fdea6c231b36ffc7d
+
+./.git/objects/55:
+total 32
+drwxr-xr-x    4 xusea  staff   136  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    70  9  5 23:51 a56787ea99385dad0d476d0800bc75b205e237
+-r--r--r--    1 xusea  staff  9255  8 26 11:11 ff6b37e000f952658909fc04be0ffbbe372c90
+
+./.git/objects/56:
+total 64
+drwxr-xr-x    3 xusea  staff    102  8 30 18:32 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  30938  8 30 18:32 fe0d9fa0783858e8b063ba07545cffaca36a67
+
+./.git/objects/59:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   420  9  1 13:31 1c103f51648d219a8c3228fedac3bdfa6a4882
+-r--r--r--    1 xusea  staff  1532  9  6 17:29 c60aa6b40a2d2828c6b768ba13bcfd2d1b0286
+
+./.git/objects/5a:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  6 22:49 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   160  9  5 23:51 76e168780d4c368a108873b793b3d4f0e71470
+-r--r--r--    1 xusea  staff    92  9  6 22:49 a84e19fdafd12bfce93c4022cc9c7ce1a6315b
+-r--r--r--    1 xusea  staff   293  8 29 09:58 e88408cca4cd3830097123308316530dca540a
+
+./.git/objects/5c:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  5 22:20 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  3741  9  5 22:20 6f43db38435740a8d71e0dbc3746bb2efeb4d0
+
+./.git/objects/5d:
+total 32
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  9151  9  6 17:29 e54aa88d83b683a79d58c87965c65ef896b6fe
+-r--r--r--    1 xusea  staff    91  9  1 13:31 e65adabe16a9444c381d75a0dbbee8ffeb8b46
+
+./.git/objects/5f:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    91  8 29 09:58 ffc9cb38c24ba811c11f196b4b9b703ce3e40a
+
+./.git/objects/60:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   288  8 31 09:51 39b33f723926bee5b39b438495648a0266685b
+-r--r--r--    1 xusea  staff    83  8 30 18:32 57cf66fe7853bfa00b6769268439ca95fd4e15
+-r--r--r--    1 xusea  staff    92  9  6 17:29 9e0b6c1a4b49acf8d5f2eb1f24f39b59b8ae89
+
+./.git/objects/61:
+total 32
+drwxr-xr-x    4 xusea  staff    136  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  12288  9  2 17:12 1a0bede796c43a61fdf6ce4aed133cecc5e675
+-r--r--r--    1 xusea  staff   2578  8 29 09:58 3e6522bd4df3037363bd2eca75e3701ad4f84e
+
+./.git/objects/62:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9  6 22:50 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  8 29 09:58 59b975678ea543016ce7d88f9c5783d2cbfb62
+-r--r--r--    1 xusea  staff  2856  8 31 09:51 6169522089b27b7513e0f5bccb9f7fa68960a0
+-r--r--r--    1 xusea  staff    82  8 26 11:12 6c4932714604d4676ea42b3f77cd1afe561722
+-r--r--r--    1 xusea  staff   162  9  6 22:50 706e0edecd01dc0d154750d8c8e2d12085bdc1
+
+./.git/objects/63:
+total 88
+drwxr-xr-x    5 xusea  staff    170  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    362  8 26 17:18 53c4fbf0964ed09159eab209e9b78cdeaf3918
+-r--r--r--    1 xusea  staff  33273  9  5 23:51 75b8e83024335eb770cad863783c3f8dca970b
+-r--r--r--    1 xusea  staff    131  8 26 10:36 ec839caa3ccfee86c8230fba503bcf53285c77
+
+./.git/objects/64:
+total 32
+drwxr-xr-x    5 xusea  staff   170  9  6 22:50 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  9  6 17:29 1588be4cac492c1f1c8183a77aa6e95b6e41c4
+-r--r--r--    1 xusea  staff  4102  8 31 09:51 44555e3cbe54ec4cafd6bd490f38114bdc0ca7
+-r--r--r--    1 xusea  staff   134  9  6 22:50 f64e896abc7ba2231cfed3b97ce1024cc30b92
+
+./.git/objects/66:
+total 40
+drwxr-xr-x    4 xusea  staff    136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   1264  8 26 11:11 67200bda564c7eaeab87de9850f4818cc31977
+-r--r--r--    1 xusea  staff  12532  9  7 14:51 ae08091a46464bd6b7c8a9006b61f045e27579
+
+./.git/objects/67:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  5 22:20 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   282  8 29 09:58 0883f5e44e424070b4aa5a1ef80f3841655dc6
+-r--r--r--    1 xusea  staff    72  9  5 22:20 7af9d8c66621e5780ecbb97e3170c1c4d4310e
+
+./.git/objects/68:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 30 10:03 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   709  8 30 10:03 0f483183158004abde2d6ddd559a172b6b7488
+
+./.git/objects/69:
+total 24
+drwxr-xr-x    5 xusea  staff   170  8 30 18:32 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   316  8 29 09:58 23aeb25a8d30e6004882dcce4966a4334f5424
+-r--r--r--    1 xusea  staff  1423  8 30 18:32 9e4bf35334d1bd512a10ba5aba4b65387ef4dc
+-r--r--r--    1 xusea  staff   519  8 29 09:58 ccca21ef32c8673188b488de10e7dfa336aa66
+
+./.git/objects/6a:
+total 72
+drwxr-xr-x    4 xusea  staff    136  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  29532  8 26 10:35 12382a31f0d4b41ac350ef2cd682b234330800
+-r--r--r--    1 xusea  staff   1323  9 21 16:29 945cd3723f8e7dbd0e9f10304a40738b1e5956
+
+./.git/objects/6b:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  2 17:08 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   232  9  2 17:08 348f6a11b8862abde0d6920b553535088fdaae
+
+./.git/objects/6d:
+total 40
+drwxr-xr-x    5 xusea  staff    170  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    856  9  5 23:51 5ea0e033c76b6f921d11d3ff1b8168e06d8155
+-r--r--r--    1 xusea  staff  11411  8 26 17:18 9477bb0bad1eef28fb280de56f84d0cb322413
+-r--r--r--    1 xusea  staff    486  8 26 17:18 c78a3e782bf980818535a1d8a2a2af8a463a30
+
+./.git/objects/6e:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  8 29 09:58 fff1b57395d99975d37bd36ffccc3c2f821087
+
+./.git/objects/6f:
+total 56
+drwxr-xr-x    7 xusea  staff    238  9  6 22:49 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    415  8 29 09:58 575f2a2f10a5ec2d80dac68e190fc6f00aaed7
+-r--r--r--    1 xusea  staff    380  9  6 22:49 9f724ed61d24941156f6517b65ae1922b43d23
+-r--r--r--    1 xusea  staff     92  9  2 22:36 af550145dbf6c68228d2da2abbfd37a14a87b4
+-r--r--r--    1 xusea  staff    131  8 29 09:58 ec297d74595d8b45b9b534de69f2897199ef0c
+-r--r--r--    1 xusea  staff  11956  8 29 09:58 faf9f7e39a60c3535cea575939aa282fc6be1a
+
+./.git/objects/70:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  2 22:36 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   379  9  2 22:36 fd26abc8f2578731f38c6aeae725f006dde4f0
+
+./.git/objects/71:
+total 32
+drwxr-xr-x    4 xusea  staff    136  9  6 22:50 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  11985  9  6 22:50 5936f5d778bffcc25d80a82d8188ac2b3a1780
+-r--r--r--    1 xusea  staff   1430  9  2 22:35 61d4b4849e432070ed3a29ecb7baad362ea314
+
+./.git/objects/74:
+total 80
+drwxr-xr-x    5 xusea  staff    170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  11897  9  6 17:29 3b8d57b587399feac0a941755b9d57b99b8e2d
+-r--r--r--    1 xusea  staff    131  9  5 23:51 95f52e7ca6b35f963fe6c366c0341aa0967802
+-r--r--r--    1 xusea  staff  22677  8 29 09:58 d35b7f42e08016642cd57c465a1cf059fcf278
+
+./.git/objects/75:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  7 17:23 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  7 17:23 37c1b3282f59c3529f9ca9fe176f9b3f768d34
+-r--r--r--    1 xusea  staff    92  8 29 17:57 51f3d9717975085c29df726ca3cee5a15ad81d
+-r--r--r--    1 xusea  staff    92  8 31 09:51 8f04e3a03da0fb546e7d5c4ea9c4c312f9f648
+
+./.git/objects/77:
+total 64
+drwxr-xr-x    5 xusea  staff    170  9  2 22:35 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   2772  9  2 22:35 43abda31898270f88aa6408043c439eebdb464
+-r--r--r--    1 xusea  staff  23300  8 31 09:51 740165f67af300517004c94b87adc040d6db62
+-r--r--r--    1 xusea  staff    167  8 29 09:58 9175a14cd13204deecb59007ba074aa5862bbb
+
+./.git/objects/78:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   493  8 29 09:58 ae527da8650e3c08c4c7afe92cc478560b7cc3
+
+./.git/objects/79:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  2 13:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  9  2 13:29 30a3768662323e69df449e2b3f9e723c7ee4c1
+
+./.git/objects/7b:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   316  8 29 09:58 4d7fa04192a6656453252423f68027a975742f
+
+./.git/objects/7d:
+total 40
+drwxr-xr-x    7 xusea  staff   238  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2891  9  7 14:51 0606abfdcd144548f91c879fc6663f3961c61f
+-r--r--r--    1 xusea  staff    71  8 31 09:51 45c9aa54a41cdf58eb793ef2eff6deabe5a3f7
+-r--r--r--    1 xusea  staff   722  9  6 17:29 7635409a3cbf49a21ea2f8ede9fd8c5671b6d3
+-r--r--r--    1 xusea  staff   135  9  6 22:49 a80d03d02e3293a746ed8e7c620b6c519479f4
+-r--r--r--    1 xusea  staff    91  8 29 17:57 d803b2fce42db8286870f10511e18f3b1a9b8c
+
+./.git/objects/7e:
+total 48
+drwxr-xr-x    7 xusea  staff   238  9  6 22:49 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2839  8 29 09:58 381d2d9dd9e269bd1e9f039407addf6441905a
+-r--r--r--    1 xusea  staff   159  8 29 17:57 788fa84ba66c74c9b5a3af4755c4721e5e662c
+-r--r--r--    1 xusea  staff   131  9  6 22:49 966db1955404e22c9dab352c88c46cd6b50e54
+-r--r--r--    1 xusea  staff    70  8 29 09:58 9ac65c07b0fd236baa0e44b8062ad0cce33bf8
+-r--r--r--    1 xusea  staff  5129  8 30 18:32 f9211cf045dbe4a432831f0a1d34d45228dae1
+
+./.git/objects/80:
+total 88
+drwxr-xr-x    4 xusea  staff    136  9  7 17:23 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  32565  9  7 17:23 b49e44e782d96f48b6a9c8b5c69b5ffe893992
+-r--r--r--    1 xusea  staff   9304  8 26 17:18 c27b028fc13a8cc94cd5c65415ccfa702fdb27
+
+./.git/objects/83:
+total 72
+drwxr-xr-x    4 xusea  staff    136  9  6 22:50 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  30319  8 29 17:57 2006d6daed53766813ac9c0dfe19b8e3f8101c
+-r--r--r--    1 xusea  staff     71  9  6 22:50 8a0f1800ecb7027731ba9765ed0a5642ed7392
+
+./.git/objects/84:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   132  8 29 09:58 160f2643da00842c29976b45728c7d79f04568
+-r--r--r--    1 xusea  staff   135  9  7 14:51 68db8f15d503c07718f3e8fb2b51e8758ff2b5
+
+./.git/objects/85:
+total 56
+drwxr-xr-x    4 xusea  staff    136  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  23510  9  1 13:31 821a8339105a1718f974d98c14a6ac3f8449fc
+-r--r--r--    1 xusea  staff    706  8 26 11:11 b7143add708c9070e1815c0d46e62d70662473
+
+./.git/objects/87:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9  6 22:49 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   354  8 30 10:03 1647bb31f1303b35acd39eec0293752404b5ed
+-r--r--r--    1 xusea  staff  1141  8 29 09:58 608e4f7b86954f98670689a4da3aa7791bf405
+-r--r--r--    1 xusea  staff  2792  9  6 22:49 6a64a7431eae681af41bfe0d71e2b521858d7e
+-r--r--r--    1 xusea  staff    71  8 26 10:36 6b223999ac6db739fc1511f06187888610170c
+
+./.git/objects/88:
+total 24
+drwxr-xr-x    3 xusea  staff   102  8 26 10:35 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  9261  8 26 10:35 b4fdb19df050e1ee9b45b383b3405eaa5d2df8
+
+./.git/objects/8b:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   159  8 31 09:51 77712e02efbe1a88f3b09732b7a41a2a87ec36
+-r--r--r--    1 xusea  staff    91  9  1 13:31 ee64f98d26cb0901c0f3e5943e81069ccf7270
+
+./.git/objects/8c:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9  6 22:50 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   380  9  6 22:50 0f06107bcd42a2b627efb6c947fbda62405031
+-r--r--r--    1 xusea  staff   722  8 26 17:18 34accaac820e24317014f3c9aa67e433821eba
+-r--r--r--    1 xusea  staff  3796  9  6 17:29 65a20b4961ff344def13c4f46e1d6d36fbde25
+-r--r--r--    1 xusea  staff    83  9  1 13:31 a98f87c4d426167517be8b53dd5b574ca0a392
+
+./.git/objects/8d:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    91  9  7 14:51 4f0c726cc1ddf381c2f151da9cc5f8e3d048f1
+
+./.git/objects/8e:
+total 32
+drwxr-xr-x    4 xusea  staff    136  9  2 22:36 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff     70  9  2 22:36 7db0194c1d469d467b805c5d02a4dd847cf587
+-r--r--r--    1 xusea  staff  12034  8 29 09:58 92f709175f9a6aa38ac1057910f8dd0eade59e
+
+./.git/objects/8f:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    69  9  1 13:31 7645199c0a375de5b9aa5b0dc903b0cb3dcce1
+
+./.git/objects/90:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  5 22:20 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  9  2 22:36 39b50489c76253aa152a6433a932a0f23ea895
+-r--r--r--    1 xusea  staff   169  9  5 22:20 42b0a4f07c6c08a36b1020b5a6d5de6ce1b018
+-r--r--r--    1 xusea  staff   135  8 29 09:58 a6ce061bb266c9a9a990b4b4d7ee412bf54b28
+
+./.git/objects/93:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 22:49 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1238  9  6 22:49 17e18b35d7b29ee7c3de9a36e39e393ad3670a
+-r--r--r--    1 xusea  staff  1386  8 26 17:18 ecb2aff835dd43ce120fdfe83e0122e32cfbde
+
+./.git/objects/94:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   165  8 29 09:58 2b0eed8fcea4822a138e4b50152cfef64b1bb5
+
+./.git/objects/95:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  7 17:23 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   827  9  2 22:35 3c443a9dde4c2f4a98882f85a3f8841b37a791
+-r--r--r--    1 xusea  staff   134  9  7 17:23 44b12b910106a133c35663519696055ad5027a
+
+./.git/objects/97:
+total 32
+drwxr-xr-x    4 xusea  staff    136  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  12081  9  6 23:12 8726694436b5439c35eb226de150ad436a7a22
+-r--r--r--    1 xusea  staff    317  8 26 17:19 d11c5a54cb758215cba08c269da0482ed363ce
+
+./.git/objects/99:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2736  9  1 13:31 5fb6a63e6fd55bcf9b3cfe3dd1fb6b4175e191
+
+./.git/objects/9a:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   518  8 29 09:58 e7ce9368652caacb6f20d39707ad629e511ac0
+
+./.git/objects/9c:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   135  8 29 09:58 154a5731301eed2bb3563169ed051d10f05c7f
+
+./.git/objects/9d:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 26 11:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    70  8 26 10:36 30a89ac4b4677442c7520bf0faa91bda93a9fe
+-r--r--r--    1 xusea  staff   164  8 26 11:12 564c81b48cfeb1d86351409e87b3dd4dd07aee
+
+./.git/objects/9e:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   381  8 29 09:58 2d575d225ac87a8361e2131dea1ce6aef9db6a
+-r--r--r--    1 xusea  staff  1142  8 29 09:58 907151b78242d7626c5792404b3edef431010a
+
+./.git/objects/9f:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    69  8 31 09:51 17194a5b82390b2fedd946c2cd369ccdd058e8
+-r--r--r--    1 xusea  staff    71  8 29 09:58 189d56b65fc905d0d33f48c74e6ea8d8be54a4
+-r--r--r--    1 xusea  staff    72  9 21 16:29 5531de4532a91fd895478fbc4e47071fe88ad5
+-r--r--r--    1 xusea  staff  1233  9  5 23:51 c2ece77ff78f7aa6e02cb5f2bf67a94a356a45
+
+./.git/objects/a1:
+total 80
+drwxr-xr-x    4 xusea  staff    136  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    379  9 21 16:29 523f53283e498fa18f59376aa313ca84dd3a4b
+-r--r--r--    1 xusea  staff  33309  9 21 16:29 b07fa330189c23ecbb63f18627ebf91e70b781
+
+./.git/objects/a2:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   236  8 30 10:03 100a41b0457f173d808ae34b5669f220de823a
+-r--r--r--    1 xusea  staff  1351  9  5 23:51 177ca9751b8798110e7595ed0c7719a42df8e5
+-r--r--r--    1 xusea  staff  1313  9  2 17:12 72efc2341821f3321a20ad1f4cd68d37c7ac9d
+-r--r--r--    1 xusea  staff    92  8 26 11:12 b58cc5d151f623990ab73e711d04b0011432e0
+
+./.git/objects/a3:
+total 40
+drwxr-xr-x    5 xusea  staff    170  9  6 22:49 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    163  9  6 17:29 bc7939f0dfd99c6c87579d0c0ded81e6f8f06d
+-r--r--r--    1 xusea  staff  11986  9  6 22:49 d80964126ecf650c6b7774cc01c57b841cd116
+-r--r--r--    1 xusea  staff     57  8 29 09:58 fc09430781d321301991593a9b645e705482b1
+
+./.git/objects/a4:
+total 56
+drwxr-xr-x    5 xusea  staff    170  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   9132  8 29 09:58 2df83928c1870738e5c92f43b969c82b4398ac
+-r--r--r--    1 xusea  staff   2459  8 29 09:58 c6115b549bafac8b69eb8249ecdc12eb1467c5
+-r--r--r--    1 xusea  staff  11807  9  2 17:12 cc010a05de037c2fbed55428b9409687402678
+
+./.git/objects/a5:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1552  9  5 23:51 90e0dcf45f6c5f7680fb44d289bd72af58d09b
+-r--r--r--    1 xusea  staff   131  9  6 17:29 c6ffcc379a89b51ec66f9e73970ecd40e443ea
+
+./.git/objects/a6:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  5 23:51 20bfd6dae6f2db74e8865875a379c44b15e296
+-r--r--r--    1 xusea  staff   332  9  2 17:12 d7d2e6fcadeee68f7875bbe179306383f352e2
+-r--r--r--    1 xusea  staff    83  9  2 17:12 deaed8b5fdb1b03dc6407ca63ca6ccd24b03ce
+
+./.git/objects/a9:
+total 24
+drwxr-xr-x    4 xusea  staff   136  8 30 18:32 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  6036  8 26 17:18 c2f16ce157388f22c2aaa4d9d4e7ae7442f0e4
+-r--r--r--    1 xusea  staff    92  8 30 18:32 ec8b339cb1a75e9547fd4f63d6b77edc01e1ac
+
+./.git/objects/aa:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   857  9  5 22:20 58bcaf5b20c50cf987cb7e5081d5d7eb75c6f1
+-r--r--r--    1 xusea  staff   162  9  7 14:51 7ea43ff1a7b4db022fefe0853ad0d0ed0e1321
+
+./.git/objects/ab:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  6 22:49 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  9  6 22:49 0dfdab317edfeebe68d19592719d2a41921574
+
+./.git/objects/ac:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   457  9  5 23:51 08a2c1152e296659b3b5b63732ec6ed2a37b9d
+
+./.git/objects/ad:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1239  9  6 17:29 1a7637129886c2c376133aa1721df6a1ed1155
+-r--r--r--    1 xusea  staff  2376  8 31 09:51 4566b001ffb8fc77fcb1b59465c0f923c45cc5
+-r--r--r--    1 xusea  staff   378  9  2 17:12 86dc42b31e66655b9be7009dc75e6752d23e99
+
+./.git/objects/ae:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  9  2 17:12 1bd5a19cdf1913b78791dfe79b9c5aa60a295b
+-r--r--r--    1 xusea  staff  1509  8 29 09:58 c90acd39e7e258c076ebe396b7468abecaa526
+
+./.git/objects/af:
+total 56
+drwxr-xr-x    4 xusea  staff    136  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff     91  9  6 23:12 78b75d5b7ba605c165b897bb1911abe2425d14
+-r--r--r--    1 xusea  staff  22848  8 29 09:58 d24b69d566595267a5f36db9ec7643d750bd67
+
+./.git/objects/b0:
+total 24
+drwxr-xr-x    4 xusea  staff   136  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2736  8 26 11:11 85186e3579157fd23f155193304f3dbde31ba0
+-r--r--r--    1 xusea  staff  5230  8 29 17:57 f6826c44c863bdcd231f35b7a2e787b3f42c0b
+
+./.git/objects/b1:
+total 16
+drwxr-xr-x    3 xusea  staff   102  8 26 11:11 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  6024  8 26 11:11 88b9591a5f7d58945375f25ef3f215376d5ea0
+
+./.git/objects/b2:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   178  9  2 21:33 a74aafda8a1d428aa106693ed45fb67489b1f4
+-r--r--r--    1 xusea  staff  2486  9  1 13:31 f86dbf1c5a88e317ab7c6aa23c23a9dde543e5
+-r--r--r--    1 xusea  staff  1627  9 21 16:29 fae00ebeb7f84e1ce61a58f6072ebbf154d906
+
+./.git/objects/b4:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  5 23:51 03735b0794a17a984dcb60c19ea2d9946cd844
+
+./.git/objects/b5:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 17:08 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   163  8 30 10:03 09f4bd0f7cf6faafd6a5653d60672a04055dc6
+-r--r--r--    1 xusea  staff   174  9  2 17:08 354c4d1730c09dcba36660375979ada446a67e
+
+./.git/objects/b6:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  5 22:20 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  5 22:20 31a3aa3440240bd37e32542e7822d429f240c3
+
+./.git/objects/b7:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   170  9  2 17:12 127569fa80d34e6790e7cf24028adc275541b7
+-r--r--r--    1 xusea  staff   134  8 26 11:12 2aadd5bd6941fb5f2a6bf71f422f0603280eba
+
+./.git/objects/b8:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2910  9  7 14:51 0e7f1573b6445d5a990edb32426fc272a5e5c1
+
+./.git/objects/b9:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  2 22:35 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  3233  9  2 22:35 de270e69b9fc6c8d6b4167cad870ee5130a4eb
+
+./.git/objects/ba:
+total 80
+drwxr-xr-x    5 xusea  staff    170  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  32419  9  6 22:49 26af163f521e3fc0d470f624fa16c02be11801
+-r--r--r--    1 xusea  staff     72  8 26 11:12 3cf50c46e9efd8248c6f21937dcc16ca8a2d29
+-r--r--r--    1 xusea  staff     72  9  7 14:51 5a3ed71db8b9d8efbc326e94d408969f63c83b
+
+./.git/objects/bc:
+total 24
+drwxr-xr-x    4 xusea  staff   136  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  2810  9  5 23:51 3a39417b70dd9332ba31262843c414535aed24
+-r--r--r--    1 xusea  staff  5124  8 30 10:03 75ae02a74e4ec225af7e6bfabed7046388a26e
+
+./.git/objects/bd:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    57  8 29 17:57 20e8bb968f72acf5c8ca6b7079220551a6bce9
+
+./.git/objects/be:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 29 17:57 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  8 29 17:57 4881acc8f7d7f2a94322130705b1dcd2bc9170
+-r--r--r--    1 xusea  staff   134  8 29 17:57 8254a0d88831239feaf38b211ba7766adf5ab5
+
+./.git/objects/bf:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    84  9 21 16:29 176adf5f5a3a140f94df33f7af2fd481015a5c
+-r--r--r--    1 xusea  staff    84  8 26 17:19 183abc86bc68d57e58c04499c84516c5e6e3a8
+-r--r--r--    1 xusea  staff  1140  8 30 18:32 eeeeb8b26873a7648cc857b621aa2fde648860
+-r--r--r--    1 xusea  staff   134  8 29 09:58 f854719d564660dea66107f7e48e170f8820dc
+
+./.git/objects/c0:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  2 17:12 9a9629a68ab70cec13e43a0d247396d4d45696
+
+./.git/objects/c2:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   317  8 29 17:57 1ac43ca63358b75c3da655e47ab0f6a323c089
+-r--r--r--    1 xusea  staff    72  9  6 17:29 6589c1a02b9061d5b9a17291a32b7abd0cb4af
+
+./.git/objects/c3:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 30 10:03 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  8 30 10:03 5cbc0395090537aeeef49bd81c3c0b01727c91
+-r--r--r--    1 xusea  staff   131  8 29 09:58 d5ed5c05ef8add2fd22ce3aa891e5d2befa4aa
+
+./.git/objects/c5:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  8 29 09:58 8d073ffbdd7d104a2812d338b9ffb5d743c25d
+-r--r--r--    1 xusea  staff   227  8 26 16:50 cd2fd9ad5a0c9f6e5685e8a18da435744d032e
+-r--r--r--    1 xusea  staff   177  8 26 10:36 d29eebad2199cb4b9dc7b32373988bf855643a
+-r--r--r--    1 xusea  staff    70  9  6 23:12 eee1d11d22ade9eabbeb2f4745b653fad725db
+
+./.git/objects/c6:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  2 22:36 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1234  9  2 22:36 23dc0c52059144bd150d3b5e2152d62f19994d
+-r--r--r--    1 xusea  staff  2270  8 30 10:03 381c07c24f999c8ae5de1bca548f2efeb1a42e
+-r--r--r--    1 xusea  staff  2920  9  2 17:12 613d5480899fe11a23ff5c07fdce31b5b21491
+
+./.git/objects/c7:
+total 80
+drwxr-xr-x    5 xusea  staff    170  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff     57  8 26 11:12 771c64395364cbe3f66a0a03e64b278f795dec
+-r--r--r--    1 xusea  staff  32364  9  6 23:12 87acc586f91b50f8b0396d64f3a13e5d3775f6
+-r--r--r--    1 xusea  staff    317  8 31 09:51 999a5a30bcf767ebf7764803237f6750e7664f
+
+./.git/objects/c9:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   317  8 29 09:58 24056b36c547c257c48a51f63168c527f4db56
+-r--r--r--    1 xusea  staff    92  8 29 09:58 cc0eeef1f3bca4694a9f235892b76d5bbc1739
+
+./.git/objects/ca:
+total 72
+drwxr-xr-x    4 xusea  staff    136  9  2 22:35 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  32637  9  2 22:35 7a6393b5d2b63925dc1a60a56a21fc181f3125
+-r--r--r--    1 xusea  staff     91  8 29 09:58 a59789b78952d44495cded3b18706afa302f84
+
+./.git/objects/cc:
+total 32
+drwxr-xr-x    4 xusea  staff    136  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    317  8 26 10:36 2d1702a9bf8a44e2bc163ff3482a0d670c7a49
+-r--r--r--    1 xusea  staff  11884  9  5 23:51 f7107083a4857046bc77265628cc61d60a416c
+
+./.git/objects/cd:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  2 22:36 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  9  2 22:36 1c88e9fabbf48a4a0f104cec2b0da6e938249a
+
+./.git/objects/ce:
+total 128
+drwxr-xr-x    4 xusea  staff    136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  32570  9  7 14:51 b36defaf761c39f06583d0fcd5b9f973a0106a
+-r--r--r--    1 xusea  staff  32419  9  6 22:50 f9776f8895e3c04eee9875476a35031a771b1d
+
+./.git/objects/cf:
+total 56
+drwxr-xr-x    4 xusea  staff    136  8 30 10:03 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff     92  8 29 09:58 92d20005098d9db030454b14b12ee5ed1ed984
+-r--r--r--    1 xusea  staff  23232  8 30 10:03 f92bf891b64395c8a9722c1b42ca4b0fdeab4e
+
+./.git/objects/d1:
+total 80
+drwxr-xr-x    4 xusea  staff    136  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    380  9  5 23:51 2ea97a9c28bd3824cc61f21524a8be28ded582
+-r--r--r--    1 xusea  staff  33446  9  5 22:20 ee276a9b7dc283c8acbab52f3f4ea7bb802ab9
+
+./.git/objects/d2:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   134  9  1 13:31 8404b12d9d3f474b9257d8c2c8b2b1c990154e
+
+./.git/objects/d4:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 31 09:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   557  8 31 09:51 a434f6aede9ca541aabbd1c8414fb1c169d049
+
+./.git/objects/d6:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  2 21:33 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  8 31 09:51 b5eee31b47928d84739037edb92a0c3574f425
+-r--r--r--    1 xusea  staff   287  9  2 21:33 dc184592357577433d27b1a934cd628a4146a0
+-r--r--r--    1 xusea  staff    92  8 26 17:19 fa6ed0c851e0f5b0188703d47cc0612f2a5d24
+
+./.git/objects/d7:
+total 48
+drwxr-xr-x    3 xusea  staff    102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  22317  8 29 09:58 fb45cf4ef02abdf4381b7afa362a5e8140666a
+
+./.git/objects/d8:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 30 10:03 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    70  8 30 10:03 522b46c7dbdc141c04001272d2ba14e6d31d64
+-r--r--r--    1 xusea  staff   388  8 29 09:58 55c3077f1a0ee008c1bee4116f4f2f52d98b77
+
+./.git/objects/d9:
+total 48
+drwxr-xr-x    5 xusea  staff    170  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  12433  9  2 22:35 a4e754d8729d37298f4b6f47be476e57abcbff
+-r--r--r--    1 xusea  staff     91  8 30 18:32 cfd48f6a1bc5ad32c2fb7b37a24f9267097290
+-r--r--r--    1 xusea  staff    131  9 21 16:29 e97ebc556ef9174d9d719441851d1fc23d7284
+
+./.git/objects/da:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 31 09:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  8 29 09:58 a88ea2a29cb20b36a146cc882b775d53ef7497
+-r--r--r--    1 xusea  staff  1141  8 31 09:51 f8e833091118d497297e5b76dde29b9e570ce6
+
+./.git/objects/db:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  7 17:23 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  9  7 17:23 5617d92f472bd0e9a1a22725998345937e9485
+
+./.git/objects/dc:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 10:36 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   134  8 26 10:36 0d17e0413b7353e29919a98c6c82ba17e2caec
+
+./.git/objects/dd:
+total 32
+drwxr-xr-x    5 xusea  staff   170  9  2 17:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   135  9  2 17:12 30c59c554eaf6edac6907b82249aed0f8d66ec
+-r--r--r--    1 xusea  staff  4700  8 30 10:03 50f546fe189f5c197ba4087eeddffec7aae185
+-r--r--r--    1 xusea  staff   169  8 26 16:50 7a93ac7268d01512fcc929c3abbdb40888f5e0
+
+./.git/objects/de:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  7 17:23 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   380  9  7 17:23 29c7afbbb3966d7dd05719bc9f55e39163b17b
+
+./.git/objects/df:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 11:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   317  8 26 11:12 f29c881b50ec6cf4e4bd80e71c1521952d80e8
+
+./.git/objects/e1:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    57  9  6 17:29 8c96d9b23cd7464f33a04d1bd90751cf4107c5
+-r--r--r--    1 xusea  staff  1145  8 29 09:58 c5bb61190f0b90d7c9e879d805c7c2fdb722d1
+-r--r--r--    1 xusea  staff  1381  8 26 11:11 e923950249ef7125327750e12580ed224bb59f
+
+./.git/objects/e2:
+total 16
+drwxr-xr-x    4 xusea  staff   136  8 30 18:32 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   135  8 30 18:32 4f5095339eff41cc3ec72e15dffe7697672ad1
+-r--r--r--    1 xusea  staff    92  8 26 17:19 9f8a15a6867b0882a2384f481fc389912c2795
+
+./.git/objects/e3:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  2 13:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9  2 13:29 0157647d82b38372389a42f286b267ab10e7de
+
+./.git/objects/e4:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    91  8 26 10:36 31f9f0bd2711877c3d6623babe578bf8f02c65
+-r--r--r--    1 xusea  staff  1234  9  7 14:51 81c3d43cb84faef42e97f6109101a35f0c23f2
+-r--r--r--    1 xusea  staff  2887  9  2 13:29 cb8908069edd8f9c419dccbde591454b4208fe
+
+./.git/objects/e5:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 29 09:58 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  8 29 09:58 f89ec35f33e498b50200a8066a1d113395fc51
+
+./.git/objects/e6:
+total 32
+drwxr-xr-x    6 xusea  staff   204  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    92  9 21 16:29 0be146ea944e70a5fd7a556db9f497db4990b8
+-r--r--r--    1 xusea  staff  4084  8 30 18:32 3312f91720287388ba2e1277dfb6d66da5459b
+-r--r--r--    1 xusea  staff    70  8 29 09:58 d1b40d414b5608889499273fe60354f692f0dc
+-r--r--r--    1 xusea  staff    91  8 30 10:03 d6b276afc2368d830fd2ac31710814d639ff37
+
+./.git/objects/e7:
+total 32
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  4431  9  6 17:29 4bfc2a9450f27a268ab364a504d214387fbce4
+-r--r--r--    1 xusea  staff   134  8 31 09:51 556eb3466891389e2613e0775ba0a3c6bfdbd3
+-r--r--r--    1 xusea  staff  2656  8 29 09:58 d12a1cb111a23e982bda0ea8fb2e1c23dd5826
+
+./.git/objects/e8:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 30 10:03 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  8 30 10:03 35b4f2921e788898dbccc24c9ee8211f44a5bb
+
+./.git/objects/e9:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   135  9  6 17:29 32080e256ba2de3ee8c5ea7f7e6a19b203b5a7
+
+./.git/objects/ea:
+total 8
+drwxr-xr-x    3 xusea  staff   102  8 26 17:19 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    70  8 26 17:19 9578e5a99b620ddf03eaab63a73da286115bd1
+
+./.git/objects/eb:
+total 24
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   317  8 30 10:03 b7294c7b6f1736b78b9e098784e08d10978f27
+-r--r--r--    1 xusea  staff   161  8 29 09:58 bc2bdcb65b222aaeed352d2b2af594a7b49537
+-r--r--r--    1 xusea  staff    91  9  6 17:29 e98da8a4371d4cc48208ec3c633b8fec710236
+
+./.git/objects/ec:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  9  1 13:31 87338afb51fae93ded434d09b799d514bada4c
+
+./.git/objects/ed:
+total 48
+drwxr-xr-x    5 xusea  staff   170  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   380  9  6 23:12 2c14c735cf335028781f9d427eb21fe27b77a7
+-r--r--r--    1 xusea  staff  5315  9  5 23:51 7ac5c674541d7ca4a25716778bbf005ee7f102
+-r--r--r--    1 xusea  staff  9153  9  7 14:51 e5d28af0c7aafcd16210b079c690cfd9aa3d96
+
+./.git/objects/ee:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   131  9  7 14:51 1bfa7acc9b5b93e953ac4063cb3793c53bfd8f
+-r--r--r--    1 xusea  staff    71  9  2 13:29 5a4919a0ebb5fdd8f57d6c15d178f0fbf844a5
+
+./.git/objects/ef:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9 21 16:25 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   474  9 21 16:25 13d3a054b0436828427937e95ab5b9846039fa
+-r--r--r--    1 xusea  staff  1141  8 30 10:03 25a84ce63be31f8b6cdc30211e96c98e886a7d
+
+./.git/objects/f0:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  2 22:36 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   166  9  2 22:36 64b5d0ccf79af34f6fa234c739038e13e59e40
+-r--r--r--    1 xusea  staff  2162  8 26 17:18 efbbf43ee195a9562cffba38c579ea9b79901d
+
+./.git/objects/f1:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9 21 16:28 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    70  8 29 09:58 193989ca324fe363779d4365a9662398449e61
+-r--r--r--    1 xusea  staff   553  9 21 16:28 486a4c9ac4c6c6a4e8e40034ad3059a5064620
+
+./.git/objects/f2:
+total 32
+drwxr-xr-x    5 xusea  staff   170  9  6 17:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   134  8 30 10:03 463714e50f83cb623067740ae70348d4389178
+-r--r--r--    1 xusea  staff    91  8 26 11:12 94cf30b807294d80982dd204261c241125ed01
+-r--r--r--    1 xusea  staff  5374  9  6 17:29 efb08068b9308fd59af16b4eae0d5a57e086d7
+
+./.git/objects/f3:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  6 23:12 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  9  6 23:12 9291762d8cec04644b72e2ba010fc40b36b944
+-r--r--r--    1 xusea  staff  1420  8 29 17:57 b0a5234a309a785b5211261e7c1659b1e50c6b
+
+./.git/objects/f5:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    83  9  5 23:51 edd5171c164fa4fa49423093e99ab6430dda60
+
+./.git/objects/f6:
+total 40
+drwxr-xr-x    7 xusea  staff   238  9 21 16:29 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   161  9  1 13:31 7725dce6c749875d351eab5afac68f78d19da7
+-r--r--r--    1 xusea  staff   175  9 21 16:29 7e9bfbd601bab4f9af5e834eff6107fdaf7d56
+-r--r--r--    1 xusea  staff   131  8 26 17:19 88fd8afd3e1fe9cc0dc4c1a64e00268c6b3e17
+-r--r--r--    1 xusea  staff    83  8 29 09:58 b74e85225fb4a512b3ffa025c09c1816bd2012
+-r--r--r--    1 xusea  staff   245  8 29 09:58 cb1b3f88104b1dac4a33c8fd0de772c579acf1
+
+./.git/objects/f7:
+total 16
+drwxr-xr-x    4 xusea  staff   136  9  1 13:31 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  1295  9  1 13:31 b324d56c4e6e073f82de96fd38b20b65a3d60b
+-r--r--r--    1 xusea  staff    70  8 30 18:32 d6e20d6e8730563aa802484dc6547e1ca91dda
+
+./.git/objects/f8:
+total 24
+drwxr-xr-x    3 xusea  staff    102  9  7 14:51 .
+drwxr-xr-x  195 xusea  staff   6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff  12199  9  7 14:51 bf072762045f55141333a021556304b710bfb0
+
+./.git/objects/fd:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  5 23:51 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    71  9  5 23:51 eb1dc968f2c0a91ec3788efe9b3c98b815e961
+
+./.git/objects/ff:
+total 8
+drwxr-xr-x    3 xusea  staff   102  9  6 22:50 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff    91  9  6 22:50 8dc2f1040709a5ac49f5488e11f5286b6ba289
+
+./.git/objects/info:
+total 0
+drwxr-xr-x    2 xusea  staff    68  8 26 10:14 .
+drwxr-xr-x  195 xusea  staff  6630  9 21 16:29 ..
+
+./.git/objects/pack:
+total 784
+drwxr-xr-x    4 xusea  staff     136  8 26 10:14 .
+drwxr-xr-x  195 xusea  staff    6630  9 21 16:29 ..
+-r--r--r--    1 xusea  staff   10200  8 26 10:14 pack-ab525dbcc027da7d1c987030919c0b9ef8387c43.idx
+-r--r--r--    1 xusea  staff  388292  8 26 10:14 pack-ab525dbcc027da7d1c987030919c0b9ef8387c43.pack
+
+./.git/refs:
+total 0
+drwxr-xr-x   5 xusea  staff  170  8 26 10:14 .
+drwxr-xr-x  16 xusea  staff  544  9 21 16:29 ..
+drwxr-xr-x   3 xusea  staff  102  9 21 16:29 heads
+drwxr-xr-x   3 xusea  staff  102  8 26 10:14 remotes
+drwxr-xr-x   2 xusea  staff   68  8 26 10:14 tags
+
+./.git/refs/heads:
+total 8
+drwxr-xr-x  3 xusea  staff  102  9 21 16:29 .
+drwxr-xr-x  5 xusea  staff  170  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff   41  9 21 16:29 master
+
+./.git/refs/remotes:
+total 0
+drwxr-xr-x  3 xusea  staff  102  8 26 10:14 .
+drwxr-xr-x  5 xusea  staff  170  8 26 10:14 ..
+drwxr-xr-x  4 xusea  staff  136  9 21 16:29 origin
+
+./.git/refs/remotes/origin:
+total 16
+drwxr-xr-x  4 xusea  staff  136  9 21 16:29 .
+drwxr-xr-x  3 xusea  staff  102  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff   32  8 26 10:14 HEAD
+-rw-r--r--  1 xusea  staff   41  9 21 16:29 master
+
+./.git/refs/tags:
+total 0
+drwxr-xr-x  2 xusea  staff   68  8 26 10:14 .
+drwxr-xr-x  5 xusea  staff  170  8 26 10:14 ..
+
+./testDrawSketch:
+total 512
+drwxr-xr-x  45 xusea  staff   1530  9 22 18:01 .
+drwxr-xr-x  15 xusea  staff    510  9 24 15:30 ..
+-rw-r--r--   1 xusea  staff   6148  8 26 10:14 .DS_Store
+-rw-r--r--   1 xusea  staff   2328  9  2 21:42 AppDelegate.h
+-rw-r--r--   1 xusea  staff  16601  9  6 16:54 AppDelegate.m
+drwxr-xr-x   4 xusea  staff    136  8 26 10:14 Assets.xcassets
+drwxr-xr-x   3 xusea  staff    102  9 24 15:04 Base.lproj
+-rw-r--r--   1 xusea  staff    453  8 26 10:14 BrushPoint.h
+-rw-r--r--   1 xusea  staff    285  8 26 10:14 BrushPoint.m
+-rw-r--r--   1 xusea  staff   1235  8 26 10:14 Info.plist
+-rw-r--r--   1 xusea  staff    433  8 26 10:14 downfile.h
+-rw-r--r--   1 xusea  staff   4847  8 26 10:14 downfile.m
+-rw-r--r--   1 xusea  staff   1497  8 26 10:14 drawSketch.h
+-rw-r--r--   1 xusea  staff   8277  8 26 10:14 drawSketch.m
+-rw-r--r--   1 xusea  staff    214  8 26 10:14 drawSketchCollection.h
+-rw-r--r--   1 xusea  staff    463  8 26 10:14 drawSketchCollection.m
+-rw-r--r--   1 xusea  staff    876  8 30 10:03 imageitem.h
+-rw-r--r--   1 xusea  staff    440  8 30 10:03 imageitem.m
+-rw-r--r--   1 xusea  staff   1677  9  6 13:55 imagetrans.h
+-rw-r--r--   1 xusea  staff  28575  9  6 16:54 imagetrans.m
+-rw-r--r--   1 xusea  staff    237  8 26 10:14 main.m
+-rw-r--r--   1 xusea  staff    225  9  2 21:33 mattwindowcontroller.h
+-rw-r--r--   1 xusea  staff    450  9  2 21:33 mattwindowcontroller.m
+-rw-r--r--   1 xusea  staff   2011  9  5 22:37 mattwindowcontroller.xib
+-rw-r--r--   1 xusea  staff    277  8 26 10:14 opencvproxy.hpp
+-rw-r--r--   1 xusea  staff   2489  8 26 10:14 opencvproxy.mm
+-rw-r--r--   1 xusea  staff    590  8 31 09:51 premattview.h
+-rw-r--r--   1 xusea  staff   1366  8 31 09:51 premattview.m
+-rw-r--r--   1 xusea  staff   1765  8 26 10:14 query2image.h
+-rw-r--r--   1 xusea  staff  16085  8 30 10:03 query2image.m
+-rw-r--r--   1 xusea  staff    319  9 22 18:01 resultdetailViewController.h
+-rw-r--r--   1 xusea  staff    391  9 22 18:01 resultdetailViewController.m
+-rw-r--r--   1 xusea  staff   1104  9 21 16:28 resultdetailViewController.xib
+-rw-r--r--   1 xusea  staff    309  8 26 10:14 resultimageview.h
+-rw-r--r--   1 xusea  staff   5269  8 26 10:14 resultimageview.m
+-rw-r--r--   1 xusea  staff   1072  9  5 23:44 scrollBrowserView.h
+-rw-r--r--   1 xusea  staff  11216  9  7 14:27 scrollBrowserView.m
+-rw-r--r--   1 xusea  staff    561  8 29 09:58 scrollCell.h
+-rw-r--r--   1 xusea  staff  10224  9  7 14:07 scrollCell.m
+-rw-r--r--   1 xusea  staff    799  8 29 09:58 scrollimagedelegate.h
+-rw-r--r--   1 xusea  staff   3876  8 29 09:58 scrollimagedelegate.m
+-rw-r--r--   1 xusea  staff   1477  8 26 10:14 thumbnailView.h
+-rw-r--r--   1 xusea  staff   8158  8 26 10:14 thumbnailView.m
+-rw-r--r--   1 xusea  staff    220  8 26 10:14 thumbnailViewCollection.h
+-rw-r--r--   1 xusea  staff    540  8 26 10:14 thumbnailViewCollection.m
+
+./testDrawSketch/Assets.xcassets:
+total 16
+drwxr-xr-x   4 xusea  staff   136  8 26 10:14 .
+drwxr-xr-x  45 xusea  staff  1530  9 22 18:01 ..
+-rw-r--r--   1 xusea  staff  6148  8 26 10:14 .DS_Store
+drwxr-xr-x   3 xusea  staff   102  8 26 10:14 AppIcon.appiconset
+
+./testDrawSketch/Assets.xcassets/AppIcon.appiconset:
+total 8
+drwxr-xr-x  3 xusea  staff  102  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  903  8 26 10:14 Contents.json
+
+./testDrawSketch/Base.lproj:
+total 136
+drwxr-xr-x   3 xusea  staff    102  9 24 15:04 .
+drwxr-xr-x  45 xusea  staff   1530  9 22 18:01 ..
+-rw-r--r--   1 xusea  staff  65611  9 24 15:04 MainMenu.xib
+
+./testDrawSketch.xcodeproj:
+total 168
+drwxr-xr-x   5 xusea  staff    170  9 24 15:28 .
+drwxr-xr-x  15 xusea  staff    510  9 24 15:30 ..
+-rw-r--r--   1 xusea  staff  85979  9 24 15:28 project.pbxproj
+drwxr-xr-x   5 xusea  staff    170  8 26 10:14 project.xcworkspace
+drwxr-xr-x   4 xusea  staff    136  8 26 10:14 xcuserdata
+
+./testDrawSketch.xcodeproj/project.xcworkspace:
+total 8
+drwxr-xr-x  5 xusea  staff  170  8 26 10:14 .
+drwxr-xr-x  5 xusea  staff  170  9 24 15:28 ..
+-rw-r--r--  1 xusea  staff  159  8 26 10:14 contents.xcworkspacedata
+drwxr-xr-x  3 xusea  staff  102  9 18 14:28 xcshareddata
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 xcuserdata
+
+./testDrawSketch.xcodeproj/project.xcworkspace/xcshareddata:
+total 8
+drwxr-xr-x  3 xusea  staff   102  9 18 14:28 .
+drwxr-xr-x  5 xusea  staff   170  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  2062  9 18 14:28 testDrawSketch.xcscmblueprint
+
+./testDrawSketch.xcodeproj/project.xcworkspace/xcuserdata:
+total 0
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 .
+drwxr-xr-x  5 xusea  staff  170  8 26 10:14 ..
+drwxr-xr-x  3 xusea  staff  102  9  1 13:31 taochang.xcuserdatad
+drwxr-xr-x  3 xusea  staff  102  9 24 15:29 xusea.xcuserdatad
+
+./testDrawSketch.xcodeproj/project.xcworkspace/xcuserdata/taochang.xcuserdatad:
+total 88
+drwxr-xr-x  3 xusea  staff    102  9  1 13:31 .
+drwxr-xr-x  4 xusea  staff    136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  42471  9  1 13:31 UserInterfaceState.xcuserstate
+
+./testDrawSketch.xcodeproj/project.xcworkspace/xcuserdata/xusea.xcuserdatad:
+total 136
+drwxr-xr-x  3 xusea  staff    102  9 24 15:29 .
+drwxr-xr-x  4 xusea  staff    136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  67024  9 24 15:29 UserInterfaceState.xcuserstate
+
+./testDrawSketch.xcodeproj/xcuserdata:
+total 0
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 .
+drwxr-xr-x  5 xusea  staff  170  9 24 15:28 ..
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 taochang.xcuserdatad
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 xusea.xcuserdatad
+
+./testDrawSketch.xcodeproj/xcuserdata/taochang.xcuserdatad:
+total 0
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 ..
+drwxr-xr-x  3 xusea  staff  102  9  1 13:31 xcdebugger
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 xcschemes
+
+./testDrawSketch.xcodeproj/xcuserdata/taochang.xcuserdatad/xcdebugger:
+total 8
+drwxr-xr-x  3 xusea  staff   102  9  1 13:31 .
+drwxr-xr-x  4 xusea  staff   136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  4052  9  1 13:31 Breakpoints_v2.xcbkptlist
+
+./testDrawSketch.xcodeproj/xcuserdata/taochang.xcuserdatad/xcschemes:
+total 24
+drwxr-xr-x  4 xusea  staff   136  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff   136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  4293  8 26 10:14 testDrawSketch.xcscheme
+-rw-r--r--  1 xusea  staff   666  8 26 10:14 xcschememanagement.plist
+
+./testDrawSketch.xcodeproj/xcuserdata/xusea.xcuserdatad:
+total 0
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 ..
+drwxr-xr-x  3 xusea  staff  102  9 24 15:04 xcdebugger
+drwxr-xr-x  4 xusea  staff  136  8 26 10:14 xcschemes
+
+./testDrawSketch.xcodeproj/xcuserdata/xusea.xcuserdatad/xcdebugger:
+total 48
+drwxr-xr-x  3 xusea  staff    102  9 24 15:04 .
+drwxr-xr-x  4 xusea  staff    136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  24446  9 24 15:04 Breakpoints_v2.xcbkptlist
+
+./testDrawSketch.xcodeproj/xcuserdata/xusea.xcuserdatad/xcschemes:
+total 24
+drwxr-xr-x  4 xusea  staff   136  8 26 10:14 .
+drwxr-xr-x  4 xusea  staff   136  8 26 10:14 ..
+-rw-r--r--  1 xusea  staff  4293  8 26 10:14 testDrawSketch.xcscheme
+-rw-r--r--  1 xusea  staff   666  8 26 10:14 xcschememanagement.plist
+
+./testDrawSketchTests:
+total 16
+drwxr-xr-x   4 xusea  staff  136  8 26 10:14 .
+drwxr-xr-x  15 xusea  staff  510  9 24 15:30 ..
+-rw-r--r--   1 xusea  staff  733  8 26 10:14 Info.plist
+-rw-r--r--   1 xusea  staff  919  8 26 10:14 testDrawSketchTests.m
+
+./testDrawSketchUITests:
+total 16
+drwxr-xr-x   4 xusea  staff   136  8 26 10:14 .
+drwxr-xr-x  15 xusea  staff   510  9 24 15:30 ..
+-rw-r--r--   1 xusea  staff   733  8 26 10:14 Info.plist
+-rw-r--r--   1 xusea  staff  1228  8 26 10:14 testDrawSketchUITests.m

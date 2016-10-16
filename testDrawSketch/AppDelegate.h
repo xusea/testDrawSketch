@@ -20,6 +20,8 @@
 #import "mattviewController.h"
 #import "premattview.h"
 #import "mattwindowcontroller.h"
+#import "resultdetailViewController.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     query2image * qi;
@@ -34,6 +36,7 @@
     mattviewController * mattview;
     //NSWindow __unsafe_unretained * mattwindow;
     mattwindowcontroller * mattwindow;
+    resultdetailViewController * resultdetailView;
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -59,7 +62,7 @@
 - (IBAction)statscore:(id)sender;
 - (IBAction)showscores:(id)sender;
 @property (weak) IBOutlet resultimageview *resultimage;
-@property (weak) IBOutlet resultimageview *riv;
+//@property (weak) IBOutlet resultimageview *riv;
 - (IBAction)extend:(id)sender;
 @property (weak) IBOutlet NSButton *extendbutton;
 - (IBAction)showindex:(id)sender;
@@ -69,5 +72,9 @@
 @property (weak) IBOutlet premattview *bigsizeimage;
 //@property(assign) IBOutlet NSWindow *mattwindow;
 @property(weak) mattwindowcontroller * mattwindow;
+@property(weak) resultdetailViewController * resultdetailView;
+- (IBAction)opendetail:(id)sender;
+- (IBAction)closedetail:(id)sender;
+
 @end
 

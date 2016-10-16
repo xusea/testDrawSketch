@@ -133,7 +133,11 @@
             NSImage * image =[[NSImage alloc]initWithContentsOfFile:imagename];
             [msi setI:image];
             [msi setTitle:@"123"];
-            [msi setSubtitle:@"1_-1.0"];
+            //设置文件名到subtitle第二位，替换score，用于debug
+            NSArray * strs = [[imaget filename] componentsSeparatedByString:@"/"];
+            NSString * filenametemp = [[strs lastObject] substringWithRange:NSMakeRange(0, 5)];
+            [msi setSubtitle:[NSString stringWithFormat:@"1_%@",filenametemp]];
+            //[msi setSubtitle:@"1_-1.0"];
             [[imagesource scrollimages] addObject:msi];
             [imaget setMyiobjectpoint:msi];
             int ind = [[imagesource scrollimages] count];
@@ -300,7 +304,9 @@
            /* NSString * subtitle = [[temp myiobjectpoint] subtitle];
             NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
             NSString * newsubtitle = [NSString stringWithFormat:@"%@_%f", [strs firstObject], score];*/
-            [[temp myiobjectpoint] changevalue:[NSString stringWithFormat:@"%lf", score] index:1];
+           
+            // #####暂时注释掉份数，为了debug 文件名
+            //[[temp myiobjectpoint] changevalue:[NSString stringWithFormat:@"%lf", score] index:1];
             if([temp ind] > [self visiblerange])
             {
                 

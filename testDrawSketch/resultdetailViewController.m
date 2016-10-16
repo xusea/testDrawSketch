@@ -13,6 +13,7 @@
 @end
 
 @implementation resultdetailViewController
+//@synthesize querydrawlist;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -113,6 +113,14 @@
    // [[[mattwindow window] contentView] addSubview:[mattview allview]];
     //[NSApp runModalForWindow:[mattwindow window]];
     
+    //12.初始化大图编辑
+    resultdetailView = [[resultdetailViewController alloc]init];
+    bool ret = [[NSBundle mainBundle]loadNibNamed:@"resultdetailViewController" owner:resultdetailView topLevelObjects:nil];
+    NSLog(@"load resultdetailViewController %d", ret);
+    [[resultdetailView resultimage] setQuerydrawlist:querydraw];
+    [[resultdetailView allview]setFrame:[_dSC frame]];
+    [[_window contentView] addSubview:[resultdetailView allview]];
+    [[resultdetailView allview]setHidden:YES];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -289,6 +297,7 @@
    // [imagetrans cutalpha:@"/Users/xusea/sketch2photo/tdog.png" outimage:@"/Users/xusea/sketch2photo/t2dog.png"];
                                        
     [_resultimage setNeedsDisplay:YES];
+    [[resultdetailView resultimage] setNeedsDisplay: YES];
 
 }//debug end
 
@@ -438,4 +447,11 @@
     //[_scrollimagelist scrollIndexToVisible:3];
 }
 
+- (IBAction)opendetail:(id)sender {
+    [[resultdetailView allview]setHidden:NO];
+}
+
+- (IBAction)closedetail:(id)sender {
+    [[resultdetailView allview]setHidden:YES];
+}
 @end

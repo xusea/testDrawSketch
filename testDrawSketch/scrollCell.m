@@ -135,13 +135,13 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         [borderimg drawInRect:bound];
        
         //画分数
-     /*   if([strs count] > 1)
+        if([strs count] > 1)
         {
             NSString * score = [strs objectAtIndex:1];
             NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica light" size:15], NSFontAttributeName,[NSColor blackColor], NSForegroundColorAttributeName, nil];
             NSAttributedString * currentText =[[NSAttributedString alloc] initWithString:score attributes: attributes];
             [currentText drawAtPoint:bound.origin];
-        }*/
+        }
         
         //画mouse over
         if([self mouseoverflag] == 1)
