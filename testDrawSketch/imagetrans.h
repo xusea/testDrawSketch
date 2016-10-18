@@ -37,5 +37,7 @@
 +(void)gray2stroke:(NSString *)logfile strokename:(NSString*)strokename;
 //将彩色图片转为stroke
 +(void)color2stroke:(NSString *)logfile strokename:(NSString*)strokename;
+//计算图片位置
++(NSRect)getDrawPosition:(NSRect)resultimage canves:(NSRect)canves sketch:(NSRect)sketch transparent:(NSRect)transparent;
 @end
 

@@ -54,8 +54,12 @@
             {
                 continue;
             }
+            drawrect = [imagetrans getDrawPosition:[self frame]
+                                            canves:[[q2i dsketch]frame]
+                                            sketch:NSMakeRect([[q2i dsketch] leftbuttom].x, [[q2i dsketch] leftbuttom].y, [[q2i dsketch] righttop].x - [[q2i dsketch] leftbuttom].x, [[q2i dsketch] righttop].y - [[q2i dsketch] leftbuttom].y)
+                                       transparent:NSMakeRect(0,0,[image size].width, [image size].height)];
         
-            drawrect.origin.x = 0;
+        /*    drawrect.origin.x = 0;
             drawrect.origin.y = 0;
             drawrect.size.width =  [[q2i dsketch] righttop].x - [[q2i dsketch] leftbuttom].x;
             drawrect.size.height = [[q2i dsketch] righttop].y - [[q2i dsketch] leftbuttom].y;
@@ -84,7 +88,7 @@
             drawpoint.y *= radio;
             drawrect.size.width *=  radio;
             drawrect.size.height *= radio;
-            drawrect.origin = drawpoint;
+            drawrect.origin = drawpoint;*/
         }
         [image drawInRect:drawrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
     }

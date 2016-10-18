@@ -719,4 +719,67 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSData * repdata = [repgraybak representationUsingType:NSPNGFileType properties:nil];
     [repdata writeToFile:strokename atomically:YES];
 }
+
++(NSRect)getDrawPosition:(NSRect)resultimage canves:(NSRect)canves sketch:(NSRect)sketch transparent:(NSRect)transparent
+{
+    if(resultimage.size.width == 0 || resultimage.size.height == 0
+       || canves.size.width == 0 || canves.size.height == 0
+       || sketch.size.width == 0 || sketch.size.height == 0
+       || transparent.size.width == 0 || transparent.size.height == 0)
+    {
+        return NSZeroRect;
+    }
+    //1.缩放画布
+    NSRect newcanves;
+    float ratio = 0.0;
+    if(resultimage.size.width / resultimage.size.height > canves.size.width / canves.size.height)
+    {
+        ratio = resultimage.size.height / canves.size.height;
+        newcanves.size.width = canves.size.width * ratio;
+        newcanves.size.height = canves.size.height * ratio;
+        newcanves.origin.y = 0;
+        newcanves.origin.x = (resultimage.size.width - newcanves.size.width) / 2;
+    }
+    else
+    {
+        ratio = resultimage.size.width / canves.size.width;
+        newcanves.size.width = canves.size.width * ratio;
+        newcanves.size.height = canves.size.height * ratio;
+        newcanves.origin.x = 0;
+        newcanves.origin.y = (resultimage.size.height - newcanves.size.height) / 2;
+    }
+    //2.将sketch进行缩放
+    NSRect newsketch;
+    newsketch.size.width = sketch.size.width * ratio;
+    newsketch.size.height = sketch.size.height * ratio;
+    newsketch.origin.x = sketch.origin.x * ratio + newcanves.origin.x;
+    newsketch.origin.y = sketch.origin.y * ratio + newcanves.origin.y;
+    
+    //3.将transparent进行缩放
+    //当前方案是将transparent放到sketch中
+    NSRect newtransparent;
+    float ratiosketch = 0;
+    if(newsketch.size.width / newsketch.size.height > transparent.size.width / transparent.size.height)
+    {
+        ratiosketch = newsketch.size.height / newsketch.size.width;
+        newtransparent.size.width = transparent.size.width * ratiosketch * ratio;
+        newtransparent.size.height = transparent.size.height * ratiosketch * ratio;
+        newtransparent.origin.y = 0;
+        newtransparent.origin.x = (newsketch.size.width - newtransparent.size.width) / 2;
+    }
+    else
+    {
+        ratiosketch = newsketch.size.width / newsketch.size.height;
+        newtransparent.size.width = transparent.size.width * ratiosketch * ratio;
+        newtransparent.size.height = transparent.size.height * ratiosketch * ratio;
+        newtransparent.origin.x = 0;
+        newtransparent.origin.y = (newsketch.size.height - newtransparent.size.height) / 2;
+    }
+    newtransparent.origin.x += newsketch.origin.x;
+    newtransparent.origin.y += newsketch.origin.y;
+    
+    
+    
+    return newtransparent;
+}
 @end
