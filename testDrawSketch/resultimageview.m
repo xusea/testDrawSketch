@@ -39,7 +39,20 @@
             continue;
         }
         //NSLog(@"%lu", i % [querydrawlist count]);
-        imageitem * it = [q2i getbestimageitem];
+        imageitem * it;
+        if([q2i getselectedimageitem] != nil)
+        {
+            it = [q2i getselectedimageitem];
+        }
+        else if([q2i getbestimageitem] != nil)
+        {
+            it = [q2i getbestimageitem];
+        }
+        else
+        {
+            continue;
+        }
+        
         NSImage * image;
         NSRect drawrect;
         if(i < [querydrawlist count])
@@ -59,36 +72,6 @@
                                             sketch:NSMakeRect([[q2i dsketch] leftbuttom].x, [[q2i dsketch] leftbuttom].y, [[q2i dsketch] righttop].x - [[q2i dsketch] leftbuttom].x, [[q2i dsketch] righttop].y - [[q2i dsketch] leftbuttom].y)
                                        transparent:NSMakeRect(0,0,[image size].width, [image size].height)];
         
-        /*    drawrect.origin.x = 0;
-            drawrect.origin.y = 0;
-            drawrect.size.width =  [[q2i dsketch] righttop].x - [[q2i dsketch] leftbuttom].x;
-            drawrect.size.height = [[q2i dsketch] righttop].y - [[q2i dsketch] leftbuttom].y;
-            float radio = 1.0;
-            radio = [image size].width / [image size].height;
-            if(radio > drawrect.size.width / drawrect.size.height)
-            {
-                drawrect.size.height *= radio;
-            }
-            else
-            {
-                drawrect.size.width *= radio;
-            }
-            NSPoint drawpoint =[[q2i dsketch]leftbuttom];
-            
-            
-            if([self frame].size.width / [self frame].size.height > [[q2i dsketch] frame].size.width / [[q2i dsketch] frame].size.height)
-            {
-                radio = [self frame].size.width / [[q2i dsketch] frame].size.width;
-            }
-            else
-            {
-                radio = [self frame].size.height / [[q2i dsketch] frame].size.height;
-            }
-            drawpoint.x *= radio;
-            drawpoint.y *= radio;
-            drawrect.size.width *=  radio;
-            drawrect.size.height *= radio;
-            drawrect.origin = drawpoint;*/
         }
         [image drawInRect:drawrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
     }

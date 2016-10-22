@@ -757,7 +757,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLz-3s-Ftd" customClass="drawSketchCollection">
-                        <rect key="frame" x="203" y="124" width="568" height="284"/>
+                        <rect key="frame" x="203" y="128" width="568" height="284"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dve-KN-y6Y">
@@ -831,14 +831,14 @@
                         </connections>
                     </button>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ld-fz-4Dg">
-                        <rect key="frame" x="203" y="20" width="545" height="96"/>
+                        <rect key="frame" x="203" y="2" width="545" height="123"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="Vam-US-8Su">
-                            <rect key="frame" x="1" y="1" width="543" height="94"/>
+                            <rect key="frame" x="1" y="1" width="543" height="121"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2fm-qJ-Rvz" customClass="scrollBrowserView">
-                                    <rect key="frame" x="0.0" y="0.0" width="181" height="94"/>
+                                    <rect key="frame" x="0.0" y="27" width="181" height="94"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <connections>
                                         <outlet property="_dataSource" destination="mPe-fk-axe" id="fdK-NW-OMu"/>
@@ -848,11 +848,11 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="NCM-98-jyw">
-                            <rect key="frame" x="1" y="79" width="543" height="16"/>
+                            <rect key="frame" x="1" y="106" width="543" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="5Yx-ol-a3t">
-                            <rect key="frame" x="528" y="1" width="16" height="94"/>
+                            <rect key="frame" x="528" y="1" width="16" height="121"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>

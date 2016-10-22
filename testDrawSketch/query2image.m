@@ -300,10 +300,6 @@
             double score = [imagetrans imagecom:[dsketch tracefillcontourpath] rightfile:[temp logname]];
             //NSLog(@"score %lf", score);
             [temp setScore:score];
-            
-           /* NSString * subtitle = [[temp myiobjectpoint] subtitle];
-            NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
-            NSString * newsubtitle = [NSString stringWithFormat:@"%@_%f", [strs firstObject], score];*/
            
             // #####暂时注释掉份数，为了debug 文件名
             //[[temp myiobjectpoint] changevalue:[NSString stringWithFormat:@"%lf", score] index:1];
@@ -322,10 +318,10 @@
                     if(bestimageind == -1)
                     {
                         bestimageind = i;
-                        //newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
-                       // NSLog(@"top score %d %lf", bestimageind, score);
-                        
-                        [[temp myiobjectpoint] changevalue:@"3" index:0];
+                        if(bestimageind != selectedimageind)
+                        {
+                            [[temp myiobjectpoint] changevalue:@"3" index:0];
+                        }
                     }
                     else if(bestimageind > -1 && bestimageind < [imageitemlist count])
                     {
@@ -333,20 +329,22 @@
                         double mscore = [bit score];
                         if(score > 0.0001 && score < mscore && i != bestimageind)
                         {
-                            /*NSLog(@"haha top score %d %lf", i ,score);
+                           
                             //修改旧的属性
-                            NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
-                            NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
-                            [[bit myiobjectpoint]setSubtitle:oldsubtitle];*/
+                            if(bestimageind != selectedimageind)
+                            {
+                                [[bit myiobjectpoint] changevalue:@"2" index:0];
+                            }
                             bestimageind = i;
-                            [[bit myiobjectpoint] changevalue:@"2" index:0];
-                            [[temp myiobjectpoint] changevalue:@"3" index:0];
-                            //newsubtitle = [NSString stringWithFormat:@"3_%f",  score];
+        
+                            if(bestimageind != selectedimageind)
+                            {
+                                [[temp myiobjectpoint] changevalue:@"3" index:0];
+                            }
                         }
                     }
                 }
             }
-            //[[temp myiobjectpoint]setSubtitle:newsubtitle];
             break;
         }
     }
@@ -417,14 +415,9 @@
     if(bestind != -1 && bestind != [self bestimageind])
     {
         imageitem * bit = [imageitemlist objectAtIndex:bestimageind];
-        /*NSArray * oldstrs = [[[bit myiobjectpoint] subtitle] componentsSeparatedByString:@"_"];
-        NSString * oldsubtitle = [NSString stringWithFormat:@"2_%@", [oldstrs objectAtIndex:1]];
-        [[bit myiobjectpoint]setSubtitle:oldsubtitle];*/
         [[bit myiobjectpoint] changevalue:@"2" index:0];
-       // NSString * newsubtitle = [NSString stringWithFormat:@"3_%f", tempscore];
         bit = [imageitemlist objectAtIndex:bestind];
         [[bit myiobjectpoint] changevalue:@"3" index:0];
-        //[[bit myiobjectpoint]setSubtitle:newsubtitle];
     }
     [self setBestimageind:bestind];
 }

@@ -132,6 +132,10 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         {
             borderimg = [NSImage imageNamed:@"blue.png"];
         }
+        else if([self imagestatus] == 4)
+        {
+            borderimg = [NSImage imageNamed:@"pink.png"];
+        }
         [borderimg drawInRect:bound];
        
         //画分数

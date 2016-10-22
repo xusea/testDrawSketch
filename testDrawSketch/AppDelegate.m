@@ -67,7 +67,10 @@
     [_thumblist setNeedsDisplay:YES];
     //3.底部初始化
     [_scrollimagelist setContentResizingMask:NSViewWidthSizable];
+    [_scrollimagelist setIntercellSpacing:NSMakeSize(5, 0)];
+    [_scrollimagelist setCellspace:[_scrollimagelist intercellSpacing].width];
     NSPoint fixpos = [_imageT frame].origin;
+    [_imageT setHasVerticalScroller:NO];
     [_scrollimagelist setFixpos:fixpos];
     if([_window backingScaleFactor] > 1.0)
     {

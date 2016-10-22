@@ -93,7 +93,18 @@
     subtitle = newsubtitle;
     return;
 }
-
+-(NSString *)getvalue:(int)ind
+{
+    NSArray * strs = [subtitle componentsSeparatedByString:@"_"];
+    if(ind < [strs count])
+    {
+        return [strs objectAtIndex:ind];
+    }
+    else
+    {
+        return nil;
+    }
+}
 @end
 scrollimagedelegate * g_scrollimagedelegate;
 @implementation scrollimagedelegate

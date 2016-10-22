@@ -23,6 +23,7 @@
 @property (retain) NSString * subtitle;
 @property (retain) NSString * title;
 -(void)changevalue:(NSString *) value index:(int)ind;
+-(NSString *)getvalue:(int)ind;
 @end
 
 @interface scrollimagedelegate : NSObject

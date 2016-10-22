@@ -104,6 +104,7 @@
 		DF3CFFA71CF6908B008B325B /* testDrawSketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFA61CF6908B008B325B /* testDrawSketchTests.m */; };
 		DF3CFFB21CF6908B008B325B /* testDrawSketchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFB11CF6908B008B325B /* testDrawSketchUITests.m */; };
 		DF3CFFC11CF693AE008B325B /* drawSketch.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFC01CF693AE008B325B /* drawSketch.m */; };
+		DF415F4D1DBB4B4000079302 /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = DF415F4C1DBB4B4000079302 /* pink.png */; };
 		DF57CC181D0FA5F6005AD426 /* query2image.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC171D0FA5F6005AD426 /* query2image.m */; };
 		DF57CC1B1D0FADA0005AD426 /* imageitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC1A1D0FADA0005AD426 /* imageitem.m */; };
 		DF57CC1E1D1248AA005AD426 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF57CC1C1D1248AA005AD426 /* Quartz.framework */; };
@@ -288,6 +289,7 @@
 		DF3CFFB31CF6908B008B325B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF3CFFBF1CF693AE008B325B /* drawSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawSketch.h; sourceTree = "<group>"; };
 		DF3CFFC01CF693AE008B325B /* drawSketch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawSketch.m; sourceTree = "<group>"; };
+		DF415F4C1DBB4B4000079302 /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pink.png; path = ../../icons/pink.png; sourceTree = "<group>"; };
 		DF57CC161D0FA5F6005AD426 /* query2image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = query2image.h; sourceTree = "<group>"; };
 		DF57CC171D0FA5F6005AD426 /* query2image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = query2image.m; sourceTree = "<group>"; };
 		DF57CC191D0FADA0005AD426 /* imageitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageitem.h; sourceTree = "<group>"; };
@@ -604,6 +606,7 @@
 				DFDE8E251D337A0300A13724 /* blue.png */,
 				DFDE8E261D337A0300A13724 /* green.png */,
 				DFDE8E271D337A0300A13724 /* purple.png */,
+				DF415F4C1DBB4B4000079302 /* pink.png */,
 				DFDE8E281D337A0300A13724 /* red.png */,
 				DFDE8E291D337A0300A13724 /* tick.png */,
 				DFDE8E2A1D337A0300A13724 /* yellow.png */,
@@ -719,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2914A81D1D71C6E60021E9E6 /* pencil.png in Resources */,
+				DF415F4D1DBB4B4000079302 /* pink.png in Resources */,
 				2914A7C31D6F23D60021E9E6 /* itunes_barLeftAge.png in Resources */,
 				2914A7C61D6F23D60021E9E6 /* leftcorner.png in Resources */,
 				2914A7CC1D6F23D60021E9E6 /* redo.png in Resources */,

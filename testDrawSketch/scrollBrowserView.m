@@ -28,7 +28,9 @@
     targetrect.origin.y = 10;
     targetrect.size.height = 115;
     targetrect.size.width = 100;
-    cellspace = 20;
+    //cellspace = 20;
+    
+    cellspace = [self intercellSpacing].width;
     bigsizeimageframe.origin.x = 0;
     bigsizeimageframe.origin.y = 0;
     bigsizeimageframe.size.width = 400;
@@ -87,7 +89,6 @@
 }
 - (void)mouseDown:(NSEvent *)theEvent
 {
-    
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     
     int index =[self getindexfrompoint:currentPosition];
@@ -159,13 +160,32 @@
         }
         else if(toolind == 2)
         {
-            // 2 钉子
+            // 2 设置当前图片为选中
             for(int i = 0;i < [[[self q2ipoint] imageitemlist] count]; i ++)
             {
                 if(mio == [[[[self q2ipoint] imageitemlist]objectAtIndex:i] myiobjectpoint])
                 {
-                    [[self q2ipoint] setBestimageind:i];
-                    NSLog(@"click bestind %d", i);
+                    int oldselectimageind = [[self q2ipoint] selectedimageind];
+                    if(i != oldselectimageind)
+                    {
+                        if(oldselectimageind != -1)
+                        {
+                            if(oldselectimageind != [[self q2ipoint] bestimageind])
+                            {
+                                [[[[[self q2ipoint] imageitemlist]objectAtIndex:oldselectimageind] myiobjectpoint] changevalue:@"2" index:0];
+                            }
+                            else
+                            {
+                                [[[[[self q2ipoint] imageitemlist]objectAtIndex:oldselectimageind] myiobjectpoint] changevalue:@"3" index:0];
+                            }
+                        }
+                        [[self q2ipoint] setSelectedimageind:i];
+                        //[[self q2ipoint] setBestimageind:i];
+                        NSLog(@"click bestind %d", i);
+                        NSLog(@"subtitle :%@", [mio subtitle]);
+                        [mio changevalue:@"4" index:0];
+                        NSLog(@"subtitle :%@", [mio subtitle]);
+                    }
                     break;
                 }
             }
