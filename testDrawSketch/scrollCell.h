@@ -15,11 +15,13 @@
     int mouseoverflag;
     int imagestatus;
     int strokeclickflag;
+    NSString * se;
 }
 @property (readwrite)NSRect internalimageframe;
 @property (readwrite)int selectedflag;
 @property (readwrite)int mouseoverflag;
 @property (readwrite)int imagestatus;
 @property (readwrite)int strokeclickflag;
+@property (readwrite)NSString * se;
 -(void)getallstatus;
 @end

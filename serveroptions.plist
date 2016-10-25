@@ -39,7 +39,7 @@
 			<key>pattern</key>
 			<string>http://pic.sogou.com/pics?query=[query]</string>
 			<key>check</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>depth</key>
 			<integer>15</integer>
 		</dict>

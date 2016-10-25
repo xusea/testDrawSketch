@@ -27,6 +27,7 @@
 @synthesize visiblerange;
 @synthesize backgroundflag;
 @synthesize serveroption;
+@synthesize lock;
 - (id) init
 {
     if(self = [super init])
@@ -44,6 +45,7 @@
         bestimageind = -1;
         visiblerange = -1;
         backgroundflag = 0;
+        lock = [[NSLock alloc]init];
     }
     return self; 
 }
@@ -118,7 +120,20 @@
         if([orgurl hasPrefix:@"http://image.baidu.com/search/"])
         {
             NSLog(@"handle search engine %@", orgurl);
-            [self getimagesfromseresult:downloadURL sesource:@"baiduimage"];
+            [self getimagesfrombaiduresult:downloadURL];
+            //[self getimagesfromseresult:downloadURL sesource:@"baiduimage"];
+        }
+        if([orgurl hasPrefix:@"http://cn.bing.com/images/"])
+        {
+            NSLog(@"handle search engine %@", orgurl);
+            [self getimagesfrombingresult:downloadURL];
+            //[self getimagesfromseresult:downloadURL sesource:@"baiduimage"];
+        }
+        if([orgurl hasPrefix:@"http://pic.sogou.com/"])
+        {
+            NSLog(@"handle search engine %@", orgurl);
+            [self getimagesfromsogouresult:downloadURL];
+            //[self getimagesfromseresult:downloadURL sesource:@"baiduimage"];
         }
         if([imaget type ]==1)
         {
@@ -138,6 +153,7 @@
             NSArray * strs = [[imaget filename] componentsSeparatedByString:@"/"];
             NSString * filenametemp = [[strs lastObject] substringWithRange:NSMakeRange(0, 5)];
             [msi setSubtitle:[NSString stringWithFormat:@"1_%@",filenametemp]];
+            [msi changevalue:[imaget se] index:4];
             //[msi setSubtitle:@"1_-1.0"];
             [[imagesource scrollimages] addObject:msi];
             [imaget setMyiobjectpoint:msi];
@@ -176,6 +192,10 @@
     for(int i = 0; i < [[serveroption selist] count]; i++)
     {
         seOptions * seop = [[serveroption selist] objectAtIndex:i];
+        if([seop check] == 0)
+        {
+            continue;
+        }
         NSString * urlpattern = [seop pattern];
         NSRange range = [urlpattern rangeOfString:@"[query]"];
         
@@ -184,38 +204,24 @@
             urlpattern = [urlpattern stringByReplacingOccurrencesOfString:@"[query]" withString:queryencode];
             urlpattern = [urlpattern stringByReplacingOccurrencesOfString:@"[number]" withString:[NSString stringWithFormat:@"%d", [seop depth]]];
             NSLog(@"new search %@", urlpattern);
-        }
-        else
-        {
-            NSLog(@"serveroptions error !!! bad pattern %@", urlpattern);
-        }
-    }
-    for(int i = 0 ; i < [selist count]; i ++)
-    {
-        NSString * se = [selist objectAtIndex:i];
-        if([se isEqualToString:@"baiduimage"])
-        {
-            
-            NSString * url = [NSString stringWithFormat:@"http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=%@&pn=100", queryencode];
-            NSLog(@"fetch url : %@ ", url);
             NSString * filename = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
             NSString * grayname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
             NSString * logname = [NSString stringWithFormat:@"%@/%@.png", dir, [self getrandstr]];
-        
+            
             imageitem * seitem = [[imageitem alloc]init];
-            [seitem setUrl:url];
+            [seitem setUrl:urlpattern];
             [seitem setType:0];
             [seitem setDownflag:0];
             [seitem setFilename:filename];
             [seitem setGrayname:grayname];
             [seitem setLogname:logname];
             [seitem setScore:MAXFLOAT];
-            [url2file setObject:seitem  forKey:url];
-            [self downloadfile:url file:filename];
+            [url2file setObject:seitem  forKey:urlpattern];
+            [self downloadfile:urlpattern file:filename];
         }
-        else if([se isEqualToString:@"bingimage"])
+        else
         {
-            
+            NSLog(@"serveroptions error !!! bad pattern %@", urlpattern);
         }
     }
 }
@@ -242,6 +248,9 @@
     NSString *dataPoint = [[NSString alloc] initWithBytes:data length:NUMBER_OF_CHARS encoding:NSUTF8StringEncoding];
     return dataPoint;
 }
+/*
+ 被其他函数替换
+ */
 -(int)getimagesfromseresult:(NSURL *)filename sesource:(NSString*) se
 {
     NSString * filecontent = [NSString stringWithContentsOfFile:[[filename absoluteString] substringWithRange:NSMakeRange(7, [[filename absoluteString] length] - 7)]  encoding:NSUTF8StringEncoding error:nil];
@@ -287,6 +296,160 @@
         imageitem * image = [imageitemlist objectAtIndex:i];
         [self downloadfile:[image url] file:[image filename]];
     }
+    return 0;
+}
+-(int)getimagesfrombaiduresult:(NSURL *)filename
+{
+    NSString * filecontent = [NSString stringWithContentsOfFile:[[filename absoluteString] substringWithRange:NSMakeRange(7, [[filename absoluteString] length] - 7)]  encoding:NSUTF8StringEncoding error:nil];
+    NSArray * strs = [filecontent componentsSeparatedByString:@"\""];
+    for(int i = 0;i < [strs count]; i ++)
+    {
+        if([[strs objectAtIndex:i] isEqualToString:@"objURL"])
+        {
+            //NSLog(@"get pic url %@", [strs objectAtIndex:(i +2)]);
+            imageitem * image = [[imageitem alloc]init];
+            NSString * url = [strs objectAtIndex:(i +2)];
+            NSArray * urls = [url componentsSeparatedByString:@"."];
+            NSString * suffix = [urls lastObject];
+            [image setSe:@"baiduimage"];
+            [image setType:1];
+            [image setUrl:url];
+            [image setDownflag:0];
+            [image setInd:[imageitemlist count]];
+            NSString * prefixstr = [self getrandnum];
+            NSString * filename =[NSString stringWithFormat:@"%@/%@%@.%@", dir,prefixstr, [self getrandstr], suffix];
+            
+            NSString * grayname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * logname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * transparentname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * strokename = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            [image setFilename:filename];
+            [image setGrayname:grayname];
+            [image setLogname:logname];
+            [image setTransparentname:transparentname];
+            [image setStrokename:strokename];
+            [image setMyiobjectpoint:nil];
+            [image setInd:-1];
+            [lock lock];
+            [imageitemlist addObject:image];
+            [lock unlock];
+            [url2file setObject:image forKey:url];
+            i+=2;
+        }
+    }
+     NSLog(@"downstart baiduimage");
+    [self downloadimagefromse:@"baiduimage"];
+
+    return 0;
+}
+-(int)getimagesfrombingresult:(NSURL *)filename
+{
+    NSString * filecontent = [NSString stringWithContentsOfFile:[[filename absoluteString] substringWithRange:NSMakeRange(7, [[filename absoluteString] length] - 7)]  encoding:NSUTF8StringEncoding error:nil];
+    NSArray * strs = [filecontent componentsSeparatedByString:@"\""];
+    for(int i = 0;i < [strs count] - 5; i ++)
+    {
+        if([[strs objectAtIndex:i] isEqualToString:@"thumb"]
+           &&[[strs objectAtIndex:(i+1)] isEqualToString:@" target="]
+           &&[[strs objectAtIndex:(i+2)] isEqualToString:@"_blank"]
+           &&[[strs objectAtIndex:(i+3)] isEqualToString:@" href="])
+        {
+            //NSLog(@"get pic url %@", [strs objectAtIndex:(i +2)]);
+            imageitem * image = [[imageitem alloc]init];
+            NSString * url = [strs objectAtIndex:(i+4)];
+            NSArray * urls = [url componentsSeparatedByString:@"."];
+            NSString * suffix = [urls lastObject];
+            [image setSe:@"bingimage"];
+            [image setType:1];
+            [image setUrl:url];
+            [image setDownflag:0];
+            [image setInd:[imageitemlist count]];
+            NSString * prefixstr = [self getrandnum];
+            NSString * filename =[NSString stringWithFormat:@"%@/%@%@.%@", dir,prefixstr, [self getrandstr], suffix];
+            
+            NSString * grayname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * logname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * transparentname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * strokename = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            [image setFilename:filename];
+            [image setGrayname:grayname];
+            [image setLogname:logname];
+            [image setTransparentname:transparentname];
+            [image setStrokename:strokename];
+            [image setMyiobjectpoint:nil];
+            [image setInd:-1];
+            [lock lock];
+            [imageitemlist addObject:image];
+            [lock unlock];
+            
+            [url2file setObject:image forKey:url];
+            i+=4;
+        }
+    }
+    NSLog(@"downstart bingimage");
+    [self downloadimagefromse:@"bingimage"];
+    return 0;
+}
+-(int)getimagesfromsogouresult:(NSURL *)filename
+{
+    NSString * filecontent = [NSString stringWithContentsOfFile:[[filename absoluteString] substringWithRange:NSMakeRange(7, [[filename absoluteString] length] - 7)]  encoding:NSUTF8StringEncoding error:nil];
+    NSArray * strs = [filecontent componentsSeparatedByString:@"\""];
+    for(int i = 0;i < [strs count]; i ++)
+    {
+        if([[strs objectAtIndex:i] isEqualToString:@"objURL"])
+        {
+            //NSLog(@"get pic url %@", [strs objectAtIndex:(i +2)]);
+            imageitem * image = [[imageitem alloc]init];
+            NSString * url = [strs objectAtIndex:(i +2)];
+            NSArray * urls = [url componentsSeparatedByString:@"."];
+            NSString * suffix = [urls lastObject];
+            [image setSe:@"sogouimage"];
+            [image setType:1];
+            [image setUrl:url];
+            [image setDownflag:0];
+            [image setInd:[imageitemlist count]];
+            NSString * prefixstr = [self getrandnum];
+            NSString * filename =[NSString stringWithFormat:@"%@/%@%@.%@", dir,prefixstr, [self getrandstr], suffix];
+            
+            NSString * grayname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * logname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * transparentname = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            NSString * strokename = [NSString stringWithFormat:@"%@/%@%@.png", dir, prefixstr, [self getrandstr]];
+            [image setFilename:filename];
+            [image setGrayname:grayname];
+            [image setLogname:logname];
+            [image setTransparentname:transparentname];
+            [image setStrokename:strokename];
+            [image setMyiobjectpoint:nil];
+            [image setInd:-1];
+            [lock lock];
+            [imageitemlist addObject:image];
+            [lock unlock];
+            
+            [url2file setObject:image forKey:url];
+            i+=2;
+        }
+    }
+    [self downloadimagefromse:@"sogouimage"];
+    return 0;
+}
+-(int)downloadimagefromse:(NSString *)se
+{
+    [lock lock];
+    int c = 0;
+    for(int i = 0; i < [imageitemlist count] ; i++)
+    {
+        imageitem * image = [imageitemlist objectAtIndex:i];
+        if([[image se]isEqualToString:se])
+        {
+            c++;
+            [self downloadfile:[image url] file:[image filename]];
+            if(c==[serveroption sedepth])
+            {
+                break;
+            }
+        }
+    }
+    [lock unlock];
     return 0;
 }
 -(imageitem *)getdownimageitem

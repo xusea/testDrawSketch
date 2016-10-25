@@ -31,6 +31,7 @@
     int visiblerange;
     int backgroundflag;
     serverOptions *serveroption;
+    NSLock *lock;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -47,6 +48,7 @@
 @property int visiblerange;
 @property int backgroundflag;
 @property serverOptions *serveroption;
+@property NSLock * lock;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;
@@ -54,6 +56,10 @@
 -(NSString *)getrandstr;
 -(NSString *)getrandnum;
 -(int)getimagesfromseresult:(NSURL *)filename sesource:(NSString*) se;
+-(int)getimagesfrombaiduresult:(NSURL *)filename;
+-(int)getimagesfrombingresult:(NSURL *)filename;
+-(int)getimagesfromsogouresult:(NSURL *)filename;
+-(int)downloadimagefromse:(NSString *)se;
 -(imageitem *)getdownimageitem;
 -(void)statimagescore:(imageitem *)it;
 -(imageitem *)getbestimageitem;

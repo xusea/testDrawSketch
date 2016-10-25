@@ -138,10 +138,11 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
         }
         [borderimg drawInRect:bound];
        
-        //画分数
+        //画分数,debug 画se
         if([strs count] > 1)
         {
-            NSString * score = [strs objectAtIndex:1];
+            //NSString * score = [strs objectAtIndex:1];
+            NSString * score = [self se];
             NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica light" size:15], NSFontAttributeName,[NSColor blackColor], NSForegroundColorAttributeName, nil];
             NSAttributedString * currentText =[[NSAttributedString alloc] initWithString:score attributes: attributes];
             [currentText drawAtPoint:bound.origin];
@@ -321,13 +322,21 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
     {
         [self setMouseoverflag:0];
     }
-    if([strs count] >=4)
+    if([strs count] >= 4)
     {
         [self setStrokeclickflag:[[strs objectAtIndex:3] intValue]];
     }
     else
     {
         [self setStrokeclickflag:-1];
+    }
+    if([strs count] >= 5)
+    {
+        [self setSe:[strs objectAtIndex:4]];
+    }
+    else
+    {
+        [self setSe:@"NONE"];
     }
     return;
 }
