@@ -116,6 +116,11 @@
 		DF6AA2681D927C310000184C /* resultdetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6AA2661D927C310000184C /* resultdetailViewController.m */; };
 		DF6AA2691D927C310000184C /* resultdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6AA2671D927C310000184C /* resultdetailViewController.xib */; };
 		DFC58C241D0EA40000E06DFD /* downfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC58C231D0EA40000E06DFD /* downfile.m */; };
+		DFCB82F71DBF1F2300ECC965 /* serverOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCB82F61DBF1F2300ECC965 /* serverOptions.m */; };
+		DFCB82FA1DBF2C1500ECC965 /* serveroptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFCB82F91DBF2C1500ECC965 /* serveroptions.plist */; };
+		DFCB82FE1DBF2F7D00ECC965 /* sogouimage.ico in Resources */ = {isa = PBXBuildFile; fileRef = DFCB82FB1DBF2F7D00ECC965 /* sogouimage.ico */; };
+		DFCB82FF1DBF2F7D00ECC965 /* bingimage.ico in Resources */ = {isa = PBXBuildFile; fileRef = DFCB82FC1DBF2F7D00ECC965 /* bingimage.ico */; };
+		DFCB83001DBF2F7D00ECC965 /* baiduimage.ico in Resources */ = {isa = PBXBuildFile; fileRef = DFCB82FD1DBF2F7D00ECC965 /* baiduimage.ico */; };
 		DFDE8E1E1D3379CC00A13724 /* CmCv.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFDE8E0E1D3379CC00A13724 /* CmCv.mm */; };
 		DFDE8E1F1D3379CC00A13724 /* cmdefine.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFDE8E101D3379CC00A13724 /* cmdefine.mm */; };
 		DFDE8E201D3379CC00A13724 /* CmEvaluation.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFDE8E121D3379CC00A13724 /* CmEvaluation.mm */; };
@@ -309,6 +314,12 @@
 		DF6AA2671D927C310000184C /* resultdetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = resultdetailViewController.xib; path = testDrawSketch/resultdetailViewController.xib; sourceTree = "<group>"; };
 		DFC58C221D0EA40000E06DFD /* downfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downfile.h; sourceTree = "<group>"; };
 		DFC58C231D0EA40000E06DFD /* downfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downfile.m; sourceTree = "<group>"; };
+		DFCB82F51DBF1F2300ECC965 /* serverOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serverOptions.h; sourceTree = "<group>"; };
+		DFCB82F61DBF1F2300ECC965 /* serverOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serverOptions.m; sourceTree = "<group>"; };
+		DFCB82F91DBF2C1500ECC965 /* serveroptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = serveroptions.plist; sourceTree = "<group>"; };
+		DFCB82FB1DBF2F7D00ECC965 /* sogouimage.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = sogouimage.ico; path = ../../icons/sogouimage.ico; sourceTree = "<group>"; };
+		DFCB82FC1DBF2F7D00ECC965 /* bingimage.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = bingimage.ico; path = ../../icons/bingimage.ico; sourceTree = "<group>"; };
+		DFCB82FD1DBF2F7D00ECC965 /* baiduimage.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = baiduimage.ico; path = ../../icons/baiduimage.ico; sourceTree = "<group>"; };
 		DFDE8E0C1D3379CC00A13724 /* block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = block.h; path = ../cm/block.h; sourceTree = "<group>"; };
 		DFDE8E0D1D3379CC00A13724 /* CmCv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CmCv.hpp; path = ../cm/CmCv.hpp; sourceTree = "<group>"; };
 		DFDE8E0E1D3379CC00A13724 /* CmCv.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CmCv.mm; path = ../cm/CmCv.mm; sourceTree = "<group>"; };
@@ -455,6 +466,7 @@
 		DF3CFF861CF6908B008B325B = {
 			isa = PBXGroup;
 			children = (
+				DFCB82F81DBF2BD000ECC965 /* optionplist */,
 				DF3824BA1D6FDF3C006101F1 /* libopencv_videostab.2.4.3.dylib */,
 				DF3824BB1D6FDF3C006101F1 /* libopencv_stitching.2.4.3.dylib */,
 				DF3824BC1D6FDF3C006101F1 /* libopencv_ts.2.4.3.dylib */,
@@ -537,6 +549,8 @@
 				DF3824E61D79B718006101F1 /* mattwindowcontroller.h */,
 				DF3824E71D79B718006101F1 /* mattwindowcontroller.m */,
 				DF3824E81D79B718006101F1 /* mattwindowcontroller.xib */,
+				DFCB82F51DBF1F2300ECC965 /* serverOptions.h */,
+				DFCB82F61DBF1F2300ECC965 /* serverOptions.m */,
 			);
 			path = testDrawSketch;
 			sourceTree = "<group>";
@@ -565,6 +579,14 @@
 				DF3CFFB31CF6908B008B325B /* Info.plist */,
 			);
 			path = testDrawSketchUITests;
+			sourceTree = "<group>";
+		};
+		DFCB82F81DBF2BD000ECC965 /* optionplist */ = {
+			isa = PBXGroup;
+			children = (
+				DFCB82F91DBF2C1500ECC965 /* serveroptions.plist */,
+			);
+			name = optionplist;
 			sourceTree = "<group>";
 		};
 		DFEA8EBA1D23B8D500A2D87A /* icons */ = {
@@ -610,6 +632,9 @@
 				DFDE8E281D337A0300A13724 /* red.png */,
 				DFDE8E291D337A0300A13724 /* tick.png */,
 				DFDE8E2A1D337A0300A13724 /* yellow.png */,
+				DFCB82FB1DBF2F7D00ECC965 /* sogouimage.ico */,
+				DFCB82FC1DBF2F7D00ECC965 /* bingimage.ico */,
+				DFCB82FD1DBF2F7D00ECC965 /* baiduimage.ico */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -738,12 +763,14 @@
 				2914A7D11D6F23D60021E9E6 /* start.png in Resources */,
 				DFDE8E2C1D337A0300A13724 /* green.png in Resources */,
 				DF3824EA1D79B718006101F1 /* mattwindowcontroller.xib in Resources */,
+				DFCB82FF1DBF2F7D00ECC965 /* bingimage.ico in Resources */,
 				2914A7C21D6F23D60021E9E6 /* itunes_barFillBeforeknob.png in Resources */,
 				2914A7D01D6F23D60021E9E6 /* smallbg.png in Resources */,
 				2914A7CA1D6F23D60021E9E6 /* outclick.png in Resources */,
 				2914A81F1D71CC1F0021E9E6 /* stroke.png in Resources */,
 				DF3824DD1D7037B4006101F1 /* mouseover.png in Resources */,
 				2914A7BD1D6F23D60021E9E6 /* centermove.png in Resources */,
+				DFCB82FE1DBF2F7D00ECC965 /* sogouimage.ico in Resources */,
 				DFDE8E2D1D337A0300A13724 /* purple.png in Resources */,
 				2914A7C11D6F23D60021E9E6 /* itunes_barFill.png in Resources */,
 				2914A7C81D6F23D60021E9E6 /* open.png in Resources */,
@@ -754,11 +781,13 @@
 				2914A7D41D6F23D60021E9E6 /* zoominclick.png in Resources */,
 				2914A7CD1D6F23D60021E9E6 /* rightbuttom.png in Resources */,
 				2914A7C41D6F23D60021E9E6 /* itunes_barRightAge.png in Resources */,
+				DFCB83001DBF2F7D00ECC965 /* baiduimage.ico in Resources */,
 				2914A7C91D6F23D60021E9E6 /* out.png in Resources */,
 				2914A7C51D6F23D60021E9E6 /* itunes_knob.png in Resources */,
 				2914A7D51D6F23D60021E9E6 /* zoomout.png in Resources */,
 				DF3CFF9C1CF6908B008B325B /* MainMenu.xib in Resources */,
 				2914A8071D6F241E0021E9E6 /* mattviewController.xib in Resources */,
+				DFCB82FA1DBF2C1500ECC965 /* serveroptions.plist in Resources */,
 				2914A7D31D6F23D60021E9E6 /* zoomin.png in Resources */,
 				2914A7BE1D6F23D60021E9E6 /* erase.png in Resources */,
 				DF139FE71D7FE3460018C063 /* insert.png in Resources */,
@@ -807,6 +836,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCB82F71DBF1F2300ECC965 /* serverOptions.m in Sources */,
 				DF3824971D6FDE96006101F1 /* progresswindow.m in Sources */,
 				DF57CC251D17B405005AD426 /* thumbnailView.m in Sources */,
 				DFDE8E221D3379CC00A13724 /* CmSalCut.mm in Sources */,

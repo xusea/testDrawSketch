@@ -24,6 +24,7 @@
 @synthesize convert_progress;
 @synthesize lock;
 @synthesize mattwindow =_mattwindow;
+@synthesize serveroption;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
    // [imagetrans color2stroke:@"/Users/xusea/Desktop/df23js773_resultfilepath.png" strokename:@"/Users/xusea/Desktop/123.png"];
@@ -57,6 +58,10 @@
     [imagetrans cutalpha:outimage outimage:cutimage];*/
     NSLog(@"start");
     //初始化
+    
+    //0.初始化配置文件
+    serveroption = [[serverOptions alloc]init];
+    [serveroption initial];
     //1.整体信息
     querydraw = [[NSMutableArray alloc]init];
     
@@ -67,8 +72,8 @@
     [_thumblist setNeedsDisplay:YES];
     //3.底部初始化
     [_scrollimagelist setContentResizingMask:NSViewWidthSizable];
-    [_scrollimagelist setIntercellSpacing:NSMakeSize(5, 0)];
-    [_scrollimagelist setCellspace:[_scrollimagelist intercellSpacing].width];
+   // [_scrollimagelist setIntercellSpacing:NSMakeSize(5, 0)];
+   // [_scrollimagelist setCellspace:[_scrollimagelist intercellSpacing].width];
     NSPoint fixpos = [_imageT frame].origin;
     [_imageT setHasVerticalScroller:NO];
     [_scrollimagelist setFixpos:fixpos];
@@ -193,6 +198,7 @@
     [q2i setDsketch:dS];
     [q2i setQuery:inputq];
     [q2i setIkipoint:_scrollimagelist];
+    [q2i setServeroption:serveroption];
     [querydraw addObject:q2i];
     [tV setQ2ipoint:q2i];
     

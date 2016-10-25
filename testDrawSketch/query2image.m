@@ -26,6 +26,7 @@
 @synthesize bestimageind;
 @synthesize visiblerange;
 @synthesize backgroundflag;
+@synthesize serveroption;
 - (id) init
 {
     if(self = [super init])
@@ -172,6 +173,23 @@
 {
     NSString * queryencode = [query stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
+    for(int i = 0; i < [[serveroption selist] count]; i++)
+    {
+        seOptions * seop = [[serveroption selist] objectAtIndex:i];
+        NSString * urlpattern = [seop pattern];
+        NSRange range = [urlpattern rangeOfString:@"[query]"];
+        
+        if(range.location != NSNotFound)
+        {
+            urlpattern = [urlpattern stringByReplacingOccurrencesOfString:@"[query]" withString:queryencode];
+            urlpattern = [urlpattern stringByReplacingOccurrencesOfString:@"[number]" withString:[NSString stringWithFormat:@"%d", [seop depth]]];
+            NSLog(@"new search %@", urlpattern);
+        }
+        else
+        {
+            NSLog(@"serveroptions error !!! bad pattern %@", urlpattern);
+        }
+    }
     for(int i = 0 ; i < [selist count]; i ++)
     {
         NSString * se = [selist objectAtIndex:i];

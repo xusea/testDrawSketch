@@ -12,6 +12,7 @@
 #import "scrollimagedelegate.h"
 #import "drawSketch.h"
 #import "thumbnailView.h"
+#import "serverOptions.h"
 @interface query2image : NSObject<NSURLSessionDownloadDelegate>
 {
     NSString * query;
@@ -29,6 +30,7 @@
     int selectedimageind;
     int visiblerange;
     int backgroundflag;
+    serverOptions *serveroption;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -44,6 +46,7 @@
 @property int selectedimageind;
 @property int visiblerange;
 @property int backgroundflag;
+@property serverOptions *serveroption;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;

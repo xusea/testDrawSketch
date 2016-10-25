@@ -28,9 +28,9 @@
     targetrect.origin.y = 10;
     targetrect.size.height = 115;
     targetrect.size.width = 100;
-    //cellspace = 20;
+    cellspace = 20;
     
-    cellspace = [self intercellSpacing].width;
+    //cellspace = [self intercellSpacing].width;
     bigsizeimageframe.origin.x = 0;
     bigsizeimageframe.origin.y = 0;
     bigsizeimageframe.size.width = 400;
@@ -89,6 +89,7 @@
 }
 - (void)mouseDown:(NSEvent *)theEvent
 {
+    NSLog(@"duang duang duang");
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     
     int index =[self getindexfrompoint:currentPosition];
@@ -189,6 +190,10 @@
                     break;
                 }
             }
+        }
+        else
+        {
+            NSLog(@"what the fuck? %d", toolind);
         }
         
     }
@@ -302,7 +307,7 @@
     {
         return ind;
     }
-    return -1;
+    return -2;
 }
 -(int)gettoolfrompoint:(NSPoint)point
 {
@@ -323,9 +328,10 @@
     }
     else
     {
-        return -1;
+        NSLog(@"point.y %f", point.y);
+        return -2;
     }
-    return -1;
+    return -3;
 }
 
 -(void)cleanalltoolsstatus

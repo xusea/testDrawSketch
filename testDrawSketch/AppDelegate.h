@@ -21,6 +21,7 @@
 #import "premattview.h"
 #import "mattwindowcontroller.h"
 #import "resultdetailViewController.h"
+#import "serverOptions.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
@@ -37,6 +38,7 @@
     //NSWindow __unsafe_unretained * mattwindow;
     mattwindowcontroller * mattwindow;
     resultdetailViewController * resultdetailView;
+    serverOptions * serveroption;
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -47,6 +49,7 @@
 @property NSPoint fpos;
 @property NSThread * convert_progress;
 @property NSLock * lock;
+@property serverOptions * serveroption;
 - (IBAction)addDS:(id)sender;
 - (IBAction)debug:(id)sender;
 - (IBAction)trace2png:(id)sender;

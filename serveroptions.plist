@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>selist</key>
+	<dict>
+		<key>baiduimage</key>
+		<dict>
+			<key>logofile</key>
+			<string>baiduimage.ico</string>
+			<key>sename</key>
+			<string>baiduimage</string>
+			<key>pattern</key>
+			<string>http://image.baidu.com/search/flip?tn=baiduimage&amp;ie=utf-8&amp;word=[query]&amp;pn=[number]</string>
+			<key>check</key>
+			<integer>1</integer>
+			<key>depth</key>
+			<integer>15</integer>
+		</dict>
+		<key>bingimage</key>
+		<dict>
+			<key>logofile</key>
+			<string>bingimage.ico</string>
+			<key>sename</key>
+			<string>bingimage</string>
+			<key>pattern</key>
+			<string>http://cn.bing.com/images/search?q=[query]</string>
+			<key>check</key>
+			<integer>1</integer>
+			<key>depth</key>
+			<integer>15</integer>
+		</dict>
+		<key>sogouimage</key>
+		<dict>
+			<key>logofile</key>
+			<string>sogouimage.ico</string>
+			<key>sename</key>
+			<string>sogouimage</string>
+			<key>pattern</key>
+			<string>http://pic.sogou.com/pics?query=[query]</string>
+			<key>check</key>
+			<integer>1</integer>
+			<key>depth</key>
+			<integer>15</integer>
+		</dict>
+	</dict>
+	<key>sedepth</key>
+	<integer>15</integer>
+</dict>
+</plist>
