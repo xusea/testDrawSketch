@@ -194,6 +194,17 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
             NSImage * insertimage = [NSImage imageNamed:@"insert.png"];
             [insertimage drawInRect:insertframe];
         }
+        
+        //画logo
+        NSString * logoname = [NSString stringWithFormat:@"%@.ico", [self se]];
+        NSRect logobound = [self frame];
+        logobound.origin.x = 0;
+        logobound.origin.y = logobound.size.height-8;
+        logobound.size.width = 8;
+        logobound.size.height = 8;
+        NSImage * logoimg = [NSImage imageNamed:logoname];
+        [logoimg drawInRect:logobound];
+        
 
     }
     else
