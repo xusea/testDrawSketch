@@ -129,6 +129,16 @@
     [[resultdetailView allview]setFrame:[_dSC frame]];
     [[_window contentView] addSubview:[resultdetailView allview]];
     [[resultdetailView allview]setHidden:YES];
+    
+    //13.初始化大图结果，12即将废弃
+    [_drawingboard setHidden:YES];
+    [_drawingboard setRiv:_rivindrawingboard];
+    [_drawingboard setBackgroundview:_backgroundviewindrawingboard];
+    [_drawingboard setDsc:_dscindrawingboard];
+    [_drawingboard setBs:_bsindrawingboard];
+    [_rivindrawingboard setQuerydrawlist:querydraw];
+    [_drawingboard initial];
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -457,10 +467,27 @@
 }
 
 - (IBAction)opendetail:(id)sender {
-    [[resultdetailView allview]setHidden:NO];
+    [_drawingboard setHidden:NO];
+   // [[resultdetailView allview]setHidden:NO];
 }
 
 - (IBAction)closedetail:(id)sender {
-    [[resultdetailView allview]setHidden:YES];
+    [_drawingboard setHidden:YES];
+   // [[resultdetailView allview]setHidden:YES];
+}
+- (IBAction)zoomin:(id)sender {
+}
+
+- (IBAction)zoomout:(id)sender {
+    NSRect visible = [_drawingboard documentVisibleRect];
+    NSRect newrect = NSInsetRect(visible, NSWidth(visible)*(1 - 1/1.3)/2.0, NSHeight(visible)*(1 - 1/1.3)/2.0);
+    NSRect frame = [[_drawingboard documentView] frame];
+    [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(1.3, 1.3)];
+    [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width * 1.3, frame.size.height * 1.3)];
+    
+    [[_drawingboard documentView] scrollPoint:newrect.origin];
+    
+    
+
 }
 @end

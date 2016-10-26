@@ -115,6 +115,8 @@
 		DF5B40AC1D193739008F8F26 /* drawSketchCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5B40AB1D193739008F8F26 /* drawSketchCollection.m */; };
 		DF6AA2681D927C310000184C /* resultdetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6AA2661D927C310000184C /* resultdetailViewController.m */; };
 		DF6AA2691D927C310000184C /* resultdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6AA2671D927C310000184C /* resultdetailViewController.xib */; };
+		DF9673911DC07D2B0075DC29 /* drawingBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9673901DC07D2B0075DC29 /* drawingBoard.m */; };
+		DF9673941DC07E640075DC29 /* boardshell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9673931DC07E640075DC29 /* boardshell.m */; };
 		DFC58C241D0EA40000E06DFD /* downfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC58C231D0EA40000E06DFD /* downfile.m */; };
 		DFCB82F71DBF1F2300ECC965 /* serverOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCB82F61DBF1F2300ECC965 /* serverOptions.m */; };
 		DFCB82FA1DBF2C1500ECC965 /* serveroptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFCB82F91DBF2C1500ECC965 /* serveroptions.plist */; };
@@ -312,6 +314,10 @@
 		DF6AA2651D927C310000184C /* resultdetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = resultdetailViewController.h; path = testDrawSketch/resultdetailViewController.h; sourceTree = "<group>"; };
 		DF6AA2661D927C310000184C /* resultdetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = resultdetailViewController.m; path = testDrawSketch/resultdetailViewController.m; sourceTree = "<group>"; };
 		DF6AA2671D927C310000184C /* resultdetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = resultdetailViewController.xib; path = testDrawSketch/resultdetailViewController.xib; sourceTree = "<group>"; };
+		DF96738F1DC07D2B0075DC29 /* drawingBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawingBoard.h; sourceTree = "<group>"; };
+		DF9673901DC07D2B0075DC29 /* drawingBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawingBoard.m; sourceTree = "<group>"; };
+		DF9673921DC07E640075DC29 /* boardshell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boardshell.h; sourceTree = "<group>"; };
+		DF9673931DC07E640075DC29 /* boardshell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = boardshell.m; sourceTree = "<group>"; };
 		DFC58C221D0EA40000E06DFD /* downfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downfile.h; sourceTree = "<group>"; };
 		DFC58C231D0EA40000E06DFD /* downfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downfile.m; sourceTree = "<group>"; };
 		DFCB82F51DBF1F2300ECC965 /* serverOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serverOptions.h; sourceTree = "<group>"; };
@@ -551,6 +557,10 @@
 				DF3824E81D79B718006101F1 /* mattwindowcontroller.xib */,
 				DFCB82F51DBF1F2300ECC965 /* serverOptions.h */,
 				DFCB82F61DBF1F2300ECC965 /* serverOptions.m */,
+				DF96738F1DC07D2B0075DC29 /* drawingBoard.h */,
+				DF9673901DC07D2B0075DC29 /* drawingBoard.m */,
+				DF9673921DC07E640075DC29 /* boardshell.h */,
+				DF9673931DC07E640075DC29 /* boardshell.m */,
 			);
 			path = testDrawSketch;
 			sourceTree = "<group>";
@@ -860,6 +870,7 @@
 				DF38248B1D6FDE95006101F1 /* brushview.m in Sources */,
 				DF57CC281D17CD42005AD426 /* thumbnailViewCollection.m in Sources */,
 				DF3CFF971CF6908B008B325B /* main.m in Sources */,
+				DF9673941DC07E640075DC29 /* boardshell.m in Sources */,
 				DF3CFFC11CF693AE008B325B /* drawSketch.m in Sources */,
 				2914A80A1D6F2B3C0021E9E6 /* BrushPoint.m in Sources */,
 				DF3824951D6FDE96006101F1 /* CTCSlider.m in Sources */,
@@ -875,6 +886,7 @@
 				DF3824921D6FDE96006101F1 /* backgroundbound.m in Sources */,
 				DF3824941D6FDE96006101F1 /* CTCSliderCell.m in Sources */,
 				DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */,
+				DF9673911DC07D2B0075DC29 /* drawingBoard.m in Sources */,
 				DF3824E01D703A57006101F1 /* premattview.m in Sources */,
 				DF3CFF941CF6908B008B325B /* AppDelegate.m in Sources */,
 			);

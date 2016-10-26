@@ -22,7 +22,7 @@
 #import "mattwindowcontroller.h"
 #import "resultdetailViewController.h"
 #import "serverOptions.h"
-
+#import "drawingBoard.h"
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     query2image * qi;
@@ -78,6 +78,13 @@
 @property(weak) resultdetailViewController * resultdetailView;
 - (IBAction)opendetail:(id)sender;
 - (IBAction)closedetail:(id)sender;
+@property (weak) IBOutlet drawingBoard *drawingboard;
+@property (weak) IBOutlet resultimageview *rivindrawingboard;
+@property (weak) IBOutlet NSImageView *backgroundviewindrawingboard;
+@property (weak) IBOutlet drawSketchCollection *dscindrawingboard;
+@property (weak) IBOutlet boardshell *bsindrawingboard;
+- (IBAction)zoomin:(id)sender;
+- (IBAction)zoomout:(id)sender;
 
 @end
 
