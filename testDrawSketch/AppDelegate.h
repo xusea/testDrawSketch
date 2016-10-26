@@ -39,6 +39,7 @@
     mattwindowcontroller * mattwindow;
     resultdetailViewController * resultdetailView;
     serverOptions * serveroption;
+    float zoomFactor;
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -50,6 +51,7 @@
 @property NSThread * convert_progress;
 @property NSLock * lock;
 @property serverOptions * serveroption;
+@property float zoomFactor;
 - (IBAction)addDS:(id)sender;
 - (IBAction)debug:(id)sender;
 - (IBAction)trace2png:(id)sender;

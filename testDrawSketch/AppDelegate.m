@@ -25,6 +25,7 @@
 @synthesize lock;
 @synthesize mattwindow =_mattwindow;
 @synthesize serveroption;
+@synthesize zoomFactor;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
    // [imagetrans color2stroke:@"/Users/xusea/Desktop/df23js773_resultfilepath.png" strokename:@"/Users/xusea/Desktop/123.png"];
@@ -46,6 +47,9 @@
     [colorset addObject:[NSColor whiteColor]];
     [colorset addObject:[NSColor yellowColor]];
     colorind = 0;
+    
+    //初始化常量
+    zoomFactor = 1.3;
     // Insert code here to initialize your application
   /*  [imagetrans test];
     NSString* dir = NSTemporaryDirectory();
@@ -476,14 +480,25 @@
    // [[resultdetailView allview]setHidden:YES];
 }
 - (IBAction)zoomin:(id)sender {
+    NSRect visible = [_drawingboard documentVisibleRect];
+    NSRect newrect = NSOffsetRect(visible, -NSWidth(visible)*(zoomFactor - 1)/2.0, -NSHeight(visible)*(zoomFactor - 1)/2.0);
+    
+    NSRect frame = [_drawingboard.documentView frame];
+    [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(1/zoomFactor, 1/zoomFactor)];
+    
+    
+    
+    [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width / zoomFactor, frame.size.height / zoomFactor)];
+    
+    [[_drawingboard documentView] scrollPoint:newrect.origin];
 }
 
 - (IBAction)zoomout:(id)sender {
     NSRect visible = [_drawingboard documentVisibleRect];
-    NSRect newrect = NSInsetRect(visible, NSWidth(visible)*(1 - 1/1.3)/2.0, NSHeight(visible)*(1 - 1/1.3)/2.0);
+    NSRect newrect = NSInsetRect(visible, NSWidth(visible)*(1 - 1/zoomFactor)/2.0, NSHeight(visible)*(1 - 1/zoomFactor)/2.0);
     NSRect frame = [[_drawingboard documentView] frame];
-    [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(1.3, 1.3)];
-    [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width * 1.3, frame.size.height * 1.3)];
+    [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(zoomFactor, zoomFactor)];
+    [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width * zoomFactor, frame.size.height * zoomFactor)];
     
     [[_drawingboard documentView] scrollPoint:newrect.origin];
     
