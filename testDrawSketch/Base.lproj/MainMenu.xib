@@ -751,16 +751,16 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-RI-QMv" customClass="resultimageview">
-                                            <rect key="frame" x="166" y="83" width="163" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="495" height="267"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </customView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-ZP-r72">
-                                            <rect key="frame" x="223" y="107" width="48" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bMu-eC-Sdo"/>
                                         </imageView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-dY-kQJ" customClass="drawSketchCollection">
-                                            <rect key="frame" x="166" y="83" width="163" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </customView>
                                     </subviews>

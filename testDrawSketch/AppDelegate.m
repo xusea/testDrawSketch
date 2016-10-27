@@ -324,6 +324,7 @@
                                        
     [_resultimage setNeedsDisplay:YES];
     [[resultdetailView resultimage] setNeedsDisplay: YES];
+    [[_drawingboard riv]setNeedsDisplay:YES];
 
 }//debug end
 

@@ -602,4 +602,11 @@
     }
     [self setBestimageind:bestind];
 }
+-(void)forceselecteditem
+{
+    if(selectedimageind == -1)
+    {
+        selectedimageind = bestimageind;
+    }
+}
 @end

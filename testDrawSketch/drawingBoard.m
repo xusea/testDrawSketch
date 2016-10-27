@@ -7,6 +7,7 @@
 //
 
 #import "drawingBoard.h"
+#import "query2image.h"
 
 @implementation drawingBoard
 @synthesize riv;
@@ -14,17 +15,7 @@
 @synthesize backgroundview;
 @synthesize bs;
 - (void)drawRect:(NSRect)dirtyRect {
-  /*  [super drawRect:dirtyRect];
-    NSRect bound = [self bounds];
-    NSBezierPath *trace = [[NSBezierPath alloc]init];
-    [trace setLineWidth:2];
-    [[NSColor greenColor] set];
-    //NSColor * cn = [c colorWithAlphaComponent:0.5];
-    //[cn set];
-    [trace appendBezierPathWithRect:bound];
-    [trace closePath];
-    [trace stroke];
-    // Drawing code here.*/
+ 
 }
 -(void)initial
 {
@@ -33,5 +24,13 @@
     [riv setFrame:frame];
     [dsc setFrame:frame];
     [backgroundview setFrame:frame];
+}
+-(void)forcebestimage
+{
+    for(int i = 0; i < [[riv querydrawlist] count]; i++)
+    {
+        query2image * q2i = [[riv querydrawlist] objectAtIndex:i];
+        [q2i forceselecteditem];
+    }
 }
 @end

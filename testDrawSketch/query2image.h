@@ -66,4 +66,5 @@
 -(imageitem *)getselectedimageitem;
 -(int)checkdownloadfile:(NSString *)filename;
 -(void)resetbestimagescore;
+-(void)forceselecteditem;
 @end

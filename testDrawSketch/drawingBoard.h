@@ -22,4 +22,5 @@
 @property drawSketchCollection * dsc;
 @property boardshell * bs;
 -(void)initial;
+-(void)forcebestimage;
 @end
