@@ -779,7 +779,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     newtransparent.origin.y += newsketch.origin.y;
     
     
-    NSLog(@"drawPosition resultimage[%f %f] canves[%f %f] sketch[%f %f] transparent[%f %f] finalresult[%f %f]", resultimage.size.width, resultimage.size.height,canves.size.width, canves.size.height, sketch.size.width, sketch.size.height,transparent.size.width, transparent.size.height, newtransparent.size.width, newtransparent.size.height);
+    //NSLog(@"drawPosition resultimage[%f %f] canves[%f %f] sketch[%f %f] transparent[%f %f] finalresult[%f %f]", resultimage.size.width, resultimage.size.height,canves.size.width, canves.size.height, sketch.size.width, sketch.size.height,transparent.size.width, transparent.size.height, newtransparent.size.width, newtransparent.size.height);
 
     return newtransparent;
 }

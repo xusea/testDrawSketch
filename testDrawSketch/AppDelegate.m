@@ -422,7 +422,10 @@
             [imagetrans resizeimage:imagename outimage:resizename newsize:NSMakeSize(400, 300)];
             [imagetrans imagecut:resizename outfile:grayname logfile:logname];
             [imagetrans gray2stroke:logname strokename:strokename];
-            [imagetrans imagesketch:logname orgimage:resizename outimage:transparenttemp];
+            NSString * orgsizelogname = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
+            [imagetrans resizeimage:logname outimage:orgsizelogname newsize:[image size]];
+            [imagetrans imagesketch:orgsizelogname orgimage:imagename outimage:transparenttemp];
+            //[imagetrans imagesketch:logname orgimage:resizename outimage:transparenttemp];
             [imagetrans cutalpha:transparenttemp outimage:transparentname];
             if([imaget myiobjectpoint] != nil)
             {
