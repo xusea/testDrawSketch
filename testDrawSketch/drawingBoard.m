@@ -14,7 +14,7 @@
 @synthesize backgroundview;
 @synthesize bs;
 - (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+  /*  [super drawRect:dirtyRect];
     NSRect bound = [self bounds];
     NSBezierPath *trace = [[NSBezierPath alloc]init];
     [trace setLineWidth:2];
@@ -24,7 +24,7 @@
     [trace appendBezierPathWithRect:bound];
     [trace closePath];
     [trace stroke];
-    // Drawing code here.
+    // Drawing code here.*/
 }
 -(void)initial
 {

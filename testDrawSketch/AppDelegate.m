@@ -86,8 +86,8 @@
         [_scrollimagelist setDPIScale:2];
     }
     //4.初始化绘画修正点
-    fpos = [_dSC frame].origin;
-    
+   // fpos = [_dSC frame].origin;
+    fpos = [[_drawingboard dsc] frame].origin ;
     //5.启动独立线程转换图片
     convert_progress = [[NSThread alloc] initWithTarget:self selector:@selector(run_convert) object:nil];
     [convert_progress setName:@"Thread_convert"];
@@ -130,12 +130,13 @@
     bool ret = [[NSBundle mainBundle]loadNibNamed:@"resultdetailViewController" owner:resultdetailView topLevelObjects:nil];
     NSLog(@"load resultdetailViewController %d", ret);
     [[resultdetailView resultimage] setQuerydrawlist:querydraw];
+    
     [[resultdetailView allview]setFrame:[_dSC frame]];
     [[_window contentView] addSubview:[resultdetailView allview]];
     [[resultdetailView allview]setHidden:YES];
     
     //13.初始化大图结果，12即将废弃
-    [_drawingboard setHidden:YES];
+    //[_drawingboard setHidden:YES];
     [_drawingboard setRiv:_rivindrawingboard];
     [_drawingboard setBackgroundview:_backgroundviewindrawingboard];
     [_drawingboard setDsc:_dscindrawingboard];
@@ -177,7 +178,8 @@
     }
     
     // drawSketch
-    NSRect dsframe = [_dSC frame];
+    //NSRect dsframe = [_dSC frame];
+    NSRect dsframe = [[_drawingboard dsc]frame];
     dsframe.origin.x = 0;
     dsframe.origin.y = 0;
     drawSketch * dS = [[drawSketch alloc]initWithFrame:dsframe];
@@ -185,7 +187,8 @@
     [dS setFixpos:fpos];
     [dS setQuery:inputq];
     
-    [_dSC addSubview:dS];
+    [[_drawingboard dsc] addSubview:dS];
+    //[_dSC addSubview:dS];
     
     //thumbnailView
     thumbnailView * tV = [[thumbnailView alloc]init];

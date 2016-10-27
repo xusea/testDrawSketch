@@ -11,13 +11,13 @@
 @implementation drawSketchCollection
 
 - (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+   /* [super drawRect:dirtyRect];
     NSBezierPath * bf = [NSBezierPath bezierPathWithRect:[self bounds]];
     [bf setLineWidth:5];
     [[NSColor redColor] set];
     [bf stroke];
 
-    // Drawing code here.
+    // Drawing code here.*/
 }
 
 @end

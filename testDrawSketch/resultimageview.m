@@ -23,7 +23,7 @@
     [border drawInRect:frame];*/
     //NSBezierPath * trace = [[NSBezierPath alloc]init];
     //trace
-    [NSBezierPath strokeRect:dirtyRect];
+   // [NSBezierPath strokeRect:dirtyRect];
     // Drawing code here.
     if(querydrawlist == nil)
     {

@@ -111,7 +111,6 @@
         [trace closePath];
         [trace stroke];
     }
-    
     // Drawing code here.
 }
 - (void)mouseDown:(NSEvent *)theEvent
@@ -120,10 +119,13 @@
     {
         return ;
     }
-    NSRect locat;
+ /*   NSRect locat;
     locat.origin = [theEvent locationInWindow];
     locat.origin.x -= fixpos.x;
-    locat.origin.y -= fixpos.y;
+    locat.origin.y -= fixpos.y;*/
+    NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSRect locat;
+    locat.origin = currentPosition;
     [self getmaxbound:locat.origin];
 //    locat.origin.x -= [self frame].origin.x;
 //    locat.origin.y -= [self frame].origin.y;
@@ -159,10 +161,14 @@
     {
         return ;
     }
-    NSRect locat;
+    /*NSRect locat;
     locat.origin = [theEvent locationInWindow];
     locat.origin.x -= fixpos.x;
-    locat.origin.y -= fixpos.y;
+    locat.origin.y -= fixpos.y;*/
+    
+    NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSRect locat;
+    locat.origin = currentPosition;
     [self getmaxbound:locat.origin];
 //    locat.origin.x -= [self frame].origin.x;
 //    locat.origin.y -= [self frame].origin.y;

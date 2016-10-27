@@ -761,7 +761,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     float ratiosketch = 0;
     if(newsketch.size.width / newsketch.size.height > transparent.size.width / transparent.size.height)
     {
-        ratiosketch = newsketch.size.height / newsketch.size.width;
+        ratiosketch = newsketch.size.height / transparent.size.height;
         newtransparent.size.width = transparent.size.width * ratiosketch * ratio;
         newtransparent.size.height = transparent.size.height * ratiosketch * ratio;
         newtransparent.origin.y = 0;
@@ -769,7 +769,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     }
     else
     {
-        ratiosketch = newsketch.size.width / newsketch.size.height;
+        ratiosketch = newsketch.size.width / transparent.size.width;
         newtransparent.size.width = transparent.size.width * ratiosketch * ratio;
         newtransparent.size.height = transparent.size.height * ratiosketch * ratio;
         newtransparent.origin.x = 0;
@@ -779,7 +779,8 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     newtransparent.origin.y += newsketch.origin.y;
     
     
-    
+    NSLog(@"drawPosition resultimage[%f %f] canves[%f %f] sketch[%f %f] transparent[%f %f] finalresult[%f %f]", resultimage.size.width, resultimage.size.height,canves.size.width, canves.size.height, sketch.size.width, sketch.size.height,transparent.size.width, transparent.size.height, newtransparent.size.width, newtransparent.size.height);
+
     return newtransparent;
 }
 @end
