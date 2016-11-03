@@ -28,6 +28,9 @@
 @synthesize backgroundflag;
 @synthesize serveroption;
 @synthesize lock;
+@synthesize imagedrawrect;
+@synthesize rotateDeg;
+@synthesize riv;
 - (id) init
 {
     if(self = [super init])
@@ -46,6 +49,10 @@
         visiblerange = -1;
         backgroundflag = 0;
         lock = [[NSLock alloc]init];
+        imagedrawrect = NSZeroRect;
+        rotateDeg = 0.0;
+        riv = nil;
+        displayflag = 1;
     }
     return self; 
 }
@@ -54,46 +61,12 @@
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     //  session
     NSURLSession *session = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
-    //NSURLSession *session = [NSURLSession sharedSession];
-    
-    //         URL
-    //NSURL *url1 = [NSURL URLWithString:@"http://b.hiphotos.baidu.com/image/w%3D2048/sign=6be5fc5f718da9774e2f812b8469f919/8b13632762d0f703b0faaab00afa513d2697c515.jpg"];
-    //NSURL *url1 = [NSURL URLWithString:@"http://www.baidu.com/"];//  Download
+  
     NSURL *url1 = [NSURL URLWithString:url];
     NSURLRequest *request = [NSURLRequest requestWithURL:url1];
-    //NSURLSessionDownloadTask *task =  [session downloadTaskWithURL:url1];
+    
     NSURLSessionDownloadTask *task =  [session downloadTaskWithRequest:request];
     [task resume];
-   // NSLog(@"dsdfsd");
-    /*NSURL *URL = [NSURL URLWithString:@"http://b.hiphotos.baidu.com/image/w%3D2048/sign=6be5fc5f718da9774e2f812b8469f919/8b13632762d0f703b0faaab00afa513d2697c515.jpg"];
-     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-     NSURLSession *session = [NSURLSession sharedSession];
-     NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithRequest:request
-     completionHandler:
-     ^(NSURL *location, NSURLResponse *response, NSError *error) {
-     [self showResponseCode:response];
-     
-     // 输出下载文件原来的存放目录
-     NSLog(@"location :    %@", location);
-     
-     // 设置文件的存放目标路径
-     NSString *documentsPath = [self getDocumentsPath];
-     NSURL *documentsDirectoryURL = [NSURL fileURLWithPath:documentsPath];
-     NSURL *fileURL = [documentsDirectoryURL URLByAppendingPathComponent:[[response URL] lastPathComponent]];
-     
-     // 如果该路径下文件已经存在，就要先将其移除，在移动文件
-     NSFileManager *fileManager = [NSFileManager defaultManager];
-     if ([fileManager fileExistsAtPath:[fileURL path] isDirectory:NULL]) {
-     [fileManager removeItemAtURL:fileURL error:NULL];
-     }
-     [fileManager moveItemAtURL:location toURL:fileURL error:NULL];
-     
-     // 在webView中加载图片文件
-     //                                                  NSURLRequest *showImage_request = [NSURLRequest requestWithURL:fileURL];
-     
-     }];
-     
-     [downloadTask resume];*/
 }
 - (NSString *)getDocumentsPath {
     NSArray *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -104,16 +77,14 @@
 
 -(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
     NSError *err = nil;
-    //
-    //NSString *fileName = [[downloadTask.originalRequest.URL absoluteString]lastPathComponent];
+   
     NSString * orgurl = [downloadTask.originalRequest.URL absoluteString];
-    //NSString * filename = [url2file objectForKey:orgurl];
+    
     imageitem * imaget = [url2file objectForKey:orgurl];
     [imaget setDownflag:1];
     NSString * filename = [imaget filename];
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    /*NSString *downloadDir = [NSTemporaryDirectory()  stringByAppendingPathComponent:filename];
-    NSURL *downloadURL = [NSURL fileURLWithPath:downloadDir];*/
+   
     NSURL *downloadURL = [NSURL fileURLWithPath:filename];
     if ([fileManager moveItemAtURL:location toURL:downloadURL error: &err])
     {
@@ -121,19 +92,16 @@
         {
             NSLog(@"handle search engine %@", orgurl);
             [self getimagesfrombaiduresult:downloadURL];
-            //[self getimagesfromseresult:downloadURL sesource:@"baiduimage"];
         }
         if([orgurl hasPrefix:@"http://cn.bing.com/images/"])
         {
             NSLog(@"handle search engine %@", orgurl);
             [self getimagesfrombingresult:downloadURL];
-            //[self getimagesfromseresult:downloadURL sesource:@"baiduimage"];
         }
         if([orgurl hasPrefix:@"http://pic.sogou.com/"])
         {
             NSLog(@"handle search engine %@", orgurl);
             [self getimagesfromsogouresult:downloadURL];
-            //[self getimagesfromseresult:downloadURL sesource:@"baiduimage"];
         }
         if([imaget type ]==1)
         {
@@ -172,7 +140,6 @@
             }
             
         }
-        //NSLog(@"downnewfile %@", location);
     }
     else
     {
@@ -311,6 +278,11 @@
             NSString * url = [strs objectAtIndex:(i +2)];
             NSArray * urls = [url componentsSeparatedByString:@"."];
             NSString * suffix = [urls lastObject];
+            //不支持的图片类型
+            if([serveroption supporttype:suffix]==false)
+            {
+                continue;
+            }
             [image setSe:@"baiduimage"];
             [image setType:1];
             [image setUrl:url];
@@ -608,5 +580,29 @@
     {
         selectedimageind = bestimageind;
     }
+    
+    imageitem * it = [self getselectedimageitem];
+    if(it == nil)
+    {
+        return;
+    }
+    
+    NSImage * image;
+    
+    image = [[NSImage alloc]initWithContentsOfFile:[it transparentname]];
+    if(image == nil)
+    {
+        return;
+    }
+    if(riv == nil)
+    {
+        return;
+    }
+    imagedrawrect = [imagetrans getDrawPosition:[riv frame]
+                                    canves:[dsketch frame]
+                                    sketch:NSMakeRect([dsketch leftbuttom].x, [  dsketch leftbuttom].y, [dsketch righttop].x - [dsketch leftbuttom].x, [dsketch righttop].y - [dsketch leftbuttom].y)
+                               transparent:NSMakeRect(0,0,[image size].width, [image size].height)];
+        
+    
 }
 @end

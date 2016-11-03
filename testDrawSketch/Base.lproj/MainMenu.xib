@@ -20,6 +20,7 @@
                 <outlet property="dSC" destination="rLz-3s-Ftd" id="mY2-6u-Od7"/>
                 <outlet property="drawingboard" destination="8yZ-RT-HNT" id="LEd-ve-FUe"/>
                 <outlet property="dscindrawingboard" destination="3yZ-dY-kQJ" id="t7X-ot-uIn"/>
+                <outlet property="eirvindrawingboard" destination="OCB-YY-FEz" id="HVx-Ef-Zmq"/>
                 <outlet property="extendbutton" destination="9Z8-wn-tgc" id="Wis-hV-G4H"/>
                 <outlet property="imageT" destination="9Ld-fz-4Dg" id="LzC-GY-nfd"/>
                 <outlet property="resultimage" destination="71C-Kq-chf" id="uRV-Ai-mdz"/>
@@ -750,8 +751,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-YY-FEz" customClass="editimageresultview">
+                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-RI-QMv" customClass="resultimageview">
-                                            <rect key="frame" x="0.0" y="0.0" width="495" height="267"/>
+                                            <rect key="frame" x="0.0" y="-2" width="495" height="267"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </customView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-ZP-r72">
@@ -942,6 +947,28 @@
                         <rect key="frame" x="604" y="462" width="163" height="96"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLe-Xt-x7b">
+                        <rect key="frame" x="18" y="530" width="73" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="block" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j3n-f8-SGF">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="block:" target="Voe-Tx-rLC" id="IFa-zb-xiv"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-bX-ASU">
+                        <rect key="frame" x="538" y="538" width="64" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="edit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="emk-e3-hIW">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="eriveditenable:" target="Voe-Tx-rLC" id="zD0-YC-WiJ"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>

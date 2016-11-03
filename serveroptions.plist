@@ -46,5 +46,14 @@
 	</dict>
 	<key>sedepth</key>
 	<integer>15</integer>
+	<key>filetype</key>
+	<dict>
+		<key>jpg</key>
+		<string></string>
+		<key>png</key>
+		<string></string>
+		<key>bmp</key>
+		<string></string>
+	</dict>
 </dict>
 </plist>

@@ -26,8 +26,11 @@
 {
     NSMutableArray * selist;
     int sedepth;
+    NSDictionary * filetype;
 }
 @property NSMutableArray * selist;
 @property int sedepth;
+@property NSDictionary * filetype;
 -(void)initial;
+-(BOOL)supporttype:(NSString *) type;
 @end

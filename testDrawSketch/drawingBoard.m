@@ -14,6 +14,7 @@
 @synthesize dsc;
 @synthesize backgroundview;
 @synthesize bs;
+@synthesize eirv;
 - (void)drawRect:(NSRect)dirtyRect {
  
 }
@@ -24,6 +25,7 @@
     [riv setFrame:frame];
     [dsc setFrame:frame];
     [backgroundview setFrame:frame];
+    [eirv setFrame:frame];
 }
 -(void)forcebestimage
 {

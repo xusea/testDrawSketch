@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499102660.918889"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-URLSession:downloadTask:didFinishDownloadingToURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499102660.918889"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-URLSession:downloadTask:didFinishDownloadingToURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-getrandnum"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499102660.918889"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-URLSession:downloadTask:didFinishDownloadingToURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/AppDelegate.m"
-            timestampString = "499228626.703602"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "-addDS:"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/AppDelegate.m"
-            timestampString = "499228626.703602"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-addDS:"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/AppDelegate.m"
-            timestampString = "499250861.185702"
+            timestampString = "499838244.403655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "469"
-            endingLineNumber = "469"
+            startingLineNumber = "474"
+            endingLineNumber = "474"
             landmarkName = "-showindex:"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499102660.918889"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-URLSession:downloadTask:didFinishDownloadingToURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/AppDelegate.m"
-            timestampString = "499250861.185702"
+            timestampString = "499838244.403655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
+            startingLineNumber = "482"
+            endingLineNumber = "482"
             landmarkName = "-scrollposition:"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "492"
-            endingLineNumber = "492"
+            startingLineNumber = "464"
+            endingLineNumber = "464"
             landmarkName = "-statimagescore:"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "484"
-            endingLineNumber = "484"
+            startingLineNumber = "456"
+            endingLineNumber = "456"
             landmarkName = "-statimagescore:"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "506"
-            endingLineNumber = "506"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
             landmarkName = "-statimagescore:"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-URLSession:downloadTask:didFinishDownloadingToURL:"
             landmarkType = "7">
          </BreakpointContent>
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/AppDelegate.m"
-            timestampString = "499250861.185702"
+            timestampString = "499838572.606175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "581"
-            endingLineNumber = "581">
+            startingLineNumber = "594"
+            endingLineNumber = "594">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -472,11 +472,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "548"
-            endingLineNumber = "548"
+            startingLineNumber = "520"
+            endingLineNumber = "520"
             landmarkName = "-getselectedimageitem"
             landmarkType = "7">
          </BreakpointContent>
@@ -600,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "-getimagesfrombaiduresult:"
             landmarkType = "7">
          </BreakpointContent>
@@ -616,11 +616,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "-getimagesfrombaiduresult:"
             landmarkType = "7">
          </BreakpointContent>
@@ -632,11 +632,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "-getimagesfrombingresult:"
             landmarkType = "7">
          </BreakpointContent>
@@ -648,11 +648,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/query2image.m"
-            timestampString = "499103583.875603"
+            timestampString = "499837883.436169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
             landmarkName = "-getimagesfrombingresult:"
             landmarkType = "7">
          </BreakpointContent>
@@ -686,6 +686,86 @@
             startingLineNumber = "735"
             endingLineNumber = "735"
             landmarkName = "+getDrawPosition:canves:sketch:transparent:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testDrawSketch/drawingBoard.m"
+            timestampString = "499837883.436169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-forcebestimage"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testDrawSketch/query2image.m"
+            timestampString = "499837883.436169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "601"
+            endingLineNumber = "601"
+            landmarkName = "-forceselecteditem"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testDrawSketch/AppDelegate.m"
+            timestampString = "499838244.403655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "522"
+            endingLineNumber = "522"
+            landmarkName = "-block:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testDrawSketch/editimageresultview.m"
+            timestampString = "499838308.938069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-mouseDown:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testDrawSketch/editimageresultview.m"
+            timestampString = "499838322.718312"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-mouseDown:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

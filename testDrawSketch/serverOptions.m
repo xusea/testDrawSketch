@@ -39,13 +39,15 @@
         [seoptions setCheck:[[values objectForKey:@"check"] intValue]];
         [selist addObject:seoptions];
     }
-    
-   /* NSLog(@"options !! %@", [dictionary objectForKey:@"sedepth"]);
-    for(int i = 0; i < [selist count] ;i ++)
+    filetype = [dictionary objectForKey:@"filetype"];
+}
+-(BOOL)supporttype:(NSString *) type
+{
+    BOOL ret = true;
+    if([filetype objectForKey:[type lowercaseString]] == nil)
     {
-        seOptions * seoption = [selist objectAtIndex:i];
-        NSLog(@"%@ %@", [seoption logofile], [seoption sename]);
-    }*/
-    
+        ret = false;
+    }
+    return ret;
 }
 @end

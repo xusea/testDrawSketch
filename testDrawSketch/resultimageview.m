@@ -52,7 +52,10 @@
         {
             continue;
         }
-        
+        if([q2i displayflag] == 0)
+        {
+            continue;
+        }
         NSImage * image;
         NSRect drawrect;
         if(i < [querydrawlist count])
@@ -67,13 +70,8 @@
             {
                 continue;
             }
-            drawrect = [imagetrans getDrawPosition:[self frame]
-                                            canves:[[q2i dsketch]frame]
-                                            sketch:NSMakeRect([[q2i dsketch] leftbuttom].x, [[q2i dsketch] leftbuttom].y, [[q2i dsketch] righttop].x - [[q2i dsketch] leftbuttom].x, [[q2i dsketch] righttop].y - [[q2i dsketch] leftbuttom].y)
-                                       transparent:NSMakeRect(0,0,[image size].width, [image size].height)];
-        
         }
-        [image drawInRect:drawrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+        [image drawInRect:[q2i imagedrawrect] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
     }
     return;
 }

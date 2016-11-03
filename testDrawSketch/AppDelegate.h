@@ -87,6 +87,9 @@
 @property (weak) IBOutlet boardshell *bsindrawingboard;
 - (IBAction)zoomin:(id)sender;
 - (IBAction)zoomout:(id)sender;
+- (IBAction)block:(id)sender;
+@property (weak) IBOutlet editimageresultview *eirvindrawingboard;
 
+- (IBAction)eriveditenable:(id)sender;
 @end
 

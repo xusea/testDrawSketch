@@ -13,6 +13,7 @@
 #import "drawSketch.h"
 #import "thumbnailView.h"
 #import "serverOptions.h"
+#import "resultimageview.h"
 @interface query2image : NSObject<NSURLSessionDownloadDelegate>
 {
     NSString * query;
@@ -32,6 +33,10 @@
     int backgroundflag;
     serverOptions *serveroption;
     NSLock *lock;
+    NSRect imagedrawrect;
+    float rotateDeg;
+    resultimageview * riv;
+    int displayflag;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -49,6 +54,10 @@
 @property int backgroundflag;
 @property serverOptions *serveroption;
 @property NSLock * lock;
+@property NSRect imagedrawrect;
+@property float rotateDeg;
+@property resultimageview * riv;
+@property int displayflag;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;

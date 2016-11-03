@@ -141,6 +141,9 @@
     [_drawingboard setBackgroundview:_backgroundviewindrawingboard];
     [_drawingboard setDsc:_dscindrawingboard];
     [_drawingboard setBs:_bsindrawingboard];
+    [_drawingboard setEirv:_eirvindrawingboard];
+    [_eirvindrawingboard initial];
+    [_eirvindrawingboard setRiv:_rivindrawingboard];
     [_rivindrawingboard setQuerydrawlist:querydraw];
     [_drawingboard initial];
     
@@ -210,12 +213,14 @@
 
     //query2image
     query2image * q2i = [[query2image alloc]init];
+    [q2i setDisplayflag:1];
     [q2i setQuery:@"1"];
     [q2i setThumbnailViewpoint:tV];
     [q2i setDsketch:dS];
     [q2i setQuery:inputq];
     [q2i setIkipoint:_scrollimagelist];
     [q2i setServeroption:serveroption];
+    [q2i setRiv:[_drawingboard riv]];
     [querydraw addObject:q2i];
     [tV setQ2ipoint:q2i];
     
@@ -511,5 +516,13 @@
     
     
 
+}
+
+- (IBAction)block:(id)sender {
+    [_drawingboard forcebestimage];
+}
+- (IBAction)eriveditenable:(id)sender {
+    bool display = [_dscindrawingboard isHidden];
+    [_dscindrawingboard setHidden:!display];
 }
 @end
