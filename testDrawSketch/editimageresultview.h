@@ -13,9 +13,15 @@
 {
     resultimageview * riv;
     NSRect selectedrect;
+    int dragflag;
+    NSPoint lastpoint;
+    query2image * q2i;
 }
 @property resultimageview * riv;
 @property NSRect selectedrect;
+@property int dragflag;
+@property NSPoint lastpoint;
+@property query2image * q2i;
 -(void)initial;
 -(void)getSelectedDS:(NSPoint)point;
 @end

@@ -31,6 +31,7 @@
 @synthesize imagedrawrect;
 @synthesize rotateDeg;
 @synthesize riv;
+@synthesize displayflag;
 - (id) init
 {
     if(self = [super init])
