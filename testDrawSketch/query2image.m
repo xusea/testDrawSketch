@@ -32,6 +32,7 @@
 @synthesize rotateDeg;
 @synthesize riv;
 @synthesize displayflag;
+@synthesize degree;
 - (id) init
 {
     if(self = [super init])

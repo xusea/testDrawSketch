@@ -71,7 +71,34 @@
                 continue;
             }
         }
+        
+        NSGraphicsContext *context = [NSGraphicsContext currentContext];
+        
+        [context saveGraphicsState];
+        CGFloat rotateDeg = [q2i degree];
+        NSRect selectedrect = [q2i imagedrawrect];
+        NSAffineTransform *rotate = [[NSAffineTransform alloc] init];
+        //  if(status == 6)
+        //{
+        //  [rotate translateXBy:dirtyRect.size.width/2 yBy:dirtyRect.size.height/2];
+        //  [rotate rotateByDegrees:rotateDeg];
+        //  [rotate translateXBy:-dirtyRect.size.width/2 yBy:-dirtyRect.size.height/2];
+        // }
+        // else
+        // {
+        [rotate translateXBy: selectedrect.origin.x + selectedrect.size.width/2 yBy:selectedrect.origin.y + selectedrect.size.height/2];
+        [rotate rotateByDegrees:rotateDeg];
+        [rotate translateXBy:-(selectedrect.origin.x + selectedrect.size.width/2) yBy:-(selectedrect.origin.y + selectedrect.size.height/2)];
+        // }
+        [rotate concat];
         [image drawInRect:[q2i imagedrawrect] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+        [context restoreGraphicsState];
+       // NSRect newrect = [q2i imagedrawrect];
+       // newrect.origin.x -= 30;
+       // newrect.origin.y -= 30;
+       // [image drawInRect:newrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+
+
     }
     return;
 }

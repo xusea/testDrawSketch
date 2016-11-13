@@ -37,6 +37,7 @@
     float rotateDeg;
     resultimageview * riv;
     int displayflag;
+    CGFloat degree;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -58,6 +59,7 @@
 @property float rotateDeg;
 @property resultimageview * riv;
 @property int displayflag;
+@property CGFloat degree;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;
