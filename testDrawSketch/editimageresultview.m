@@ -260,12 +260,18 @@
     {
         return 0;
     }
+    NSRect handlerectrotate = [self calcupos:selectedrect rotatedegree:degree];
+    if((status == 1 || status == 6)&& NSPointInRect(point, handlerectrotate))
+    {
+        return 6;
+    }
     for(int i = 0; i < [[riv querydrawlist] count] ; i++)
     {
         q2i = [[riv querydrawlist] objectAtIndex:i];
         if([q2i displayflag] == 1 && NSPointInRect(point, [q2i imagedrawrect]))
         {
             selectedrect = [q2i imagedrawrect];
+            degree = [q2i degree];
             handlerect = NSMakeRect(0, 0, handlesize.width, handlesize.height);
             handlerect.origin.x = [self selectedrect].origin.x + [self selectedrect].size.width / 2.0 - handlerect.size.width / 2.0;
             handlerect.origin.y = [self selectedrect].origin.y + [self selectedrect].size.height + 20;
@@ -273,12 +279,7 @@
             return 1;
         }
     }
-    NSRect handlerectrotate = [self calcupos:selectedrect rotatedegree:degree];
-    if(status == 1 && NSPointInRect(point, handlerectrotate))
-    {
-        
-        return 6;
-    }
+    
     selectedrect = NSZeroRect;
     q2i = nil;
     return 0;
