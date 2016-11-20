@@ -23,6 +23,12 @@
     NSSize cornersize;
     NSSize handlesize;
     CGFloat degree;
+    
+    //test rotata
+    NSRect lefttoprect;
+    NSRect leftbuttomrect;
+    NSRect righttoprect;
+    NSRect rightbuttomrect;
 }
 @property resultimageview * riv;
 @property NSRect selectedrect;
@@ -36,9 +42,19 @@
 @property NSSize cornersize;
 @property NSSize handlesize;
 @property CGFloat degree;
+
+@property NSRect lefttoprect;
+@property NSRect leftbuttomrect;
+@property NSRect righttoprect;
+@property NSRect rightbuttomrect;
 -(void)initial;
 -(int)getSelectedDS:(NSPoint)point;
 -(int)checkclickcorner:(NSPoint)point;
 - (float) vectorangle:(NSPoint) startpoint endpoint:(NSPoint)endpoint;
 - (NSRect) calcupos:(NSRect) border rotatedegree:(CGFloat)d;
+- (NSRect) calculefttoppos:(NSRect) border rotatedegree:(CGFloat)d;
+- (NSRect) calculeftbuttompos:(NSRect) border rotatedegree:(CGFloat)d;
+- (NSRect) calcurighttoppos:(NSRect) border rotatedegree:(CGFloat)d;
+- (NSRect) calcurightbuttompos:(NSRect) border rotatedegree:(CGFloat)d;
+- (NSPoint) calcuborderpointnorotate:(NSPoint) point pos:(int)pos;
 @end

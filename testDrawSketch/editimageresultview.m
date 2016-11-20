@@ -21,10 +21,15 @@
 @synthesize cornersize;
 @synthesize handlesize;
 @synthesize degree;
+@synthesize lefttoprect;
+@synthesize leftbuttomrect;
+@synthesize righttoprect;
+@synthesize rightbuttomrect;
 -(void)initial
 {
     selectedrect = NSZeroRect;
     handlerect = NSZeroRect;
+    
     dragflag = 0;
     q2i = nil;
     status = 0;
@@ -32,10 +37,32 @@
     zoomfactor = 1.0;
     cornersize = NSMakeSize(20, 20);
     handlesize = NSMakeSize(20, 20);
+    
+    lefttoprect = NSZeroRect;
+    leftbuttomrect = NSZeroRect;
+    righttoprect = NSZeroRect;
+    rightbuttomrect = NSZeroRect;
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
+    
+    if(!NSEqualRects(selectedrect , NSZeroRect))
+    {
+        NSRect bound = [self selectedrect];
+        NSBezierPath *trace = [[NSBezierPath alloc]init];
+        [trace setLineWidth:2];
+        [[NSColor redColor] set];
+        //NSColor * cn = [c colorWithAlphaComponent:0.5];
+        //[cn set];
+        [trace appendBezierPathWithRect:bound];
+        [trace appendBezierPathWithRect:lefttoprect];
+        [trace appendBezierPathWithRect:leftbuttomrect];
+        [trace appendBezierPathWithRect:righttoprect];
+        [trace appendBezierPathWithRect:rightbuttomrect];
+        [trace closePath];
+        [trace stroke];
+    }
     CGFloat rotateDeg = degree;
     NSAffineTransform *rotate = [[NSAffineTransform alloc] init];
   //  if(status == 6)
@@ -66,13 +93,13 @@
         
         
         NSBezierPath *tracehandle = [[NSBezierPath alloc]init];
-        [tracehandle setLineWidth:2];
+        [tracehandle setLineWidth:1];
         [[NSColor greenColor] set];
-      /*  NSRect rotatehandle = NSMakeRect(0, 0, 20, 20);
-        
-        rotatehandle.origin.x = [self selectedrect].origin.x + [self selectedrect].size.width / 2.0 - rotatehandle.size.width / 2.0;
-        rotatehandle.origin.y = [self selectedrect].origin.y + [self selectedrect].size.height + 20;*/
         [tracehandle appendBezierPathWithRect:handlerect];
+      /*  [tracehandle appendBezierPathWithRect:lefttoprect];
+        [tracehandle appendBezierPathWithRect:leftbuttomrect];
+        [tracehandle appendBezierPathWithRect:righttoprect];
+        [tracehandle appendBezierPathWithRect:rightbuttomrect];*/
         [tracehandle closePath];
         [tracehandle stroke];
         //handlerect = [self calcupos:selectedrect rotatedegree:rotateDeg];
@@ -102,6 +129,11 @@
         [self setNeedsDisplay:YES];
         return;
     }
+    if(status == 2 || status == 3 || status == 4 || status == 5)
+    {
+        [self setNeedsDisplay:YES];
+        return;
+    }
     NSRect lefttop, righttop, leftbuttom, rightbuttom;
     NSSize cur_cornersize = cornersize;
     cur_cornersize.width /= zoomfactor;
@@ -123,6 +155,7 @@
     rightbuttom.origin.y = selectedrect.origin.y;
     
     if(NSPointInRect(currentPosition, lefttop))
+    //if(NSPointInRect(currentPosition, [self calculefttoppos:selectedrect rotatedegree:degree]))
     {
         NSLog(@"click in lefttop");
         status = 2;
@@ -175,6 +208,10 @@
             else
             {
                 //lefttop
+                if(status == 2)
+                {
+                    currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
+                }
                 if(status == 2
                    && currentPosition.x + resizegap < selectedrect.origin.x + selectedrect.size.width
                    && currentPosition.y > selectedrect.origin.y + resizegap)
@@ -261,9 +298,33 @@
         return 0;
     }
     NSRect handlerectrotate = [self calcupos:selectedrect rotatedegree:degree];
+    NSRect lefttoprectrotate = [self calculefttoppos:selectedrect rotatedegree:degree];
+    NSRect leftbuttomrectrotate = [self calculeftbuttompos:selectedrect rotatedegree:degree];
+    NSRect righttoprectrotate = [self calcurighttoppos:selectedrect rotatedegree:degree];
+    NSRect rightbuttomrectrotate = [self calcurightbuttompos:selectedrect rotatedegree:degree];
     if((status == 1 || status == 6)&& NSPointInRect(point, handlerectrotate))
     {
         return 6;
+    }
+    if((status == 1 || status == 2) && NSPointInRect(point, lefttoprectrotate))
+    {
+        status = 2;
+        return 2;
+    }
+    if((status == 1 || status == 3) && NSPointInRect(point, leftbuttomrectrotate))
+    {
+        status = 3;
+        return 3;
+    }
+    if((status == 1 || status == 4) && NSPointInRect(point, righttoprectrotate))
+    {
+        status = 4;
+        return 4;
+    }
+    if((status == 1 || status == 5) && NSPointInRect(point, rightbuttomrectrotate))
+    {
+        status = 5;
+        return 5;
     }
     for(int i = 0; i < [[riv querydrawlist] count] ; i++)
     {
@@ -331,5 +392,99 @@
     
     return r;
 }
+- (NSRect) calculefttoppos:(NSRect) border rotatedegree:(CGFloat)d
+{
+    NSRect r;
+    r.size.height = 20;
+    r.size.width = 20;
+    float p = sqrt(border.size.height / 2 * border.size.height / 2 + border.size.width / 2 * border.size.width / 2);
+    float at = atanf(border.size.width / border.size.height) * 180 / 3.1415926;
+    r.origin.x = p * cos((d+90 + at)*3.1415926/180);
+    r.origin.y = p * sin((d+90 + at)*3.1415926/180);
+    r.origin.x += border.origin.x + border.size.width/2 - r.size.width/2;
+    r.origin.y += border.origin.y + border.size.height/2 - r.size.height/2 ;
 
+    lefttoprect = r;
+    return r;
+    
+}
+- (NSRect) calculeftbuttompos:(NSRect) border rotatedegree:(CGFloat)d
+{
+    NSRect r;
+    r.size.height = 20;
+    r.size.width = 20;
+    float p = sqrt(border.size.height / 2 * border.size.height / 2 + border.size.width / 2 * border.size.width / 2);
+    float at = atanf(border.size.width / border.size.height) * 180 / 3.1415926;
+    r.origin.x = p * cos((d+270-at)*3.1415926/180);
+    r.origin.y = p * sin((d+270-at)*3.1415926/180);
+    r.origin.x += border.origin.x + border.size.width/2 - r.size.width/2;
+    r.origin.y += border.origin.y + border.size.height/2 - r.size.height/2 ;
+    leftbuttomrect = r;
+    return r;
+    
+}
+- (NSRect) calcurighttoppos:(NSRect) border rotatedegree:(CGFloat)d
+{
+    NSRect r;
+    r.size.height = 20;
+    r.size.width = 20;
+    float p = sqrt(border.size.height / 2 * border.size.height / 2 + border.size.width / 2 * border.size.width / 2);
+    float at = atanf(border.size.width / border.size.height) * 180 / 3.1415926;
+    r.origin.x = p * cos((d+90-at)*3.1415926/180);
+    r.origin.y = p * sin((d+90-at)*3.1415926/180);
+    r.origin.x += border.origin.x + border.size.width/2 - r.size.width/2;
+    r.origin.y += border.origin.y + border.size.height/2 - r.size.height/2 ;
+    righttoprect = r;
+    return r;
+}
+- (NSRect) calcurightbuttompos:(NSRect) border rotatedegree:(CGFloat)d
+{
+    NSRect r;
+    r.size.height = 20;
+    r.size.width = 20;
+    float p = sqrt(border.size.height / 2 * border.size.height / 2 + border.size.width / 2 * border.size.width / 2);
+    float at = atanf(border.size.width / border.size.height) * 180 / 3.1415926;
+    r.origin.x = p * cos((d+270+at)*3.1415926/180);
+    r.origin.y = p * sin((d+270+at)*3.1415926/180);
+    r.origin.x += border.origin.x + border.size.width/2 - r.size.width/2;
+    r.origin.y += border.origin.y + border.size.height/2 - r.size.height/2 ;
+    rightbuttomrect = r;
+    return r;
+}
+- (NSPoint) calcuborderpointnorotate:(NSPoint) point pos:(int)pos
+{
+    NSPoint p = NSZeroPoint;
+    NSPoint centerpoint = NSZeroPoint;
+    centerpoint.x = selectedrect.origin.x + selectedrect.size.width / 2;
+    centerpoint.y = selectedrect.origin.y + selectedrect.size.height / 2;
+    float dx = centerpoint.x - point.x;
+    float dy = centerpoint.y - point.y;
+    float l = sqrt(dx * dx + dy * dy);
+    float at = fabs(atanf(dx / dy) * 180 / 3.1415926);
+    if(pos == 2)
+    {
+        p.x = l * cos((0 - degree + 90 + at)*3.1415926/180);
+        p.y = l * sin((0 - degree + 90 + at)*3.1415926/180);
+
+    }
+    else if(pos == 3)
+    {
+        
+    }
+    else if(pos == 4)
+    {
+        
+    }
+    else if(pos == 5)
+    {
+        
+    }
+    else
+    {
+        
+    }
+    p.x += selectedrect.origin.x + selectedrect.size.width/2 ;
+    p.y += selectedrect.origin.y + selectedrect.size.height/2 ;
+    return p;
+}
 @end
