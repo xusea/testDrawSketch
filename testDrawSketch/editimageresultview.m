@@ -65,18 +65,11 @@
     }
     CGFloat rotateDeg = degree;
     NSAffineTransform *rotate = [[NSAffineTransform alloc] init];
-  //  if(status == 6)
-    //{
-      //  [rotate translateXBy:dirtyRect.size.width/2 yBy:dirtyRect.size.height/2];
-      //  [rotate rotateByDegrees:rotateDeg];
-      //  [rotate translateXBy:-dirtyRect.size.width/2 yBy:-dirtyRect.size.height/2];
-   // }
-   // else
-   // {
-        [rotate translateXBy: selectedrect.origin.x + selectedrect.size.width/2 yBy:selectedrect.origin.y + selectedrect.size.height/2];
-        [rotate rotateByDegrees:rotateDeg];
-        [rotate translateXBy:-(selectedrect.origin.x + selectedrect.size.width/2) yBy:-(selectedrect.origin.y + selectedrect.size.height/2)];
-   // }
+  
+    [rotate translateXBy: selectedrect.origin.x + selectedrect.size.width/2 yBy:selectedrect.origin.y + selectedrect.size.height/2];
+    [rotate rotateByDegrees:rotateDeg];
+    [rotate translateXBy:-(selectedrect.origin.x + selectedrect.size.width/2) yBy:-(selectedrect.origin.y + selectedrect.size.height/2)];
+   
     [rotate concat];
     
     if(!NSEqualRects(selectedrect , NSZeroRect))
@@ -96,13 +89,9 @@
         [tracehandle setLineWidth:1];
         [[NSColor greenColor] set];
         [tracehandle appendBezierPathWithRect:handlerect];
-      /*  [tracehandle appendBezierPathWithRect:lefttoprect];
-        [tracehandle appendBezierPathWithRect:leftbuttomrect];
-        [tracehandle appendBezierPathWithRect:righttoprect];
-        [tracehandle appendBezierPathWithRect:rightbuttomrect];*/
+      
         [tracehandle closePath];
         [tracehandle stroke];
-        //handlerect = [self calcupos:selectedrect rotatedegree:rotateDeg];
     }
     // Drawing code here.
 }
@@ -230,8 +219,65 @@
                         selectedrect.origin.x -= currentnail.x - lastnail.x;
                         selectedrect.origin.y -= currentnail.y - lastnail.y;
                     }
-                    //currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
                     
+                }
+                if(status == 3)
+                {
+                    NSPoint currentRotate = [self calcuborderpointnorotate:currentPosition pos: status];
+                    NSPoint lastRatate = [self calcuborderpointnorotate:lastpoint pos: status];
+                    NSPoint lastnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x + selectedrect.size.width, selectedrect.origin.y + selectedrect.size.height) pos:5];
+                    
+                    selectedrect.origin.x += currentRotate.x - lastRatate.x;
+                    selectedrect.origin.y += currentRotate.y - lastRatate.y;
+                    selectedrect.size.width -= currentRotate.x - lastRatate.x;
+                    selectedrect.size.height -= currentRotate.y - lastRatate.y;
+                    lastpoint = currentPosition;
+
+                    NSPoint currentnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x + selectedrect.size.width, selectedrect.origin.y + selectedrect.size.height) pos:5];;
+                    if(!NSEqualPoints(lastnail, NSZeroPoint))
+                    {
+                        selectedrect.origin.x -= currentnail.x - lastnail.x;
+                        selectedrect.origin.y -= currentnail.y - lastnail.y;
+                    }
+
+                }
+                
+                if(status == 4)
+                {
+                    NSPoint currentRotate = [self calcuborderpointnorotate:currentPosition pos: status];
+                    NSPoint lastRatate = [self calcuborderpointnorotate:lastpoint pos: status];
+                    NSPoint lastnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x , selectedrect.origin.y) pos:5];
+                    
+                    selectedrect.size.width += currentRotate.x - lastRatate.x;
+                    selectedrect.size.height += currentRotate.y - lastRatate.y;
+                    lastpoint = currentPosition;
+                    
+                    NSPoint currentnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x , selectedrect.origin.y) pos:5];;
+                    if(!NSEqualPoints(lastnail, NSZeroPoint))
+                    {
+                        selectedrect.origin.x -= currentnail.x - lastnail.x;
+                        selectedrect.origin.y -= currentnail.y - lastnail.y;
+                    }
+
+                }
+                
+                if(status == 5)
+                {
+                    NSPoint currentRotate = [self calcuborderpointnorotate:currentPosition pos: status];
+                    NSPoint lastRatate = [self calcuborderpointnorotate:lastpoint pos: status];
+                    NSPoint lastnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x , selectedrect.origin.y + selectedrect.size.height) pos:5];
+                    
+                    selectedrect.origin.y += currentRotate.y - lastRatate.y;
+                    selectedrect.size.width += currentRotate.x - lastRatate.x;
+                    selectedrect.size.height -= currentRotate.y - lastRatate.y;
+                    lastpoint = currentPosition;
+                    
+                    NSPoint currentnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x , selectedrect.origin.y + selectedrect.size.height) pos:5];;
+                    if(!NSEqualPoints(lastnail, NSZeroPoint))
+                    {
+                        selectedrect.origin.x -= currentnail.x - lastnail.x;
+                        selectedrect.origin.y -= currentnail.y - lastnail.y;
+                    }
                 }
             /*    if(status == 2
                    && currentPosition.x + resizegap < selectedrect.origin.x + selectedrect.size.width
@@ -242,7 +288,7 @@
                     selectedrect.size.width -= currentPosition.x - lastpoint.x;
                     lastpoint = currentPosition;
                     
-                }*/
+                }
                 //leftbuttom
                 if(status == 3
                    && currentPosition.x + resizegap < selectedrect.origin.x + selectedrect.size.width
@@ -275,7 +321,7 @@
                     selectedrect.size.width += currentPosition.x - lastpoint.x;
                     lastpoint = currentPosition;
                     
-                }
+                }*/
                 if(status == 6)
                 {
                     degree = [self vectorangle:handlerect.origin endpoint:currentPosition];
@@ -296,11 +342,6 @@
     handlerect = NSMakeRect(0, 0, handlesize.width, handlesize.height);
     handlerect.origin.x = [self selectedrect].origin.x + [self selectedrect].size.width / 2.0 - handlerect.size.width / 2.0;
     handlerect.origin.y = [self selectedrect].origin.y + [self selectedrect].size.height + 20;
-    
-/*if(status == 2)
-    {
-        currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
-    }*/
     lastpoint = currentPosition;
     dragflag = 1;
 }
@@ -487,35 +528,6 @@
     p.y = (point.x - centerpoint.x) * sin(-degree * 3.1415926 / 180) + (point.y - centerpoint.y)*cos(-degree * 3.1415926 / 180) + centerpoint.y;
     return p;
     
-    float dx = centerpoint.x - point.x;
-    float dy = centerpoint.y - point.y;
-    float l = sqrt(dx * dx + dy * dy);
-    float at = fabs(atanf(dx / dy) * 180 / 3.1415926);
-    if(pos == 2)
-    {
-        p.x = l * cos((0 - degree + 90 + at)*3.1415926/180);
-        p.y = l * sin((0 - degree + 90 + at)*3.1415926/180);
-
-    }
-    else if(pos == 3)
-    {
-        
-    }
-    else if(pos == 4)
-    {
-        
-    }
-    else if(pos == 5)
-    {
-        
-    }
-    else
-    {
-        
-    }
-    p.x += selectedrect.origin.x + selectedrect.size.width/2 ;
-    p.y += selectedrect.origin.y + selectedrect.size.height/2 ;
-    return p;
 }
 
 - (NSPoint) calcuborderpointnorotate2:(NSPoint) point pos:(int)pos

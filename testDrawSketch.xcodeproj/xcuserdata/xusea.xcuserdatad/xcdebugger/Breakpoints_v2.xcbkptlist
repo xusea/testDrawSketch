@@ -744,11 +744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501351070.851333"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-mouseDown:"
             landmarkType = "7">
          </BreakpointContent>
@@ -760,11 +760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501351070.851333"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-mouseDown:"
             landmarkType = "7">
          </BreakpointContent>
@@ -776,11 +776,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402344.468513"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "356"
-            endingLineNumber = "356"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "-getSelectedDS:"
             landmarkType = "7">
          </BreakpointContent>
@@ -792,11 +792,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402344.468513"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "-getSelectedDS:"
             landmarkType = "7">
          </BreakpointContent>
@@ -808,11 +808,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501389688.794229"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "-mouseDragged:"
             landmarkType = "7">
          </BreakpointContent>
@@ -824,11 +824,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402344.468513"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "366"
+            endingLineNumber = "366"
             landmarkName = "-getSelectedDS:"
             landmarkType = "7">
          </BreakpointContent>
@@ -840,11 +840,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402344.468513"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "422"
-            endingLineNumber = "422"
+            startingLineNumber = "463"
+            endingLineNumber = "463"
             landmarkName = "-calculefttoppos:rotatedegree:"
             landmarkType = "7">
          </BreakpointContent>
@@ -856,11 +856,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402344.468513"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
+            startingLineNumber = "466"
+            endingLineNumber = "466"
             landmarkName = "-calculefttoppos:rotatedegree:"
             landmarkType = "7">
          </BreakpointContent>
@@ -872,11 +872,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402344.468513"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "-mouseDragged:"
             landmarkType = "7">
          </BreakpointContent>
@@ -888,11 +888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402344.468513"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
+            startingLineNumber = "522"
+            endingLineNumber = "522"
             landmarkName = "-calcuborderpointnorotate:pos:"
             landmarkType = "7">
          </BreakpointContent>
@@ -904,11 +904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501389525.110099"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-mouseDragged:"
             landmarkType = "7">
          </BreakpointContent>
@@ -920,11 +920,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501402700.694222"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "-mouseDragged:"
             landmarkType = "7">
          </BreakpointContent>
@@ -936,11 +936,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/editimageresultview.m"
-            timestampString = "501408004.36308"
+            timestampString = "501423385.16265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "-mouseDragged:"
             landmarkType = "7">
          </BreakpointContent>
