@@ -185,6 +185,8 @@
 
     
     dragflag = 1;
+    
+    //currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
     lastpoint = currentPosition;
     
 
@@ -195,6 +197,9 @@
 {
     
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    
+    
+   // currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
     if(dragflag == 1)
     {
         if(!NSEqualRects(selectedrect, NSZeroRect))
@@ -210,19 +215,25 @@
                 //lefttop
                 if(status == 2)
                 {
-                    currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
+                    NSPoint currentRotate = [self calcuborderpointnorotate:currentPosition pos: status];
+                    NSPoint lastRatate = [self calcuborderpointnorotate:lastpoint pos: status];
+                    selectedrect.origin.x += currentRotate.x - lastRatate.x;
+                    selectedrect.size.height += (currentRotate.y - lastRatate.y)*2;
+                    selectedrect.size.width -= (currentRotate.x - lastRatate.x)*2;
+                    lastpoint = currentPosition;
+                    //currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
+                    
                 }
-                if(status == 2
+            /*    if(status == 2
                    && currentPosition.x + resizegap < selectedrect.origin.x + selectedrect.size.width
                    && currentPosition.y > selectedrect.origin.y + resizegap)
                 {
                     selectedrect.origin.x += currentPosition.x - lastpoint.x;
-                    //selectedrect.origin.y += currentPosition.y - lastpoint.y;
                     selectedrect.size.height += currentPosition.y - lastpoint.y;
                     selectedrect.size.width -= currentPosition.x - lastpoint.x;
                     lastpoint = currentPosition;
                     
-                }
+                }*/
                 //leftbuttom
                 if(status == 3
                    && currentPosition.x + resizegap < selectedrect.origin.x + selectedrect.size.width
@@ -276,6 +287,11 @@
     handlerect = NSMakeRect(0, 0, handlesize.width, handlesize.height);
     handlerect.origin.x = [self selectedrect].origin.x + [self selectedrect].size.width / 2.0 - handlerect.size.width / 2.0;
     handlerect.origin.y = [self selectedrect].origin.y + [self selectedrect].size.height + 20;
+    
+/*if(status == 2)
+    {
+        currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
+    }*/
     lastpoint = currentPosition;
     dragflag = 1;
 }
@@ -457,6 +473,11 @@
     NSPoint centerpoint = NSZeroPoint;
     centerpoint.x = selectedrect.origin.x + selectedrect.size.width / 2;
     centerpoint.y = selectedrect.origin.y + selectedrect.size.height / 2;
+    
+    p.x = (point.x - centerpoint.x) * cos(-degree * 3.1415926 / 180) - (point.y - centerpoint.y)*sin(-degree * 3.1415926 / 180) + centerpoint.x;
+    p.y = (point.x - centerpoint.x) * sin(-degree * 3.1415926 / 180) + (point.y - centerpoint.y)*cos(-degree * 3.1415926 / 180) + centerpoint.y;
+    return p;
+    
     float dx = centerpoint.x - point.x;
     float dy = centerpoint.y - point.y;
     float l = sqrt(dx * dx + dy * dy);
