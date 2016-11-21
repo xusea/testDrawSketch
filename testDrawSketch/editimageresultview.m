@@ -217,10 +217,19 @@
                 {
                     NSPoint currentRotate = [self calcuborderpointnorotate:currentPosition pos: status];
                     NSPoint lastRatate = [self calcuborderpointnorotate:lastpoint pos: status];
+                    NSPoint lastnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x + selectedrect.size.width, selectedrect.origin.y) pos:5];
+                    
                     selectedrect.origin.x += currentRotate.x - lastRatate.x;
-                    selectedrect.size.height += (currentRotate.y - lastRatate.y)*2;
-                    selectedrect.size.width -= (currentRotate.x - lastRatate.x)*2;
+                    selectedrect.size.height += currentRotate.y - lastRatate.y;
+                    selectedrect.size.width -= currentRotate.x - lastRatate.x;
                     lastpoint = currentPosition;
+                    
+                    NSPoint currentnail = [self calcuborderpointnorotate2:NSMakePoint(selectedrect.origin.x + selectedrect.size.width, selectedrect.origin.y) pos:5];;
+                    if(!NSEqualPoints(lastnail, NSZeroPoint))
+                    {
+                        selectedrect.origin.x -= currentnail.x - lastnail.x;
+                        selectedrect.origin.y -= currentnail.y - lastnail.y;
+                    }
                     //currentPosition = [self calcuborderpointnorotate:currentPosition pos: status];
                     
                 }
@@ -506,6 +515,18 @@
     }
     p.x += selectedrect.origin.x + selectedrect.size.width/2 ;
     p.y += selectedrect.origin.y + selectedrect.size.height/2 ;
+    return p;
+}
+
+- (NSPoint) calcuborderpointnorotate2:(NSPoint) point pos:(int)pos
+{
+    NSPoint p = NSZeroPoint;
+    NSPoint centerpoint = NSZeroPoint;
+    centerpoint.x = selectedrect.origin.x + selectedrect.size.width / 2;
+    centerpoint.y = selectedrect.origin.y + selectedrect.size.height / 2;
+    
+    p.x = (point.x - centerpoint.x) * cos(degree * 3.1415926 / 180) - (point.y - centerpoint.y)*sin(degree * 3.1415926 / 180) + centerpoint.x;
+    p.y = (point.x - centerpoint.x) * sin(degree * 3.1415926 / 180) + (point.y - centerpoint.y)*cos(degree * 3.1415926 / 180) + centerpoint.y;
     return p;
 }
 @end

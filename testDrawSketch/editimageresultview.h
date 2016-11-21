@@ -57,4 +57,5 @@
 - (NSRect) calcurighttoppos:(NSRect) border rotatedegree:(CGFloat)d;
 - (NSRect) calcurightbuttompos:(NSRect) border rotatedegree:(CGFloat)d;
 - (NSPoint) calcuborderpointnorotate:(NSPoint) point pos:(int)pos;
+- (NSPoint) calcuborderpointnorotate2:(NSPoint) point pos:(int)pos;
 @end
