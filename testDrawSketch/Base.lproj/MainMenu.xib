@@ -768,6 +768,12 @@
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-dY-kQJ" customClass="drawSketchCollection">
                                             <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <subviews>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-rA-fbF" customClass="premattview">
+                                                    <rect key="frame" x="376" y="177" width="163" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </customView>
+                                            </subviews>
                                         </customView>
                                     </subviews>
                                 </view>
@@ -944,10 +950,6 @@
                             <action selector="zoomout:" target="Voe-Tx-rLC" id="oid-cy-U0s"/>
                         </connections>
                     </button>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-rA-fbF" customClass="premattview">
-                        <rect key="frame" x="604" y="462" width="163" height="96"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLe-Xt-x7b">
                         <rect key="frame" x="18" y="530" width="73" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -978,6 +980,28 @@
                         <rect key="frame" x="217" y="252" width="5" height="200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </box>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fuQ-p0-4Yy">
+                        <rect key="frame" x="630" y="538" width="72" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="up" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B1m-ir-MYV">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="upimage:" target="Voe-Tx-rLC" id="JTp-7J-Mk5"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4R-bH-4am">
+                        <rect key="frame" x="691" y="538" width="73" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="down" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ewg-D9-peU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="downimage:" target="Voe-Tx-rLC" id="wwC-sf-k2j"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>

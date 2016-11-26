@@ -40,6 +40,7 @@
     resultdetailViewController * resultdetailView;
     serverOptions * serveroption;
     float zoomFactor;
+    int g_draworder;
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -52,6 +53,7 @@
 @property NSLock * lock;
 @property serverOptions * serveroption;
 @property float zoomFactor;
+@property int g_draworder;
 - (IBAction)addDS:(id)sender;
 - (IBAction)debug:(id)sender;
 - (IBAction)trace2png:(id)sender;
@@ -91,5 +93,8 @@
 @property (weak) IBOutlet editimageresultview *eirvindrawingboard;
 
 - (IBAction)eriveditenable:(id)sender;
+- (IBAction)upimage:(id)sender;
+- (IBAction)downimage:(id)sender;
+
 @end
 

@@ -38,6 +38,7 @@
     resultimageview * riv;
     int displayflag;
     CGFloat degree;
+    int draworder;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -60,6 +61,7 @@
 @property resultimageview * riv;
 @property int displayflag;
 @property CGFloat degree;
+@property int draworder;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;

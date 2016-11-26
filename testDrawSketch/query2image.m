@@ -33,6 +33,7 @@
 @synthesize riv;
 @synthesize displayflag;
 @synthesize degree;
+@synthesize draworder;
 - (id) init
 {
     if(self = [super init])
@@ -55,6 +56,7 @@
         rotateDeg = 0.0;
         riv = nil;
         displayflag = 1;
+        draworder=-1;
     }
     return self; 
 }

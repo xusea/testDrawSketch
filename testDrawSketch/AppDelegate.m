@@ -26,6 +26,7 @@
 @synthesize mattwindow =_mattwindow;
 @synthesize serveroption;
 @synthesize zoomFactor;
+@synthesize g_draworder;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
    // [imagetrans color2stroke:@"/Users/xusea/Desktop/df23js773_resultfilepath.png" strokename:@"/Users/xusea/Desktop/123.png"];
@@ -50,6 +51,7 @@
     
     //初始化常量
     zoomFactor = 1.3;
+    g_draworder = 0;
     // Insert code here to initialize your application
   /*  [imagetrans test];
     NSString* dir = NSTemporaryDirectory();
@@ -223,7 +225,8 @@
     [q2i setRiv:[_drawingboard riv]];
     [querydraw addObject:q2i];
     [tV setQ2ipoint:q2i];
-    
+    [q2i setDraworder:g_draworder];
+    g_draworder ++;
     
     //设置刚插入为最高优先级
     //设置底部备选图片
@@ -524,5 +527,43 @@
 - (IBAction)eriveditenable:(id)sender {
     bool display = [_dscindrawingboard isHidden];
     [_dscindrawingboard setHidden:!display];
+}
+
+- (IBAction)upimage:(id)sender {
+    if([[_drawingboard eirv] q2i] == nil )
+    {
+        return;
+    }
+    for(int i = 0 ;i<[querydraw count]; i ++)
+    {
+        if([[_drawingboard eirv] q2i] == [querydraw objectAtIndex:i])
+        {
+            if(i < [querydraw count] - 1)
+            {
+                [querydraw exchangeObjectAtIndex:i withObjectAtIndex:i+1];
+                NSLog(@"click %@", [[[_drawingboard eirv] q2i] query]);
+                break;
+            }
+        }
+    }
+}
+
+- (IBAction)downimage:(id)sender {
+    if([[_drawingboard eirv] q2i] == nil )
+    {
+        return;
+    }
+    for(int i = 0 ;i<[querydraw count]; i ++)
+    {
+        if([[_drawingboard eirv] q2i] == [querydraw objectAtIndex:i])
+        {
+            if(i != 0 )
+            {
+                [querydraw exchangeObjectAtIndex:i withObjectAtIndex:i-1];
+                NSLog(@"click %@", [[[_drawingboard eirv] q2i] query]);
+                break;
+            }
+        }
+    }
 }
 @end
