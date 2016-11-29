@@ -34,6 +34,8 @@
 @synthesize displayflag;
 @synthesize degree;
 @synthesize draworder;
+@synthesize flipx;
+@synthesize flipy;
 - (id) init
 {
     if(self = [super init])
@@ -57,6 +59,8 @@
         riv = nil;
         displayflag = 1;
         draworder=-1;
+        flipx = 0;
+        flipy = 0;
     }
     return self; 
 }

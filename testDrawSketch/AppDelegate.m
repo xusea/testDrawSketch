@@ -566,4 +566,22 @@
         }
     }
 }
+
+- (IBAction)flipx:(id)sender {
+    if([[_drawingboard eirv] q2i] == nil )
+    {
+        return;
+    }
+    [[[_drawingboard eirv] q2i] setFlipx:1-[[[_drawingboard eirv] q2i]flipx]];
+    [[_drawingboard eirv] setNeedsDisplay:YES];
+}
+
+- (IBAction)flipy:(id)sender {
+    if([[_drawingboard eirv] q2i] == nil )
+    {
+        return;
+    }
+    [[[_drawingboard eirv] q2i] setFlipy:1-[[[_drawingboard eirv] q2i]flipy]];
+    [[_drawingboard eirv] setNeedsDisplay:YES];
+}
 @end

@@ -95,6 +95,8 @@
 - (IBAction)eriveditenable:(id)sender;
 - (IBAction)upimage:(id)sender;
 - (IBAction)downimage:(id)sender;
+- (IBAction)flipx:(id)sender;
+- (IBAction)flipy:(id)sender;
 
 @end
 

@@ -39,6 +39,8 @@
     int displayflag;
     CGFloat degree;
     int draworder;
+    int flipx;
+    int flipy;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -62,6 +64,8 @@
 @property int displayflag;
 @property CGFloat degree;
 @property int draworder;
+@property int flipx;
+@property int flipy;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;

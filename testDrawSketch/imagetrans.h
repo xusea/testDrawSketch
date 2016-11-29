@@ -39,5 +39,9 @@
 +(void)color2stroke:(NSString *)logfile strokename:(NSString*)strokename;
 //计算图片位置
 +(NSRect)getDrawPosition:(NSRect)resultimage canves:(NSRect)canves sketch:(NSRect)sketch transparent:(NSRect)transparent;
+//图片翻转
++ (NSImage *)flipImageByX:(NSImage *)image;
++ (NSImage *)flipImageByY:(NSImage *)image;
++ (NSImage *)flipImage:(NSImage *)image byx:(int)byx byy:(int)byy;
 @end
 

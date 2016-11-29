@@ -783,4 +783,48 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
 
     return newtransparent;
 }
+
++ (NSImage *)flipImage:(NSImage *)image  byx:(int)byx byy:(int)byy
+{
+    // NSLog(@"%d %d", byx, byy);
+    NSImage *existingImage = image;
+    NSSize existingSize = [existingImage size];
+    NSSize newSize = NSMakeSize(existingSize.width, existingSize.height);
+    NSImage *flipedImage = [[NSImage alloc] initWithSize:newSize] ;
+    
+    [flipedImage lockFocus];
+    [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
+    
+    NSAffineTransform *t = [NSAffineTransform transform];
+    if(byx == 1 && byy ==-1)
+    {
+        [t translateXBy:0   yBy:existingSize.height];
+    }
+    else if(byx== -1 && byy==1){
+        [t translateXBy:existingSize.width  yBy:0];
+    }
+    else if(byx== 1 && byy==1){
+        [t translateXBy:0   yBy:0];
+    }
+    else if(byx== -1 && byy==-1){
+        [t translateXBy:existingSize.width yBy:existingSize.height];
+    }
+    [t scaleXBy:byx yBy:byy];
+    
+    [t concat];
+    
+    [existingImage drawAtPoint:NSZeroPoint fromRect:NSMakeRect(0, 0, newSize.width, newSize.height) operation:NSCompositingOperationSourceOver fraction:1.0];
+    
+    [flipedImage unlockFocus];
+    
+    return flipedImage;
+}
++ (NSImage *)flipImageByX:(NSImage *)image
+{
+    return [self flipImage:image byx:1 byy:-1];
+}
++ (NSImage *)flipImageByY:(NSImage *)image
+{
+    return [self flipImage:image byx:-1 byy:1];
+}
 @end

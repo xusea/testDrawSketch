@@ -13,4 +13,5 @@
     NSMutableArray * querydrawlist;
 }
 @property NSMutableArray * querydrawlist;
+
 @end
