@@ -827,4 +827,31 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
 {
     return [self flipImage:image byx:-1 byy:1];
 }
+
++(NSImage*) CGImageRef2NSImage:(CGImageRef)image
+{
+    NSRect imageRect = NSMakeRect(0.0, 0.0, 0.0, 0.0);
+    CGContextRef imageContext = nil;
+    NSImage* newImage = nil;
+    
+    // Get the image dimensions.
+    imageRect.size.height = CGImageGetHeight(image);
+    imageRect.size.width = CGImageGetWidth(image);
+    // Create a new image to receive the Quartz image data
+    newImage = [[NSImage alloc] initWithSize:imageRect.size];
+    [newImage lockFocus];
+    // Get the Quartz context and draw.
+    imageContext = (CGContextRef)[[NSGraphicsContext currentContext]graphicsPort];
+    CGContextDrawImage(imageContext, *(CGRect*)&imageRect, image);
+    [newImage unlockFocus];
+    return newImage;
+}
++(CIImage*)NSImage2CIImage:(NSImage*)image
+{
+    NSData  * tiffData = [image TIFFRepresentation];
+    NSBitmapImageRep * bitmap;
+    bitmap = [NSBitmapImageRep imageRepWithData:tiffData];
+    CIImage * ciImage = [[CIImage alloc] initWithBitmapImageRep:bitmap];
+    return ciImage;
+}
 @end

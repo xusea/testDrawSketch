@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 #import "opencvproxy.hpp"
+#import CoreImage;
 @interface imagetrans : NSObject
 +(void)test;
 //笔迹转黑白图片
@@ -40,8 +41,11 @@
 //计算图片位置
 +(NSRect)getDrawPosition:(NSRect)resultimage canves:(NSRect)canves sketch:(NSRect)sketch transparent:(NSRect)transparent;
 //图片翻转
-+ (NSImage *)flipImageByX:(NSImage *)image;
-+ (NSImage *)flipImageByY:(NSImage *)image;
-+ (NSImage *)flipImage:(NSImage *)image byx:(int)byx byy:(int)byy;
++(NSImage *)flipImageByX:(NSImage *)image;
++(NSImage *)flipImageByY:(NSImage *)image;
++(NSImage *)flipImage:(NSImage *)image byx:(int)byx byy:(int)byy;
+//图片格式转换
++(NSImage*)CGImageRef2NSImage:(CGImageRef)image;
++(CIImage*)NSImage2CIImage:(NSImage*)image;
 @end
 
