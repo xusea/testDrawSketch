@@ -25,6 +25,9 @@
 @synthesize leftbuttomrect;
 @synthesize righttoprect;
 @synthesize rightbuttomrect;
+@synthesize brightnessslider;
+@synthesize contrastslider;
+@synthesize saturationslider;
 -(void)initial
 {
     selectedrect = NSZeroRect;
@@ -42,6 +45,10 @@
     leftbuttomrect = NSZeroRect;
     righttoprect = NSZeroRect;
     rightbuttomrect = NSZeroRect;
+    
+    brightnessslider = nil;
+    contrastslider = nil;
+    saturationslider = nil;
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
@@ -540,5 +547,25 @@
     p.x = (point.x - centerpoint.x) * cos(degree * 3.1415926 / 180) - (point.y - centerpoint.y)*sin(degree * 3.1415926 / 180) + centerpoint.x;
     p.y = (point.x - centerpoint.x) * sin(degree * 3.1415926 / 180) + (point.y - centerpoint.y)*cos(degree * 3.1415926 / 180) + centerpoint.y;
     return p;
+}
+
+- (void) setBCS:(float)v BCS:(NSImageBCSType)BCS
+{
+    if(q2i != nil)
+    {
+        switch(BCS)
+        {
+            case IMGTbrightness:
+                [q2i setBrightness:v];
+                break;
+            case IMGTsaturation:
+                [q2i setSaturation:v];
+                break;
+            case IMGTcontrast:
+                [q2i setContrast:v];
+                break;
+        }
+        [riv setNeedsDisplay:YES];
+    }
 }
 @end

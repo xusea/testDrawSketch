@@ -9,7 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 #import "opencvproxy.hpp"
-#import CoreImage;
+#import <CoreImage/CoreImage.h>
+extern float const IMGTcontrastIdentity;
+extern float const IMGTcontrastMIN;
+extern float const IMGTcontrastMAX;
+extern float const IMGTsaturationIdentity;
+extern float const IMGTsaturationMIN;
+extern float const IMGTsaturationMAX;
+extern float const IMGTbrightnessIdentity;
+extern float const IMGTbrightnessMIN;
+extern float const IMGTbrightnessMAX;
 @interface imagetrans : NSObject
 +(void)test;
 //笔迹转黑白图片
@@ -47,5 +56,21 @@
 //图片格式转换
 +(NSImage*)CGImageRef2NSImage:(CGImageRef)image;
 +(CIImage*)NSImage2CIImage:(NSImage*)image;
+
+typedef enum _NSImageBCSType {
+    IMGTcontrast  = 0,
+    IMGTsaturation,
+    IMGTbrightness
+} NSImageBCSType;
+//修改图片对比度
++(NSImage*)NSImageContrast:(NSImage*)image contrast:(float)contrast;
+//修改图片饱和度
++(NSImage*)NSImageSaturation:(NSImage*)image saturation:(float)saturation;
+//修改图片亮度
++(NSImage*)NSImageBrightness:(NSImage*)image brightness:(float)brightness;
+//修改图片对比度、饱和度、亮度
++(NSImage*)NSImageBCS:(NSImage*)image v:(float)v BCS:(NSImageBCSType)BCS;
+
+
 @end
 

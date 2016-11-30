@@ -29,6 +29,11 @@
     NSRect leftbuttomrect;
     NSRect righttoprect;
     NSRect rightbuttomrect;
+    
+    NSSlider * brightnessslider;
+    NSSlider * contrastslider;
+    NSSlider * saturationslider;
+    
 }
 @property resultimageview * riv;
 @property NSRect selectedrect;
@@ -47,6 +52,10 @@
 @property NSRect leftbuttomrect;
 @property NSRect righttoprect;
 @property NSRect rightbuttomrect;
+
+@property NSSlider * brightnessslider;
+@property NSSlider * contrastslider;
+@property NSSlider * saturationslider;
 -(void)initial;
 -(int)getSelectedDS:(NSPoint)point;
 -(int)checkclickcorner:(NSPoint)point;
@@ -58,4 +67,5 @@
 - (NSRect) calcurightbuttompos:(NSRect) border rotatedegree:(CGFloat)d;
 - (NSPoint) calcuborderpointnorotate:(NSPoint) point pos:(int)pos;
 - (NSPoint) calcuborderpointnorotate2:(NSPoint) point pos:(int)pos;
+- (void) setBCS:(float)v BCS:(NSImageBCSType)BCS;
 @end

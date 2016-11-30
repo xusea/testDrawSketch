@@ -27,6 +27,9 @@
                 <outlet property="resultimage" destination="71C-Kq-chf" id="uRV-Ai-mdz"/>
                 <outlet property="rivindrawingboard" destination="Hgm-RI-QMv" id="utZ-5z-alm"/>
                 <outlet property="scrollimagelist" destination="2fm-qJ-Rvz" id="KGR-gc-F1U"/>
+                <outlet property="showbrightness" destination="Bqg-AE-Ha8" id="aDr-qf-nE4"/>
+                <outlet property="showcontrast" destination="rc1-3V-pfd" id="hvk-b5-b0S"/>
+                <outlet property="showsaturation" destination="TdE-LR-pHq" id="sHe-PC-9EQ"/>
                 <outlet property="thumblist" destination="xo5-o9-zgm" id="r3a-4N-rhF"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -727,7 +730,7 @@
                         </connections>
                     </button>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLz-3s-Ftd" customClass="drawSketchCollection">
-                        <rect key="frame" x="207" y="158" width="452" height="66"/>
+                        <rect key="frame" x="211" y="143" width="297" height="66"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLh-oR-VB9">
@@ -1024,6 +1027,57 @@
                             <action selector="flipy:" target="Voe-Tx-rLC" id="q1Z-RL-vBe"/>
                         </connections>
                     </button>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rc1-3V-pfd">
+                        <rect key="frame" x="549" y="218" width="96" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" minValue="0.25" maxValue="4" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="YsX-hr-BsD"/>
+                        <connections>
+                            <action selector="modifycontrast:" target="Voe-Tx-rLC" id="DWW-Wl-iff"/>
+                        </connections>
+                    </slider>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TdE-LR-pHq">
+                        <rect key="frame" x="549" y="184" width="96" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="2" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Qv0-SJ-ATh"/>
+                        <connections>
+                            <action selector="modifysaturation:" target="Voe-Tx-rLC" id="G2n-mK-Ymx"/>
+                        </connections>
+                    </slider>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-AE-Ha8">
+                        <rect key="frame" x="549" y="152" width="96" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="above" sliderType="linear" id="SD1-bc-P3d"/>
+                        <connections>
+                            <action selector="modifybrightness:" target="Voe-Tx-rLC" id="diQ-FL-Vbk"/>
+                        </connections>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fd8-rn-3V5">
+                        <rect key="frame" x="665" y="218" width="55" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="contrast" id="CDU-Ct-eUk">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7l-ig-rAn">
+                        <rect key="frame" x="665" y="186" width="65" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="saturation" id="vyk-sG-MSK">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-hw-pSd">
+                        <rect key="frame" x="664" y="154" width="69" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="brightness" id="4Zp-Fc-aYf">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>

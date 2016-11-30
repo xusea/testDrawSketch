@@ -97,6 +97,12 @@
 - (IBAction)downimage:(id)sender;
 - (IBAction)flipx:(id)sender;
 - (IBAction)flipy:(id)sender;
+@property (weak) IBOutlet NSSlider *showcontrast;
+- (IBAction)modifycontrast:(id)sender;
+@property (weak) IBOutlet NSSlider *showsaturation;
+- (IBAction)modifysaturation:(id)sender;
+@property (weak) IBOutlet NSSlider *showbrightness;
+- (IBAction)modifybrightness:(id)sender;
 
 @end
 

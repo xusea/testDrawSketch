@@ -36,6 +36,9 @@
 @synthesize draworder;
 @synthesize flipx;
 @synthesize flipy;
+@synthesize saturation;
+@synthesize contrast;
+@synthesize brightness;
 - (id) init
 {
     if(self = [super init])
@@ -61,6 +64,9 @@
         draworder=-1;
         flipx = 0;
         flipy = 0;
+        saturation = IMGTsaturationIdentity;
+        contrast = IMGTcontrastIdentity;
+        brightness = IMGTbrightnessIdentity;
     }
     return self; 
 }

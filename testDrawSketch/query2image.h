@@ -41,6 +41,9 @@
     int draworder;
     int flipx;
     int flipy;
+    float saturation;
+    float contrast;
+    float brightness;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -66,6 +69,9 @@
 @property int draworder;
 @property int flipx;
 @property int flipy;
+@property float saturation;
+@property float contrast;
+@property float brightness;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;

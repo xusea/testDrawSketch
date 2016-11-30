@@ -10,6 +10,16 @@
 extern void opencvproxy_fillcontour(char * infile, char * outfile);
 extern void opencvproxy_imagecut(char * imagein, char * imageout , char *imagelog);
 extern double opencvproxy_com2image(char * leftfile, char * rightfile);
+
+float const IMGTcontrastIdentity = 1;
+float const IMGTcontrastMIN = 0.25;
+float const IMGTcontrastMAX = 4;
+float const IMGTsaturationIdentity = 1;
+float const IMGTsaturationMIN = 0;
+float const IMGTsaturationMAX = 2;
+float const IMGTbrightnessIdentity = 0;
+float const IMGTbrightnessMIN = -1;
+float const IMGTbrightnessMAX = 1;
 @implementation imagetrans
 +(void)test
 {
@@ -35,7 +45,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxin = [NSGraphicsContext graphicsContextWithBitmapImageRep: repin];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxin];
-    [inimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [inimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxin flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -133,7 +143,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxgray = [NSGraphicsContext graphicsContextWithBitmapImageRep: repgray];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxgray];
-    [gimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [gimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxgray flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -156,7 +166,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxorg = [NSGraphicsContext graphicsContextWithBitmapImageRep: reporg];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxorg];
-    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxorg flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -214,7 +224,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxorg = [NSGraphicsContext graphicsContextWithBitmapImageRep: reporg];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxorg];
-    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxorg flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -289,8 +299,8 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
         NSGraphicsContext *ctxout = [NSGraphicsContext graphicsContextWithBitmapImageRep: repout];
         [NSGraphicsContext saveGraphicsState];
         [NSGraphicsContext setCurrentContext: ctxout];
-        //[oimage drawAtPoint:NSZeroPoint fromRect: rect operation: NSCompositeCopy fraction: 1.0];
-        [oimage drawInRect:inrect fromRect:rect operation:NSCompositeCopy fraction:1.0];
+        //[oimage drawAtPoint:NSZeroPoint fromRect: rect operation: NSCompositingOperationCopy fraction: 1.0];
+        [oimage drawInRect:inrect fromRect:rect operation:NSCompositingOperationCopy fraction:1.0];
         [ctxout flushGraphics];
         [NSGraphicsContext restoreGraphicsState];
         NSData * outdata = [repout representationUsingType:NSPNGFileType properties:nil];
@@ -334,7 +344,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctx_dpi = [NSGraphicsContext graphicsContextWithBitmapImageRep: rep_dpi];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctx_dpi];
-    [image_dpi drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [image_dpi drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctx_dpi flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -395,8 +405,8 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctx_dpi = [NSGraphicsContext graphicsContextWithBitmapImageRep: rep_dpi];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctx_dpi];
-    [image_dpi drawInRect:NSMakeRect(0, 0, width, height) fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
-    //[image_dpi drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [image_dpi drawInRect:NSMakeRect(0, 0, width, height) fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
+    //[image_dpi drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctx_dpi flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -430,7 +440,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxorg = [NSGraphicsContext graphicsContextWithBitmapImageRep: reporg];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxorg];
-    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxorg flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -484,7 +494,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxgray = [NSGraphicsContext graphicsContextWithBitmapImageRep: repgray];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxgray];
-    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxgray flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -512,7 +522,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxgraybak = [NSGraphicsContext graphicsContextWithBitmapImageRep: repgraybak];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxgraybak];
-    [oimagebak drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [oimagebak drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxgraybak flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -614,7 +624,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxgray = [NSGraphicsContext graphicsContextWithBitmapImageRep: repgray];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxgray];
-    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [oimage drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxgray flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -642,7 +652,7 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     NSGraphicsContext *ctxgraybak = [NSGraphicsContext graphicsContextWithBitmapImageRep: repgraybak];
     [NSGraphicsContext saveGraphicsState];
     [NSGraphicsContext setCurrentContext: ctxgraybak];
-    [oimagebak drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositeCopy fraction: 1.0];
+    [oimagebak drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
     [ctxgraybak flushGraphics];
     [NSGraphicsContext restoreGraphicsState];
     
@@ -853,5 +863,58 @@ extern double opencvproxy_com2image(char * leftfile, char * rightfile);
     bitmap = [NSBitmapImageRep imageRepWithData:tiffData];
     CIImage * ciImage = [[CIImage alloc] initWithBitmapImageRep:bitmap];
     return ciImage;
+}
+
++(NSImage*)NSImageContrast:(NSImage*)image contrast:(float)contrast
+{
+    //0.25 4 1
+    return [self NSImageBCS:image v:contrast BCS:IMGTcontrast];
+}
+
++(NSImage*)NSImageSaturation:(NSImage*)image saturation:(float)saturation
+{
+    //0 2 1
+    return [self NSImageBCS:image v:saturation BCS:IMGTsaturation];
+}
+
++(NSImage*)NSImageBrightness:(NSImage*)image brightness:(float)brightness
+{
+    //-1 1 0
+    return [self NSImageBCS:image v:brightness BCS:IMGTbrightness];
+}
+
+//修改图片对比度、饱和度、亮度
++(NSImage*)NSImageBCS:(NSImage*)image v:(float)v BCS:(NSImageBCSType)BCS
+{
+    CIContext *context = [CIContext contextWithOptions:nil];
+    // NSImage * image    = [self currentImage];
+    NSData  * tiffData = [image TIFFRepresentation];
+    NSBitmapImageRep * bitmap;
+    bitmap = [NSBitmapImageRep imageRepWithData:tiffData];
+    CIImage * ciImage = [[CIImage alloc] initWithBitmapImageRep:bitmap];
+    CIFilter *filter = [CIFilter filterWithName:@"CIColorControls"];           // 3
+    [filter setValue:ciImage forKey:kCIInputImageKey];
+    switch(BCS)
+    {
+        case IMGTcontrast:
+            [filter setValue:[NSNumber numberWithFloat:v] forKey:@"inputContrast"];
+
+            break;
+        case IMGTsaturation:
+            [filter setValue:[NSNumber numberWithFloat:v] forKey:@"inputSaturation"];
+
+            break;
+        case IMGTbrightness:
+            [filter setValue:[NSNumber numberWithFloat:v] forKey:@"inputBrightness"];
+
+            break;
+    }
+    //[filter setValue:[NSNumber numberWithFloat:v] forKey:@"inputContrast"];
+    //NSLog(@"%@",[filter attributes]);
+    CIImage *result = [filter valueForKey:kCIOutputImageKey];              // 4
+    CGRect extent = [result extent];
+    CGImageRef cgImage = [context createCGImage:result fromRect:extent];// 5
+    NSImage* outimage = [self CGImageRef2NSImage:cgImage];
+    return outimage;
 }
 @end

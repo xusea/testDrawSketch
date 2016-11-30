@@ -147,7 +147,12 @@
     [_eirvindrawingboard initial];
     [_eirvindrawingboard setRiv:_rivindrawingboard];
     [_rivindrawingboard setQuerydrawlist:querydraw];
+    [_eirvindrawingboard setBrightnessslider:_showbrightness];
+    [_eirvindrawingboard setContrastslider:_showcontrast];
+    [_eirvindrawingboard setSaturationslider:_showsaturation];
     [_drawingboard initial];
+    
+    
     
 }
 
@@ -583,5 +588,14 @@
     }
     [[[_drawingboard eirv] q2i] setFlipy:1-[[[_drawingboard eirv] q2i]flipy]];
     [[_drawingboard eirv] setNeedsDisplay:YES];
+}
+- (IBAction)modifycontrast:(id)sender {
+    [_eirvindrawingboard setBCS:[_showcontrast floatValue] BCS:IMGTcontrast];
+}
+- (IBAction)modifysaturation:(id)sender {
+    [_eirvindrawingboard setBCS:[_showsaturation floatValue] BCS:IMGTsaturation];
+}
+- (IBAction)modifybrightness:(id)sender {
+    [_eirvindrawingboard setBCS:[_showbrightness floatValue] BCS:IMGTbrightness];
 }
 @end

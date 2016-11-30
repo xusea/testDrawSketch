@@ -61,7 +61,10 @@
                 continue;
             }
         }
-        
+        //转换亮度、对比度、饱和度
+        image = [imagetrans NSImageBCS:image v:[q2i brightness] BCS:IMGTbrightness];
+        image = [imagetrans NSImageBCS:image v:[q2i saturation] BCS:IMGTsaturation];
+        image = [imagetrans NSImageBCS:image v:[q2i contrast] BCS:IMGTcontrast];
         NSGraphicsContext *context = [NSGraphicsContext currentContext];
         
         [context saveGraphicsState];
