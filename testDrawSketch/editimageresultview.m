@@ -409,7 +409,9 @@
             handlerect = NSMakeRect(0, 0, handlesize.width, handlesize.height);
             handlerect.origin.x = [self selectedrect].origin.x + [self selectedrect].size.width / 2.0 - handlerect.size.width / 2.0;
             handlerect.origin.y = [self selectedrect].origin.y + [self selectedrect].size.height + 20;
+           // [q2i resetresimage];
             [self setNeedsDisplay:YES];
+            
             return 1;
         }
     }
@@ -565,6 +567,7 @@
                 [q2i setContrast:v];
                 break;
         }
+        [q2i resetresimage];
         [riv setNeedsDisplay:YES];
     }
 }

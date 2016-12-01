@@ -29,7 +29,7 @@
             continue;
         }
         //NSLog(@"%lu", i % [querydrawlist count]);
-        imageitem * it;
+    /*    imageitem * it;
         if([q2i getselectedimageitem] != nil)
         {
             it = [q2i getselectedimageitem];
@@ -64,7 +64,8 @@
         //转换亮度、对比度、饱和度
         image = [imagetrans NSImageBCS:image v:[q2i brightness] BCS:IMGTbrightness];
         image = [imagetrans NSImageBCS:image v:[q2i saturation] BCS:IMGTsaturation];
-        image = [imagetrans NSImageBCS:image v:[q2i contrast] BCS:IMGTcontrast];
+        image = [imagetrans NSImageBCS:image v:[q2i contrast] BCS:IMGTcontrast];*/
+        NSImage * image = [q2i getresimage];
         NSGraphicsContext *context = [NSGraphicsContext currentContext];
         
         [context saveGraphicsState];

@@ -44,6 +44,7 @@
     float saturation;
     float contrast;
     float brightness;
+    NSImage * resimage;
 }
 @property NSString * query;
 @property NSMutableArray *selist;
@@ -72,6 +73,7 @@
 @property float saturation;
 @property float contrast;
 @property float brightness;
+@property NSImage * resimage;
 -(void)getimages;
 -(void)downloadfile:(NSString *)url file:(NSString *)file;
 -(NSString *)getDocumentsPath;
@@ -90,4 +92,6 @@
 -(int)checkdownloadfile:(NSString *)filename;
 -(void)resetbestimagescore;
 -(void)forceselecteditem;
+-(NSImage *)getresimage;
+-(void)resetresimage;
 @end

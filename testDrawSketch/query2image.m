@@ -39,6 +39,7 @@
 @synthesize saturation;
 @synthesize contrast;
 @synthesize brightness;
+@synthesize resimage;
 - (id) init
 {
     if(self = [super init])
@@ -67,6 +68,7 @@
         saturation = IMGTsaturationIdentity;
         contrast = IMGTcontrastIdentity;
         brightness = IMGTbrightnessIdentity;
+        resimage = nil;
     }
     return self; 
 }
@@ -587,6 +589,7 @@
         [[bit myiobjectpoint] changevalue:@"3" index:0];
     }
     [self setBestimageind:bestind];
+    [self resetresimage];
 }
 -(void)forceselecteditem
 {
@@ -617,6 +620,41 @@
                                     sketch:NSMakeRect([dsketch leftbuttom].x, [  dsketch leftbuttom].y, [dsketch righttop].x - [dsketch leftbuttom].x, [dsketch righttop].y - [dsketch leftbuttom].y)
                                transparent:NSMakeRect(0,0,[image size].width, [image size].height)];
         
-    
+    [self resetresimage];
+}
+-(NSImage *)getresimage
+{
+    return resimage;
+}
+-(void)resetresimage
+{
+    imageitem * it;
+    if([self getselectedimageitem] != nil)
+    {
+        it = [self getselectedimageitem];
+    }
+    else if([self getbestimageitem] != nil)
+    {
+        it = [self getbestimageitem];
+    }
+    else
+    {
+        return;
+    }
+    if(backgroundflag == 1)
+    {
+        resimage = [[NSImage alloc]initWithContentsOfFile:[it filename]];
+    }
+    else
+    {
+        resimage = [[NSImage alloc]initWithContentsOfFile:[it transparentname]];
+    }
+    if(resimage == nil)
+    {
+        return;
+    }
+    resimage = [imagetrans NSImageBCS:resimage v:[self brightness] BCS:IMGTbrightness];
+    resimage = [imagetrans NSImageBCS:resimage v:[self saturation] BCS:IMGTsaturation];
+    resimage = [imagetrans NSImageBCS:resimage v:[self contrast] BCS:IMGTcontrast];
 }
 @end
