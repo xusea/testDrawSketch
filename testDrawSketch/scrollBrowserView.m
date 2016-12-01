@@ -191,6 +191,16 @@
                 }
             }
         }
+        else if(toolind == 3)
+        {
+            for(int i = index - 1 ; i >=0 ;i --)
+            {
+                [[[[self q2ipoint]imagesource] scrollimages]exchangeObjectAtIndex:i withObjectAtIndex:i+1];
+                NSLog(@"exchange %d %d", i , i+1);
+            }
+            [self reloadData];
+            NSLog(@"arrow");
+        }
         else
         {
             NSLog(@"what the fuck? %d", toolind);
@@ -217,8 +227,10 @@
     
     //NSInteger idx  = [self indexOfItemAtPoint:currentPosition];
     int idx = [self getindexfrompoint:currentPosition];
+    
     if(idx != -1)
     {
+        NSLog(@"mouseEntered %d", idx);
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:idx];
         
         [mio changevalue:@"1" index:2];
