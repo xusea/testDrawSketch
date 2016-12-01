@@ -193,6 +193,15 @@ static void setBundleImageOnLayer(CALayer *layer, CFStringRef imageName)
             insertframe.origin.y = 0;
             NSImage * insertimage = [NSImage imageNamed:@"insert.png"];
             [insertimage drawInRect:insertframe];
+            
+            //画向左箭头
+            NSRect arrowframe;
+            arrowframe.size.height = 20;
+            arrowframe.size.width = 20;
+            arrowframe.origin.x = 60;
+            arrowframe.origin.y = 0;
+            NSImage * arrowimage = [NSImage imageNamed:@"arrow.png"];
+            [arrowimage drawInRect:arrowframe];
         }
         
         //画logo

@@ -59,6 +59,7 @@
 		2914A81F1D71CC1F0021E9E6 /* stroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A81E1D71CC1F0021E9E6 /* stroke.png */; };
 		2914A8211D71D0860021E9E6 /* strokeclick.png in Resources */ = {isa = PBXBuildFile; fileRef = 2914A8201D71D0860021E9E6 /* strokeclick.png */; };
 		DF043B7E1DEECF4E00E42460 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF043B7D1DEECF4E00E42460 /* CoreImage.framework */; };
+		DF043B801DF062C000E42460 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DF043B7F1DF062C000E42460 /* arrow.png */; };
 		DF139FE71D7FE3460018C063 /* insert.png in Resources */ = {isa = PBXBuildFile; fileRef = DF139FE61D7FE3460018C063 /* insert.png */; };
 		DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */; };
 		DF27CE221CFFE4E0009DAA27 /* opencvproxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */; };
@@ -227,6 +228,7 @@
 		2914A81E1D71CC1F0021E9E6 /* stroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stroke.png; path = ../../icons/stroke.png; sourceTree = "<group>"; };
 		2914A8201D71D0860021E9E6 /* strokeclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = strokeclick.png; path = ../../icons/strokeclick.png; sourceTree = "<group>"; };
 		DF043B7D1DEECF4E00E42460 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		DF043B7F1DF062C000E42460 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = ../../icons/arrow.png; sourceTree = "<group>"; };
 		DF139FE61D7FE3460018C063 /* insert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insert.png; path = ../../icons/insert.png; sourceTree = "<group>"; };
 		DF27CE1D1CFEC5A7009DAA27 /* imagetrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imagetrans.h; sourceTree = "<group>"; };
 		DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imagetrans.m; sourceTree = "<group>"; };
@@ -622,6 +624,7 @@
 				DF139FE61D7FE3460018C063 /* insert.png */,
 				2914A8201D71D0860021E9E6 /* strokeclick.png */,
 				2914A81E1D71CC1F0021E9E6 /* stroke.png */,
+				DF043B7F1DF062C000E42460 /* arrow.png */,
 				2914A81C1D71C6E60021E9E6 /* pencil.png */,
 				DF3824DC1D7037B4006101F1 /* mouseover.png */,
 				2914A79E1D6F23D60021E9E6 /* backg.png */,
@@ -783,6 +786,7 @@
 				2914A7C71D6F23D60021E9E6 /* newbg.png in Resources */,
 				2914A7BB1D6F23D60021E9E6 /* background.png in Resources */,
 				DF6AA2691D927C310000184C /* resultdetailViewController.xib in Resources */,
+				DF043B801DF062C000E42460 /* arrow.png in Resources */,
 				DF3CFF991CF6908B008B325B /* Assets.xcassets in Resources */,
 				DF38248C1D6FDE95006101F1 /* progresswindow.xib in Resources */,
 				DFDE8E301D337A0300A13724 /* yellow.png in Resources */,
