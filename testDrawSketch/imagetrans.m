@@ -886,6 +886,7 @@ float const IMGTbrightnessMAX = 1;
 //修改图片对比度、饱和度、亮度
 +(NSImage*)NSImageBCS:(NSImage*)image v:(float)v BCS:(NSImageBCSType)BCS
 {
+    @autoreleasepool {
     CIContext *context = [CIContext contextWithOptions:nil];
     // NSImage * image    = [self currentImage];
     NSData  * tiffData = [image TIFFRepresentation];
@@ -915,6 +916,8 @@ float const IMGTbrightnessMAX = 1;
     CGRect extent = [result extent];
     CGImageRef cgImage = [context createCGImage:result fromRect:extent];// 5
     NSImage* outimage = [self CGImageRef2NSImage:cgImage];
+    
     return outimage;
+    }
 }
 @end

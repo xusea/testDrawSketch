@@ -29,6 +29,7 @@
 @synthesize serveroption;
 @synthesize lock;
 @synthesize imagedrawrect;
+@synthesize backgroundrect;
 @synthesize rotateDeg;
 @synthesize riv;
 @synthesize displayflag;
@@ -69,6 +70,7 @@
         contrast = IMGTcontrastIdentity;
         brightness = IMGTbrightnessIdentity;
         resimage = nil;
+        backgroundrect = NSZeroRect;
     }
     return self; 
 }
@@ -514,6 +516,7 @@
                     }
                 }
             }
+            [self resetresimage];
             break;
         }
     }
@@ -619,7 +622,9 @@
                                     canves:[dsketch frame]
                                     sketch:NSMakeRect([dsketch leftbuttom].x, [  dsketch leftbuttom].y, [dsketch righttop].x - [dsketch leftbuttom].x, [dsketch righttop].y - [dsketch leftbuttom].y)
                                transparent:NSMakeRect(0,0,[image size].width, [image size].height)];
-        
+    backgroundrect = [riv frame];
+    backgroundrect.origin.x = 0;
+    backgroundrect.origin.y = 0;
     [self resetresimage];
 }
 -(NSImage *)getresimage
@@ -651,10 +656,28 @@
     }
     if(resimage == nil)
     {
+        NSLog(@"what's the fuck?");
         return;
     }
+    [self resetresimageBCS];
+}
+-(void)resetresimageBCS
+{
+    [self resetresimageBCSB];
+    [self resetresimageBCSC];
+    [self resetresimageBCSS];
+}
+-(void)resetresimageBCSB
+{
     resimage = [imagetrans NSImageBCS:resimage v:[self brightness] BCS:IMGTbrightness];
-    resimage = [imagetrans NSImageBCS:resimage v:[self saturation] BCS:IMGTsaturation];
+}
+-(void)resetresimageBCSC
+{
     resimage = [imagetrans NSImageBCS:resimage v:[self contrast] BCS:IMGTcontrast];
 }
+-(void)resetresimageBCSS
+{
+    resimage = [imagetrans NSImageBCS:resimage v:[self saturation] BCS:IMGTsaturation];
+}
+
 @end

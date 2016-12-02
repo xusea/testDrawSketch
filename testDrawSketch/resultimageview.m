@@ -66,29 +66,35 @@
         image = [imagetrans NSImageBCS:image v:[q2i saturation] BCS:IMGTsaturation];
         image = [imagetrans NSImageBCS:image v:[q2i contrast] BCS:IMGTcontrast];*/
         NSImage * image = [q2i getresimage];
-        NSGraphicsContext *context = [NSGraphicsContext currentContext];
-        
-        [context saveGraphicsState];
-        CGFloat rotateDeg = [q2i degree];
-        NSRect selectedrect = [q2i imagedrawrect];
-        NSAffineTransform *rotate = [[NSAffineTransform alloc] init];
-               [rotate translateXBy: selectedrect.origin.x + selectedrect.size.width/2 yBy:selectedrect.origin.y + selectedrect.size.height/2];
-        [rotate rotateByDegrees:rotateDeg];
-        [rotate translateXBy:-(selectedrect.origin.x + selectedrect.size.width/2) yBy:-(selectedrect.origin.y + selectedrect.size.height/2)];
-        [rotate concat];
-        if([q2i flipx] == 1)
+        if([q2i backgroundflag] == 1)
         {
-            image = [imagetrans flipImageByX:image];            //NSLog(@"set flip X");
+            [image drawInRect:[q2i backgroundrect] fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0];
         }
-        
-        if([q2i flipy] == 1)
+        else
         {
-           image = [imagetrans flipImageByY:image];
-        }
-        [image drawInRect:[q2i imagedrawrect] fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0];
-        [context restoreGraphicsState];
+            NSGraphicsContext *context = [NSGraphicsContext currentContext];
+            
+            [context saveGraphicsState];
+            CGFloat rotateDeg = [q2i degree];
+            NSRect selectedrect = [q2i imagedrawrect];
+            NSAffineTransform *rotate = [[NSAffineTransform alloc] init];
+                   [rotate translateXBy: selectedrect.origin.x + selectedrect.size.width/2 yBy:selectedrect.origin.y + selectedrect.size.height/2];
+            [rotate rotateByDegrees:rotateDeg];
+            [rotate translateXBy:-(selectedrect.origin.x + selectedrect.size.width/2) yBy:-(selectedrect.origin.y + selectedrect.size.height/2)];
+            [rotate concat];
+            if([q2i flipx] == 1)
+            {
+                image = [imagetrans flipImageByX:image];            //NSLog(@"set flip X");
+            }
+            
+            if([q2i flipy] == 1)
+            {
+               image = [imagetrans flipImageByY:image];
+            }
+            [image drawInRect:[q2i imagedrawrect] fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0];
+            [context restoreGraphicsState];
       
-
+        }
     }
     return;
 }

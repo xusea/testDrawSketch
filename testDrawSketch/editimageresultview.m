@@ -559,14 +559,18 @@
         {
             case IMGTbrightness:
                 [q2i setBrightness:v];
+              //  [q2i resetresimageBCSB];
                 break;
             case IMGTsaturation:
                 [q2i setSaturation:v];
+              //  [q2i resetresimageBCSS];
                 break;
             case IMGTcontrast:
                 [q2i setContrast:v];
+              //  [q2i resetresimageBCSC];
                 break;
         }
+        //[q2i resetresimageBCS];
         [q2i resetresimage];
         [riv setNeedsDisplay:YES];
     }

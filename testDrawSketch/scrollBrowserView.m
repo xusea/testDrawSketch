@@ -53,35 +53,6 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    /*int pos = 0;
-    for(int i = 0 ;i < [[[q2ipoint imagesource] scrollimages] count]; i ++)
-    {
-        NSRect bound;
-        bound.size.width = 40;
-        bound.size.height = 40;
-        bound.origin.x = pos;
-        bound.origin.y = 0;
-        pos += 40;
-        NSBezierPath *trace = [[NSBezierPath alloc]init];
-        [trace setLineWidth:2];
-        [[NSColor blueColor] set];
-        [trace appendBezierPathWithRect:bound];
-        [trace closePath];
-        [trace stroke];
-        NSLog(@"%d", i);
-    }*/
-    
-    
-   /* NSRect bound = [self frame];
-    bound.origin.x = 0;
-    bound.origin.y = 0;
-    NSBezierPath *trace = [[NSBezierPath alloc]init];
-    [trace setLineWidth:2];
-    [[NSColor blueColor] set];
-    [trace appendBezierPathWithRect:bound];
-    [trace closePath];
-    [trace fill];*/
-    // Drawing code here.
 }
 - (IKImageBrowserCell *)newCellForRepresentedItem:(id)cell
 {
@@ -89,11 +60,11 @@
 }
 - (void)mouseDown:(NSEvent *)theEvent
 {
-    NSLog(@"duang duang duang");
+    //NSLog(@"duang duang duang");
     NSPoint currentPosition = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     
     int index =[self getindexfrompoint:currentPosition];
-    NSLog(@"click item %d", index);
+    //NSLog(@"click item %d", index);
     if(index != -1)
     {
         int toolind = [self gettoolfrompoint:currentPosition];
@@ -181,6 +152,7 @@
                             }
                         }
                         [[self q2ipoint] setSelectedimageind:i];
+                        [[self q2ipoint] resetresimage];
                         //[[self q2ipoint] setBestimageind:i];
                         NSLog(@"click bestind %d", i);
                         NSLog(@"subtitle :%@", [mio subtitle]);
@@ -196,10 +168,10 @@
             for(int i = index - 1 ; i >=0 ;i --)
             {
                 [[[[self q2ipoint]imagesource] scrollimages]exchangeObjectAtIndex:i withObjectAtIndex:i+1];
-                NSLog(@"exchange %d %d", i , i+1);
+                //NSLog(@"exchange %d %d", i , i+1);
             }
             [self reloadData];
-            NSLog(@"arrow");
+            //NSLog(@"arrow");
         }
         else
         {
@@ -230,7 +202,7 @@
     
     if(idx != -1)
     {
-        NSLog(@"mouseEntered %d", idx);
+        //NSLog(@"mouseEntered %d", idx);
         MyScrollImageObject * mio = [[[[self q2ipoint]imagesource] scrollimages]objectAtIndex:idx];
         
         [mio changevalue:@"1" index:2];

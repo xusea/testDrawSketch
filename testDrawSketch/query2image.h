@@ -34,6 +34,7 @@
     serverOptions *serveroption;
     NSLock *lock;
     NSRect imagedrawrect;
+    NSRect backgroundrect;
     float rotateDeg;
     resultimageview * riv;
     int displayflag;
@@ -63,6 +64,7 @@
 @property serverOptions *serveroption;
 @property NSLock * lock;
 @property NSRect imagedrawrect;
+@property NSRect backgroundrect;
 @property float rotateDeg;
 @property resultimageview * riv;
 @property int displayflag;
@@ -94,4 +96,8 @@
 -(void)forceselecteditem;
 -(NSImage *)getresimage;
 -(void)resetresimage;
+-(void)resetresimageBCS;
+-(void)resetresimageBCSB;
+-(void)resetresimageBCSC;
+-(void)resetresimageBCSS;
 @end
