@@ -840,6 +840,20 @@ float const IMGTbrightnessMAX = 1;
 
 +(NSImage*) CGImageRef2NSImage:(CGImageRef)image
 {
+    NSRect imageRect = NSMakeRect(0.0, 0.0, 0.0, 0.0);    
+    NSImage* newImage = nil;
+    
+    // Get the image dimensions.
+    imageRect.size.height = CGImageGetHeight(image);
+    imageRect.size.width = CGImageGetWidth(image);
+    // Create a new image to receive the Quartz image data
+    
+    newImage = [[NSImage alloc] initWithCGImage:image size:imageRect.size];
+    return newImage;
+}
+
+/*+(NSImage*) CGImageRef2NSImage:(CGImageRef)image
+{
     NSRect imageRect = NSMakeRect(0.0, 0.0, 0.0, 0.0);
     CGContextRef imageContext = nil;
     NSImage* newImage = nil;
@@ -855,7 +869,7 @@ float const IMGTbrightnessMAX = 1;
     CGContextDrawImage(imageContext, *(CGRect*)&imageRect, image);
     [newImage unlockFocus];
     return newImage;
-}
+}*/
 +(CIImage*)NSImage2CIImage:(NSImage*)image
 {
     NSData  * tiffData = [image TIFFRepresentation];

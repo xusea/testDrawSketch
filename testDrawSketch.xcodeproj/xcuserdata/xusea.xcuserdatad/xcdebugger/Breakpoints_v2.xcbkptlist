@@ -984,11 +984,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/imagetrans.m"
-            timestampString = "502212339.002479"
+            timestampString = "503467915.610411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "871"
-            endingLineNumber = "871"
+            startingLineNumber = "885"
+            endingLineNumber = "885"
             landmarkName = "+NSImageContrast:contrast:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1000,11 +1000,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/imagetrans.m"
-            timestampString = "502349404.732924"
+            timestampString = "503467915.610411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "915"
-            endingLineNumber = "915"
+            startingLineNumber = "929"
+            endingLineNumber = "929"
             landmarkName = "+NSImageBCS:v:BCS:"
             landmarkType = "7">
          </BreakpointContent>
