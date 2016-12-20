@@ -406,12 +406,23 @@
 
 -(void)run_convert
 {
+    int c = 0;
     while (YES) {
         [NSThread sleepForTimeInterval:0.1];
         [lock lock];
-        imageitem * imaget = nil;
         query2image * q2i = nil;
-        for(int i = 0 ; i < [querydraw count]; i ++)
+        imageitem * imaget = nil;
+        if([querydraw count] != 0)
+        {
+            c = c + 1;
+            c = c % [querydraw count];
+            
+            q2i = [querydraw objectAtIndex:c];
+            imaget = [q2i getdownimageitem];
+            [imaget setDownflag:2];
+        }
+        
+        /*for(int i = 0 ; i < [querydraw count]; i ++)
         {
             query2image * tempq2i = [querydraw objectAtIndex:i];
             imageitem * temp = [tempq2i getdownimageitem];
@@ -422,7 +433,7 @@
                 [imaget setDownflag:2];
                 break;
             }
-        }
+        }*/
         if(imaget != nil)
         {
             NSString * imagename = [imaget filename];

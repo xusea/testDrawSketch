@@ -755,12 +755,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-YY-FEz" customClass="editimageresultview">
-                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-RI-QMv" customClass="resultimageview">
                                             <rect key="frame" x="0.0" y="-2" width="495" height="267"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-YY-FEz" customClass="editimageresultview">
+                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </customView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-ZP-r72">

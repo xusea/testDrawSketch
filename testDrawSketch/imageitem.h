@@ -17,6 +17,7 @@
     NSString * logname;
     NSString * transparentname;
     NSString * strokename;
+    //0 初始化  1 下载完毕 2 开始下载
     int downflag;
     int ind;
     int type;//0 se , 1 image
