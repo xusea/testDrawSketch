@@ -18,6 +18,7 @@
                 <outlet property="backgroundviewindrawingboard" destination="zvY-ZP-r72" id="h6g-4c-CgO"/>
                 <outlet property="bigsizeimage" destination="f4q-rA-fbF" id="n76-zt-fOV"/>
                 <outlet property="bsindrawingboard" destination="NYS-2s-7VR" id="RrN-Zw-cnX"/>
+                <outlet property="bsinnerindrawingboard" destination="9OF-NQ-NVn" id="lY9-Wx-NrR"/>
                 <outlet property="dSC" destination="rLz-3s-Ftd" id="mY2-6u-Od7"/>
                 <outlet property="drawingboard" destination="8yZ-RT-HNT" id="LEd-ve-FUe"/>
                 <outlet property="dscindrawingboard" destination="3yZ-dY-kQJ" id="t7X-ot-uIn"/>
@@ -755,26 +756,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-RI-QMv" customClass="resultimageview">
-                                            <rect key="frame" x="0.0" y="-2" width="495" height="267"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </customView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-YY-FEz" customClass="editimageresultview">
-                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </customView>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-ZP-r72">
-                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bMu-eC-Sdo"/>
-                                        </imageView>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-dY-kQJ" customClass="drawSketchCollection">
-                                            <rect key="frame" x="0.0" y="0.0" width="495" height="262"/>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9OF-NQ-NVn" customClass="boardshell">
+                                            <rect key="frame" x="166" y="83" width="163" height="96"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <subviews>
-                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-rA-fbF" customClass="premattview">
-                                                    <rect key="frame" x="173" y="83" width="163" height="96"/>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-RI-QMv" customClass="resultimageview">
+                                                    <rect key="frame" x="-166" y="-85" width="495" height="267"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </customView>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-YY-FEz" customClass="editimageresultview">
+                                                    <rect key="frame" x="-166" y="-83" width="495" height="262"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </customView>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-ZP-r72">
+                                                    <rect key="frame" x="-166" y="-83" width="495" height="262"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bMu-eC-Sdo"/>
+                                                </imageView>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-dY-kQJ" customClass="drawSketchCollection">
+                                                    <rect key="frame" x="-166" y="-83" width="495" height="262"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <subviews>
+                                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-rA-fbF" customClass="premattview">
+                                                            <rect key="frame" x="173" y="83" width="163" height="96"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        </customView>
+                                                    </subviews>
                                                 </customView>
                                             </subviews>
                                         </customView>

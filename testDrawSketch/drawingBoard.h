@@ -17,12 +17,14 @@
     NSImageView * backgroundview;
     drawSketchCollection * dsc;
     boardshell * bs;
+    boardshell * bsinner;
     editimageresultview * eirv;
 }
 @property resultimageview * riv;
 @property NSImageView * backgroundview;
 @property drawSketchCollection * dsc;
 @property boardshell * bs;
+@property boardshell * bsinner;
 @property editimageresultview * eirv;
 -(void)initial;
 -(void)forcebestimage;

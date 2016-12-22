@@ -27,6 +27,7 @@
 @synthesize serveroption;
 @synthesize zoomFactor;
 @synthesize g_draworder;
+@synthesize curzoomFactor;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
    // [imagetrans color2stroke:@"/Users/xusea/Desktop/df23js773_resultfilepath.png" strokename:@"/Users/xusea/Desktop/123.png"];
@@ -52,6 +53,7 @@
     //初始化常量
     zoomFactor = 1.3;
     g_draworder = 0;
+    curzoomFactor = 1.0;
     // Insert code here to initialize your application
   /*  [imagetrans test];
     NSString* dir = NSTemporaryDirectory();
@@ -143,6 +145,7 @@
     [_drawingboard setBackgroundview:_backgroundviewindrawingboard];
     [_drawingboard setDsc:_dscindrawingboard];
     [_drawingboard setBs:_bsindrawingboard];
+    [_drawingboard setBsinner:_bsinnerindrawingboard];
     [_drawingboard setEirv:_eirvindrawingboard];
     [_eirvindrawingboard initial];
     [_eirvindrawingboard setRiv:_rivindrawingboard];
@@ -511,29 +514,59 @@
    // [[resultdetailView allview]setHidden:YES];
 }
 - (IBAction)zoomin:(id)sender {
-    NSRect visible = [_drawingboard documentVisibleRect];
-    NSRect newrect = NSOffsetRect(visible, -NSWidth(visible)*(zoomFactor - 1)/2.0, -NSHeight(visible)*(zoomFactor - 1)/2.0);
-    
-    NSRect frame = [_drawingboard.documentView frame];
-    [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(1/zoomFactor, 1/zoomFactor)];
-    
-    
-    
-    [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width / zoomFactor, frame.size.height / zoomFactor)];
-    
-    [[_drawingboard documentView] scrollPoint:newrect.origin];
+    if (curzoomFactor < 1.0001)
+    {
+        NSRect bsinnerindrawingboardframe = [_bsinnerindrawingboard frame];
+        bsinnerindrawingboardframe.size.width /= zoomFactor;
+        bsinnerindrawingboardframe.size.height /= zoomFactor;
+        bsinnerindrawingboardframe.origin.x = ([_bsindrawingboard frame].size.width - bsinnerindrawingboardframe.size.width) / 2;
+        bsinnerindrawingboardframe.origin.y = ([_bsindrawingboard frame].size.height - bsinnerindrawingboardframe.size.height) / 2;
+        [_bsinnerindrawingboard scaleUnitSquareToSize:NSMakeSize(1/zoomFactor, 1/zoomFactor)];
+        [_bsinnerindrawingboard setFrame:bsinnerindrawingboardframe];
+        [_drawingboard setNeedsDisplay:YES];
+    }
+    else
+    {
+        NSRect visible = [_drawingboard documentVisibleRect];
+        NSRect newrect = NSOffsetRect(visible, -NSWidth(visible)*(zoomFactor - 1)/2.0, -NSHeight(visible)*(zoomFactor - 1)/2.0);
+        
+        NSRect frame = [_drawingboard.documentView frame];
+        [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(1/zoomFactor, 1/zoomFactor)];
+        
+        
+        
+        [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width / zoomFactor, frame.size.height / zoomFactor)];
+       
+        
+        [[_drawingboard documentView] scrollPoint:newrect.origin];
+    }
+    curzoomFactor /= zoomFactor;
 }
 
 - (IBAction)zoomout:(id)sender {
-    NSRect visible = [_drawingboard documentVisibleRect];
-    NSRect newrect = NSInsetRect(visible, NSWidth(visible)*(1 - 1/zoomFactor)/2.0, NSHeight(visible)*(1 - 1/zoomFactor)/2.0);
-    NSRect frame = [[_drawingboard documentView] frame];
-    [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(zoomFactor, zoomFactor)];
-    [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width * zoomFactor, frame.size.height * zoomFactor)];
-    
-    [[_drawingboard documentView] scrollPoint:newrect.origin];
-    
-    
+    if (curzoomFactor < 1.0001)
+    {
+        NSRect bsinnerindrawingboardframe = [_bsinnerindrawingboard frame];
+        bsinnerindrawingboardframe.size.width *= zoomFactor;
+        bsinnerindrawingboardframe.size.height *= zoomFactor;
+        bsinnerindrawingboardframe.origin.x = ([_bsindrawingboard frame].size.width - bsinnerindrawingboardframe.size.width) / 2;
+        bsinnerindrawingboardframe.origin.y = ([_bsindrawingboard frame].size.height - bsinnerindrawingboardframe.size.height) / 2;
+        [_bsinnerindrawingboard scaleUnitSquareToSize:NSMakeSize(zoomFactor, zoomFactor)];
+        [_bsinnerindrawingboard setFrame:bsinnerindrawingboardframe];
+        [_drawingboard setNeedsDisplay:YES];
+    }
+    else
+    {
+        NSRect visible = [_drawingboard documentVisibleRect];
+        NSRect newrect = NSInsetRect(visible, NSWidth(visible)*(1 - 1/zoomFactor)/2.0, NSHeight(visible)*(1 - 1/zoomFactor)/2.0);
+        NSRect frame = [[_drawingboard documentView] frame];
+        [_drawingboard.documentView scaleUnitSquareToSize:NSMakeSize(zoomFactor, zoomFactor)];
+        [_drawingboard.documentView setFrame:NSMakeRect(0, 0, frame.size.width * zoomFactor, frame.size.height * zoomFactor)];
+        
+        [[_drawingboard documentView] scrollPoint:newrect.origin];
+    }
+    curzoomFactor /= zoomFactor;
+
 
 }
 

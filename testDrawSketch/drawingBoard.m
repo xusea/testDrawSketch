@@ -14,6 +14,7 @@
 @synthesize dsc;
 @synthesize backgroundview;
 @synthesize bs;
+@synthesize bsinner;
 @synthesize eirv;
 - (void)drawRect:(NSRect)dirtyRect {
  
@@ -22,6 +23,7 @@
 {
     NSRect frame = [self bounds];
     [bs setFrame:frame];
+    [bsinner setFrame:frame];
     [riv setFrame:frame];
     [dsc setFrame:frame];
     [backgroundview setFrame:frame];

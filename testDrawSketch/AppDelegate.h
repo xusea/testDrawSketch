@@ -41,6 +41,7 @@
     serverOptions * serveroption;
     float zoomFactor;
     int g_draworder;
+    float curzoomFactor;
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -54,6 +55,7 @@
 @property serverOptions * serveroption;
 @property float zoomFactor;
 @property int g_draworder;
+@property float curzoomFactor;
 - (IBAction)addDS:(id)sender;
 - (IBAction)debug:(id)sender;
 - (IBAction)trace2png:(id)sender;
@@ -103,6 +105,7 @@
 - (IBAction)modifysaturation:(id)sender;
 @property (weak) IBOutlet NSSlider *showbrightness;
 - (IBAction)modifybrightness:(id)sender;
+@property (weak) IBOutlet boardshell *bsinnerindrawingboard;
 
 @end
 
