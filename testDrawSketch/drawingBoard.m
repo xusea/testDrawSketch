@@ -12,10 +12,12 @@
 @implementation drawingBoard
 @synthesize riv;
 @synthesize dsc;
-@synthesize backgroundview;
+//@synthesize backgroundview;
 @synthesize bs;
 @synthesize bsinner;
 @synthesize eirv;
+@synthesize bgv;
+@synthesize bge;
 - (void)drawRect:(NSRect)dirtyRect {
  
 }
@@ -26,8 +28,9 @@
     [bsinner setFrame:frame];
     [riv setFrame:frame];
     [dsc setFrame:frame];
-    [backgroundview setFrame:frame];
     [eirv setFrame:frame];
+    [bgv setFrame:frame];
+    [bge setFrame:frame];
 }
 -(void)forcebestimage
 {

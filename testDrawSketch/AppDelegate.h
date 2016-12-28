@@ -106,6 +106,8 @@
 @property (weak) IBOutlet NSSlider *showbrightness;
 - (IBAction)modifybrightness:(id)sender;
 @property (weak) IBOutlet boardshell *bsinnerindrawingboard;
+@property (weak) IBOutlet backgroundview *bgvindrawingboard;
+@property (weak) IBOutlet backgroundedit *bgeindrawingboard;
 
 @end
 

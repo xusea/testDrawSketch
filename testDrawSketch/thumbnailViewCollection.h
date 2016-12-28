@@ -7,7 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+//#import "drawingBoard.h"
+@class drawingBoard;
 @interface thumbnailViewCollection : NSView
-
+{
+    drawingBoard * db;
+}
+@property drawingBoard * db;
 @end

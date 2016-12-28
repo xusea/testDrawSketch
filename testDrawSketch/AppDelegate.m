@@ -142,11 +142,13 @@
     //13.初始化大图结果，12即将废弃
     //[_drawingboard setHidden:YES];
     [_drawingboard setRiv:_rivindrawingboard];
-    [_drawingboard setBackgroundview:_backgroundviewindrawingboard];
+    //[_drawingboard setBackgroundview:_backgroundviewindrawingboard];
     [_drawingboard setDsc:_dscindrawingboard];
     [_drawingboard setBs:_bsindrawingboard];
     [_drawingboard setBsinner:_bsinnerindrawingboard];
     [_drawingboard setEirv:_eirvindrawingboard];
+    [_drawingboard setBgv:_bgvindrawingboard];
+    [_drawingboard setBge:_bgeindrawingboard];
     [_eirvindrawingboard initial];
     [_eirvindrawingboard setRiv:_rivindrawingboard];
     [_rivindrawingboard setQuerydrawlist:querydraw];
@@ -155,7 +157,7 @@
     [_eirvindrawingboard setSaturationslider:_showsaturation];
     [_drawingboard initial];
     
-    
+    [tvc setDb:_drawingboard];
     
 }
 

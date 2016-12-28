@@ -120,6 +120,8 @@
 		DF6AA2691D927C310000184C /* resultdetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF6AA2671D927C310000184C /* resultdetailViewController.xib */; };
 		DF9673911DC07D2B0075DC29 /* drawingBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9673901DC07D2B0075DC29 /* drawingBoard.m */; };
 		DF9673941DC07E640075DC29 /* boardshell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9673931DC07E640075DC29 /* boardshell.m */; };
+		DF98F9111E1246B200893D08 /* backgroundview.m in Sources */ = {isa = PBXBuildFile; fileRef = DF98F9101E1246B200893D08 /* backgroundview.m */; };
+		DF98F9141E12470900893D08 /* backgroundedit.m in Sources */ = {isa = PBXBuildFile; fileRef = DF98F9131E12470900893D08 /* backgroundedit.m */; };
 		DFC58C241D0EA40000E06DFD /* downfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC58C231D0EA40000E06DFD /* downfile.m */; };
 		DFCB82F71DBF1F2300ECC965 /* serverOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCB82F61DBF1F2300ECC965 /* serverOptions.m */; };
 		DFCB82FA1DBF2C1500ECC965 /* serveroptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFCB82F91DBF2C1500ECC965 /* serveroptions.plist */; };
@@ -325,6 +327,11 @@
 		DF9673901DC07D2B0075DC29 /* drawingBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawingBoard.m; sourceTree = "<group>"; };
 		DF9673921DC07E640075DC29 /* boardshell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boardshell.h; sourceTree = "<group>"; };
 		DF9673931DC07E640075DC29 /* boardshell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = boardshell.m; sourceTree = "<group>"; };
+		DF98F90F1E1246B200893D08 /* backgroundview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backgroundview.h; sourceTree = "<group>"; };
+		DF98F9101E1246B200893D08 /* backgroundview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = backgroundview.m; sourceTree = "<group>"; };
+		DF98F9121E12470900893D08 /* backgroundedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backgroundedit.h; sourceTree = "<group>"; };
+		DF98F9131E12470900893D08 /* backgroundedit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = backgroundedit.m; sourceTree = "<group>"; };
+		DF98F9151E1249D100893D08 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		DFC58C221D0EA40000E06DFD /* downfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downfile.h; sourceTree = "<group>"; };
 		DFC58C231D0EA40000E06DFD /* downfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downfile.m; sourceTree = "<group>"; };
 		DFCB82F51DBF1F2300ECC965 /* serverOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serverOptions.h; sourceTree = "<group>"; };
@@ -580,6 +587,11 @@
 				DF9673931DC07E640075DC29 /* boardshell.m */,
 				DF6836091DC895EB003AC041 /* editimageresultview.h */,
 				DF68360A1DC895EB003AC041 /* editimageresultview.m */,
+				DF98F90F1E1246B200893D08 /* backgroundview.h */,
+				DF98F9101E1246B200893D08 /* backgroundview.m */,
+				DF98F9121E12470900893D08 /* backgroundedit.h */,
+				DF98F9131E12470900893D08 /* backgroundedit.m */,
+				DF98F9151E1249D100893D08 /* util.h */,
 			);
 			path = testDrawSketch;
 			sourceTree = "<group>";
@@ -867,6 +879,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF98F9111E1246B200893D08 /* backgroundview.m in Sources */,
 				DFCB82F71DBF1F2300ECC965 /* serverOptions.m in Sources */,
 				DF3824971D6FDE96006101F1 /* progresswindow.m in Sources */,
 				DF57CC251D17B405005AD426 /* thumbnailView.m in Sources */,
@@ -885,6 +898,7 @@
 				2914A8061D6F241E0021E9E6 /* mattviewController.m in Sources */,
 				DFDE8E241D3379CC00A13724 /* segment-image.cpp in Sources */,
 				DF38248F1D6FDE96006101F1 /* TCScroller.m in Sources */,
+				DF98F9141E12470900893D08 /* backgroundedit.m in Sources */,
 				DF57CC1B1D0FADA0005AD426 /* imageitem.m in Sources */,
 				DF27CE221CFFE4E0009DAA27 /* opencvproxy.mm in Sources */,
 				DFDE8E1E1D3379CC00A13724 /* CmCv.mm in Sources */,

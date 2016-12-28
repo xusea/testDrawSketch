@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,7 +15,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="backgroundviewindrawingboard" destination="zvY-ZP-r72" id="h6g-4c-CgO"/>
+                <outlet property="bgeindrawingboard" destination="TWv-dR-n0p" id="4b0-co-DUd"/>
+                <outlet property="bgvindrawingboard" destination="tnY-Nx-PFh" id="3dg-NJ-je4"/>
                 <outlet property="bigsizeimage" destination="f4q-rA-fbF" id="n76-zt-fOV"/>
                 <outlet property="bsindrawingboard" destination="NYS-2s-7VR" id="RrN-Zw-cnX"/>
                 <outlet property="bsinnerindrawingboard" destination="9OF-NQ-NVn" id="lY9-Wx-NrR"/>
@@ -768,11 +769,14 @@
                                                     <rect key="frame" x="-166" y="-83" width="495" height="262"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </customView>
-                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-ZP-r72">
-                                                    <rect key="frame" x="-166" y="-83" width="495" height="262"/>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnY-Nx-PFh" customClass="backgroundview">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bMu-eC-Sdo"/>
-                                                </imageView>
+                                                </customView>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWv-dR-n0p" customClass="backgroundedit">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </customView>
                                                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-dY-kQJ" customClass="drawSketchCollection">
                                                     <rect key="frame" x="-166" y="-83" width="495" height="262"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -987,7 +991,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </box>
                     <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="S4V-YH-3k3">
-                        <rect key="frame" x="217" y="252" width="5" height="200"/>
+                        <rect key="frame" x="217" y="252" width="4" height="200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </box>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fuQ-p0-4Yy">

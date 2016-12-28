@@ -9,7 +9,7 @@
 #import "thumbnailViewCollection.h"
 
 @implementation thumbnailViewCollection
-
+@synthesize db;
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
 
