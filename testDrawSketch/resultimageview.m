@@ -68,7 +68,7 @@
         NSImage * image = [q2i getresimage];
         if([q2i backgroundflag] == 1)
         {
-            [image drawInRect:[q2i backgroundrect] fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0];
+          //  [image drawInRect:[q2i backgroundrect] fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0];
         }
         else
         {

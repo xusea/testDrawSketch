@@ -255,7 +255,9 @@
                     [[tv q2ipoint] setBackgroundflag:1 - [[tv q2ipoint] backgroundflag]];
                     if([[tv q2ipoint] backgroundflag ] == 1)
                     {
-                        [[[parentcollection db] bgv]setI:[q2ipoint getresimage]];
+                        //[[[parentcollection db] bgv]setI:[q2ipoint getresimage]];
+                        [[[parentcollection db] bge]setI:[q2ipoint getresimage]];
+                        
                     }
                     //NSLog(@"current selected item %d", i);
                 }

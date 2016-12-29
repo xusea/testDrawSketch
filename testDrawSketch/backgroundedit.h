@@ -24,7 +24,7 @@
 }
 @property(readwrite) NSImage * i;
 @property(readwrite) NSRect pointbound;
-@property(readwrite) NSRect imageboung;
+@property(readwrite) NSRect imagebound;
 @property(readwrite) NSPoint lastpoint;
 @property(readwrite) float zoomfactor;
 @property(readwrite) NSSize cornersize;
@@ -32,4 +32,5 @@
 @property(readwrite) int status;
 @property(readwrite) backgroundview * background;
 @property(readwrite) int resizegap;
+-(void)initial;
 @end

@@ -31,6 +31,7 @@
     [eirv setFrame:frame];
     [bgv setFrame:frame];
     [bge setFrame:frame];
+    [bge initial];
 }
 -(void)forcebestimage
 {

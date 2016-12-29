@@ -141,6 +141,7 @@
     
     //13.初始化大图结果，12即将废弃
     //[_drawingboard setHidden:YES];
+
     [_drawingboard setRiv:_rivindrawingboard];
     //[_drawingboard setBackgroundview:_backgroundviewindrawingboard];
     [_drawingboard setDsc:_dscindrawingboard];
@@ -158,7 +159,7 @@
     [_drawingboard initial];
     
     [tvc setDb:_drawingboard];
-    
+    NSLog(@"%f %f", [_bgeindrawingboard frame].size.width, [_bgeindrawingboard frame].size.height);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -339,7 +340,8 @@
     }
     NSLog(@"current selected images %@", str);*/
    // [imagetrans cutalpha:@"/Users/xusea/sketch2photo/tdog.png" outimage:@"/Users/xusea/sketch2photo/t2dog.png"];
-                                       
+    
+    NSLog(@"%f %f", [_bgeindrawingboard frame].size.width, [_bgeindrawingboard frame].size.height);
     [_resultimage setNeedsDisplay:YES];
     [[resultdetailView resultimage] setNeedsDisplay: YES];
     [[_drawingboard riv]setNeedsDisplay:YES];

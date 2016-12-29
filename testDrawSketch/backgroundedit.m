@@ -12,7 +12,7 @@
 
 @synthesize i;
 @synthesize pointbound;
-@synthesize imageboung;
+@synthesize imagebound;
 @synthesize zoomfactor;
 @synthesize lastpoint;
 @synthesize cornersize;
@@ -51,6 +51,15 @@
     background = nil;
     resizegap = 40;
 }
+-(void)initial
+{
+    pointbound = [self frame];
+    pointbound.origin.x = 0;
+    pointbound.origin.y = 0;
+    imagebound = [self frame];
+    imagebound.origin.x = 0;
+    imagebound.origin.y = 0;
+}
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
@@ -59,8 +68,8 @@
         return ;
     }
     
-    //[i drawInRect:[self pointbound]];
-    [i drawInRect:[self imageboung]];
+    [i drawInRect:[self pointbound]];
+    //[i drawInRect:[self imageboung]];
     NSBezierPath * bp = [NSBezierPath bezierPathWithRect:[self pointbound]];
     [bp setLineWidth:3 / zoomfactor];
     [[NSColor blackColor] set];
