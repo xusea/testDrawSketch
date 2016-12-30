@@ -19,4 +19,5 @@
 @property(readwrite) NSRect pointbound;
 @property(readwrite) int bgtype;
 @property drawingBoard * parentdb;
+-(void)initial;
 @end

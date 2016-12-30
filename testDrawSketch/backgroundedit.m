@@ -82,7 +82,7 @@
         if([q2i backgroundflag] == 1)
         {
             bgimage = [q2i getresimage];
-            [bgimage drawInRect:[self pointbound]];
+            //[bgimage drawInRect:[self pointbound]];
             break;
         }
     }

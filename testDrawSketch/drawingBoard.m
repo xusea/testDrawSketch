@@ -35,8 +35,10 @@
     [dsc setFrame:frame];
     [eirv setFrame:frame];
     [bgv setFrame:frame];
+    [bgv initial];
     [bge setFrame:frame];
     [bge initial];
+    [bge setBackground:bgv];
     
 }
 -(void)forcebestimage

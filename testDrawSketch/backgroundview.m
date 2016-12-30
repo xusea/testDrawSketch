@@ -33,6 +33,13 @@
     pointbound = [self bounds];
     bgtype = 1;
 }
+
+-(void)initial
+{
+    pointbound = [self frame];
+    pointbound.origin.x = 0;
+    pointbound.origin.y = 0;
+}
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     

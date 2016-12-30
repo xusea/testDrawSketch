@@ -150,6 +150,7 @@
     [_drawingboard setEirv:_eirvindrawingboard];
     [_drawingboard setBgv:_bgvindrawingboard];
     [_drawingboard setBge:_bgeindrawingboard];
+    
     [_eirvindrawingboard initial];
     [_eirvindrawingboard setRiv:_rivindrawingboard];
    // [_rivindrawingboard setQuerydrawlist:querydraw];
