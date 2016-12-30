@@ -765,12 +765,12 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </customView>
-                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWv-dR-n0p" customClass="backgroundedit">
-                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                </customView>
                                                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-RI-QMv" customClass="resultimageview">
                                                     <rect key="frame" x="-166" y="-85" width="495" height="267"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </customView>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWv-dR-n0p" customClass="backgroundedit">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </customView>
                                                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-YY-FEz" customClass="editimageresultview">
@@ -1089,6 +1089,17 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGh-WT-ZxO">
+                        <rect key="frame" x="290" y="538" width="71" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="bedit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xTu-vk-rAW">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="backgroundedit:" target="Voe-Tx-rLC" id="hnO-eN-PIZ"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>

@@ -7,6 +7,7 @@
 //
 
 #import "editimageresultview.h"
+#import "drawingBoard.h"
 
 @implementation editimageresultview
 @synthesize riv;
@@ -28,6 +29,7 @@
 @synthesize brightnessslider;
 @synthesize contrastslider;
 @synthesize saturationslider;
+@synthesize parentdb;
 -(void)initial
 {
     selectedrect = NSZeroRect;
@@ -366,7 +368,7 @@
 }
 -(int)getSelectedDS:(NSPoint)point
 {
-    if(riv == nil)
+    if(parentdb == nil)
     {
         return 0;
     }
@@ -399,9 +401,10 @@
         status = 5;
         return 5;
     }
-    for(int i = 0; i < [[riv querydrawlist] count] ; i++)
+    
+    for(int i = 0; i < [[parentdb querydrawlist] count] ; i++)
     {
-        q2i = [[riv querydrawlist] objectAtIndex:i];
+        q2i = [[parentdb querydrawlist] objectAtIndex:i];
         if([q2i displayflag] == 1 && NSPointInRect(point, [q2i imagedrawrect]))
         {
             selectedrect = [q2i imagedrawrect];

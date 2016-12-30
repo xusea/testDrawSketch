@@ -108,6 +108,7 @@
 @property (weak) IBOutlet boardshell *bsinnerindrawingboard;
 @property (weak) IBOutlet backgroundview *bgvindrawingboard;
 @property (weak) IBOutlet backgroundedit *bgeindrawingboard;
+- (IBAction)backgroundedit:(id)sender;
 
 @end
 

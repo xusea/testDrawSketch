@@ -7,14 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+@class drawingBoard;
 @interface backgroundview : NSView
 {
-    NSImage * i;
+    NSImage * bgimage;
     NSRect pointbound;
     int bgtype;
+    drawingBoard * parentdb;
 }
-@property(readwrite) NSImage * i;
+@property(readwrite) NSImage * bgimage;
 @property(readwrite) NSRect pointbound;
 @property(readwrite) int bgtype;
+@property drawingBoard * parentdb;
 @end

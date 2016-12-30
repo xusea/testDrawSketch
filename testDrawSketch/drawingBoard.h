@@ -23,6 +23,7 @@
     editimageresultview * eirv;
     backgroundview * bgv;
     backgroundedit * bge;
+    NSMutableArray * querydrawlist;
 }
 @property resultimageview * riv;
 //@property NSImageView * backgroundview;
@@ -32,6 +33,7 @@
 @property editimageresultview * eirv;
 @property backgroundview * bgv;
 @property backgroundedit * bge;
+@property NSMutableArray * querydrawlist;
 
 -(void)initial;
 -(void)forcebestimage;

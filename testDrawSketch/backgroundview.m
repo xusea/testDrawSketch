@@ -7,10 +7,10 @@
 //
 
 #import "backgroundview.h"
-
+#import "drawingBoard.h"
 @implementation backgroundview
-
-@synthesize i;
+@synthesize parentdb;
+@synthesize bgimage;
 @synthesize pointbound;
 @synthesize bgtype;
 - (id)initWithFrame:(NSRect)frame
@@ -23,25 +23,39 @@
                                                                          owner:self userInfo:nil];
         [self addTrackingArea:trackingArea];
     }
-    i = nil;
+    bgimage = nil;
     pointbound = [self bounds];
     bgtype = 1;
     return self;
 }
 - (void) awakeFromNib{
-    i = nil;
+    bgimage = nil;
     pointbound = [self bounds];
     bgtype = 1;
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    if(i == nil)
+    
+    if(parentdb == nil)
     {
-        return ;
+        return;
     }
-    [i drawInRect:[self pointbound]];
-    //[i drawInRect:[self pointbound] fromRect:[self pointbound] operation:NSCompositeSourceOver fraction:1.0];
-    // Drawing code here.
+    NSMutableArray * querydrawlist = [parentdb querydrawlist];
+    if(querydrawlist == nil)
+    {
+        return;
+    }
+    
+    for(int i = 0; i < [querydrawlist count] ; i++)
+    {
+        query2image * q2i = [querydrawlist objectAtIndex:i % [querydrawlist count]];
+        if([q2i backgroundflag] == 1)
+        {
+            bgimage = [q2i getresimage];
+            [bgimage drawInRect:[self pointbound]];
+            break;
+        }
+    }
 }
 
 

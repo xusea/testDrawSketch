@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "resultimageview.h"
 #import "query2image.h"
+@class drawingBoard;
 @interface editimageresultview : NSView
 {
     resultimageview * riv;
@@ -33,7 +34,7 @@
     NSSlider * brightnessslider;
     NSSlider * contrastslider;
     NSSlider * saturationslider;
-    
+    drawingBoard * parentdb;
 }
 @property resultimageview * riv;
 @property NSRect selectedrect;
@@ -56,6 +57,7 @@
 @property NSSlider * brightnessslider;
 @property NSSlider * contrastslider;
 @property NSSlider * saturationslider;
+@property drawingBoard * parentdb;
 -(void)initial;
 -(int)getSelectedDS:(NSPoint)point;
 -(int)checkclickcorner:(NSPoint)point;

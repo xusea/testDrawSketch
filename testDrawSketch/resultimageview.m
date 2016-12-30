@@ -9,12 +9,18 @@
 #import "resultimageview.h"
 #import "query2image.h"
 #import "imageitem.h"
+#import "drawingBoard.h"
 
 @implementation resultimageview
-@synthesize querydrawlist;
+//@synthesize querydrawlist;
+@synthesize parentdb;
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
+    if(parentdb == nil)
+    {
+        return;
+    }
+    NSMutableArray * querydrawlist = [parentdb querydrawlist];
     if(querydrawlist == nil)
     {
         return;

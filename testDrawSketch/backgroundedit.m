@@ -7,10 +7,10 @@
 //
 
 #import "backgroundedit.h"
-
+#import "drawingBoard.h"
 @implementation backgroundedit
 
-@synthesize i;
+@synthesize bgimage;
 @synthesize pointbound;
 @synthesize imagebound;
 @synthesize zoomfactor;
@@ -20,6 +20,8 @@
 @synthesize status;
 @synthesize background;
 @synthesize resizegap;
+@synthesize parentdb;
+@synthesize editflag;
 - (id)initWithFrame:(NSRect)frame
 {
     
@@ -39,6 +41,7 @@
     status = 0;
     background = nil;
     resizegap = 40;
+    editflag = 0;
     return self;
 }
 - (void) awakeFromNib{
@@ -50,6 +53,7 @@
     status = 0;
     background = nil;
     resizegap = 40;
+    editflag = 0;
 }
 -(void)initial
 {
@@ -62,14 +66,31 @@
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
-    if(i == nil)
+    if(parentdb == nil)
     {
-        return ;
+        return;
+    }
+    NSMutableArray * querydrawlist = [parentdb querydrawlist];
+    if(querydrawlist == nil)
+    {
+        return;
     }
     
-    [i drawInRect:[self pointbound]];
-    //[i drawInRect:[self imageboung]];
+    for(int i = 0; i < [querydrawlist count] ; i++)
+    {
+        query2image * q2i = [querydrawlist objectAtIndex:i % [querydrawlist count]];
+        if([q2i backgroundflag] == 1)
+        {
+            bgimage = [q2i getresimage];
+            [bgimage drawInRect:[self pointbound]];
+            break;
+        }
+    }
+   
+    if(editflag == 0)
+    {
+        return;
+    }
     NSBezierPath * bp = [NSBezierPath bezierPathWithRect:[self pointbound]];
     [bp setLineWidth:3 / zoomfactor];
     [[NSColor blackColor] set];
@@ -122,7 +143,7 @@
 }
 - (void)mouseDown:(NSEvent *)theEvent
 {
-    if(i == nil)
+    if(bgimage == nil)
     {
         return ;
     }
@@ -217,7 +238,7 @@
 }
 - (void)mouseDragged:(NSEvent *)theEvent
 {
-    if(i == nil)
+    if(bgimage == nil)
     {
         return ;
     }

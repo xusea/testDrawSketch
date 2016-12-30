@@ -8,10 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
+@class drawingBoard;
 @interface resultimageview : NSView
 {
-    NSMutableArray * querydrawlist;
+    //NSMutableArray * querydrawlist;
+    drawingBoard * parentdb;
 }
-@property NSMutableArray * querydrawlist;
+//@property NSMutableArray * querydrawlist;
+@property drawingBoard * parentdb;
 
 @end

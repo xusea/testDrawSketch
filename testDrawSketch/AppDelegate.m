@@ -98,7 +98,7 @@
     [convert_progress start];
     
     //6.初始化左下角缩略图
-    [_resultimage setQuerydrawlist:querydraw];
+   // [_resultimage setQuerydrawlist:querydraw];
     
     //7.右下角按钮
     [_extendbutton setEnabled:YES];
@@ -133,7 +133,7 @@
     resultdetailView = [[resultdetailViewController alloc]init];
     bool ret = [[NSBundle mainBundle]loadNibNamed:@"resultdetailViewController" owner:resultdetailView topLevelObjects:nil];
     NSLog(@"load resultdetailViewController %d", ret);
-    [[resultdetailView resultimage] setQuerydrawlist:querydraw];
+    //[[resultdetailView resultimage] setQuerydrawlist:querydraw];
     
     [[resultdetailView allview]setFrame:[_dSC frame]];
     [[_window contentView] addSubview:[resultdetailView allview]];
@@ -141,7 +141,7 @@
     
     //13.初始化大图结果，12即将废弃
     //[_drawingboard setHidden:YES];
-
+    [_drawingboard setQuerydrawlist:querydraw];
     [_drawingboard setRiv:_rivindrawingboard];
     //[_drawingboard setBackgroundview:_backgroundviewindrawingboard];
     [_drawingboard setDsc:_dscindrawingboard];
@@ -152,7 +152,7 @@
     [_drawingboard setBge:_bgeindrawingboard];
     [_eirvindrawingboard initial];
     [_eirvindrawingboard setRiv:_rivindrawingboard];
-    [_rivindrawingboard setQuerydrawlist:querydraw];
+   // [_rivindrawingboard setQuerydrawlist:querydraw];
     [_eirvindrawingboard setBrightnessslider:_showbrightness];
     [_eirvindrawingboard setContrastslider:_showcontrast];
     [_eirvindrawingboard setSaturationslider:_showsaturation];
@@ -645,5 +645,12 @@
 }
 - (IBAction)modifybrightness:(id)sender {
     [_eirvindrawingboard setBCS:[_showbrightness floatValue] BCS:IMGTbrightness];
+}
+- (IBAction)backgroundedit:(id)sender {
+    [[_drawingboard bge] setEditflag:1 - [[_drawingboard bge]editflag] ];
+    bool display = [[_drawingboard eirv] isHidden];
+    [[_drawingboard eirv] setHidden:!display];
+    [_drawingboard setNeedsDisplay:YES];
+    
 }
 @end

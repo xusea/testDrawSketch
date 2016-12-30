@@ -9,9 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import "backgroundview.h"
 #import "util.h"
+@class drawingBoard;
 @interface backgroundedit : NSView
 {
-    NSImage * i;
+    NSImage * bgimage;
     NSRect pointbound;
     NSRect imagebound;
     NSPoint lastpoint;
@@ -21,8 +22,10 @@
     int status;
     backgroundview * background;
     int resizegap;
+    drawingBoard * parentdb;
+    int editflag;
 }
-@property(readwrite) NSImage * i;
+@property NSImage * bgimage;
 @property(readwrite) NSRect pointbound;
 @property(readwrite) NSRect imagebound;
 @property(readwrite) NSPoint lastpoint;
@@ -32,5 +35,7 @@
 @property(readwrite) int status;
 @property(readwrite) backgroundview * background;
 @property(readwrite) int resizegap;
+@property drawingBoard * parentdb;
+@property int editflag;
 -(void)initial;
 @end
