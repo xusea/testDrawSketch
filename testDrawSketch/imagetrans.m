@@ -323,33 +323,10 @@ float const IMGTbrightnessMAX = 1;
         //NSLog(@"convertDPI72 cann't open file %@", orgimage);
         return;
     }
-    int width = [image_dpi size].width;
-    int height = [image_dpi size].height;
-    
-    if(width < 1 || height < 1)
-        return ;
-    
-    NSBitmapImageRep *rep_dpi = [[NSBitmapImageRep alloc]
-                                 initWithBitmapDataPlanes: NULL
-                                 pixelsWide: width
-                                 pixelsHigh: height
-                                 bitsPerSample: 8
-                                 samplesPerPixel: 4
-                                 hasAlpha: YES
-                                 isPlanar: NO
-                                 colorSpaceName: NSDeviceRGBColorSpace
-                                 bytesPerRow: width * 4
-                                 bitsPerPixel: 32];
-    
-    NSGraphicsContext *ctx_dpi = [NSGraphicsContext graphicsContextWithBitmapImageRep: rep_dpi];
-    [NSGraphicsContext saveGraphicsState];
-    [NSGraphicsContext setCurrentContext: ctx_dpi];
-    [image_dpi drawAtPoint: NSZeroPoint fromRect: NSZeroRect operation: NSCompositingOperationCopy fraction: 1.0];
-    [ctx_dpi flushGraphics];
-    [NSGraphicsContext restoreGraphicsState];
-    
-    NSSize pointsSize = rep_dpi.size;
-    NSSize pixelSize = NSMakeSize(rep_dpi.pixelsWide, rep_dpi.pixelsHigh);
+    NSBitmapImageRep *rep = [[image_dpi representations] objectAtIndex: 0];
+    //NSLog(@"%f %f %f %f",rep.size.width, rep.size.height, rep.pixelsWide, rep.pixelsHigh);
+    NSSize pointsSize = rep.size;
+    NSSize pixelSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
     
     CGFloat currentDPI = ceilf((72.0f * pixelSize.width)/pointsSize.width);
     NSLog(@"current DPI %f", currentDPI);
@@ -359,9 +336,9 @@ float const IMGTbrightnessMAX = 1;
     updatedPointsSize.width = ceilf((72.0f * pixelSize.width)/dpi);
     updatedPointsSize.height = ceilf((72.0f * pixelSize.height)/dpi);
     
-    [rep_dpi setSize:updatedPointsSize];
+    [rep setSize:updatedPointsSize];
     
-    NSData *data = [rep_dpi representationUsingType: NSPNGFileType properties: nil];
+    NSData *data = [rep representationUsingType: NSPNGFileType properties: nil];
     [data writeToFile: outimage atomically: YES];
 }
 +(void)resizeimage:(NSString *)orgimage outimage:(NSString *)outimage newsize:(NSSize)ns

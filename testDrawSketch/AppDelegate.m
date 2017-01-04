@@ -291,56 +291,32 @@
 }
 
 - (IBAction)debug:(id)sender {
-    /*for(int i = 0; i < [[[_window contentView] subviews] count]; i ++)
-    {
-        NSLog(@"%d %ld %@", i, [[[[_window contentView] subviews]objectAtIndex:i] tag], NSStringFromClass([[[[_window contentView] subviews]objectAtIndex:i] class]));
-    }*/
-   /* NSString * info = [NSString stringWithFormat:@"image download progress:{%lu}", (unsigned long)[[qi imageitemlist] count]];
-    for(int i = 0; i < [[qi imageitemlist] count]; i++)
-    {
-        imageitem * image = [[qi imageitemlist]objectAtIndex:i];
-        NSString * tstr = [NSString stringWithFormat:@" [%d %@ %d]", i, [image url], [image downflag]];
-        //NSLog(@"%@", tstr);
-        info = [info stringByAppendingString:tstr] ;
-    }
-    NSLog(@"%@", info);*/
+   
+    //////////测试透明文件生成
+   /* NSString * imagename = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/filename.jpg";
+    NSString * imagedpi72=@"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/dpi72.jpg";
+    NSString * grayname =  @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/grayname.jpg";
+    NSString * logname = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/logname.jpg";
+    NSString * transparentname = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/transparentname.jpg";
+    NSString * strokename = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/strokename.jpg";
+    NSString * transparenttemp = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/transparenttemp.jpg";
+       NSString * resizename = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/resizename.jpg";
     
-/*    NSString * info = [NSString stringWithFormat:@"image download progress:"];
-    NSLog(@"%@",info);
+    NSString * orgsizelogname = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/orgsizelogname.jpg";
     
-    MyScrollImageObject * msi = [[MyScrollImageObject alloc]init];
-    //[msi setUrl:@"http://111/111.html"];
-    NSString * imagename = @"11234";
-    NSImage * image =[[NSImage alloc]initWithContentsOfFile:@"/Users/xusea/sketch2photo/104.jpg"];
-    [msi setI:image];
-    [[imagedatasource scrollimages] addObject:msi];
+    NSImage * image =[[NSImage alloc]initWithContentsOfFile:imagename];
+
+    [imagetrans convertDPI72:imagename outimage:imagedpi72];
+    NSImage * image72 = [[NSImage alloc]initWithContentsOfFile:imagedpi72];
+    [imagetrans resizeimage:imagedpi72 outimage:resizename newsize:NSMakeSize(400, 300)];
+    [imagetrans imagecut:resizename outfile:grayname logfile:logname];
+    [imagetrans gray2stroke:logname strokename:strokename];
     
-    [_scrollimagelist reloadData];*/
-    //[imagetrans imagecut:@"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/IBPQYFGRWF.jpg" outfile:@"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/OVIIHWQYTD.png" logfile:@"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/VVIWSPVZYL.png"];
-    
-   /* NSString* dir = NSTemporaryDirectory();
-    //NSString * imagedog = [NSString stringWithFormat:@"/Users/xusea/sketch2photo/11.jpg"];
-    NSString * imagedog = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/IBPQYFGRWF.jpg";
-    NSString * imagedoggray = [NSString stringWithFormat:@"%@/doggray.png", dir];
-    NSString * imagedoglog = [NSString stringWithFormat:@"%@/doglog.png", dir];
-    [imagetrans imagecut:imagedog outfile:imagedoggray logfile:imagedoglog];*/
-/*    query2image * qi2 = [_scrollimagelist qi2point];
-    [_scrollimagelist setDataSource:nil];
-    
-    [_scrollimagelist reloadData];
-    [_scrollimagelist setDataSource:[qi2 imagesource]];
-    [_scrollimagelist reloadData];*/
-   /* NSMutableArray * querydrawlist = querydraw;
-    NSString * str = @"";
-    for(int i = 0; i < [querydrawlist count]; i ++)
-    {
-        query2image * q2i = [querydrawlist objectAtIndex:i];
-        imageitem * it = [q2i getbestimageitem];
-        str = [str stringByAppendingString:@" [] "];
-        str = [str stringByAppendingString:[it filename]];
-    }
-    NSLog(@"current selected images %@", str);*/
-   // [imagetrans cutalpha:@"/Users/xusea/sketch2photo/tdog.png" outimage:@"/Users/xusea/sketch2photo/t2dog.png"];
+    [imagetrans resizeimage:logname outimage:orgsizelogname newsize:[image72 size]];
+    [imagetrans imagesketch:orgsizelogname orgimage:imagedpi72 outimage:transparenttemp];
+    //[imagetrans imagesketch:logname orgimage:resizename outimage:transparenttemp];
+    [imagetrans cutalpha:transparenttemp outimage:transparentname];*/
+    /////////////////测试结束
     
     NSLog(@"%f %f", [_bgeindrawingboard frame].size.width, [_bgeindrawingboard frame].size.height);
     [_resultimage setNeedsDisplay:YES];
@@ -449,14 +425,18 @@
             NSString * logname = [imaget logname];
             NSString * transparentname = [imaget transparentname];
             NSString * strokename = [imaget strokename];
+            NSString * image72name = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
+            [imagetrans convertDPI72:imagename outimage:image72name];
+            
             NSString * transparenttemp = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
             NSImage * image =[[NSImage alloc]initWithContentsOfFile:imagename];
+            NSImage * image72 = [[NSImage alloc]initWithContentsOfFile:image72name];
             NSString * resizename = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
-            [imagetrans resizeimage:imagename outimage:resizename newsize:NSMakeSize(400, 300)];
+            [imagetrans resizeimage:image72name outimage:resizename newsize:NSMakeSize(400, 300)];
             [imagetrans imagecut:resizename outfile:grayname logfile:logname];
             [imagetrans gray2stroke:logname strokename:strokename];
             NSString * orgsizelogname = [NSTemporaryDirectory()  stringByAppendingPathComponent:[self getrandstr]];
-            [imagetrans resizeimage:logname outimage:orgsizelogname newsize:[image size]];
+            [imagetrans resizeimage:logname outimage:orgsizelogname newsize:[image72 size]];
             [imagetrans imagesketch:orgsizelogname orgimage:imagename outimage:transparenttemp];
             //[imagetrans imagesketch:logname orgimage:resizename outimage:transparenttemp];
             [imagetrans cutalpha:transparenttemp outimage:transparentname];
