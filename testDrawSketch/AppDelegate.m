@@ -293,7 +293,7 @@
 - (IBAction)debug:(id)sender {
    
     //////////测试透明文件生成
-   /* NSString * imagename = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/filename.jpg";
+  /*  NSString * imagename = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/filename.jpg";
     NSString * imagedpi72=@"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/dpi72.jpg";
     NSString * grayname =  @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/grayname.jpg";
     NSString * logname = @"/var/folders/vn/3_kk6lms28x0032c_v_z721h0000gn/T/123456/logname.jpg";

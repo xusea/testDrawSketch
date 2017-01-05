@@ -323,23 +323,34 @@ float const IMGTbrightnessMAX = 1;
         //NSLog(@"convertDPI72 cann't open file %@", orgimage);
         return;
     }
-    NSBitmapImageRep *rep = [[image_dpi representations] objectAtIndex: 0];
-    //NSLog(@"%f %f %f %f",rep.size.width, rep.size.height, rep.pixelsWide, rep.pixelsHigh);
-    NSSize pointsSize = rep.size;
-    NSSize pixelSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
-    
-    CGFloat currentDPI = ceilf((72.0f * pixelSize.width)/pointsSize.width);
-    NSLog(@"current DPI %f", currentDPI);
-    
-    NSSize updatedPointsSize = pointsSize;
-    
-    updatedPointsSize.width = ceilf((72.0f * pixelSize.width)/dpi);
-    updatedPointsSize.height = ceilf((72.0f * pixelSize.height)/dpi);
-    
-    [rep setSize:updatedPointsSize];
-    
-    NSData *data = [rep representationUsingType: NSPNGFileType properties: nil];
-    [data writeToFile: outimage atomically: YES];
+    if([[image_dpi representations] count] >0)
+    {
+        NSBitmapImageRep *rep = [[image_dpi representations] objectAtIndex: 0];
+        //NSLog(@"%f %f %f %f",rep.size.width, rep.size.height, rep.pixelsWide, rep.pixelsHigh);
+        if(rep == nil)
+        {
+            return;
+        }
+        NSSize pointsSize = rep.size;
+        NSSize pixelSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
+        
+        CGFloat currentDPI = ceilf((72.0f * pixelSize.width)/pointsSize.width);
+        NSLog(@"current DPI %f", currentDPI);
+        
+        NSSize updatedPointsSize = pointsSize;
+        
+        updatedPointsSize.width = ceilf((72.0f * pixelSize.width)/dpi);
+        updatedPointsSize.height = ceilf((72.0f * pixelSize.height)/dpi);
+        
+        [rep setSize:updatedPointsSize];
+        
+        NSData *data = [rep representationUsingType: NSPNGFileType properties: nil];
+        [data writeToFile: outimage atomically: YES];
+    }
+    else
+    {
+        return;
+    }
 }
 +(void)resizeimage:(NSString *)orgimage outimage:(NSString *)outimage newsize:(NSSize)ns
 {
@@ -364,6 +375,8 @@ float const IMGTbrightnessMAX = 1;
     }
     width /= ratio;
     height /= ratio;
+    width = (int)width;
+    height = (int)height;
     if(width < 1 || height < 1)
         return ;
     

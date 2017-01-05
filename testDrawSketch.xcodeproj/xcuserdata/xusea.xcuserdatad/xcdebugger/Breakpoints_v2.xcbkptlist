@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/imagetrans.m"
-            timestampString = "505213547.930099"
+            timestampString = "505291183.044636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "656"
-            endingLineNumber = "656"
+            startingLineNumber = "669"
+            endingLineNumber = "669"
             landmarkName = "+color2stroke:strokename:"
             landmarkType = "7">
          </BreakpointContent>
@@ -680,11 +680,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/imagetrans.m"
-            timestampString = "505213547.930099"
+            timestampString = "505291183.044636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "722"
-            endingLineNumber = "722"
+            startingLineNumber = "735"
+            endingLineNumber = "735"
             landmarkName = "+getDrawPosition:canves:sketch:transparent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -984,11 +984,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/imagetrans.m"
-            timestampString = "505213547.930099"
+            timestampString = "505291183.044636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "862"
-            endingLineNumber = "862"
+            startingLineNumber = "875"
+            endingLineNumber = "875"
             landmarkName = "+NSImageContrast:contrast:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1000,11 +1000,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testDrawSketch/imagetrans.m"
-            timestampString = "505213547.930099"
+            timestampString = "505291183.044636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "906"
-            endingLineNumber = "906"
+            startingLineNumber = "919"
+            endingLineNumber = "919"
             landmarkName = "+NSImageBCS:v:BCS:"
             landmarkType = "7">
          </BreakpointContent>
