@@ -23,6 +23,9 @@
 #import "resultdetailViewController.h"
 #import "serverOptions.h"
 #import "drawingBoard.h"
+#import "preferencesWindow.h"
+#import "preferencesView.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     query2image * qi;
@@ -42,6 +45,9 @@
     float zoomFactor;
     int g_draworder;
     float curzoomFactor;
+    preferencesWindow * preferenceswindow;
+    preferencesView * preferencesview;
+    
 }
 @property query2image * qi;
 @property scrollimagedelegate * imagedatasource;
@@ -109,6 +115,9 @@
 @property (weak) IBOutlet backgroundview *bgvindrawingboard;
 @property (weak) IBOutlet backgroundedit *bgeindrawingboard;
 - (IBAction)backgroundedit:(id)sender;
+- (IBAction)openPreferences:(id)sender;
+@property preferencesWindow * preferenceswindow;
+@property preferencesView * preferencesview;
 
 @end
 

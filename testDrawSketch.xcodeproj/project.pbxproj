@@ -61,6 +61,12 @@
 		DF043B7E1DEECF4E00E42460 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF043B7D1DEECF4E00E42460 /* CoreImage.framework */; };
 		DF043B801DF062C000E42460 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DF043B7F1DF062C000E42460 /* arrow.png */; };
 		DF139FE71D7FE3460018C063 /* insert.png in Resources */ = {isa = PBXBuildFile; fileRef = DF139FE61D7FE3460018C063 /* insert.png */; };
+		DF27BD9B1E27B025003DEC57 /* preferencesWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27BD991E27B025003DEC57 /* preferencesWindow.m */; };
+		DF27BD9C1E27B025003DEC57 /* preferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF27BD9A1E27B025003DEC57 /* preferencesWindow.xib */; };
+		DF27BDA01E27B06E003DEC57 /* preferencesView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27BD9E1E27B06E003DEC57 /* preferencesView.m */; };
+		DF27BDA11E27B06E003DEC57 /* preferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF27BD9F1E27B06E003DEC57 /* preferencesView.xib */; };
+		DF27BDA51E27BCF2003DEC57 /* preferencesSE.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27BDA31E27BCF2003DEC57 /* preferencesSE.m */; };
+		DF27BDA61E27BCF2003DEC57 /* preferencesSE.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF27BDA41E27BCF2003DEC57 /* preferencesSE.xib */; };
 		DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */; };
 		DF27CE221CFFE4E0009DAA27 /* opencvproxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */; };
 		DF27CE241CFFEE38009DAA27 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF27CE231CFFEE38009DAA27 /* AppKit.framework */; };
@@ -106,6 +112,7 @@
 		DF3CFFA71CF6908B008B325B /* testDrawSketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFA61CF6908B008B325B /* testDrawSketchTests.m */; };
 		DF3CFFB21CF6908B008B325B /* testDrawSketchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFB11CF6908B008B325B /* testDrawSketchUITests.m */; };
 		DF3CFFC11CF693AE008B325B /* drawSketch.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFC01CF693AE008B325B /* drawSketch.m */; };
+		DF3F3CDF1E31E7D200CB2C0C /* ICImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3F3CDE1E31E7D200CB2C0C /* ICImageCell.m */; };
 		DF415F4D1DBB4B4000079302 /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = DF415F4C1DBB4B4000079302 /* pink.png */; };
 		DF57CC181D0FA5F6005AD426 /* query2image.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC171D0FA5F6005AD426 /* query2image.m */; };
 		DF57CC1B1D0FADA0005AD426 /* imageitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC1A1D0FADA0005AD426 /* imageitem.m */; };
@@ -232,6 +239,15 @@
 		DF043B7D1DEECF4E00E42460 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		DF043B7F1DF062C000E42460 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = ../../icons/arrow.png; sourceTree = "<group>"; };
 		DF139FE61D7FE3460018C063 /* insert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insert.png; path = ../../icons/insert.png; sourceTree = "<group>"; };
+		DF27BD981E27B025003DEC57 /* preferencesWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferencesWindow.h; sourceTree = "<group>"; };
+		DF27BD991E27B025003DEC57 /* preferencesWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preferencesWindow.m; sourceTree = "<group>"; };
+		DF27BD9A1E27B025003DEC57 /* preferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = preferencesWindow.xib; sourceTree = "<group>"; };
+		DF27BD9D1E27B06E003DEC57 /* preferencesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferencesView.h; sourceTree = "<group>"; };
+		DF27BD9E1E27B06E003DEC57 /* preferencesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preferencesView.m; sourceTree = "<group>"; };
+		DF27BD9F1E27B06E003DEC57 /* preferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = preferencesView.xib; sourceTree = "<group>"; };
+		DF27BDA21E27BCF2003DEC57 /* preferencesSE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferencesSE.h; sourceTree = "<group>"; };
+		DF27BDA31E27BCF2003DEC57 /* preferencesSE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preferencesSE.m; sourceTree = "<group>"; };
+		DF27BDA41E27BCF2003DEC57 /* preferencesSE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = preferencesSE.xib; sourceTree = "<group>"; };
 		DF27CE1D1CFEC5A7009DAA27 /* imagetrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imagetrans.h; sourceTree = "<group>"; };
 		DF27CE1E1CFEC5A7009DAA27 /* imagetrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imagetrans.m; sourceTree = "<group>"; };
 		DF27CE201CFFE4E0009DAA27 /* opencvproxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = opencvproxy.mm; sourceTree = "<group>"; };
@@ -303,6 +319,8 @@
 		DF3CFFB31CF6908B008B325B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF3CFFBF1CF693AE008B325B /* drawSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawSketch.h; sourceTree = "<group>"; };
 		DF3CFFC01CF693AE008B325B /* drawSketch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawSketch.m; sourceTree = "<group>"; };
+		DF3F3CDD1E31E7D200CB2C0C /* ICImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageCell.h; sourceTree = "<group>"; };
+		DF3F3CDE1E31E7D200CB2C0C /* ICImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCell.m; sourceTree = "<group>"; };
 		DF415F4C1DBB4B4000079302 /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pink.png; path = ../../icons/pink.png; sourceTree = "<group>"; };
 		DF57CC161D0FA5F6005AD426 /* query2image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = query2image.h; sourceTree = "<group>"; };
 		DF57CC171D0FA5F6005AD426 /* query2image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = query2image.m; sourceTree = "<group>"; };
@@ -447,10 +465,10 @@
 				DF3824881D6FDE95006101F1 /* matt.mm */,
 				DF3824891D6FDE95006101F1 /* progresswindow.m */,
 				DF38248A1D6FDE95006101F1 /* progresswindow.h */,
-				2914A8031D6F241E0021E9E6 /* mattviewController.h */,
 				DF6AA2651D927C310000184C /* resultdetailViewController.h */,
 				DF6AA2661D927C310000184C /* resultdetailViewController.m */,
 				DF6AA2671D927C310000184C /* resultdetailViewController.xib */,
+				2914A8031D6F241E0021E9E6 /* mattviewController.h */,
 				2914A8041D6F241E0021E9E6 /* mattviewController.m */,
 				2914A8051D6F241E0021E9E6 /* mattviewController.xib */,
 				DF3824E11D797908006101F1 /* mattbackgroundview.h */,
@@ -465,6 +483,24 @@
 				DF043B7D1DEECF4E00E42460 /* CoreImage.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF27BD971E27B00F003DEC57 /* preferences */ = {
+			isa = PBXGroup;
+			children = (
+				DF27BD981E27B025003DEC57 /* preferencesWindow.h */,
+				DF27BD991E27B025003DEC57 /* preferencesWindow.m */,
+				DF27BD9A1E27B025003DEC57 /* preferencesWindow.xib */,
+				DF27BD9D1E27B06E003DEC57 /* preferencesView.h */,
+				DF27BD9E1E27B06E003DEC57 /* preferencesView.m */,
+				DF27BD9F1E27B06E003DEC57 /* preferencesView.xib */,
+				DF27BDA21E27BCF2003DEC57 /* preferencesSE.h */,
+				DF27BDA31E27BCF2003DEC57 /* preferencesSE.m */,
+				DF27BDA41E27BCF2003DEC57 /* preferencesSE.xib */,
+				DF3F3CDD1E31E7D200CB2C0C /* ICImageCell.h */,
+				DF3F3CDE1E31E7D200CB2C0C /* ICImageCell.m */,
+			);
+			name = preferences;
 			sourceTree = "<group>";
 		};
 		DF27CE471CFFFFBF009DAA27 /* cm */ = {
@@ -495,6 +531,7 @@
 		DF3CFF861CF6908B008B325B = {
 			isa = PBXGroup;
 			children = (
+				DF27BD971E27B00F003DEC57 /* preferences */,
 				DFCB82F81DBF2BD000ECC965 /* optionplist */,
 				DF3824BA1D6FDF3C006101F1 /* libopencv_videostab.2.4.3.dylib */,
 				DF3824BB1D6FDF3C006101F1 /* libopencv_stitching.2.4.3.dylib */,
@@ -805,6 +842,7 @@
 				2914A7BF1D6F23D60021E9E6 /* in.png in Resources */,
 				2914A7D11D6F23D60021E9E6 /* start.png in Resources */,
 				DFDE8E2C1D337A0300A13724 /* green.png in Resources */,
+				DF27BDA11E27B06E003DEC57 /* preferencesView.xib in Resources */,
 				DF3824EA1D79B718006101F1 /* mattwindowcontroller.xib in Resources */,
 				DFCB82FF1DBF2F7D00ECC965 /* bingimage.ico in Resources */,
 				2914A7C21D6F23D60021E9E6 /* itunes_barFillBeforeknob.png in Resources */,
@@ -824,10 +862,12 @@
 				2914A7D41D6F23D60021E9E6 /* zoominclick.png in Resources */,
 				2914A7CD1D6F23D60021E9E6 /* rightbuttom.png in Resources */,
 				2914A7C41D6F23D60021E9E6 /* itunes_barRightAge.png in Resources */,
+				DF27BD9C1E27B025003DEC57 /* preferencesWindow.xib in Resources */,
 				DFCB83001DBF2F7D00ECC965 /* baiduimage.ico in Resources */,
 				2914A7C91D6F23D60021E9E6 /* out.png in Resources */,
 				2914A7C51D6F23D60021E9E6 /* itunes_knob.png in Resources */,
 				2914A7D51D6F23D60021E9E6 /* zoomout.png in Resources */,
+				DF27BDA61E27BCF2003DEC57 /* preferencesSE.xib in Resources */,
 				DF3CFF9C1CF6908B008B325B /* MainMenu.xib in Resources */,
 				2914A8071D6F241E0021E9E6 /* mattviewController.xib in Resources */,
 				DFCB82FA1DBF2C1500ECC965 /* serveroptions.plist in Resources */,
@@ -888,11 +928,13 @@
 				DF3824931D6FDE96006101F1 /* sharedmatting.mm in Sources */,
 				DFEA8ED21D2CFCD800A2D87A /* resultimageview.m in Sources */,
 				DF3824901D6FDE96006101F1 /* SynchroScrollView.m in Sources */,
+				DF27BDA01E27B06E003DEC57 /* preferencesView.m in Sources */,
 				DF5B40AC1D193739008F8F26 /* drawSketchCollection.m in Sources */,
 				DFDE8E201D3379CC00A13724 /* CmEvaluation.mm in Sources */,
 				DFEA8EC51D23BA2900A2D87A /* scrollBrowserView.m in Sources */,
 				DFC58C241D0EA40000E06DFD /* downfile.m in Sources */,
 				DFDE8E231D3379CC00A13724 /* CmSaliencyRC.mm in Sources */,
+				DF27BDA51E27BCF2003DEC57 /* preferencesSE.m in Sources */,
 				DF3824E91D79B718006101F1 /* mattwindowcontroller.m in Sources */,
 				DFDE8E1F1D3379CC00A13724 /* cmdefine.mm in Sources */,
 				2914A8061D6F241E0021E9E6 /* mattviewController.m in Sources */,
@@ -907,6 +949,7 @@
 				DF3CFF971CF6908B008B325B /* main.m in Sources */,
 				DF9673941DC07E640075DC29 /* boardshell.m in Sources */,
 				DF3CFFC11CF693AE008B325B /* drawSketch.m in Sources */,
+				DF27BD9B1E27B025003DEC57 /* preferencesWindow.m in Sources */,
 				2914A80A1D6F2B3C0021E9E6 /* BrushPoint.m in Sources */,
 				DF3824951D6FDE96006101F1 /* CTCSlider.m in Sources */,
 				DF3824911D6FDE96006101F1 /* RFOverlayScroller.m in Sources */,
@@ -921,6 +964,7 @@
 				DF3824921D6FDE96006101F1 /* backgroundbound.m in Sources */,
 				DF3824941D6FDE96006101F1 /* CTCSliderCell.m in Sources */,
 				DF68360B1DC895EB003AC041 /* editimageresultview.m in Sources */,
+				DF3F3CDF1E31E7D200CB2C0C /* ICImageCell.m in Sources */,
 				DF27CE1F1CFEC5A7009DAA27 /* imagetrans.m in Sources */,
 				DF9673911DC07D2B0075DC29 /* drawingBoard.m in Sources */,
 				DF3824E01D703A57006101F1 /* premattview.m in Sources */,

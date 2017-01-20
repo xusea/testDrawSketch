@@ -28,6 +28,9 @@
 @synthesize zoomFactor;
 @synthesize g_draworder;
 @synthesize curzoomFactor;
+@synthesize preferenceswindow;
+@synthesize preferencesview;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
    // [imagetrans color2stroke:@"/Users/xusea/Desktop/df23js773_resultfilepath.png" strokename:@"/Users/xusea/Desktop/123.png"];
@@ -633,5 +636,33 @@
     [[_drawingboard eirv] setHidden:!display];
     [_drawingboard setNeedsDisplay:YES];
     
+}
+
+- (IBAction)openPreferences:(id)sender {
+    
+    /*
+     mattview = [[mattviewController alloc]init];
+     bool ret = [[NSBundle mainBundle] loadNibNamed:@"mattviewController" owner:mattview topLevelObjects:nil];
+     NSLog(@"load mattviewController %d", ret);
+     [mattview viewDidLoad];
+     mattwindow = [[mattwindowcontroller alloc]init];
+    
+    ret = [[NSBundle mainBundle]loadNibNamed:@"mattwindowcontroller" owner:mattwindow topLevelObjects:nil];
+    NSLog(@"load mattwindowController %d", ret);
+    [mattview addimage:[it filename] strokename:[it strokename] transparentname:[it transparentname]];
+    [[[mattwindow window] contentView] addSubview:[mattview allview]];
+    */
+    preferencesview = [[preferencesView alloc]init];
+    bool ret = [[NSBundle mainBundle] loadNibNamed:@"preferencesView" owner:preferencesview topLevelObjects:nil];
+    NSLog(@"preferencesview load %d", ret);
+
+    [preferencesview setServeroption:serveroption];
+    [preferencesview viewDidLoad];
+    
+
+    preferenceswindow = [[preferencesWindow alloc]init];
+    ret = [[NSBundle mainBundle]loadNibNamed:@"preferencesWindow" owner:preferenceswindow topLevelObjects:nil];
+    [[[preferenceswindow window] contentView] addSubview:[preferencesview view]];
+    NSLog(@"preferencesview load %d", ret);
 }
 @end
