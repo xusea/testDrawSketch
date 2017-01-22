@@ -61,7 +61,7 @@
 }
 - (NSCell *)tableView:(NSTableView *)tableView dataCellForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    NSLog(@"image image image");
+    //NSLog(@"image image image");
     if(serveroption == nil || [[serveroption selist] count] == 0)
     {
         return nil;
@@ -76,5 +76,38 @@
     }
     return nil;
 }
+- (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    //NSLog(@"fffffff");
+    //SimpleData *data = [array objectAtIndex:row];
+    if(serveroption == nil || [[serveroption selist] count] == 0)
+    {
+        return;
+    }
+    seOptions * se = [[serveroption selist] objectAtIndex:row];
+    NSString *identifier = [tableColumn identifier];
+    
+    if ([identifier isEqualToString:@"secheck"]) {
+        YepCheckImageCell *checkCell = cell;
+        [checkCell setTitle:@"fffff"];
+        [checkCell setIsChecked:[se check]];
+    }
+   /* else if ([identifier isEqualToString:@"id"])
+    {
+        NSTextFieldCell *textCell = cell;
+        [textCell setTitle:[data iD]];
+    }*/
+}
 
+-(void) setCheckItem:(id) data
+{
+    NSNumber *row = data;
+    if(serveroption == nil || [[serveroption selist] count] == 0)
+    {
+        return;
+    }
+    seOptions * se = [[serveroption selist] objectAtIndex:[row intValue]];
+    [se setCheck:1-[se check]];
+    [_setableview setNeedsDisplay:YES];
+}
 @end

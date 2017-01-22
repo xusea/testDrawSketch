@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "serverOptions.h"
 #import "ICImageCell.h"
+#import "YepCheckImageCell.h"
 @interface preferencesSE : NSViewController
 {
     serverOptions * serveroption;
@@ -17,4 +18,5 @@
 @property serverOptions * serveroption;
 @property (weak) IBOutlet NSTableView *setableview;
 -(void)loadserveroptions:(serverOptions *)serveroption;
+-(void) setCheckItem:(id) data;
 @end

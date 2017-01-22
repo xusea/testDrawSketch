@@ -113,6 +113,9 @@
 		DF3CFFB21CF6908B008B325B /* testDrawSketchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFB11CF6908B008B325B /* testDrawSketchUITests.m */; };
 		DF3CFFC11CF693AE008B325B /* drawSketch.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CFFC01CF693AE008B325B /* drawSketch.m */; };
 		DF3F3CDF1E31E7D200CB2C0C /* ICImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3F3CDE1E31E7D200CB2C0C /* ICImageCell.m */; };
+		DF3F3CE21E3455A000CB2C0C /* YepCheckImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3F3CE11E3455A000CB2C0C /* YepCheckImageCell.m */; };
+		DF3F3CE51E3476E100CB2C0C /* check-no.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3F3CE31E3476E100CB2C0C /* check-no.png */; };
+		DF3F3CE61E3476E100CB2C0C /* check-yes.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3F3CE41E3476E100CB2C0C /* check-yes.png */; };
 		DF415F4D1DBB4B4000079302 /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = DF415F4C1DBB4B4000079302 /* pink.png */; };
 		DF57CC181D0FA5F6005AD426 /* query2image.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC171D0FA5F6005AD426 /* query2image.m */; };
 		DF57CC1B1D0FADA0005AD426 /* imageitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF57CC1A1D0FADA0005AD426 /* imageitem.m */; };
@@ -321,6 +324,10 @@
 		DF3CFFC01CF693AE008B325B /* drawSketch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawSketch.m; sourceTree = "<group>"; };
 		DF3F3CDD1E31E7D200CB2C0C /* ICImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageCell.h; sourceTree = "<group>"; };
 		DF3F3CDE1E31E7D200CB2C0C /* ICImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCell.m; sourceTree = "<group>"; };
+		DF3F3CE01E3455A000CB2C0C /* YepCheckImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YepCheckImageCell.h; sourceTree = "<group>"; };
+		DF3F3CE11E3455A000CB2C0C /* YepCheckImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YepCheckImageCell.m; sourceTree = "<group>"; };
+		DF3F3CE31E3476E100CB2C0C /* check-no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-no.png"; sourceTree = "<group>"; };
+		DF3F3CE41E3476E100CB2C0C /* check-yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-yes.png"; sourceTree = "<group>"; };
 		DF415F4C1DBB4B4000079302 /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pink.png; path = ../../icons/pink.png; sourceTree = "<group>"; };
 		DF57CC161D0FA5F6005AD426 /* query2image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = query2image.h; sourceTree = "<group>"; };
 		DF57CC171D0FA5F6005AD426 /* query2image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = query2image.m; sourceTree = "<group>"; };
@@ -499,6 +506,8 @@
 				DF27BDA41E27BCF2003DEC57 /* preferencesSE.xib */,
 				DF3F3CDD1E31E7D200CB2C0C /* ICImageCell.h */,
 				DF3F3CDE1E31E7D200CB2C0C /* ICImageCell.m */,
+				DF3F3CE01E3455A000CB2C0C /* YepCheckImageCell.h */,
+				DF3F3CE11E3455A000CB2C0C /* YepCheckImageCell.m */,
 			);
 			name = preferences;
 			sourceTree = "<group>";
@@ -670,6 +679,8 @@
 		DFEA8EBA1D23B8D500A2D87A /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				DF3F3CE31E3476E100CB2C0C /* check-no.png */,
+				DF3F3CE41E3476E100CB2C0C /* check-yes.png */,
 				DF139FE61D7FE3460018C063 /* insert.png */,
 				2914A8201D71D0860021E9E6 /* strokeclick.png */,
 				2914A81E1D71CC1F0021E9E6 /* stroke.png */,
@@ -853,8 +864,10 @@
 				2914A7BD1D6F23D60021E9E6 /* centermove.png in Resources */,
 				DFCB82FE1DBF2F7D00ECC965 /* sogouimage.ico in Resources */,
 				DFDE8E2D1D337A0300A13724 /* purple.png in Resources */,
+				DF3F3CE61E3476E100CB2C0C /* check-yes.png in Resources */,
 				2914A7C11D6F23D60021E9E6 /* itunes_barFill.png in Resources */,
 				2914A7C81D6F23D60021E9E6 /* open.png in Resources */,
+				DF3F3CE51E3476E100CB2C0C /* check-no.png in Resources */,
 				DFDE8E2E1D337A0300A13724 /* red.png in Resources */,
 				DFDE8E2F1D337A0300A13724 /* tick.png in Resources */,
 				2914A7C01D6F23D60021E9E6 /* inclick.png in Resources */,
@@ -952,6 +965,7 @@
 				DF27BD9B1E27B025003DEC57 /* preferencesWindow.m in Sources */,
 				2914A80A1D6F2B3C0021E9E6 /* BrushPoint.m in Sources */,
 				DF3824951D6FDE96006101F1 /* CTCSlider.m in Sources */,
+				DF3F3CE21E3455A000CB2C0C /* YepCheckImageCell.m in Sources */,
 				DF3824911D6FDE96006101F1 /* RFOverlayScroller.m in Sources */,
 				DFEA8EB91D23B7CD00A2D87A /* scrollCell.m in Sources */,
 				DF38248E1D6FDE95006101F1 /* shellview.m in Sources */,

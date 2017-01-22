@@ -139,5 +139,31 @@
     cellSize.width += (self.myImage ? [self.myImage size].width : 0) + 3;
     return cellSize;
 }
+-(BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView untilMouseUp:(BOOL)flag
+{
+    NSLog(@"click on");
+   /* //如果不是点击事件直接返回
+    if([theEvent type]!= NSEventTypeLeftMouseDown)
+    {
+        return NSCellHitContentArea;
+    }
+    
+    //获取点击坐标在表格的行数
+    NSTableView *myView = (NSTableView *)controlView;
+    NSPoint p = [theEvent locationInWindow];
+    NSPoint local_point = [myView convertPoint:p fromView:nil];
+    NSUInteger row = [myView rowAtPoint:local_point];
+    
+    NSImage *image = checkImage[isChecked];
+    
+    //判断点击的位置是在复选框内
+    if (local_point.x >= imageOffset && local_point.x <= (image.size.width + imageOffset)) {
+        
+        [[myView delegate] performSelector:@selector(setCheckItem:) withObject:[NSNumber numberWithInteger:row]];
+        return NSCellHitContentArea;
+    }
+    */
+    return NSNullCellType;
+}
 
 @end
