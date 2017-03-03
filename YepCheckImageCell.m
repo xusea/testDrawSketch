@@ -38,7 +38,7 @@
 
 -(BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView untilMouseUp:(BOOL)flag
 {
-    NSLog(@"click ooo");
+    //NSLog(@"click ooo");
     //如果不是点击事件直接返回
     if([theEvent type]!= NSEventTypeLeftMouseDown)
     {
@@ -50,17 +50,17 @@
     NSPoint p = [theEvent locationInWindow];
     NSPoint local_point = [myView convertPoint:p fromView:nil];
     NSUInteger row = [myView rowAtPoint:local_point];
-    NSLog(@"click at %lu", (unsigned long)row);
+    //NSLog(@"click at %lu", (unsigned long)row);
     //isChecked = !isChecked;
     [controlView setNeedsDisplay:YES];
-    NSImage *image = checkImage[isChecked];
+    //NSImage *image = checkImage[isChecked];
     [[myView delegate] performSelector:@selector(setCheckItem:) withObject:[NSNumber numberWithInteger:row]];
-    //判断点击的位置是在复选框内
+    /*//判断点击的位置是在复选框内
     if (local_point.x >= imageOffset && local_point.x <= (image.size.width + imageOffset)) {
         
         [[myView delegate] performSelector:@selector(setCheckItem:) withObject:[NSNumber numberWithInteger:row]];
         return NSCellHitContentArea;
-    }
+    }*/
     
     return NSNullCellType;
 }

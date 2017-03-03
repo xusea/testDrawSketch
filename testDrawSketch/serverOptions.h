@@ -33,4 +33,5 @@
 @property NSDictionary * filetype;
 -(void)initial;
 -(BOOL)supporttype:(NSString *) type;
+-(void)save;
 @end

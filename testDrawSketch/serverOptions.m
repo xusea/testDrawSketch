@@ -50,4 +50,31 @@
     }
     return ret;
 }
+-(void)save
+{
+    if(selist == nil)
+    {
+        return;
+    }
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"serveroptions" ofType:@"plist"];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    [dictionary setValue:[NSString stringWithFormat:@"%d", sedepth] forKey:@"sedepth"];
+    
+    
+    NSMutableDictionary *tempselistdict = [dictionary objectForKey:@"selist"];
+    NSArray * keys = [tempselistdict allKeys];
+    for(int i = 0; i< [keys count]; i++)
+    {
+        NSMutableDictionary * values = [tempselistdict objectForKey:[keys objectAtIndex:i]];
+        for(int j = 0;j < [selist count]; j++)
+        {
+            if([[[selist objectAtIndex:j] sename] isEqualToString:[values objectForKey:@"sename"]])
+            {
+                [values setValue:[NSString stringWithFormat:@"%d", [[selist objectAtIndex:j] check]] forKey:@"check"];
+                break;
+            }
+        }
+    }
+    [dictionary writeToFile:plistPath atomically:YES];
+}
 @end

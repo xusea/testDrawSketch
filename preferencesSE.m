@@ -57,6 +57,10 @@
     {
         return @"";
     }
+    else if([aTableColumn.identifier isEqualToString:@"secheck"])
+    {
+        return @"";
+    }
     return @"";
 }
 - (NSCell *)tableView:(NSTableView *)tableView dataCellForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
@@ -89,7 +93,7 @@
     
     if ([identifier isEqualToString:@"secheck"]) {
         YepCheckImageCell *checkCell = cell;
-        [checkCell setTitle:@"fffff"];
+        [checkCell setTitle:@"      "];
         [checkCell setIsChecked:[se check]];
     }
    /* else if ([identifier isEqualToString:@"id"])
@@ -108,6 +112,17 @@
     }
     seOptions * se = [[serveroption selist] objectAtIndex:[row intValue]];
     [se setCheck:1-[se check]];
+    [serveroption save];
     [_setableview setNeedsDisplay:YES];
+}
+- (NSIndexSet *)tableView:(NSTableView *)tableView selectionIndexesForProposedSelection:(NSIndexSet *)proposedSelectionIndexes
+{
+    [proposedSelectionIndexes enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+        NSLog(@"index by %lu", (unsigned long)idx);
+        //... do something with idx
+        // *stop = YES; to stop iteration early
+    }];
+
+    return proposedSelectionIndexes;
 }
 @end
